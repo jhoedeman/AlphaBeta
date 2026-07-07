@@ -57,7 +57,7 @@ AlphaBeta/
 Principles:
 
 - **Content vs. state separation.** `AlphabetItem` etc. are immutable `Codable` structs keyed by stable integer `identifier`. User progress references items by `(languageID, identifier)` — never by object relationship. This keeps CloudKit records tiny and content freely updatable.
-- **Everything language-driven comes from a manifest**, not hardcoded: display name, reading direction, filter categories, pronunciation eras available, default palette, whether the script has letter case. Greek is just the first manifest entry.
+- **Everything language-driven comes from a manifest**, not hardcoded: display name, script family, reading direction, filter categories, available pronunciation systems, default palette, whether the script has letter case. Greek is just the first manifest entry.
 - **Remote-ready loading.** All content access goes through `AlphabetProviding`. v1 ships only `BundledAlphabetProvider`; a future `RemoteAlphabetProvider` (CloudKit public DB) slots in behind the same protocol.
 
 ---
@@ -90,9 +90,9 @@ Alphabet: `{ "language": Int, "alphabetItems": [AlphabetItem] }`
 
 Greek data: 62 items — 24 capitals, 25 lowercase (incl. sigma teliko), 6 diphthongs, 7 combinations.
 
-### 3.2 Pronunciations object (schema v2: era-keyed map)
+### 3.2 Pronunciations object (schema v2: system-keyed map)
 
-`pronunciations` is a dictionary keyed by era string, so new languages/eras never require schema changes:
+`pronunciations` is a dictionary keyed by pronunciation-system ID (era, regional tradition, or register — see 3.5), so new languages and systems never require schema changes:
 
 ```json
 "pronunciations": {
@@ -101,9 +101,9 @@ Greek data: 62 items — 24 capitals, 25 lowercase (incl. sigma teliko), 6 dipht
 }
 ```
 
-- Sub-keys per era (all optional): `full`, `short`, `letterName`.
-- Eras with no data are omitted entirely (no nulls). Greek currently ships `modern` only (`full` on all 62 items, `short` on the 49 letters).
-- Era keys are open strings: Greek uses `modern`/`koine`/`ancient`/`fraternity` (fraternity is letter-name-only); Arabic could add `quranic`, Hebrew `biblical`, etc. Decode as `[String: PronunciationEntry]` — unknown era keys must survive decoding untouched.
+- Sub-keys per system (all optional): `full`, `short`, `letterName`.
+- Systems with no data are omitted entirely (no nulls). Greek currently ships `modern` only (`full` on all 62 items, `short` on the 49 letters).
+- Keys are open strings. Decode as `[String: PronunciationEntry]` — unknown keys must survive decoding untouched.
 
 ```swift
 struct PronunciationEntry: Codable, Hashable {
@@ -114,7 +114,7 @@ struct PronunciationEntry: Codable, Hashable {
 // on AlphabetItem: let pronunciations: [String: PronunciationEntry]
 ```
 
-**Era handling:** `PronunciationEra` is a lightweight wrapper over the raw string (known cases `modern`, `koine`, `ancient`, `fraternity`, plus future strings from manifests — display names come from the manifest, not a hardcoded enum). The manifest's `availableEras` declares what a language has; the settings picker shows only those (Greek v1: Modern only, control still present but single-option). Resolution rule: requested era → fall back to `modern` → fall back to any populated era. Never show an empty pronunciation.
+**System handling:** map keys are **pronunciation-system IDs** — historical eras for Greek (`modern`, `koine`, `ancient`, plus letter-name-only `fraternity`), regional traditions for others (Armenian `eastern`/`western`), registers for others still (Arabic `quranic`). No hardcoded enum: IDs and display names come from the manifest's `pronunciationSystems` (§3.4); the settings picker shows only those (Greek v1: Modern only, control still present but single-option). Resolution rule: requested system → the manifest's first-listed (default) system → any populated one. Never show an empty pronunciation.
 
 **Legacy note:** `Greek-V1.json` in the repo preserves the retired flat-key format (`modernPronunciation`, `koineShortPronunciation`, …, `version: 1`) for reference only. The app decodes v2 exclusively; do not add v1 support.
 
@@ -141,19 +141,35 @@ Derived helpers on `AlphabetItem`: `isCapital` (letter whose `englishName` start
 struct LanguageManifest: Codable, Identifiable {
     let id: Int                      // matches JSON "language" (Greek = 0)
     let code: String                 // "el"
-    let displayName: String          // "Greek"
+    let displayName: String          // "Greek", "Russian", "Ukrainian"
     let nativeName: String           // "Ελληνικά"
+    let scriptFamily: String         // "greek", "cyrillic", "arabic", "devanagari", "kana"…
     let fileName: String             // "Greek" (→ Greek.json in bundle)
     let readingDirection: ReadingDirection   // .leftToRight / .rightToLeft
     let hasLetterCase: Bool          // false for Arabic, Hebrew, Korean, Thai…
-    let availableEras: [PronunciationEra]    // Greek v1: [.modern]
+    let pronunciationSystems: [PronunciationSystem]  // ordered; first = default. Greek: [modern]
     let filterCategories: [FilterCategory]   // Greek: [.capitals, .lowercase, .diphthongs, .combinations]
     let defaultPaletteID: String     // "greek-flag"
     let flagEmoji: String            // "🇬🇷"
 }
+
+struct PronunciationSystem: Codable, Identifiable, Hashable {
+    let id: String                   // key into item pronunciation maps: "modern", "koine", "eastern"…
+    let displayName: String          // "Modern", "Koine", "Eastern Armenian"
+}
 ```
 
 `LanguageRegistry` loads a bundled `Manifest.json` array. Adding a language later = add JSON + manifest entry + palette. **RTL hook:** when `readingDirection == .rightToLeft`, multi-character items (diphthongs/combinations) render a subtle "read right-to-left ←" hint on cards and detail pages.
+
+### 3.5 Script families & language variants
+
+Two orthogonal dimensions handle scripts shared by multiple languages:
+
+1. **Different letter inventories → separate datasets.** Cyrillic is not one alphabet: Russian (ё, ъ, ы, э), Ukrainian (і, ї, є, ґ), Serbian (ђ, ј, љ, њ, ћ, џ), Bulgarian, and Macedonian (ѓ, ѕ, ќ) each get their own JSON + manifest entry — full first-class languages with their own flag palette, filters, example words, and progress. Shared glyphs still differ per language (г = 'g' Russian / 'h' Ukrainian; щ = 'shch' Russian / 'sht' Bulgarian; ъ = silent sign Russian / vowel Bulgarian), so sharing one dataset would fork nearly every field. The `scriptFamily` field groups them in the language picker ("Cyrillic ▸ Russian, Ukrainian, …"). Same pattern for the Arabic script family (Arabic, Persian, Urdu, Pashto) and Devanagari (Hindi, Marathi, Nepali, Sanskrit). If cross-file duplication gets tedious, per-language JSONs can be generated from a master script-family source at authoring time — a tooling concern, invisible to the app.
+
+2. **Same inventory, different pronunciations → pronunciation systems** (the era mechanism, generalized). Pronunciation-map keys are open strings: Greek uses `modern`/`koine`/`ancient` (historical eras); Armenian uses `eastern`/`western` (regional traditions) for the same 38 letters. The manifest's `pronunciationSystems` provides IDs + display names; the settings picker renders whatever the language declares.
+
+The reserved `languageSubtype` field on items stays reserved (unused) under this model.
 
 `AlphabetProviding`:
 
@@ -172,7 +188,7 @@ Loaded alphabets are cached in an `@Observable AlphabetStore` environment object
 ```swift
 @Model final class UserPreferences {        // singleton-by-convention (fetch first, else create)
     var selectedLanguageID: Int = 0
-    var pronunciationEraRaw: String = "modern"
+    var pronunciationSystemID: String = "modern"   // per current language; reset to manifest default on language switch
     var appearanceRaw: String = "system"     // system | light | dark
     var paletteID: String = ""               // "" = use language default
     var customPaletteData: Data? = nil       // user-built palette, Codable blob
@@ -249,7 +265,7 @@ Because CloudKit merges can duplicate the "singleton" models, always fetch-and-m
 2. Hero glyph: `foreignLetter` very large, theme accent color. If `markedVersion` exists, show it beside/behind at smaller scale with caption "with accent".
 3. `englishName` (title) + `foreignLetterName` (subtitle, native script).
 4. Metadata chips row: category (Letter/Diphthong/Combination), Vowel/Consonant, capital/lowercase where applicable.
-5. **Pronunciation** section: the selected era's `full` text; its `short` as a highlighted one-liner ("Sounds like: a long 'a,' as in 'father'") when present. Era label shown if the language has multiple eras. Speaker button slot: **present in layout but hidden in v1** (audio designed-for, not shipped — see §11).
+5. **Pronunciation** section: the selected system's `full` text; its `short` as a highlighted one-liner ("Sounds like: a long 'a,' as in 'father'") when present. System label (e.g. "Modern") shown if the language declares more than one. Speaker button slot: **present in layout but hidden in v1** (audio designed-for, not shipped — see §11).
 6. **Example word** section: parse `exampleWord` strings of the form "Άλογο, which means 'horse'" into word + meaning for nicer typography (fallback: show raw string). Native word rendered large.
 7. **Explanation** section (when present — diphthongs/combinations).
 8. **Case forms** section (letters only, per John's requirement): smaller, lower down, the related forms resolved as tappable mini-cards — e.g. detail for "Σ" shows σ (lowercase) and ς (final form / sigma teliko) with labels; tapping one pushes/replaces to that item's detail. Uses `caseEquivalent`, `endingCaseEquivalent`, `leadingCaseEquivalent`, `middleCaseEquivalent`. Not shown for diphthongs/combinations.
@@ -277,7 +293,7 @@ Because CloudKit merges can duplicate the "singleton" models, always fetch-and-m
 | Q3 | Word → contains | Show a native word (from `exampleWord`): "Which letter appears in this word?" | 4 English names; exactly one option's glyph occurs in the word |
 | Q4 | Name → word | "Which word contains a lambda?" | 4 native words; exactly one contains the target glyph |
 | Q5 | Case match (suggested) | "Which is the lowercase form of Σ?" | 4 glyphs; only for items with `caseEquivalent`; only when `hasLetterCase` |
-| Q6 | Sound → glyph (suggested) | "Which letter sounds like 'v', as in 'very'?" (from the era's `short` text) | 4 glyphs; only for items with a short pronunciation |
+| Q6 | Sound → glyph (suggested) | "Which letter sounds like 'v', as in 'very'?" (from the selected system's `short` text) | 4 glyphs; only for items with a short pronunciation |
 
 **Distractor rules (critical for fairness):**
 - Distractors come from the same `itemType` and, where relevant, same case as the correct answer.
@@ -333,12 +349,12 @@ struct ThemeColors: Codable {       // stored as hex strings
 
 ## 9. Settings & Language Picker
 
-**Language sheet** (globe/flag button, top-left): list from `LanguageRegistry` — flag emoji, display name, native name. v1 lists Greek (selected). Include a teaser row style ready for future entries. Selecting switches `AlphabetStore` content, filters reset to all-on, theme animates to the language default (unless user has a custom/stock override), card deck resets to first item.
+**Language sheet** (globe/flag button, top-left): list from `LanguageRegistry`, **grouped into sections by `scriptFamily`** ("Cyrillic ▸ Russian, Ukrainian, …"); a family with one language renders as a plain row. Rows show flag emoji, display name, native name. v1 lists Greek (selected). Include a teaser row style ready for future entries. Selecting switches `AlphabetStore` content, filters reset to all-on, theme animates to the language default (unless user has a custom/stock override), card deck resets to first item.
 
 **Settings sheet** (gear, top-right):
 - Appearance: System / Light / Dark segmented control.
 - Color scheme: stock palette list + "Custom…" builder + reset-to-default.
-- Pronunciation era: picker of `manifest.availableEras` (Greek v1: Modern only — picker present but single option; UI copy explains more eras coming).
+- Pronunciation: picker of `manifest.pronunciationSystems` display names (Greek v1: Modern only — picker present but single option; UI copy explains more coming).
 - About/version footer.
 
 Both are `.sheet` (form sheet on iPad).
@@ -377,8 +393,8 @@ Both are `.sheet` (form sheet on iPad).
 ## 11. Future roadmap (design hooks already in place)
 
 - **Audio:** speaker button slot in detail view + `audioProvider` protocol stub. Later: `AVSpeechSynthesizer` (per-language voice) or recorded assets referenced from manifest.
-- **More eras:** koine/ancient Greek pronunciations — add `koine`/`ancient` entries to items' pronunciation maps plus the manifest's `availableEras`, and the era picker lights up automatically. A `fraternity` era (letter names only) is reserved for a fun "fraternity mode" toggle.
-- **New alphabets:** add `<Name>.json` + manifest entry + palette. Case-less scripts (`hasLetterCase: false`) auto-drop case filters/case sections; Arabic/Persian positional forms reuse leading/middle/ending fields; RTL reminder auto-enables. Devanagari/Thai may need new `itemType` values — enum decodes unknown types safely (skip + log, don't crash).
+- **More pronunciation systems:** koine/ancient Greek — add `koine`/`ancient` entries to items' pronunciation maps plus the manifest's `pronunciationSystems`, and the picker lights up automatically. A `fraternity` system (letter names only) is reserved for a fun "fraternity mode" toggle. Armenian ships as one dataset with `eastern`/`western` systems.
+- **New alphabets:** add `<Name>.json` + manifest entry + palette; script-family variants (Russian/Ukrainian/Serbian…, Arabic/Persian/Urdu…) are separate datasets per §3.5. Case-less scripts (`hasLetterCase: false`) auto-drop case filters/case sections; Arabic/Persian positional forms reuse leading/middle/ending fields; RTL reminder auto-enables. Devanagari/Thai may need new `itemType` values — enum decodes unknown types safely (skip + log, don't crash).
 - **Remote content:** `RemoteAlphabetProvider` via CloudKit public DB, keyed by `version`.
 - **IAP:** gate `LanguageRegistry` entries behind StoreKit 2 product IDs.
 - **Widgets/Live Activities:** streak widget; "letter of the day."
