@@ -30,5 +30,118 @@
     "filterCategories": ["capitals", "lowercase"],
     "defaultPaletteID": "russian-flag",
     "flagEmoji": "🇷🇺"
+  },
+  {
+    "id": 2,
+    "code": "uk",
+    "displayName": "Ukrainian",
+    "nativeName": "Українська",
+    "scriptFamily": "cyrillic",
+    "fileName": "Ukrainian",
+    "readingDirection": "leftToRight",
+    "hasLetterCase": true,
+    "pronunciationSystems": [
+      { "id": "modern", "displayName": "Modern" }
+    ],
+    "filterCategories": ["capitals", "lowercase"],
+    "defaultPaletteID": "ukrainian-flag",
+    "flagEmoji": "🇺🇦"
+  },
+  {
+    "id": 3,
+    "code": "be",
+    "displayName": "Belarusian",
+    "nativeName": "Беларуская",
+    "scriptFamily": "cyrillic",
+    "fileName": "Belarusian",
+    "readingDirection": "leftToRight",
+    "hasLetterCase": true,
+    "pronunciationSystems": [
+      { "id": "modern", "displayName": "Modern" }
+    ],
+    "filterCategories": ["capitals", "lowercase"],
+    "defaultPaletteID": "belarusian-flag",
+    "flagEmoji": "🇧🇾"
+  },
+  {
+    "id": 4,
+    "code": "sr",
+    "displayName": "Serbian",
+    "nativeName": "Српски",
+    "scriptFamily": "cyrillic",
+    "fileName": "Serbian",
+    "readingDirection": "leftToRight",
+    "hasLetterCase": true,
+    "pronunciationSystems": [
+      { "id": "modern", "displayName": "Modern" }
+    ],
+    "filterCategories": ["capitals", "lowercase"],
+    "defaultPaletteID": "serbian-flag",
+    "flagEmoji": "🇷🇸"
+  },
+  {
+    "id": 5,
+    "code": "bg",
+    "displayName": "Bulgarian",
+    "nativeName": "Български",
+    "scriptFamily": "cyrillic",
+    "fileName": "Bulgarian",
+    "readingDirection": "leftToRight",
+    "hasLetterCase": true,
+    "pronunciationSystems": [
+      { "id": "modern", "displayName": "Modern" }
+    ],
+    "filterCategories": ["capitals", "lowercase"],
+    "defaultPaletteID": "bulgarian-flag",
+    "flagEmoji": "🇧🇬"
+  },
+  {
+    "id": 6,
+    "code": "mk",
+    "displayName": "Macedonian",
+    "nativeName": "Македонски",
+    "scriptFamily": "cyrillic",
+    "fileName": "Macedonian",
+    "readingDirection": "leftToRight",
+    "hasLetterCase": true,
+    "pronunciationSystems": [
+      { "id": "modern", "displayName": "Modern" }
+    ],
+    "filterCategories": ["capitals", "lowercase"],
+    "defaultPaletteID": "macedonian-flag",
+    "flagEmoji": "🇲🇰"
+  },
+  {
+    "id": 7,
+    "code": "hy",
+    "displayName": "Armenian",
+    "nativeName": "Հայերեն",
+    "scriptFamily": "armenian",
+    "fileName": "Armenian",
+    "readingDirection": "leftToRight",
+    "hasLetterCase": true,
+    "pronunciationSystems": [
+      { "id": "eastern", "displayName": "Eastern" },
+      { "id": "western", "displayName": "Western" }
+    ],
+    "filterCategories": ["capitals", "lowercase", "diphthongs", "combinations"],
+    "defaultPaletteID": "armenian-flag",
+    "flagEmoji": "🇦🇲"
+  },
+  {
+    "id": 8,
+    "code": "ka",
+    "displayName": "Georgian",
+    "nativeName": "ქართული",
+    "scriptFamily": "georgian",
+    "fileName": "Georgian",
+    "readingDirection": "leftToRight",
+    "hasLetterCase": false,
+    "pronunciationSystems": [
+      { "id": "modern", "displayName": "Modern" }
+    ],
+    "filterCategories": ["letters"],
+    "defaultPaletteID": "georgian-flag",
+    "flagEmoji": "🇬🇪"
   }
 ]

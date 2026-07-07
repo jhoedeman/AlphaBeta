@@ -1,0 +1,1610 @@
+{
+  "version": 2,
+  "alphabets": [
+    {
+      "language": 7,
+      "alphabetItems": [
+        {
+          "identifier": 7000,
+          "itemType": 0,
+          "englishName": "Ayb",
+          "foreignLetter": "Ա",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an open 'ah' sound, like the 'a' in 'father.' So, 'Արև' is pronounced 'ah-REV.'",
+              "short": "an 'ah,' as in 'father'"
+            },
+            "western": {
+              "full": "This is an open 'ah' sound, like the 'a' in 'father.' So, 'Արև' is pronounced 'ah-REV.'",
+              "short": "an 'ah,' as in 'father'"
+            }
+          },
+          "foreignLetterName": "Այբ",
+          "caseEquivalent": "ա",
+          "exampleWord": "Արև, which means 'sun'",
+          "lowercaseEnglishName": "ayb"
+        },
+        {
+          "identifier": 7001,
+          "itemType": 0,
+          "englishName": "ayb",
+          "foreignLetter": "ա",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an open 'ah' sound, like the 'a' in 'father.' So, 'արև' is pronounced 'ah-REV.'",
+              "short": "an 'ah,' as in 'father'"
+            },
+            "western": {
+              "full": "This is an open 'ah' sound, like the 'a' in 'father.' So, 'արև' is pronounced 'ah-REV.'",
+              "short": "an 'ah,' as in 'father'"
+            }
+          },
+          "foreignLetterName": "այբ",
+          "caseEquivalent": "Ա",
+          "exampleWord": "արև, which means 'sun'"
+        },
+        {
+          "identifier": 7002,
+          "itemType": 0,
+          "englishName": "Ben",
+          "foreignLetter": "Բ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a 'b,' as in 'book.' So, 'Բարև' is pronounced 'bah-REV.'",
+              "short": "a 'b,' as in 'book'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a 'p,' as in 'park' — the classic East/West voicing swap. So, 'Բարև' is pronounced 'pah-REV.'",
+              "short": "a 'p,' as in 'park'"
+            }
+          },
+          "foreignLetterName": "Բեն",
+          "caseEquivalent": "բ",
+          "exampleWord": "Բարև, which means 'hello'",
+          "lowercaseEnglishName": "ben",
+          "explanation": "The բ/պ/փ trio is the textbook example of how Eastern and Western pronunciation diverge while the spelling stays identical."
+        },
+        {
+          "identifier": 7003,
+          "itemType": 0,
+          "englishName": "ben",
+          "foreignLetter": "բ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a 'b,' as in 'book.' So, 'բարև' is pronounced 'bah-REV.'",
+              "short": "a 'b,' as in 'book'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a 'p,' as in 'park' — the classic East/West voicing swap. So, 'բարև' is pronounced 'pah-REV.'",
+              "short": "a 'p,' as in 'park'"
+            }
+          },
+          "foreignLetterName": "բեն",
+          "caseEquivalent": "Բ",
+          "exampleWord": "բարև, which means 'hello'",
+          "explanation": "The բ/պ/փ trio is the textbook example of how Eastern and Western pronunciation diverge while the spelling stays identical."
+        },
+        {
+          "identifier": 7004,
+          "itemType": 0,
+          "englishName": "Gim",
+          "foreignLetter": "Գ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a hard 'g,' as in 'go.' So, 'Գիրք' is pronounced 'geerk.'",
+              "short": "a hard 'g,' as in 'go'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a 'k,' as in 'kite.' So, 'Գիրք' is pronounced 'keerk.'",
+              "short": "a 'k,' as in 'kite'"
+            }
+          },
+          "foreignLetterName": "Գիմ",
+          "caseEquivalent": "գ",
+          "exampleWord": "Գիրք, which means 'book'",
+          "lowercaseEnglishName": "gim"
+        },
+        {
+          "identifier": 7005,
+          "itemType": 0,
+          "englishName": "gim",
+          "foreignLetter": "գ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a hard 'g,' as in 'go.' So, 'գիրք' is pronounced 'geerk.'",
+              "short": "a hard 'g,' as in 'go'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a 'k,' as in 'kite.' So, 'գիրք' is pronounced 'keerk.'",
+              "short": "a 'k,' as in 'kite'"
+            }
+          },
+          "foreignLetterName": "գիմ",
+          "caseEquivalent": "Գ",
+          "exampleWord": "գիրք, which means 'book'"
+        },
+        {
+          "identifier": 7006,
+          "itemType": 0,
+          "englishName": "Da",
+          "foreignLetter": "Դ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a 'd,' as in 'dog.' So, 'Դուռ' is pronounced 'door.'",
+              "short": "a 'd,' as in 'dog'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a 't,' as in 'top.' So, 'Դուռ' is pronounced 'toor.'",
+              "short": "a 't,' as in 'top'"
+            }
+          },
+          "foreignLetterName": "Դա",
+          "caseEquivalent": "դ",
+          "exampleWord": "Դուռ, which means 'door'",
+          "lowercaseEnglishName": "da"
+        },
+        {
+          "identifier": 7007,
+          "itemType": 0,
+          "englishName": "da",
+          "foreignLetter": "դ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a 'd,' as in 'dog.' So, 'դուռ' is pronounced 'door.'",
+              "short": "a 'd,' as in 'dog'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a 't,' as in 'top.' So, 'դուռ' is pronounced 'toor.'",
+              "short": "a 't,' as in 'top'"
+            }
+          },
+          "foreignLetterName": "դա",
+          "caseEquivalent": "Դ",
+          "exampleWord": "դուռ, which means 'door'"
+        },
+        {
+          "identifier": 7008,
+          "itemType": 0,
+          "englishName": "Yech",
+          "foreignLetter": "Ե",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an 'e,' as in 'end.' At the very start of a word it becomes 'ye,' as in 'yes' — which is why Երևան is 'Yerevan.' So, 'Երևան' is pronounced 'ye-reh-VAHN.'",
+              "short": "an 'e' — 'ye' at the start of a word"
+            },
+            "western": {
+              "full": "This is an 'e,' as in 'end.' At the very start of a word it becomes 'ye,' as in 'yes' — which is why Երևան is 'Yerevan.' So, 'Երևան' is pronounced 'ye-reh-VAHN.'",
+              "short": "an 'e' — 'ye' at the start of a word"
+            }
+          },
+          "foreignLetterName": "Եչ",
+          "caseEquivalent": "ե",
+          "exampleWord": "Երևան, Yerevan, the capital of Armenia",
+          "lowercaseEnglishName": "yech"
+        },
+        {
+          "identifier": 7009,
+          "itemType": 0,
+          "englishName": "yech",
+          "foreignLetter": "ե",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an 'e,' as in 'end.' At the very start of a word it becomes 'ye,' as in 'yes' — which is why Երևան is 'Yerevan.' So, 'Երևան' is pronounced 'ye-reh-VAHN.'",
+              "short": "an 'e' — 'ye' at the start of a word"
+            },
+            "western": {
+              "full": "This is an 'e,' as in 'end.' At the very start of a word it becomes 'ye,' as in 'yes' — which is why Երևան is 'Yerevan.' So, 'Երևան' is pronounced 'ye-reh-VAHN.'",
+              "short": "an 'e' — 'ye' at the start of a word"
+            }
+          },
+          "foreignLetterName": "եչ",
+          "caseEquivalent": "Ե",
+          "exampleWord": "Երևան, Yerevan, the capital of Armenia"
+        },
+        {
+          "identifier": 7010,
+          "itemType": 0,
+          "englishName": "Za",
+          "foreignLetter": "Զ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the 'z' in 'zoo.' So, 'Զանգ' is pronounced 'zahng.'",
+              "short": "a 'z,' as in 'zoo'"
+            },
+            "western": {
+              "full": "This is pronounced like the 'z' in 'zoo.' So, 'Զանգ' is pronounced 'zahng.'",
+              "short": "a 'z,' as in 'zoo'"
+            }
+          },
+          "foreignLetterName": "Զա",
+          "caseEquivalent": "զ",
+          "exampleWord": "Զանգ, which means 'bell'",
+          "lowercaseEnglishName": "za"
+        },
+        {
+          "identifier": 7011,
+          "itemType": 0,
+          "englishName": "za",
+          "foreignLetter": "զ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the 'z' in 'zoo.' So, 'զանգ' is pronounced 'zahng.'",
+              "short": "a 'z,' as in 'zoo'"
+            },
+            "western": {
+              "full": "This is pronounced like the 'z' in 'zoo.' So, 'զանգ' is pronounced 'zahng.'",
+              "short": "a 'z,' as in 'zoo'"
+            }
+          },
+          "foreignLetterName": "զա",
+          "caseEquivalent": "Զ",
+          "exampleWord": "զանգ, which means 'bell'"
+        },
+        {
+          "identifier": 7012,
+          "itemType": 0,
+          "englishName": "E",
+          "foreignLetter": "Է",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is a plain 'e,' as in 'end.' Where ե can shift to 'ye,' է is always a steady 'e.' So, 'Էջ' is pronounced 'ej.'",
+              "short": "an 'e,' as in 'end'"
+            },
+            "western": {
+              "full": "This is a plain 'e,' as in 'end.' Where ե can shift to 'ye,' է is always a steady 'e.' So, 'Էջ' is pronounced 'ech.'",
+              "short": "an 'e,' as in 'end'"
+            }
+          },
+          "foreignLetterName": "Է",
+          "caseEquivalent": "է",
+          "exampleWord": "Էջ, which means 'page'",
+          "lowercaseEnglishName": "e"
+        },
+        {
+          "identifier": 7013,
+          "itemType": 0,
+          "englishName": "e",
+          "foreignLetter": "է",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is a plain 'e,' as in 'end.' Where ե can shift to 'ye,' է is always a steady 'e.' So, 'էջ' is pronounced 'ej.'",
+              "short": "an 'e,' as in 'end'"
+            },
+            "western": {
+              "full": "This is a plain 'e,' as in 'end.' Where ե can shift to 'ye,' է is always a steady 'e.' So, 'էջ' is pronounced 'ech.'",
+              "short": "an 'e,' as in 'end'"
+            }
+          },
+          "foreignLetterName": "է",
+          "caseEquivalent": "Է",
+          "exampleWord": "էջ, which means 'page'"
+        },
+        {
+          "identifier": 7014,
+          "itemType": 0,
+          "englishName": "Ut",
+          "foreignLetter": "Ը",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is the schwa — the relaxed 'uh' at the start of 'about.' Armenian also slips this sound, unwritten, between crowded consonants. So, 'Ընկեր' is pronounced 'un-KEHR.'",
+              "short": "'uh' — the schwa, as in 'about'"
+            },
+            "western": {
+              "full": "This is the schwa — the relaxed 'uh' at the start of 'about.' Armenian also slips this sound, unwritten, between crowded consonants. So, 'Ընկեր' is pronounced 'un-KEHR.'",
+              "short": "'uh' — the schwa, as in 'about'"
+            }
+          },
+          "foreignLetterName": "Ըթ",
+          "caseEquivalent": "ը",
+          "exampleWord": "Ընկեր, which means 'friend'",
+          "lowercaseEnglishName": "ut"
+        },
+        {
+          "identifier": 7015,
+          "itemType": 0,
+          "englishName": "ut",
+          "foreignLetter": "ը",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is the schwa — the relaxed 'uh' at the start of 'about.' Armenian also slips this sound, unwritten, between crowded consonants. So, 'ընկեր' is pronounced 'un-KEHR.'",
+              "short": "'uh' — the schwa, as in 'about'"
+            },
+            "western": {
+              "full": "This is the schwa — the relaxed 'uh' at the start of 'about.' Armenian also slips this sound, unwritten, between crowded consonants. So, 'ընկեր' is pronounced 'un-KEHR.'",
+              "short": "'uh' — the schwa, as in 'about'"
+            }
+          },
+          "foreignLetterName": "ըթ",
+          "caseEquivalent": "Ը",
+          "exampleWord": "ընկեր, which means 'friend'"
+        },
+        {
+          "identifier": 7016,
+          "itemType": 0,
+          "englishName": "To",
+          "foreignLetter": "Թ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an aspirated 't' — a 't' with a puff of air, as in 'time.' It sounds the same in Eastern and Western Armenian. So, 'Թեյ' is pronounced 'tey.'",
+              "short": "an airy 't,' as in 'time'"
+            },
+            "western": {
+              "full": "This is an aspirated 't' — a 't' with a puff of air, as in 'time.' It sounds the same in Eastern and Western Armenian. So, 'Թեյ' is pronounced 'tey.'",
+              "short": "an airy 't,' as in 'time'"
+            }
+          },
+          "foreignLetterName": "Թո",
+          "caseEquivalent": "թ",
+          "exampleWord": "Թեյ, which means 'tea'",
+          "lowercaseEnglishName": "to"
+        },
+        {
+          "identifier": 7017,
+          "itemType": 0,
+          "englishName": "to",
+          "foreignLetter": "թ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an aspirated 't' — a 't' with a puff of air, as in 'time.' It sounds the same in Eastern and Western Armenian. So, 'թեյ' is pronounced 'tey.'",
+              "short": "an airy 't,' as in 'time'"
+            },
+            "western": {
+              "full": "This is an aspirated 't' — a 't' with a puff of air, as in 'time.' It sounds the same in Eastern and Western Armenian. So, 'թեյ' is pronounced 'tey.'",
+              "short": "an airy 't,' as in 'time'"
+            }
+          },
+          "foreignLetterName": "թո",
+          "caseEquivalent": "Թ",
+          "exampleWord": "թեյ, which means 'tea'"
+        },
+        {
+          "identifier": 7018,
+          "itemType": 0,
+          "englishName": "Zhe",
+          "foreignLetter": "Ժ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is the 'zh' sound — like the 's' in 'measure' or 'pleasure.' So, 'Ժամ' is pronounced 'zhahm.'",
+              "short": "'zh,' like the 's' in 'measure'"
+            },
+            "western": {
+              "full": "This is the 'zh' sound — like the 's' in 'measure' or 'pleasure.' So, 'Ժամ' is pronounced 'zhahm.'",
+              "short": "'zh,' like the 's' in 'measure'"
+            }
+          },
+          "foreignLetterName": "Ժե",
+          "caseEquivalent": "ժ",
+          "exampleWord": "Ժամ, which means 'hour (or clock)'",
+          "lowercaseEnglishName": "zhe"
+        },
+        {
+          "identifier": 7019,
+          "itemType": 0,
+          "englishName": "zhe",
+          "foreignLetter": "ժ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is the 'zh' sound — like the 's' in 'measure' or 'pleasure.' So, 'ժամ' is pronounced 'zhahm.'",
+              "short": "'zh,' like the 's' in 'measure'"
+            },
+            "western": {
+              "full": "This is the 'zh' sound — like the 's' in 'measure' or 'pleasure.' So, 'ժամ' is pronounced 'zhahm.'",
+              "short": "'zh,' like the 's' in 'measure'"
+            }
+          },
+          "foreignLetterName": "ժե",
+          "caseEquivalent": "Ժ",
+          "exampleWord": "ժամ, which means 'hour (or clock)'"
+        },
+        {
+          "identifier": 7020,
+          "itemType": 0,
+          "englishName": "Ini",
+          "foreignLetter": "Ի",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an 'ee' sound, like the 'ee' in 'see.' So, 'Ինը' is pronounced 'EE-nuh.'",
+              "short": "an 'ee,' as in 'see'"
+            },
+            "western": {
+              "full": "This is an 'ee' sound, like the 'ee' in 'see.' So, 'Ինը' is pronounced 'EE-nuh.'",
+              "short": "an 'ee,' as in 'see'"
+            }
+          },
+          "foreignLetterName": "Ինի",
+          "caseEquivalent": "ի",
+          "exampleWord": "Ինը, which means 'nine'",
+          "lowercaseEnglishName": "ini"
+        },
+        {
+          "identifier": 7021,
+          "itemType": 0,
+          "englishName": "ini",
+          "foreignLetter": "ի",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an 'ee' sound, like the 'ee' in 'see.' So, 'ինը' is pronounced 'EE-nuh.'",
+              "short": "an 'ee,' as in 'see'"
+            },
+            "western": {
+              "full": "This is an 'ee' sound, like the 'ee' in 'see.' So, 'ինը' is pronounced 'EE-nuh.'",
+              "short": "an 'ee,' as in 'see'"
+            }
+          },
+          "foreignLetterName": "ինի",
+          "caseEquivalent": "Ի",
+          "exampleWord": "ինը, which means 'nine'"
+        },
+        {
+          "identifier": 7022,
+          "itemType": 0,
+          "englishName": "Liun",
+          "foreignLetter": "Լ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the English 'l.' So, 'Լույս' is pronounced 'looys.'",
+              "short": "an 'l,' as in 'lamp'"
+            },
+            "western": {
+              "full": "This is pronounced like the English 'l.' So, 'Լույս' is pronounced 'looys.'",
+              "short": "an 'l,' as in 'lamp'"
+            }
+          },
+          "foreignLetterName": "Լյուն",
+          "caseEquivalent": "լ",
+          "exampleWord": "Լույս, which means 'light'",
+          "lowercaseEnglishName": "liun"
+        },
+        {
+          "identifier": 7023,
+          "itemType": 0,
+          "englishName": "liun",
+          "foreignLetter": "լ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the English 'l.' So, 'լույս' is pronounced 'looys.'",
+              "short": "an 'l,' as in 'lamp'"
+            },
+            "western": {
+              "full": "This is pronounced like the English 'l.' So, 'լույս' is pronounced 'looys.'",
+              "short": "an 'l,' as in 'lamp'"
+            }
+          },
+          "foreignLetterName": "լյուն",
+          "caseEquivalent": "Լ",
+          "exampleWord": "լույս, which means 'light'"
+        },
+        {
+          "identifier": 7024,
+          "itemType": 0,
+          "englishName": "Kheh",
+          "foreignLetter": "Խ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is a breathy 'kh' from the back of the throat — like the 'ch' in the Scottish 'loch' or German 'Bach.' So, 'Խաղող' is pronounced 'khah-GHOGH.'",
+              "short": "a breathy 'kh,' like the 'ch' in 'loch'"
+            },
+            "western": {
+              "full": "This is a breathy 'kh' from the back of the throat — like the 'ch' in the Scottish 'loch' or German 'Bach.' So, 'Խաղող' is pronounced 'khah-GHOGH.'",
+              "short": "a breathy 'kh,' like the 'ch' in 'loch'"
+            }
+          },
+          "foreignLetterName": "Խե",
+          "caseEquivalent": "խ",
+          "exampleWord": "Խաղող, which means 'grapes'",
+          "lowercaseEnglishName": "kheh"
+        },
+        {
+          "identifier": 7025,
+          "itemType": 0,
+          "englishName": "kheh",
+          "foreignLetter": "խ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is a breathy 'kh' from the back of the throat — like the 'ch' in the Scottish 'loch' or German 'Bach.' So, 'խաղող' is pronounced 'khah-GHOGH.'",
+              "short": "a breathy 'kh,' like the 'ch' in 'loch'"
+            },
+            "western": {
+              "full": "This is a breathy 'kh' from the back of the throat — like the 'ch' in the Scottish 'loch' or German 'Bach.' So, 'խաղող' is pronounced 'khah-GHOGH.'",
+              "short": "a breathy 'kh,' like the 'ch' in 'loch'"
+            }
+          },
+          "foreignLetterName": "խե",
+          "caseEquivalent": "Խ",
+          "exampleWord": "խաղող, which means 'grapes'"
+        },
+        {
+          "identifier": 7026,
+          "itemType": 0,
+          "englishName": "Tsa",
+          "foreignLetter": "Ծ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a tight, unaspirated 'ts,' as in 'cats.' So, 'Ծառ' is pronounced 'tsahr.'",
+              "short": "a tight 'ts,' as in 'cats'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to 'dz,' like the 'ds' in 'lads.' So, 'Ծառ' is pronounced 'dzahr.'",
+              "short": "'dz,' as in 'lads'"
+            }
+          },
+          "foreignLetterName": "Ծա",
+          "caseEquivalent": "ծ",
+          "exampleWord": "Ծառ, which means 'tree'",
+          "lowercaseEnglishName": "tsa"
+        },
+        {
+          "identifier": 7027,
+          "itemType": 0,
+          "englishName": "tsa",
+          "foreignLetter": "ծ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a tight, unaspirated 'ts,' as in 'cats.' So, 'ծառ' is pronounced 'tsahr.'",
+              "short": "a tight 'ts,' as in 'cats'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to 'dz,' like the 'ds' in 'lads.' So, 'ծառ' is pronounced 'dzahr.'",
+              "short": "'dz,' as in 'lads'"
+            }
+          },
+          "foreignLetterName": "ծա",
+          "caseEquivalent": "Ծ",
+          "exampleWord": "ծառ, which means 'tree'"
+        },
+        {
+          "identifier": 7028,
+          "itemType": 0,
+          "englishName": "Ken",
+          "foreignLetter": "Կ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a tight, unaspirated 'k' — the 'k' in 'skate,' with no puff of air. So, 'Կատու' is pronounced 'kah-TOO.'",
+              "short": "a tight 'k,' as in 'skate'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a hard 'g,' as in 'go.' So, 'Կատու' is pronounced 'gah-DOO.'",
+              "short": "a hard 'g,' as in 'go'"
+            }
+          },
+          "foreignLetterName": "Կեն",
+          "caseEquivalent": "կ",
+          "exampleWord": "Կատու, which means 'cat'",
+          "lowercaseEnglishName": "ken"
+        },
+        {
+          "identifier": 7029,
+          "itemType": 0,
+          "englishName": "ken",
+          "foreignLetter": "կ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a tight, unaspirated 'k' — the 'k' in 'skate,' with no puff of air. So, 'կատու' is pronounced 'kah-TOO.'",
+              "short": "a tight 'k,' as in 'skate'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a hard 'g,' as in 'go.' So, 'կատու' is pronounced 'gah-DOO.'",
+              "short": "a hard 'g,' as in 'go'"
+            }
+          },
+          "foreignLetterName": "կեն",
+          "caseEquivalent": "Կ",
+          "exampleWord": "կատու, which means 'cat'"
+        },
+        {
+          "identifier": 7030,
+          "itemType": 0,
+          "englishName": "Ho",
+          "foreignLetter": "Հ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the English 'h' in 'hat.' So, 'Հաց' is pronounced 'hahts.'",
+              "short": "an 'h,' as in 'hat'"
+            },
+            "western": {
+              "full": "This is pronounced like the English 'h' in 'hat.' So, 'Հաց' is pronounced 'hahts.'",
+              "short": "an 'h,' as in 'hat'"
+            }
+          },
+          "foreignLetterName": "Հո",
+          "caseEquivalent": "հ",
+          "exampleWord": "Հաց, which means 'bread'",
+          "lowercaseEnglishName": "ho"
+        },
+        {
+          "identifier": 7031,
+          "itemType": 0,
+          "englishName": "ho",
+          "foreignLetter": "հ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the English 'h' in 'hat.' So, 'հաց' is pronounced 'hahts.'",
+              "short": "an 'h,' as in 'hat'"
+            },
+            "western": {
+              "full": "This is pronounced like the English 'h' in 'hat.' So, 'հաց' is pronounced 'hahts.'",
+              "short": "an 'h,' as in 'hat'"
+            }
+          },
+          "foreignLetterName": "հո",
+          "caseEquivalent": "Հ",
+          "exampleWord": "հաց, which means 'bread'"
+        },
+        {
+          "identifier": 7032,
+          "itemType": 0,
+          "englishName": "Dza",
+          "foreignLetter": "Ձ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a 'dz' sound, like the 'ds' in 'lads.' So, 'Ձի' is pronounced 'dzee.'",
+              "short": "'dz,' as in 'lads'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to 'ts,' as in 'cats.' So, 'Ձի' is pronounced 'tsee.'",
+              "short": "'ts,' as in 'cats'"
+            }
+          },
+          "foreignLetterName": "Ձա",
+          "caseEquivalent": "ձ",
+          "exampleWord": "Ձի, which means 'horse'",
+          "lowercaseEnglishName": "dza"
+        },
+        {
+          "identifier": 7033,
+          "itemType": 0,
+          "englishName": "dza",
+          "foreignLetter": "ձ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a 'dz' sound, like the 'ds' in 'lads.' So, 'ձի' is pronounced 'dzee.'",
+              "short": "'dz,' as in 'lads'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to 'ts,' as in 'cats.' So, 'ձի' is pronounced 'tsee.'",
+              "short": "'ts,' as in 'cats'"
+            }
+          },
+          "foreignLetterName": "ձա",
+          "caseEquivalent": "Ձ",
+          "exampleWord": "ձի, which means 'horse'"
+        },
+        {
+          "identifier": 7034,
+          "itemType": 0,
+          "englishName": "Ghat",
+          "foreignLetter": "Ղ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is a gargled 'gh' from the back of the throat — very close to a French 'r,' and the voiced twin of խ. You hear it in 'baghlava' — and in Armenian last names like 'Ghazarian.' So, 'Ղեկ' is pronounced 'ghek.'",
+              "short": "a gargled 'gh,' like a French 'r'"
+            },
+            "western": {
+              "full": "This is a gargled 'gh' from the back of the throat — very close to a French 'r,' and the voiced twin of խ. You hear it in 'baghlava' — and in Armenian last names like 'Ghazarian.' So, 'Ղեկ' is pronounced 'gheg.'",
+              "short": "a gargled 'gh,' like a French 'r'"
+            }
+          },
+          "foreignLetterName": "Ղատ",
+          "caseEquivalent": "ղ",
+          "exampleWord": "Ղեկ, which means 'steering wheel'",
+          "lowercaseEnglishName": "ghat"
+        },
+        {
+          "identifier": 7035,
+          "itemType": 0,
+          "englishName": "ghat",
+          "foreignLetter": "ղ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is a gargled 'gh' from the back of the throat — very close to a French 'r,' and the voiced twin of խ. You hear it in 'baghlava' — and in Armenian last names like 'Ghazarian.' So, 'ղեկ' is pronounced 'ghek.'",
+              "short": "a gargled 'gh,' like a French 'r'"
+            },
+            "western": {
+              "full": "This is a gargled 'gh' from the back of the throat — very close to a French 'r,' and the voiced twin of խ. You hear it in 'baghlava' — and in Armenian last names like 'Ghazarian.' So, 'ղեկ' is pronounced 'gheg.'",
+              "short": "a gargled 'gh,' like a French 'r'"
+            }
+          },
+          "foreignLetterName": "ղատ",
+          "caseEquivalent": "Ղ",
+          "exampleWord": "ղեկ, which means 'steering wheel'"
+        },
+        {
+          "identifier": 7036,
+          "itemType": 0,
+          "englishName": "Cheh",
+          "foreignLetter": "Ճ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a tight, unaspirated 'ch,' as in 'catch.' So, 'Ճաշ' is pronounced 'chahsh.'",
+              "short": "a tight 'ch,' as in 'catch'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a 'j,' as in 'jam.' So, 'Ճաշ' is pronounced 'jahsh.'",
+              "short": "a 'j,' as in 'jam'"
+            }
+          },
+          "foreignLetterName": "Ճե",
+          "caseEquivalent": "ճ",
+          "exampleWord": "Ճաշ, which means 'meal (or lunch)'",
+          "lowercaseEnglishName": "cheh"
+        },
+        {
+          "identifier": 7037,
+          "itemType": 0,
+          "englishName": "cheh",
+          "foreignLetter": "ճ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a tight, unaspirated 'ch,' as in 'catch.' So, 'ճաշ' is pronounced 'chahsh.'",
+              "short": "a tight 'ch,' as in 'catch'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a 'j,' as in 'jam.' So, 'ճաշ' is pronounced 'jahsh.'",
+              "short": "a 'j,' as in 'jam'"
+            }
+          },
+          "foreignLetterName": "ճե",
+          "caseEquivalent": "Ճ",
+          "exampleWord": "ճաշ, which means 'meal (or lunch)'"
+        },
+        {
+          "identifier": 7038,
+          "itemType": 0,
+          "englishName": "Men",
+          "foreignLetter": "Մ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the English 'm.' So, 'Մայր' is pronounced 'mahyr.'",
+              "short": "an 'm,' as in 'mom'"
+            },
+            "western": {
+              "full": "This is pronounced like the English 'm.' So, 'Մայր' is pronounced 'mahyr.'",
+              "short": "an 'm,' as in 'mom'"
+            }
+          },
+          "foreignLetterName": "Մեն",
+          "caseEquivalent": "մ",
+          "exampleWord": "Մայր, which means 'mother'",
+          "lowercaseEnglishName": "men"
+        },
+        {
+          "identifier": 7039,
+          "itemType": 0,
+          "englishName": "men",
+          "foreignLetter": "մ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the English 'm.' So, 'մայր' is pronounced 'mahyr.'",
+              "short": "an 'm,' as in 'mom'"
+            },
+            "western": {
+              "full": "This is pronounced like the English 'm.' So, 'մայր' is pronounced 'mahyr.'",
+              "short": "an 'm,' as in 'mom'"
+            }
+          },
+          "foreignLetterName": "մեն",
+          "caseEquivalent": "Մ",
+          "exampleWord": "մայր, which means 'mother'"
+        },
+        {
+          "identifier": 7040,
+          "itemType": 0,
+          "englishName": "Yi",
+          "foreignLetter": "Յ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is the 'y' glide of 'yes' or 'boy.' So, 'Յոթ' is pronounced 'yot.'",
+              "short": "a 'y' glide, as in 'yes'"
+            },
+            "western": {
+              "full": "This is the 'y' glide of 'yes' or 'boy.' So, 'Յոթ' is pronounced 'yot.'",
+              "short": "a 'y' glide, as in 'yes'"
+            }
+          },
+          "foreignLetterName": "Յի",
+          "caseEquivalent": "յ",
+          "exampleWord": "Յոթ, which means 'seven'",
+          "lowercaseEnglishName": "yi"
+        },
+        {
+          "identifier": 7041,
+          "itemType": 0,
+          "englishName": "yi",
+          "foreignLetter": "յ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is the 'y' glide of 'yes' or 'boy.' So, 'յոթ' is pronounced 'yot.'",
+              "short": "a 'y' glide, as in 'yes'"
+            },
+            "western": {
+              "full": "This is the 'y' glide of 'yes' or 'boy.' So, 'յոթ' is pronounced 'yot.'",
+              "short": "a 'y' glide, as in 'yes'"
+            }
+          },
+          "foreignLetterName": "յի",
+          "caseEquivalent": "Յ",
+          "exampleWord": "յոթ, which means 'seven'"
+        },
+        {
+          "identifier": 7042,
+          "itemType": 0,
+          "englishName": "Nu",
+          "foreignLetter": "Ն",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the English 'n.' So, 'Նուռ' is pronounced 'noor.'",
+              "short": "an 'n,' as in 'nose'"
+            },
+            "western": {
+              "full": "This is pronounced like the English 'n.' So, 'Նուռ' is pronounced 'noor.'",
+              "short": "an 'n,' as in 'nose'"
+            }
+          },
+          "foreignLetterName": "Նու",
+          "caseEquivalent": "ն",
+          "exampleWord": "Նուռ, which means 'pomegranate'",
+          "lowercaseEnglishName": "nu"
+        },
+        {
+          "identifier": 7043,
+          "itemType": 0,
+          "englishName": "nu",
+          "foreignLetter": "ն",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the English 'n.' So, 'նուռ' is pronounced 'noor.'",
+              "short": "an 'n,' as in 'nose'"
+            },
+            "western": {
+              "full": "This is pronounced like the English 'n.' So, 'նուռ' is pronounced 'noor.'",
+              "short": "an 'n,' as in 'nose'"
+            }
+          },
+          "foreignLetterName": "նու",
+          "caseEquivalent": "Ն",
+          "exampleWord": "նուռ, which means 'pomegranate'"
+        },
+        {
+          "identifier": 7044,
+          "itemType": 0,
+          "englishName": "Sha",
+          "foreignLetter": "Շ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is the 'sh' sound of 'shoe.' So, 'Շուն' is pronounced 'shoon.'",
+              "short": "'sh,' as in 'shoe'"
+            },
+            "western": {
+              "full": "This is the 'sh' sound of 'shoe.' So, 'Շուն' is pronounced 'shoon.'",
+              "short": "'sh,' as in 'shoe'"
+            }
+          },
+          "foreignLetterName": "Շա",
+          "caseEquivalent": "շ",
+          "exampleWord": "Շուն, which means 'dog'",
+          "lowercaseEnglishName": "sha"
+        },
+        {
+          "identifier": 7045,
+          "itemType": 0,
+          "englishName": "sha",
+          "foreignLetter": "շ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is the 'sh' sound of 'shoe.' So, 'շուն' is pronounced 'shoon.'",
+              "short": "'sh,' as in 'shoe'"
+            },
+            "western": {
+              "full": "This is the 'sh' sound of 'shoe.' So, 'շուն' is pronounced 'shoon.'",
+              "short": "'sh,' as in 'shoe'"
+            }
+          },
+          "foreignLetterName": "շա",
+          "caseEquivalent": "Շ",
+          "exampleWord": "շուն, which means 'dog'"
+        },
+        {
+          "identifier": 7046,
+          "itemType": 0,
+          "englishName": "Vo",
+          "foreignLetter": "Ո",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an 'o,' as in 'more.' At the very start of a word it becomes 'vo' — which is why Ոսկի ('gold') begins with a 'v' sound. So, 'Ոսկի' is pronounced 'vos-KEE.'",
+              "short": "an 'o' — 'vo' at the start of a word"
+            },
+            "western": {
+              "full": "This is an 'o,' as in 'more.' At the very start of a word it becomes 'vo' — which is why Ոսկի ('gold') begins with a 'v' sound. So, 'Ոսկի' is pronounced 'vos-KEE.'",
+              "short": "an 'o' — 'vo' at the start of a word"
+            }
+          },
+          "foreignLetterName": "Ո",
+          "caseEquivalent": "ո",
+          "exampleWord": "Ոսկի, which means 'gold'",
+          "lowercaseEnglishName": "vo"
+        },
+        {
+          "identifier": 7047,
+          "itemType": 0,
+          "englishName": "vo",
+          "foreignLetter": "ո",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an 'o,' as in 'more.' At the very start of a word it becomes 'vo' — which is why Ոսկի ('gold') begins with a 'v' sound. So, 'ոսկի' is pronounced 'vos-KEE.'",
+              "short": "an 'o' — 'vo' at the start of a word"
+            },
+            "western": {
+              "full": "This is an 'o,' as in 'more.' At the very start of a word it becomes 'vo' — which is why Ոսկի ('gold') begins with a 'v' sound. So, 'ոսկի' is pronounced 'vos-KEE.'",
+              "short": "an 'o' — 'vo' at the start of a word"
+            }
+          },
+          "foreignLetterName": "ո",
+          "caseEquivalent": "Ո",
+          "exampleWord": "ոսկի, which means 'gold'"
+        },
+        {
+          "identifier": 7048,
+          "itemType": 0,
+          "englishName": "Cha",
+          "foreignLetter": "Չ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an aspirated 'ch' — a 'ch' with a puff of air, as in 'church.' It sounds the same in Eastern and Western Armenian. So, 'Չորս' is pronounced 'chors.'",
+              "short": "an airy 'ch,' as in 'church'"
+            },
+            "western": {
+              "full": "This is an aspirated 'ch' — a 'ch' with a puff of air, as in 'church.' It sounds the same in Eastern and Western Armenian. So, 'Չորս' is pronounced 'chors.'",
+              "short": "an airy 'ch,' as in 'church'"
+            }
+          },
+          "foreignLetterName": "Չա",
+          "caseEquivalent": "չ",
+          "exampleWord": "Չորս, which means 'four'",
+          "lowercaseEnglishName": "cha"
+        },
+        {
+          "identifier": 7049,
+          "itemType": 0,
+          "englishName": "cha",
+          "foreignLetter": "չ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an aspirated 'ch' — a 'ch' with a puff of air, as in 'church.' It sounds the same in Eastern and Western Armenian. So, 'չորս' is pronounced 'chors.'",
+              "short": "an airy 'ch,' as in 'church'"
+            },
+            "western": {
+              "full": "This is an aspirated 'ch' — a 'ch' with a puff of air, as in 'church.' It sounds the same in Eastern and Western Armenian. So, 'չորս' is pronounced 'chors.'",
+              "short": "an airy 'ch,' as in 'church'"
+            }
+          },
+          "foreignLetterName": "չա",
+          "caseEquivalent": "Չ",
+          "exampleWord": "չորս, which means 'four'"
+        },
+        {
+          "identifier": 7050,
+          "itemType": 0,
+          "englishName": "Peh",
+          "foreignLetter": "Պ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a tight, unaspirated 'p' — the 'p' in 'spin,' with no puff of air. So, 'Պատ' is pronounced 'paht.'",
+              "short": "a tight 'p,' as in 'spin'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a 'b,' as in 'book.' So, 'Պատ' is pronounced 'baht.'",
+              "short": "a 'b,' as in 'book'"
+            }
+          },
+          "foreignLetterName": "Պե",
+          "caseEquivalent": "պ",
+          "exampleWord": "Պատ, which means 'wall'",
+          "lowercaseEnglishName": "peh"
+        },
+        {
+          "identifier": 7051,
+          "itemType": 0,
+          "englishName": "peh",
+          "foreignLetter": "պ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a tight, unaspirated 'p' — the 'p' in 'spin,' with no puff of air. So, 'պատ' is pronounced 'paht.'",
+              "short": "a tight 'p,' as in 'spin'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a 'b,' as in 'book.' So, 'պատ' is pronounced 'baht.'",
+              "short": "a 'b,' as in 'book'"
+            }
+          },
+          "foreignLetterName": "պե",
+          "caseEquivalent": "Պ",
+          "exampleWord": "պատ, which means 'wall'"
+        },
+        {
+          "identifier": 7052,
+          "itemType": 0,
+          "englishName": "Jheh",
+          "foreignLetter": "Ջ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a 'j' sound, as in 'jam' or 'juice.' So, 'Ջուր' is pronounced 'joor.'",
+              "short": "a 'j,' as in 'jam'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to 'ch,' as in 'church.' So, 'Ջուր' is pronounced 'choor.'",
+              "short": "'ch,' as in 'church'"
+            }
+          },
+          "foreignLetterName": "Ջե",
+          "caseEquivalent": "ջ",
+          "exampleWord": "Ջուր, which means 'water'",
+          "lowercaseEnglishName": "jheh"
+        },
+        {
+          "identifier": 7053,
+          "itemType": 0,
+          "englishName": "jheh",
+          "foreignLetter": "ջ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a 'j' sound, as in 'jam' or 'juice.' So, 'ջուր' is pronounced 'joor.'",
+              "short": "a 'j,' as in 'jam'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to 'ch,' as in 'church.' So, 'ջուր' is pronounced 'choor.'",
+              "short": "'ch,' as in 'church'"
+            }
+          },
+          "foreignLetterName": "ջե",
+          "caseEquivalent": "Ջ",
+          "exampleWord": "ջուր, which means 'water'"
+        },
+        {
+          "identifier": 7054,
+          "itemType": 0,
+          "englishName": "Ra",
+          "foreignLetter": "Ռ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is a strongly rolled, trilled 'r' — stronger than ր, like a Spanish 'rr.' So, 'Ռադիո' is pronounced 'RAH-dee-o.'",
+              "short": "a strong rolled 'r'"
+            },
+            "western": {
+              "full": "This is a strongly rolled, trilled 'r' — stronger than ր, like a Spanish 'rr.' So, 'Ռադիո' is pronounced 'RAH-dee-o.'",
+              "short": "a strong rolled 'r'"
+            }
+          },
+          "foreignLetterName": "Ռա",
+          "caseEquivalent": "ռ",
+          "exampleWord": "Ռադիո, which means 'radio'",
+          "lowercaseEnglishName": "ra"
+        },
+        {
+          "identifier": 7055,
+          "itemType": 0,
+          "englishName": "ra",
+          "foreignLetter": "ռ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is a strongly rolled, trilled 'r' — stronger than ր, like a Spanish 'rr.' So, 'ռադիո' is pronounced 'RAH-dee-o.'",
+              "short": "a strong rolled 'r'"
+            },
+            "western": {
+              "full": "This is a strongly rolled, trilled 'r' — stronger than ր, like a Spanish 'rr.' So, 'ռադիո' is pronounced 'RAH-dee-o.'",
+              "short": "a strong rolled 'r'"
+            }
+          },
+          "foreignLetterName": "ռա",
+          "caseEquivalent": "Ռ",
+          "exampleWord": "ռադիո, which means 'radio'"
+        },
+        {
+          "identifier": 7056,
+          "itemType": 0,
+          "englishName": "Seh",
+          "foreignLetter": "Ս",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the 's' in 'sun.' So, 'Սար' is pronounced 'sahr.'",
+              "short": "an 's,' as in 'sun'"
+            },
+            "western": {
+              "full": "This is pronounced like the 's' in 'sun.' So, 'Սար' is pronounced 'sahr.'",
+              "short": "an 's,' as in 'sun'"
+            }
+          },
+          "foreignLetterName": "Սե",
+          "caseEquivalent": "ս",
+          "exampleWord": "Սար, which means 'mountain'",
+          "lowercaseEnglishName": "seh"
+        },
+        {
+          "identifier": 7057,
+          "itemType": 0,
+          "englishName": "seh",
+          "foreignLetter": "ս",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the 's' in 'sun.' So, 'սար' is pronounced 'sahr.'",
+              "short": "an 's,' as in 'sun'"
+            },
+            "western": {
+              "full": "This is pronounced like the 's' in 'sun.' So, 'սար' is pronounced 'sahr.'",
+              "short": "an 's,' as in 'sun'"
+            }
+          },
+          "foreignLetterName": "սե",
+          "caseEquivalent": "Ս",
+          "exampleWord": "սար, which means 'mountain'"
+        },
+        {
+          "identifier": 7058,
+          "itemType": 0,
+          "englishName": "Vev",
+          "foreignLetter": "Վ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the 'v' in 'very.' So, 'Վարդ' is pronounced 'vahrd.'",
+              "short": "a 'v,' as in 'very'"
+            },
+            "western": {
+              "full": "This is pronounced like the 'v' in 'very.' So, 'Վարդ' is pronounced 'vahrt.'",
+              "short": "a 'v,' as in 'very'"
+            }
+          },
+          "foreignLetterName": "Վեվ",
+          "caseEquivalent": "վ",
+          "exampleWord": "Վարդ, which means 'rose'",
+          "lowercaseEnglishName": "vev"
+        },
+        {
+          "identifier": 7059,
+          "itemType": 0,
+          "englishName": "vev",
+          "foreignLetter": "վ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the 'v' in 'very.' So, 'վարդ' is pronounced 'vahrd.'",
+              "short": "a 'v,' as in 'very'"
+            },
+            "western": {
+              "full": "This is pronounced like the 'v' in 'very.' So, 'վարդ' is pronounced 'vahrt.'",
+              "short": "a 'v,' as in 'very'"
+            }
+          },
+          "foreignLetterName": "վեվ",
+          "caseEquivalent": "Վ",
+          "exampleWord": "վարդ, which means 'rose'"
+        },
+        {
+          "identifier": 7060,
+          "itemType": 0,
+          "englishName": "Tiun",
+          "foreignLetter": "Տ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a tight, unaspirated 't' — the 't' in 'stop,' with no puff of air. So, 'Տուն' is pronounced 'toon.'",
+              "short": "a tight 't,' as in 'stop'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a 'd,' as in 'dog.' So, 'Տուն' is pronounced 'doon.'",
+              "short": "a 'd,' as in 'dog'"
+            }
+          },
+          "foreignLetterName": "Տյուն",
+          "caseEquivalent": "տ",
+          "exampleWord": "Տուն, which means 'house'",
+          "lowercaseEnglishName": "tiun"
+        },
+        {
+          "identifier": 7061,
+          "itemType": 0,
+          "englishName": "tiun",
+          "foreignLetter": "տ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Eastern Armenian this is a tight, unaspirated 't' — the 't' in 'stop,' with no puff of air. So, 'տուն' is pronounced 'toon.'",
+              "short": "a tight 't,' as in 'stop'"
+            },
+            "western": {
+              "full": "In Western Armenian this letter flips to a 'd,' as in 'dog.' So, 'տուն' is pronounced 'doon.'",
+              "short": "a 'd,' as in 'dog'"
+            }
+          },
+          "foreignLetterName": "տյուն",
+          "caseEquivalent": "Տ",
+          "exampleWord": "տուն, which means 'house'"
+        },
+        {
+          "identifier": 7062,
+          "itemType": 0,
+          "englishName": "Reh",
+          "foreignLetter": "Ր",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is a soft, light 'r' — a quick tap, gentler than the rolled ռ. It is by far the more common of Armenian's two r's. So, 'Հայր' is pronounced 'hahyr.'",
+              "short": "a soft, light 'r'"
+            },
+            "western": {
+              "full": "This is a soft, light 'r' — a quick tap, gentler than the rolled ռ. It is by far the more common of Armenian's two r's. So, 'Հայր' is pronounced 'hahyr.'",
+              "short": "a soft, light 'r'"
+            }
+          },
+          "foreignLetterName": "Րե",
+          "caseEquivalent": "ր",
+          "exampleWord": "Հայր, which means 'father'",
+          "lowercaseEnglishName": "reh",
+          "explanation": "No Armenian word begins with this letter, so the example word contains it rather than starts with it."
+        },
+        {
+          "identifier": 7063,
+          "itemType": 0,
+          "englishName": "reh",
+          "foreignLetter": "ր",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is a soft, light 'r' — a quick tap, gentler than the rolled ռ. It is by far the more common of Armenian's two r's. So, 'հայր' is pronounced 'hahyr.'",
+              "short": "a soft, light 'r'"
+            },
+            "western": {
+              "full": "This is a soft, light 'r' — a quick tap, gentler than the rolled ռ. It is by far the more common of Armenian's two r's. So, 'հայր' is pronounced 'hahyr.'",
+              "short": "a soft, light 'r'"
+            }
+          },
+          "foreignLetterName": "րե",
+          "caseEquivalent": "Ր",
+          "exampleWord": "հայր, which means 'father'",
+          "explanation": "No Armenian word begins with this letter, so the example word contains it rather than starts with it."
+        },
+        {
+          "identifier": 7064,
+          "itemType": 0,
+          "englishName": "Tso",
+          "foreignLetter": "Ց",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an aspirated 'ts' — 'ts' with a puff of air. It sounds the same in Eastern and Western Armenian. So, 'Ցուրտ' is pronounced 'tsoort.'",
+              "short": "an airy 'ts,' as in 'cats' with a puff"
+            },
+            "western": {
+              "full": "This is an aspirated 'ts' — 'ts' with a puff of air. It sounds the same in Eastern and Western Armenian. So, 'Ցուրտ' is pronounced 'tsoord.'",
+              "short": "an airy 'ts,' as in 'cats' with a puff"
+            }
+          },
+          "foreignLetterName": "Ցո",
+          "caseEquivalent": "ց",
+          "exampleWord": "Ցուրտ, which means 'cold'",
+          "lowercaseEnglishName": "tso"
+        },
+        {
+          "identifier": 7065,
+          "itemType": 0,
+          "englishName": "tso",
+          "foreignLetter": "ց",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an aspirated 'ts' — 'ts' with a puff of air. It sounds the same in Eastern and Western Armenian. So, 'ցուրտ' is pronounced 'tsoort.'",
+              "short": "an airy 'ts,' as in 'cats' with a puff"
+            },
+            "western": {
+              "full": "This is an aspirated 'ts' — 'ts' with a puff of air. It sounds the same in Eastern and Western Armenian. So, 'ցուրտ' is pronounced 'tsoord.'",
+              "short": "an airy 'ts,' as in 'cats' with a puff"
+            }
+          },
+          "foreignLetterName": "ցո",
+          "caseEquivalent": "Ց",
+          "exampleWord": "ցուրտ, which means 'cold'"
+        },
+        {
+          "identifier": 7066,
+          "itemType": 0,
+          "englishName": "Hiun",
+          "foreignLetter": "Ւ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Classical Armenian this was a 'w' sound. Today it never stands alone: it lives on only inside the digraph ու ('oo') and the ligature և.",
+              "short": "silent partner — survives only in ու and և"
+            },
+            "western": {
+              "full": "In Classical Armenian this was a 'w' sound. Today it never stands alone: it lives on only inside the digraph ու ('oo') and the ligature և.",
+              "short": "silent partner — survives only in ու and և"
+            }
+          },
+          "foreignLetterName": "Հյուն",
+          "caseEquivalent": "ւ",
+          "lowercaseEnglishName": "hiun",
+          "explanation": "A historical letter kept for completeness — modern reformed spelling dropped its standalone use entirely."
+        },
+        {
+          "identifier": 7067,
+          "itemType": 0,
+          "englishName": "hiun",
+          "foreignLetter": "ւ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "In Classical Armenian this was a 'w' sound. Today it never stands alone: it lives on only inside the digraph ու ('oo') and the ligature և.",
+              "short": "silent partner — survives only in ու and և"
+            },
+            "western": {
+              "full": "In Classical Armenian this was a 'w' sound. Today it never stands alone: it lives on only inside the digraph ու ('oo') and the ligature և.",
+              "short": "silent partner — survives only in ու and և"
+            }
+          },
+          "foreignLetterName": "հյուն",
+          "caseEquivalent": "Ւ",
+          "explanation": "A historical letter kept for completeness — modern reformed spelling dropped its standalone use entirely."
+        },
+        {
+          "identifier": 7068,
+          "itemType": 0,
+          "englishName": "Piur",
+          "foreignLetter": "Փ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an aspirated 'p' — a 'p' with a puff of air, as in 'pie.' It sounds the same in Eastern and Western Armenian. So, 'Փող' is pronounced 'pogh.'",
+              "short": "an airy 'p,' as in 'pie'"
+            },
+            "western": {
+              "full": "This is an aspirated 'p' — a 'p' with a puff of air, as in 'pie.' It sounds the same in Eastern and Western Armenian. So, 'Փող' is pronounced 'pogh.'",
+              "short": "an airy 'p,' as in 'pie'"
+            }
+          },
+          "foreignLetterName": "Փյուր",
+          "caseEquivalent": "փ",
+          "exampleWord": "Փող, which means 'money'",
+          "lowercaseEnglishName": "piur"
+        },
+        {
+          "identifier": 7069,
+          "itemType": 0,
+          "englishName": "piur",
+          "foreignLetter": "փ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an aspirated 'p' — a 'p' with a puff of air, as in 'pie.' It sounds the same in Eastern and Western Armenian. So, 'փող' is pronounced 'pogh.'",
+              "short": "an airy 'p,' as in 'pie'"
+            },
+            "western": {
+              "full": "This is an aspirated 'p' — a 'p' with a puff of air, as in 'pie.' It sounds the same in Eastern and Western Armenian. So, 'փող' is pronounced 'pogh.'",
+              "short": "an airy 'p,' as in 'pie'"
+            }
+          },
+          "foreignLetterName": "փյուր",
+          "caseEquivalent": "Փ",
+          "exampleWord": "փող, which means 'money'"
+        },
+        {
+          "identifier": 7070,
+          "itemType": 0,
+          "englishName": "Keh",
+          "foreignLetter": "Ք",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an aspirated 'k' — a 'k' with a puff of air, as in 'kite.' It sounds the same in Eastern and Western Armenian. So, 'Քար' is pronounced 'kahr.'",
+              "short": "an airy 'k,' as in 'kite'"
+            },
+            "western": {
+              "full": "This is an aspirated 'k' — a 'k' with a puff of air, as in 'kite.' It sounds the same in Eastern and Western Armenian. So, 'Քար' is pronounced 'kahr.'",
+              "short": "an airy 'k,' as in 'kite'"
+            }
+          },
+          "foreignLetterName": "Քե",
+          "caseEquivalent": "ք",
+          "exampleWord": "Քար, which means 'stone'",
+          "lowercaseEnglishName": "keh"
+        },
+        {
+          "identifier": 7071,
+          "itemType": 0,
+          "englishName": "keh",
+          "foreignLetter": "ք",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is an aspirated 'k' — a 'k' with a puff of air, as in 'kite.' It sounds the same in Eastern and Western Armenian. So, 'քար' is pronounced 'kahr.'",
+              "short": "an airy 'k,' as in 'kite'"
+            },
+            "western": {
+              "full": "This is an aspirated 'k' — a 'k' with a puff of air, as in 'kite.' It sounds the same in Eastern and Western Armenian. So, 'քար' is pronounced 'kahr.'",
+              "short": "an airy 'k,' as in 'kite'"
+            }
+          },
+          "foreignLetterName": "քե",
+          "caseEquivalent": "Ք",
+          "exampleWord": "քար, which means 'stone'"
+        },
+        {
+          "identifier": 7072,
+          "itemType": 0,
+          "englishName": "O",
+          "foreignLetter": "Օ",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is a steady 'o,' as in 'more.' Where ո can shift to 'vo' at the start of a word, օ is always a plain 'o.' So, 'Օդ' is pronounced 'od.'",
+              "short": "an 'o,' as in 'more'"
+            },
+            "western": {
+              "full": "This is a steady 'o,' as in 'more.' Where ո can shift to 'vo' at the start of a word, օ is always a plain 'o.' So, 'Օդ' is pronounced 'ot.'",
+              "short": "an 'o,' as in 'more'"
+            }
+          },
+          "foreignLetterName": "Օ",
+          "caseEquivalent": "օ",
+          "exampleWord": "Օդ, which means 'air'",
+          "lowercaseEnglishName": "o"
+        },
+        {
+          "identifier": 7073,
+          "itemType": 0,
+          "englishName": "o",
+          "foreignLetter": "օ",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is a steady 'o,' as in 'more.' Where ո can shift to 'vo' at the start of a word, օ is always a plain 'o.' So, 'օդ' is pronounced 'od.'",
+              "short": "an 'o,' as in 'more'"
+            },
+            "western": {
+              "full": "This is a steady 'o,' as in 'more.' Where ո can shift to 'vo' at the start of a word, օ is always a plain 'o.' So, 'օդ' is pronounced 'ot.'",
+              "short": "an 'o,' as in 'more'"
+            }
+          },
+          "foreignLetterName": "օ",
+          "caseEquivalent": "Օ",
+          "exampleWord": "օդ, which means 'air'"
+        },
+        {
+          "identifier": 7074,
+          "itemType": 0,
+          "englishName": "Feh",
+          "foreignLetter": "Ֆ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the English 'f' — a late addition to the alphabet for borrowed words. So, 'Ֆուտբոլ' is pronounced 'foot-BOL.'",
+              "short": "an 'f,' as in 'fun'"
+            },
+            "western": {
+              "full": "This is pronounced like the English 'f' — a late addition to the alphabet for borrowed words. So, 'Ֆուտբոլ' is pronounced 'foot-BOL.'",
+              "short": "an 'f,' as in 'fun'"
+            }
+          },
+          "foreignLetterName": "Ֆե",
+          "caseEquivalent": "ֆ",
+          "exampleWord": "Ֆուտբոլ, which means 'soccer'",
+          "lowercaseEnglishName": "feh"
+        },
+        {
+          "identifier": 7075,
+          "itemType": 0,
+          "englishName": "feh",
+          "foreignLetter": "ֆ",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This is pronounced like the English 'f' — a late addition to the alphabet for borrowed words. So, 'ֆուտբոլ' is pronounced 'foot-BOL.'",
+              "short": "an 'f,' as in 'fun'"
+            },
+            "western": {
+              "full": "This is pronounced like the English 'f' — a late addition to the alphabet for borrowed words. So, 'ֆուտբոլ' is pronounced 'foot-BOL.'",
+              "short": "an 'f,' as in 'fun'"
+            }
+          },
+          "foreignLetterName": "ֆե",
+          "caseEquivalent": "Ֆ",
+          "exampleWord": "ֆուտբոլ, which means 'soccer'"
+        },
+        {
+          "identifier": 7100,
+          "itemType": 1,
+          "englishName": "U",
+          "foreignLetter": "ու",
+          "exampleWord": "Ուրախ, which means 'happy'",
+          "isVowel": true,
+          "pronunciations": {
+            "eastern": {
+              "full": "This combination is an 'oo' sound, as in 'moon.' So, 'Ուրախ' is pronounced 'oo-RAKH.'",
+              "short": "an 'oo,' as in 'moon'"
+            },
+            "western": {
+              "full": "This combination is an 'oo' sound, as in 'moon.' So, 'Ուրախ' is pronounced 'oo-RAKH.'",
+              "short": "an 'oo,' as in 'moon'"
+            }
+          },
+          "explanation": "This is a combination of ո and ւ — exactly parallel to the Greek ου. It is how Armenian writes its 'oo' vowel, and many treat it as the alphabet's honorary extra letter."
+        },
+        {
+          "identifier": 7102,
+          "itemType": 2,
+          "englishName": "Yev",
+          "foreignLetter": "և",
+          "exampleWord": "արև, which means 'sun'",
+          "isVowel": false,
+          "pronunciations": {
+            "eastern": {
+              "full": "This ligature reads 'yev' at the start of a word and 'ev' elsewhere. On its own it spells the word 'and.' So, 'արև' is pronounced 'ah-REV.'",
+              "short": "'yev' (or 'ev' inside a word)"
+            },
+            "western": {
+              "full": "This ligature reads 'yev' at the start of a word and 'ev' elsewhere. On its own it spells the word 'and.' So, 'արև' is pronounced 'ah-REV.'",
+              "short": "'yev' (or 'ev' inside a word)"
+            }
+          },
+          "explanation": "A ligature of ե and ւ. When capitalized it is written as two letters, ԵՎ."
+        }
+      ]
+    }
+  ]
+}

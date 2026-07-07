@@ -1,0 +1,1016 @@
+{
+  "version": 2,
+  "alphabets": [
+    {
+      "language": 4,
+      "alphabetItems": [
+        {
+          "identifier": 4000,
+          "itemType": 0,
+          "englishName": "A",
+          "foreignLetter": "А",
+          "exampleWord": "Ауто, which means 'car'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an open 'ah' sound, like the 'a' in 'father.' So, 'Ауто' is pronounced 'AH-oo-to.'",
+              "short": "an 'ah,' as in 'father'"
+            }
+          },
+          "foreignLetterName": "А",
+          "caseEquivalent": "а",
+          "lowercaseEnglishName": "a"
+        },
+        {
+          "identifier": 4002,
+          "itemType": 0,
+          "englishName": "Be",
+          "foreignLetter": "Б",
+          "exampleWord": "Брат, which means 'brother'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'b' in 'book.' So, 'Брат' is pronounced 'braht.'",
+              "short": "a 'b,' as in 'book'"
+            }
+          },
+          "foreignLetterName": "Бе",
+          "caseEquivalent": "б",
+          "lowercaseEnglishName": "be"
+        },
+        {
+          "identifier": 4004,
+          "itemType": 0,
+          "englishName": "Ve",
+          "foreignLetter": "В",
+          "exampleWord": "Вода, which means 'water'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "It looks like an English 'B,' but it is pronounced like the 'v' in 'very.' So, 'Вода' is pronounced 'VO-da.'",
+              "short": "a 'v,' as in 'very'"
+            }
+          },
+          "foreignLetterName": "Ве",
+          "caseEquivalent": "в",
+          "lowercaseEnglishName": "ve"
+        },
+        {
+          "identifier": 4006,
+          "itemType": 0,
+          "englishName": "Ge",
+          "foreignLetter": "Г",
+          "exampleWord": "Град, which means 'city'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a hard 'g,' as in 'go' or 'garden' — never the soft 'g' of 'gem.' So, 'Град' is pronounced 'grahd.'",
+              "short": "a hard 'g,' as in 'go'"
+            }
+          },
+          "foreignLetterName": "Ге",
+          "caseEquivalent": "г",
+          "lowercaseEnglishName": "ge"
+        },
+        {
+          "identifier": 4008,
+          "itemType": 0,
+          "englishName": "De",
+          "foreignLetter": "Д",
+          "exampleWord": "Дан, which means 'day'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'd' in 'dog.' So, 'Дан' is pronounced 'dahn.'",
+              "short": "a 'd,' as in 'dog'"
+            }
+          },
+          "foreignLetterName": "Де",
+          "caseEquivalent": "д",
+          "lowercaseEnglishName": "de"
+        },
+        {
+          "identifier": 4010,
+          "itemType": 0,
+          "englishName": "Dje",
+          "foreignLetter": "Ђ",
+          "exampleWord": "Ђак, which means 'pupil'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a soft 'dj' sound — like the 'j' in 'juice' pronounced gently, with the tongue near the front teeth. In Latin script it is đ. So, 'Ђак' is pronounced 'djahk.'",
+              "short": "a soft 'j,' as in 'juice' said gently"
+            }
+          },
+          "foreignLetterName": "Ђе",
+          "caseEquivalent": "ђ",
+          "lowercaseEnglishName": "dje",
+          "explanation": "One of Vuk Karadžić's six additions that make Serbian Cyrillic perfectly phonetic."
+        },
+        {
+          "identifier": 4012,
+          "itemType": 0,
+          "englishName": "E",
+          "foreignLetter": "Е",
+          "exampleWord": "Ексер, which means 'nail (hardware)'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a plain 'e,' as in 'end' or 'echo,' with no 'y' sound in front. So, 'Ексер' is pronounced 'EK-ser.'",
+              "short": "an 'e,' as in 'end'"
+            }
+          },
+          "foreignLetterName": "Е",
+          "caseEquivalent": "е",
+          "lowercaseEnglishName": "e"
+        },
+        {
+          "identifier": 4014,
+          "itemType": 0,
+          "englishName": "Zhe",
+          "foreignLetter": "Ж",
+          "exampleWord": "Жаба, which means 'frog'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is the 'zh' sound — like the 's' in 'measure' or 'pleasure.' So, 'Жаба' is pronounced 'ZHA-ba.'",
+              "short": "'zh,' like the 's' in 'measure'"
+            }
+          },
+          "foreignLetterName": "Же",
+          "caseEquivalent": "ж",
+          "lowercaseEnglishName": "zhe",
+          "explanation": "Serbian does not devoice final consonants — 'нож' keeps its 'zh.'"
+        },
+        {
+          "identifier": 4016,
+          "itemType": 0,
+          "englishName": "Ze",
+          "foreignLetter": "З",
+          "exampleWord": "Зима, which means 'winter'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the 'z' in 'zoo.' Watch out: the letter looks like the digit 3. So, 'Зима' is pronounced 'ZI-ma.'",
+              "short": "a 'z,' as in 'zoo'"
+            }
+          },
+          "foreignLetterName": "Зе",
+          "caseEquivalent": "з",
+          "lowercaseEnglishName": "ze"
+        },
+        {
+          "identifier": 4018,
+          "itemType": 0,
+          "englishName": "I",
+          "foreignLetter": "И",
+          "exampleWord": "Игра, which means 'game'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'ee' sound, like the 'ee' in 'see' or the 'i' in 'machine.' So, 'Игра' is pronounced 'EE-gra.'",
+              "short": "an 'ee,' as in 'see'"
+            }
+          },
+          "foreignLetterName": "И",
+          "caseEquivalent": "и",
+          "lowercaseEnglishName": "i"
+        },
+        {
+          "identifier": 4020,
+          "itemType": 0,
+          "englishName": "Je",
+          "foreignLetter": "Ј",
+          "exampleWord": "Јабука, which means 'apple'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is the 'y' sound of 'yes' — Serbian borrowed the letter's shape straight from the Latin alphabet. So, 'Јабука' is pronounced 'YA-boo-ka.'",
+              "short": "a 'y,' as in 'yes'"
+            }
+          },
+          "foreignLetterName": "Је",
+          "caseEquivalent": "ј",
+          "lowercaseEnglishName": "je",
+          "explanation": "Yes, that's a Latin 'j' living inside a Cyrillic alphabet — another of Vuk's reforms."
+        },
+        {
+          "identifier": 4022,
+          "itemType": 0,
+          "englishName": "Ka",
+          "foreignLetter": "К",
+          "exampleWord": "Кућа, which means 'house'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the English 'k' in 'kite,' but without the little puff of air. So, 'Кућа' is pronounced 'KOO-tja.'",
+              "short": "a 'k,' as in 'kite'"
+            }
+          },
+          "foreignLetterName": "Ка",
+          "caseEquivalent": "к",
+          "lowercaseEnglishName": "ka"
+        },
+        {
+          "identifier": 4024,
+          "itemType": 0,
+          "englishName": "El",
+          "foreignLetter": "Л",
+          "exampleWord": "Лампа, which means 'lamp'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is like the English 'l,' though usually a bit darker and harder. So, 'Лампа' is pronounced 'LAM-pa.'",
+              "short": "an 'l,' as in 'lamp'"
+            }
+          },
+          "foreignLetterName": "Ел",
+          "caseEquivalent": "л",
+          "lowercaseEnglishName": "el"
+        },
+        {
+          "identifier": 4026,
+          "itemType": 0,
+          "englishName": "Lje",
+          "foreignLetter": "Љ",
+          "exampleWord": "Љубав, which means 'love'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a soft 'l' — the 'lli' sound in 'million' or Italian 'gli,' said as one letter. So, 'Љубав' is pronounced 'LYOO-bav.'",
+              "short": "'ly,' like the 'lli' in 'million'"
+            }
+          },
+          "foreignLetterName": "Ље",
+          "caseEquivalent": "љ",
+          "lowercaseEnglishName": "lje",
+          "explanation": "A ligature of л + ь — the soft sign is baked right into the letter."
+        },
+        {
+          "identifier": 4028,
+          "itemType": 0,
+          "englishName": "Em",
+          "foreignLetter": "М",
+          "exampleWord": "Мачка, which means 'cat'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'm.' So, 'Мачка' is pronounced 'MACH-ka.'",
+              "short": "an 'm,' as in 'mom'"
+            }
+          },
+          "foreignLetterName": "Ем",
+          "caseEquivalent": "м",
+          "lowercaseEnglishName": "em"
+        },
+        {
+          "identifier": 4030,
+          "itemType": 0,
+          "englishName": "En",
+          "foreignLetter": "Н",
+          "exampleWord": "Нос, which means 'nose'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "It looks like an English 'H,' but it sounds like an 'n.' So, 'Нос' is pronounced 'nohs.'",
+              "short": "an 'n,' as in 'nose'"
+            }
+          },
+          "foreignLetterName": "Ен",
+          "caseEquivalent": "н",
+          "lowercaseEnglishName": "en"
+        },
+        {
+          "identifier": 4032,
+          "itemType": 0,
+          "englishName": "Nje",
+          "foreignLetter": "Њ",
+          "exampleWord": "Њива, which means 'field (farmland)'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a soft 'n' — the 'ny' sound in 'canyon' or Spanish ñ, said as one letter. So, 'Њива' is pronounced 'NYEE-va.'",
+              "short": "'ny,' like the 'ny' in 'canyon'"
+            }
+          },
+          "foreignLetterName": "Ње",
+          "caseEquivalent": "њ",
+          "lowercaseEnglishName": "nje",
+          "explanation": "A ligature of н + ь, parallel to љ."
+        },
+        {
+          "identifier": 4034,
+          "itemType": 0,
+          "englishName": "O",
+          "foreignLetter": "О",
+          "exampleWord": "Око, which means 'eye'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'o' sound, as in 'more.' So, 'Око' is pronounced 'O-ko.'",
+              "short": "an 'o,' as in 'more'"
+            }
+          },
+          "foreignLetterName": "О",
+          "caseEquivalent": "о",
+          "lowercaseEnglishName": "o"
+        },
+        {
+          "identifier": 4036,
+          "itemType": 0,
+          "englishName": "Pe",
+          "foreignLetter": "П",
+          "exampleWord": "Пас, which means 'dog'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'p' in 'park.' So, 'Пас' is pronounced 'pahs.'",
+              "short": "a 'p,' as in 'park'"
+            }
+          },
+          "foreignLetterName": "Пе",
+          "caseEquivalent": "п",
+          "lowercaseEnglishName": "pe"
+        },
+        {
+          "identifier": 4038,
+          "itemType": 0,
+          "englishName": "Er",
+          "foreignLetter": "Р",
+          "exampleWord": "Река, which means 'river'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a rolled, trilled 'r,' like in Spanish or Italian. It looks like an English 'P,' but never sounds like one. So, 'Река' is pronounced 'RE-ka.'",
+              "short": "a rolled 'r,' as in Spanish or Italian"
+            }
+          },
+          "foreignLetterName": "Ер",
+          "caseEquivalent": "р",
+          "lowercaseEnglishName": "er",
+          "explanation": "Serbian р can even act as a vowel — 'срп' (sickle) and the name 'Србија' have no other vowel in the first syllable."
+        },
+        {
+          "identifier": 4040,
+          "itemType": 0,
+          "englishName": "Es",
+          "foreignLetter": "С",
+          "exampleWord": "Сунце, which means 'sun'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "It looks like an English 'C,' but it always sounds like the 's' in 'sun' — never like a 'k.' So, 'Сунце' is pronounced 'SOON-tse.'",
+              "short": "an 's,' as in 'sun'"
+            }
+          },
+          "foreignLetterName": "Ес",
+          "caseEquivalent": "с",
+          "lowercaseEnglishName": "es"
+        },
+        {
+          "identifier": 4042,
+          "itemType": 0,
+          "englishName": "Te",
+          "foreignLetter": "Т",
+          "exampleWord": "Тата, which means 'dad'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 't' in 'top,' but without the puff of air. So, 'Тата' is pronounced 'TA-ta.'",
+              "short": "a 't,' as in 'top'"
+            }
+          },
+          "foreignLetterName": "Те",
+          "caseEquivalent": "т",
+          "lowercaseEnglishName": "te"
+        },
+        {
+          "identifier": 4044,
+          "itemType": 0,
+          "englishName": "Tshe",
+          "foreignLetter": "Ћ",
+          "exampleWord": "Ћевапи, which means 'ćevapi, the famous grilled dish'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a soft 'ch' — lighter than ч, close to the 't' in 'future' or 'tune.' In Latin script it is ć. So, 'Ћевапи' is pronounced 'tje-VA-pee.'",
+              "short": "a soft 'ch,' near 'tu' in 'future'"
+            }
+          },
+          "foreignLetterName": "Ће",
+          "caseEquivalent": "ћ",
+          "lowercaseEnglishName": "tshe",
+          "explanation": "Compare ч (hard) and ћ (soft): Serbian keeps both, and natives hear the difference instantly."
+        },
+        {
+          "identifier": 4046,
+          "itemType": 0,
+          "englishName": "U",
+          "foreignLetter": "У",
+          "exampleWord": "Улица, which means 'street'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'oo' sound, as in 'moon' or 'school' — never the 'u' of 'cup.' So, 'Улица' is pronounced 'OO-lee-tsa.'",
+              "short": "an 'oo,' as in 'moon'"
+            }
+          },
+          "foreignLetterName": "У",
+          "caseEquivalent": "у",
+          "lowercaseEnglishName": "u"
+        },
+        {
+          "identifier": 4048,
+          "itemType": 0,
+          "englishName": "Ef",
+          "foreignLetter": "Ф",
+          "exampleWord": "Фудбал, which means 'soccer'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'f' in 'fun.' So, 'Фудбал' is pronounced 'FOOD-bal.'",
+              "short": "an 'f,' as in 'fun'"
+            }
+          },
+          "foreignLetterName": "Еф",
+          "caseEquivalent": "ф",
+          "lowercaseEnglishName": "ef"
+        },
+        {
+          "identifier": 4050,
+          "itemType": 0,
+          "englishName": "Ha",
+          "foreignLetter": "Х",
+          "exampleWord": "Хлеб, which means 'bread'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is close to an ordinary English 'h,' just slightly rougher. So, 'Хлеб' is pronounced 'hleb.'",
+              "short": "an 'h,' as in 'hat'"
+            }
+          },
+          "foreignLetterName": "Ха",
+          "caseEquivalent": "х",
+          "lowercaseEnglishName": "ha"
+        },
+        {
+          "identifier": 4052,
+          "itemType": 0,
+          "englishName": "Tse",
+          "foreignLetter": "Ц",
+          "exampleWord": "Цвет, which means 'flower'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the 'ts' in 'cats,' and unlike English it can begin a word. So, 'Цвет' is pronounced 'tsvet.'",
+              "short": "'ts,' as in 'cats'"
+            }
+          },
+          "foreignLetterName": "Це",
+          "caseEquivalent": "ц",
+          "lowercaseEnglishName": "tse"
+        },
+        {
+          "identifier": 4054,
+          "itemType": 0,
+          "englishName": "Che",
+          "foreignLetter": "Ч",
+          "exampleWord": "Час, which means 'lesson (or hour)'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the 'ch' in 'church.' So, 'Час' is pronounced 'chahs.'",
+              "short": "'ch,' as in 'church'"
+            }
+          },
+          "foreignLetterName": "Че",
+          "caseEquivalent": "ч",
+          "lowercaseEnglishName": "che"
+        },
+        {
+          "identifier": 4056,
+          "itemType": 0,
+          "englishName": "Dzhe",
+          "foreignLetter": "Џ",
+          "exampleWord": "Џеп, which means 'pocket'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is the hard 'j' of 'judge' or 'jam,' written as a single letter. So, 'Џеп' is pronounced 'jep.'",
+              "short": "a hard 'j,' as in 'judge'"
+            }
+          },
+          "foreignLetterName": "Џе",
+          "caseEquivalent": "џ",
+          "lowercaseEnglishName": "dzhe",
+          "explanation": "The hard partner of ђ. In Latin script it is dž."
+        },
+        {
+          "identifier": 4058,
+          "itemType": 0,
+          "englishName": "Sha",
+          "foreignLetter": "Ш",
+          "exampleWord": "Школа, which means 'school'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a hard 'sh,' as in 'shoe,' said with the tongue pulled a little further back than in English. So, 'Школа' is pronounced 'SHKO-la.'",
+              "short": "a hard 'sh,' as in 'shoe'"
+            }
+          },
+          "foreignLetterName": "Ша",
+          "caseEquivalent": "ш",
+          "lowercaseEnglishName": "sha"
+        },
+        {
+          "identifier": 4001,
+          "itemType": 0,
+          "englishName": "a",
+          "foreignLetter": "а",
+          "exampleWord": "мама, which means 'mom'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an open 'ah' sound, like the 'a' in 'father.' So, 'мама' is pronounced 'MA-ma.'",
+              "short": "an 'ah,' as in 'father'"
+            }
+          },
+          "foreignLetterName": "а",
+          "caseEquivalent": "А"
+        },
+        {
+          "identifier": 4003,
+          "itemType": 0,
+          "englishName": "be",
+          "foreignLetter": "б",
+          "exampleWord": "риба, which means 'fish'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'b' in 'book.' So, 'риба' is pronounced 'RI-ba.'",
+              "short": "a 'b,' as in 'book'"
+            }
+          },
+          "foreignLetterName": "бе",
+          "caseEquivalent": "Б"
+        },
+        {
+          "identifier": 4005,
+          "itemType": 0,
+          "englishName": "ve",
+          "foreignLetter": "в",
+          "exampleWord": "крава, which means 'cow'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "It looks like an English 'B,' but it is pronounced like the 'v' in 'very.' So, 'крава' is pronounced 'KRA-va.'",
+              "short": "a 'v,' as in 'very'"
+            }
+          },
+          "foreignLetterName": "ве",
+          "caseEquivalent": "В"
+        },
+        {
+          "identifier": 4007,
+          "itemType": 0,
+          "englishName": "ge",
+          "foreignLetter": "г",
+          "exampleWord": "нога, which means 'leg'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a hard 'g,' as in 'go' or 'garden' — never the soft 'g' of 'gem.' So, 'нога' is pronounced 'NO-ga.'",
+              "short": "a hard 'g,' as in 'go'"
+            }
+          },
+          "foreignLetterName": "ге",
+          "caseEquivalent": "Г"
+        },
+        {
+          "identifier": 4009,
+          "itemType": 0,
+          "englishName": "de",
+          "foreignLetter": "д",
+          "exampleWord": "деда, which means 'grandfather'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'd' in 'dog.' So, 'деда' is pronounced 'DE-da.'",
+              "short": "a 'd,' as in 'dog'"
+            }
+          },
+          "foreignLetterName": "де",
+          "caseEquivalent": "Д"
+        },
+        {
+          "identifier": 4011,
+          "itemType": 0,
+          "englishName": "dje",
+          "foreignLetter": "ђ",
+          "exampleWord": "леђа, which means 'back (of the body)'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a soft 'dj' sound — like the 'j' in 'juice' pronounced gently, with the tongue near the front teeth. In Latin script it is đ. So, 'леђа' is pronounced 'LE-dja.'",
+              "short": "a soft 'j,' as in 'juice' said gently"
+            }
+          },
+          "foreignLetterName": "ђе",
+          "caseEquivalent": "Ђ",
+          "explanation": "One of Vuk Karadžić's six additions that make Serbian Cyrillic perfectly phonetic."
+        },
+        {
+          "identifier": 4013,
+          "itemType": 0,
+          "englishName": "e",
+          "foreignLetter": "е",
+          "exampleWord": "небо, which means 'sky'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a plain 'e,' as in 'end' or 'echo,' with no 'y' sound in front. So, 'небо' is pronounced 'NE-bo.'",
+              "short": "an 'e,' as in 'end'"
+            }
+          },
+          "foreignLetterName": "е",
+          "caseEquivalent": "Е"
+        },
+        {
+          "identifier": 4015,
+          "itemType": 0,
+          "englishName": "zhe",
+          "foreignLetter": "ж",
+          "exampleWord": "нож, which means 'knife'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is the 'zh' sound — like the 's' in 'measure' or 'pleasure.' So, 'нож' is pronounced 'nozh.'",
+              "short": "'zh,' like the 's' in 'measure'"
+            }
+          },
+          "foreignLetterName": "же",
+          "caseEquivalent": "Ж",
+          "explanation": "Serbian does not devoice final consonants — 'нож' keeps its 'zh.'"
+        },
+        {
+          "identifier": 4017,
+          "itemType": 0,
+          "englishName": "ze",
+          "foreignLetter": "з",
+          "exampleWord": "коза, which means 'goat'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the 'z' in 'zoo.' Watch out: the letter looks like the digit 3. So, 'коза' is pronounced 'KO-za.'",
+              "short": "a 'z,' as in 'zoo'"
+            }
+          },
+          "foreignLetterName": "зе",
+          "caseEquivalent": "З"
+        },
+        {
+          "identifier": 4019,
+          "itemType": 0,
+          "englishName": "i",
+          "foreignLetter": "и",
+          "exampleWord": "киша, which means 'rain'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'ee' sound, like the 'ee' in 'see' or the 'i' in 'machine.' So, 'киша' is pronounced 'KEE-sha.'",
+              "short": "an 'ee,' as in 'see'"
+            }
+          },
+          "foreignLetterName": "и",
+          "caseEquivalent": "И"
+        },
+        {
+          "identifier": 4021,
+          "itemType": 0,
+          "englishName": "je",
+          "foreignLetter": "ј",
+          "exampleWord": "чај, which means 'tea'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is the 'y' sound of 'yes' — Serbian borrowed the letter's shape straight from the Latin alphabet. So, 'чај' is pronounced 'chai (rhymes with 'tie').'",
+              "short": "a 'y,' as in 'yes'"
+            }
+          },
+          "foreignLetterName": "је",
+          "caseEquivalent": "Ј",
+          "explanation": "Yes, that's a Latin 'j' living inside a Cyrillic alphabet — another of Vuk's reforms."
+        },
+        {
+          "identifier": 4023,
+          "itemType": 0,
+          "englishName": "ka",
+          "foreignLetter": "к",
+          "exampleWord": "рука, which means 'hand (or arm)'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the English 'k' in 'kite,' but without the little puff of air. So, 'рука' is pronounced 'ROO-ka.'",
+              "short": "a 'k,' as in 'kite'"
+            }
+          },
+          "foreignLetterName": "ка",
+          "caseEquivalent": "К"
+        },
+        {
+          "identifier": 4025,
+          "itemType": 0,
+          "englishName": "el",
+          "foreignLetter": "л",
+          "exampleWord": "село, which means 'village'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is like the English 'l,' though usually a bit darker and harder. So, 'село' is pronounced 'SE-lo.'",
+              "short": "an 'l,' as in 'lamp'"
+            }
+          },
+          "foreignLetterName": "ел",
+          "caseEquivalent": "Л"
+        },
+        {
+          "identifier": 4027,
+          "itemType": 0,
+          "englishName": "lje",
+          "foreignLetter": "љ",
+          "exampleWord": "недеља, which means 'week (or Sunday)'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a soft 'l' — the 'lli' sound in 'million' or Italian 'gli,' said as one letter. So, 'недеља' is pronounced 'NE-de-lya.'",
+              "short": "'ly,' like the 'lli' in 'million'"
+            }
+          },
+          "foreignLetterName": "ље",
+          "caseEquivalent": "Љ",
+          "explanation": "A ligature of л + ь — the soft sign is baked right into the letter."
+        },
+        {
+          "identifier": 4029,
+          "itemType": 0,
+          "englishName": "em",
+          "foreignLetter": "м",
+          "exampleWord": "море, which means 'sea'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'm.' So, 'море' is pronounced 'MO-re.'",
+              "short": "an 'm,' as in 'mom'"
+            }
+          },
+          "foreignLetterName": "ем",
+          "caseEquivalent": "М"
+        },
+        {
+          "identifier": 4031,
+          "itemType": 0,
+          "englishName": "en",
+          "foreignLetter": "н",
+          "exampleWord": "вино, which means 'wine'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "It looks like an English 'H,' but it sounds like an 'n.' So, 'вино' is pronounced 'VEE-no.'",
+              "short": "an 'n,' as in 'nose'"
+            }
+          },
+          "foreignLetterName": "ен",
+          "caseEquivalent": "Н"
+        },
+        {
+          "identifier": 4033,
+          "itemType": 0,
+          "englishName": "nje",
+          "foreignLetter": "њ",
+          "exampleWord": "коњ, which means 'horse'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a soft 'n' — the 'ny' sound in 'canyon' or Spanish ñ, said as one letter. So, 'коњ' is pronounced 'kohny.'",
+              "short": "'ny,' like the 'ny' in 'canyon'"
+            }
+          },
+          "foreignLetterName": "ње",
+          "caseEquivalent": "Њ",
+          "explanation": "A ligature of н + ь, parallel to љ."
+        },
+        {
+          "identifier": 4035,
+          "itemType": 0,
+          "englishName": "o",
+          "foreignLetter": "о",
+          "exampleWord": "млеко, which means 'milk'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'o' sound, as in 'more.' So, 'млеко' is pronounced 'MLE-ko.'",
+              "short": "an 'o,' as in 'more'"
+            }
+          },
+          "foreignLetterName": "о",
+          "caseEquivalent": "О"
+        },
+        {
+          "identifier": 4037,
+          "itemType": 0,
+          "englishName": "pe",
+          "foreignLetter": "п",
+          "exampleWord": "супа, which means 'soup'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'p' in 'park.' So, 'супа' is pronounced 'SOO-pa.'",
+              "short": "a 'p,' as in 'park'"
+            }
+          },
+          "foreignLetterName": "пе",
+          "caseEquivalent": "П"
+        },
+        {
+          "identifier": 4039,
+          "itemType": 0,
+          "englishName": "er",
+          "foreignLetter": "р",
+          "exampleWord": "сир, which means 'cheese'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a rolled, trilled 'r,' like in Spanish or Italian. It looks like an English 'P,' but never sounds like one. So, 'сир' is pronounced 'seer.'",
+              "short": "a rolled 'r,' as in Spanish or Italian"
+            }
+          },
+          "foreignLetterName": "ер",
+          "caseEquivalent": "Р",
+          "explanation": "Serbian р can even act as a vowel — 'срп' (sickle) and the name 'Србија' have no other vowel in the first syllable."
+        },
+        {
+          "identifier": 4041,
+          "itemType": 0,
+          "englishName": "es",
+          "foreignLetter": "с",
+          "exampleWord": "месо, which means 'meat'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "It looks like an English 'C,' but it always sounds like the 's' in 'sun' — never like a 'k.' So, 'месо' is pronounced 'ME-so.'",
+              "short": "an 's,' as in 'sun'"
+            }
+          },
+          "foreignLetterName": "ес",
+          "caseEquivalent": "С"
+        },
+        {
+          "identifier": 4043,
+          "itemType": 0,
+          "englishName": "te",
+          "foreignLetter": "т",
+          "exampleWord": "пут, which means 'road'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 't' in 'top,' but without the puff of air. So, 'пут' is pronounced 'poot.'",
+              "short": "a 't,' as in 'top'"
+            }
+          },
+          "foreignLetterName": "те",
+          "caseEquivalent": "Т"
+        },
+        {
+          "identifier": 4045,
+          "itemType": 0,
+          "englishName": "tshe",
+          "foreignLetter": "ћ",
+          "exampleWord": "ноћ, which means 'night'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a soft 'ch' — lighter than ч, close to the 't' in 'future' or 'tune.' In Latin script it is ć. So, 'ноћ' is pronounced 'nohtj.'",
+              "short": "a soft 'ch,' near 'tu' in 'future'"
+            }
+          },
+          "foreignLetterName": "ће",
+          "caseEquivalent": "Ћ",
+          "explanation": "Compare ч (hard) and ћ (soft): Serbian keeps both, and natives hear the difference instantly."
+        },
+        {
+          "identifier": 4047,
+          "itemType": 0,
+          "englishName": "u",
+          "foreignLetter": "у",
+          "exampleWord": "јутро, which means 'morning'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'oo' sound, as in 'moon' or 'school' — never the 'u' of 'cup.' So, 'јутро' is pronounced 'YOO-tro.'",
+              "short": "an 'oo,' as in 'moon'"
+            }
+          },
+          "foreignLetterName": "у",
+          "caseEquivalent": "У"
+        },
+        {
+          "identifier": 4049,
+          "itemType": 0,
+          "englishName": "ef",
+          "foreignLetter": "ф",
+          "exampleWord": "кафа, which means 'coffee'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'f' in 'fun.' So, 'кафа' is pronounced 'KA-fa.'",
+              "short": "an 'f,' as in 'fun'"
+            }
+          },
+          "foreignLetterName": "еф",
+          "caseEquivalent": "Ф"
+        },
+        {
+          "identifier": 4051,
+          "itemType": 0,
+          "englishName": "ha",
+          "foreignLetter": "х",
+          "exampleWord": "орах, which means 'walnut'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is close to an ordinary English 'h,' just slightly rougher. So, 'орах' is pronounced 'O-rah.'",
+              "short": "an 'h,' as in 'hat'"
+            }
+          },
+          "foreignLetterName": "ха",
+          "caseEquivalent": "Х"
+        },
+        {
+          "identifier": 4053,
+          "itemType": 0,
+          "englishName": "tse",
+          "foreignLetter": "ц",
+          "exampleWord": "месец, which means 'month (or moon)'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the 'ts' in 'cats,' and unlike English it can begin a word. So, 'месец' is pronounced 'ME-sets.'",
+              "short": "'ts,' as in 'cats'"
+            }
+          },
+          "foreignLetterName": "це",
+          "caseEquivalent": "Ц"
+        },
+        {
+          "identifier": 4055,
+          "itemType": 0,
+          "englishName": "che",
+          "foreignLetter": "ч",
+          "exampleWord": "кључ, which means 'key'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the 'ch' in 'church.' So, 'кључ' is pronounced 'klyooch.'",
+              "short": "'ch,' as in 'church'"
+            }
+          },
+          "foreignLetterName": "че",
+          "caseEquivalent": "Ч"
+        },
+        {
+          "identifier": 4057,
+          "itemType": 0,
+          "englishName": "dzhe",
+          "foreignLetter": "џ",
+          "exampleWord": "пиџама, which means 'pajamas'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is the hard 'j' of 'judge' or 'jam,' written as a single letter. So, 'пиџама' is pronounced 'pee-JA-ma.'",
+              "short": "a hard 'j,' as in 'judge'"
+            }
+          },
+          "foreignLetterName": "џе",
+          "caseEquivalent": "Џ",
+          "explanation": "The hard partner of ђ. In Latin script it is dž."
+        },
+        {
+          "identifier": 4059,
+          "itemType": 0,
+          "englishName": "sha",
+          "foreignLetter": "ш",
+          "exampleWord": "миш, which means 'mouse'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a hard 'sh,' as in 'shoe,' said with the tongue pulled a little further back than in English. So, 'миш' is pronounced 'meesh.'",
+              "short": "a hard 'sh,' as in 'shoe'"
+            }
+          },
+          "foreignLetterName": "ша",
+          "caseEquivalent": "Ш"
+        }
+      ]
+    }
+  ]
+}

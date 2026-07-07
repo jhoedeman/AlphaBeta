@@ -1,6 +1,6 @@
 # AlphaBeta — Build Specification v1.0
 
-A pure-SwiftUI iPhone/iPad app for exploring non-Latin alphabets. Ships with Greek and Russian (Cyrillic); architected for the rest of the Cyrillic family, Arabic, Hebrew, Persian, Armenian, Hindi, Thai, Korean, Japanese kana, and others later.
+A pure-SwiftUI iPhone/iPad app for exploring non-Latin alphabets. Ships with nine languages — Greek, six Cyrillic (Russian, Ukrainian, Belarusian, Serbian, Bulgarian, Macedonian), Armenian, and Georgian — and is architected for Arabic script, Hebrew, Devanagari, kana, Hangul, and more (roadmap in §11.1).
 
 ---
 
@@ -88,8 +88,21 @@ Alphabet: `{ "language": Int, "alphabetItems": [AlphabetItem] }`
 | `lowercaseEnglishName` | String | e.g. "beta" |
 | `explanation` | String | Used on diphthongs/combinations ("This is a combination of…") |
 
-Greek data: 62 items — 24 capitals, 25 lowercase (incl. sigma teliko), 6 diphthongs, 7 combinations.
-Russian data (`Russian.json`, language 1): 66 items — 33 capitals, 33 lowercase; no diphthong/combination items, so its manifest declares only the capitals/lowercase filter categories. Hard sign (ъ), soft sign (ь), and yery (ы) use example words that contain rather than start with the letter (no Russian word begins with them), with `explanation` notes saying so.
+**Shipped datasets** (all schema v2; language ID / item count):
+
+| File | ID | Items | Notes |
+|---|---|---|---|
+| Greek | 0 | 62 | 24 caps, 25 lower (incl. sigma teliko), 6 diphthongs, 7 combinations |
+| Russian | 1 | 66 | 33 case pairs; ъ/ь/ы use contains-style example words (nothing starts with them) |
+| Ukrainian | 2 | 66 | г = 'h' (false friend called out); ґ, є, ї, apostrophe-instead-of-ъ notes |
+| Belarusian | 3 | 64 | ў (short u); о only under stress; шч instead of щ |
+| Serbian | 4 | 60 | Vuk's letters ђ ј љ њ ћ џ; no signs; fully phonemic |
+| Bulgarian | 5 | 60 | ъ is a true vowel ("er golyam"); щ = 'sht'; ь only in ьо |
+| Macedonian | 6 | 62 | ѓ ќ ѕ unique letters |
+| Armenian | 7 | 78 | 38 case pairs + ու (diphthong) + և (combination); `eastern` + `western` systems on every item; Ւ has no example word (historical letter) |
+| Georgian | 8 | 33 | Caseless (`hasLetterCase: false`) — single items, no `caseEquivalent`; ejective/aspirate pairs cross-referenced |
+
+Non-Russian Slavic, Armenian, and Georgian example words/glosses are first-draft content — flag for native-speaker review before App Store release (tracked in §12).
 
 ### 3.2 Pronunciations object (schema v2: system-keyed map)
 
@@ -150,6 +163,7 @@ struct LanguageManifest: Codable, Identifiable {
     let hasLetterCase: Bool          // false for Arabic, Hebrew, Korean, Thai…
     let pronunciationSystems: [PronunciationSystem]  // ordered; first = default. Greek: [modern]
     let filterCategories: [FilterCategory]   // Greek: [.capitals, .lowercase, .diphthongs, .combinations]
+                                             // caseless scripts use [.letters] (Georgian)
     let defaultPaletteID: String     // "greek-flag"
     let flagEmoji: String            // "🇬🇷"
 }
@@ -350,7 +364,7 @@ struct ThemeColors: Codable {       // stored as hex strings
 
 ## 9. Settings & Language Picker
 
-**Language sheet** (globe/flag button, top-left): list from `LanguageRegistry`, **grouped into sections by `scriptFamily`** ("Cyrillic ▸ Russian, Ukrainian, …"); a family with one language renders as a plain row. Rows show flag emoji, display name, native name. v1 lists Greek and Russian. Include a teaser row style ready for future entries. Selecting switches `AlphabetStore` content, filters reset to all-on, theme animates to the language default (unless user has a custom/stock override), card deck resets to first item.
+**Language sheet** (globe/flag button, top-left): list from `LanguageRegistry`, **grouped into sections by `scriptFamily`** ("Cyrillic ▸ Russian, Ukrainian, …"); a family with one language renders as a plain row. Rows show flag emoji, display name, native name. v1 lists all nine languages (Cyrillic renders as a six-row section). Include a teaser row style ready for future entries. Selecting switches `AlphabetStore` content, filters reset to all-on, theme animates to the language default (unless user has a custom/stock override), card deck resets to first item.
 
 **Settings sheet** (gear, top-right):
 - Appearance: System / Light / Dark segmented control.
@@ -366,14 +380,14 @@ Both are `.sheet` (form sheet on iPad).
 
 1. Xcode project "AlphaBeta" created in this folder (already a git repo), bundle ID `com.JohnHoedeman.AlphaBeta`, iOS 18.0 target, iPhone + iPad, portrait + landscape.
 2. Capabilities: iCloud → CloudKit (container above), Background Modes → Remote notifications.
-3. Copy `Manifest.json`, `Greek.json`, and `Russian.json` (in this folder, alongside this spec) into `Content/Resources/`. Do not mutate them; they are the contract.
+3. Copy `Manifest.json` and all nine language JSONs (in this folder, alongside this spec) into `Content/Resources/`. Do not mutate them; they are the contract.
 4. `ModelContainer` with all four `@Model` types, `cloudKitDatabase: .automatic`; fall back to local-only configuration if container init throws (e.g. simulator without iCloud).
 5. Provide SwiftUI Previews with an in-memory container and a `PreviewAlphabetProvider`.
 6. Accessibility: Dynamic Type throughout (glyphs scale but cap), VoiceOver labels on cards ("Capital Sigma, letter, tap for details"), Reduce Motion honored (no confetti, cross-fade instead of swipe).
 7. Haptics behind a small `Haptics` utility.
 
 ### Build order (milestones)
-1. **M1 Content pipeline:** Codable models, manifest/registry, `BundledAlphabetProvider`, decode tests against `Greek.json` (all 62 items, spot-check sigma family & marked vowels) and `Russian.json` (all 66 items, spot-check ъ/ь/ы and Ё).
+1. **M1 Content pipeline:** Codable models, manifest/registry, `BundledAlphabetProvider`, decode tests looping over **every** manifest entry (item counts per §3.1 table; spot-check Greek sigma family, Russian ъ/ь/ы, Armenian dual systems, Georgian caselessness).
 2. **M2 Theming shell:** ThemeManager, placeholder palettes, RootView tabs, appearance switching.
 3. **M3 Cards:** deck, swipe gestures, filter pills, shuffle, iPad constraint, card count.
 4. **M4 Detail sheet:** all sections, case-sibling navigation, dismiss gestures.
@@ -386,7 +400,7 @@ Both are `.sheet` (form sheet on iPad).
 ### Testing (minimum)
 - `QuizEngine`: distractor validity (Q3/Q4 substring rule, Q6 sound-collision rule), no-repeat rule, small-pool degradation, weighting distribution sanity.
 - `StreakStore`: all date edge cases (§4).
-- JSON decoding: full `Greek.json` + `Russian.json` round-trips; unknown/extra keys tolerated (forward compatibility).
+- JSON decoding: full round-trips of all nine bundled datasets; unknown/extra keys tolerated (forward compatibility).
 - Filter logic: category mapping for all 62 items (24 caps / 25 lower / 6 diphthongs / 7 combos).
 
 ---
@@ -400,10 +414,23 @@ Both are `.sheet` (form sheet on iPad).
 - **IAP:** gate `LanguageRegistry` entries behind StoreKit 2 product IDs.
 - **Widgets/Live Activities:** streak widget; "letter of the day."
 
+### 11.1 Alphabet roadmap (agreed sequencing)
+
+Phased by how much architecture each wave exercises. Nothing here requires schema changes until Phase 4.
+
+1. **Phase 1 — drop-in (same model as Greek/Russian):** rest of Cyrillic (Ukrainian, Belarusian, Serbian, Bulgarian, Macedonian; later Kazakh, Mongolian Cyrillic), Armenian (`eastern`/`western` pronunciation systems), Georgian (first caseless language — `hasLetterCase: false`, single `letters` filter category), Coptic (niche; Greek-derived).
+2. **Phase 2 — RTL wave:** Hebrew first (gentlest: five final letters ך ם ן ף ץ map onto `endingCaseEquivalent` exactly like sigma teliko; niqqud as a marked-version-style toggle later), then Arabic, Persian, Urdu (full leading/middle/ending positional forms + RTL reading reminders).
+3. **Phase 3 — syllabaries (item = syllable; card model unchanged):** Japanese hiragana + katakana (two datasets, `kana` family; dakuten variants ≈ marked versions, digraphs like きゃ ≈ combinations), Korean Hangul (jamo as letters; syllable-block building as combinations — likely the highest-demand single addition), Bopomofo/Zhuyin.
+4. **Phase 4 — abugidas (needs 1–2 new `itemType` values for dependent vowel signs/conjuncts):** Devanagari family (Hindi → Marathi, Nepali, Sanskrit-as-classical-system), then Bengali, Gurmukhi, Gujarati, Tamil, Telugu, Kannada, Malayalam by demand; Thai (consonant classes + tones), Lao, Khmer, Burmese, Amharic/Ge'ez.
+5. **Fun packs (cheap, no flags — custom palettes):** Elder Futhark runes, Ogham, Phoenician ("ancestor of the alphabet" hook), Egyptian uniliteral hieroglyphs.
+
+Out of scope permanently: Han characters/kanji (logographic, not an alphabet). Vertical Mongolian script is a stretch goal pending layout work.
+
 ## 12. Open items (John to supply)
 
 1. Final color palettes (light + dark per language) — placeholder Greek palette ships meanwhile.
 2. Koine/classical pronunciation data (later JSON revision).
-3. JSON files for additional alphabets (schema in §3 is the template).
-4. App icon.
+3. Native-speaker review of the Ukrainian, Belarusian, Serbian, Bulgarian, Macedonian, Armenian, and Georgian datasets (example words, glosses, letter names) before release.
+4. JSON files for additional alphabets (schema in §3 is the template; roadmap in §11.1).
+5. App icon.
 

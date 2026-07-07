@@ -1,0 +1,1117 @@
+{
+  "version": 2,
+  "alphabets": [
+    {
+      "language": 2,
+      "alphabetItems": [
+        {
+          "identifier": 2000,
+          "itemType": 0,
+          "englishName": "A",
+          "foreignLetter": "А",
+          "exampleWord": "Акула, which means 'shark'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an open 'ah' sound, like the 'a' in 'father.' So, 'Акула' is pronounced 'a-KOO-la.'",
+              "short": "an 'ah,' as in 'father'"
+            }
+          },
+          "foreignLetterName": "А",
+          "caseEquivalent": "а",
+          "lowercaseEnglishName": "a"
+        },
+        {
+          "identifier": 2002,
+          "itemType": 0,
+          "englishName": "Be",
+          "foreignLetter": "Б",
+          "exampleWord": "Банан, which means 'banana'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'b' in 'book.' So, 'Банан' is pronounced 'ba-NAHN.'",
+              "short": "a 'b,' as in 'book'"
+            }
+          },
+          "foreignLetterName": "Бе",
+          "caseEquivalent": "б",
+          "lowercaseEnglishName": "be"
+        },
+        {
+          "identifier": 2004,
+          "itemType": 0,
+          "englishName": "Ve",
+          "foreignLetter": "В",
+          "exampleWord": "Вода, which means 'water'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "It looks like an English 'B,' but it is pronounced like the 'v' in 'very.' So, 'Вода' is pronounced 'vo-DA.'",
+              "short": "a 'v,' as in 'very'"
+            }
+          },
+          "foreignLetterName": "Ве",
+          "caseEquivalent": "в",
+          "lowercaseEnglishName": "ve"
+        },
+        {
+          "identifier": 2006,
+          "itemType": 0,
+          "englishName": "He",
+          "foreignLetter": "Г",
+          "exampleWord": "Гора, which means 'mountain'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "Unlike its Russian counterpart, the Ukrainian г is a voiced 'h' sound, like the 'h' in 'behind' said with your voice on. So, 'Гора' is pronounced 'ho-RA.'",
+              "short": "a voiced 'h,' as in 'behind'"
+            }
+          },
+          "foreignLetterName": "Ге",
+          "caseEquivalent": "г",
+          "lowercaseEnglishName": "he",
+          "explanation": "This is the biggest 'false friend' between Ukrainian and Russian: the same letter is a hard 'g' in Russian but an 'h' in Ukrainian."
+        },
+        {
+          "identifier": 2008,
+          "itemType": 0,
+          "englishName": "Ge",
+          "foreignLetter": "Ґ",
+          "exampleWord": "Ґанок, which means 'porch'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a hard 'g,' as in 'go.' It appears in only a small set of words — the little upturned tail is what separates it from the 'h' letter г. So, 'Ґанок' is pronounced 'GA-nok.'",
+              "short": "a hard 'g,' as in 'go' — a rare letter"
+            }
+          },
+          "foreignLetterName": "Ґе",
+          "caseEquivalent": "ґ",
+          "lowercaseEnglishName": "ge",
+          "explanation": "Ukrainian's rarest letter: it exists precisely because г became 'h,' leaving a handful of words that still need a true hard 'g.'"
+        },
+        {
+          "identifier": 2010,
+          "itemType": 0,
+          "englishName": "De",
+          "foreignLetter": "Д",
+          "exampleWord": "Дім, which means 'house'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'd' in 'dog.' So, 'Дім' is pronounced 'deem.'",
+              "short": "a 'd,' as in 'dog'"
+            }
+          },
+          "foreignLetterName": "Де",
+          "caseEquivalent": "д",
+          "lowercaseEnglishName": "de",
+          "explanation": "Unlike Russian, Ukrainian does not devoice final consonants — 'сад' ends in a true 'd,' not a 't.'"
+        },
+        {
+          "identifier": 2012,
+          "itemType": 0,
+          "englishName": "E",
+          "foreignLetter": "Е",
+          "exampleWord": "Екран, which means 'screen'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a plain 'e,' as in 'end' or 'echo,' with no 'y' sound in front. So, 'Екран' is pronounced 'e-KRAN.'",
+              "short": "an 'e,' as in 'end'"
+            }
+          },
+          "foreignLetterName": "Е",
+          "caseEquivalent": "е",
+          "lowercaseEnglishName": "e",
+          "explanation": "Careful if you know Russian: Ukrainian е is the plain 'e' (Russian э), while the 'ye' sound belongs to є."
+        },
+        {
+          "identifier": 2014,
+          "itemType": 0,
+          "englishName": "Ye",
+          "foreignLetter": "Є",
+          "exampleWord": "Єнот, which means 'raccoon'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the 'ye' in 'yes.' After a consonant, the 'y' part melts into that consonant and softens it. So, 'Єнот' is pronounced 'ye-NOT.'",
+              "short": "'ye,' as in 'yes'"
+            }
+          },
+          "foreignLetterName": "Є",
+          "caseEquivalent": "є",
+          "lowercaseEnglishName": "ye"
+        },
+        {
+          "identifier": 2016,
+          "itemType": 0,
+          "englishName": "Zhe",
+          "foreignLetter": "Ж",
+          "exampleWord": "Жук, which means 'beetle'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is the 'zh' sound — like the 's' in 'measure' or 'pleasure.' So, 'Жук' is pronounced 'zhook.'",
+              "short": "'zh,' like the 's' in 'measure'"
+            }
+          },
+          "foreignLetterName": "Же",
+          "caseEquivalent": "ж",
+          "lowercaseEnglishName": "zhe"
+        },
+        {
+          "identifier": 2018,
+          "itemType": 0,
+          "englishName": "Ze",
+          "foreignLetter": "З",
+          "exampleWord": "Зима, which means 'winter'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the 'z' in 'zoo.' Watch out: the letter looks like the digit 3. So, 'Зима' is pronounced 'zy-MA.'",
+              "short": "a 'z,' as in 'zoo'"
+            }
+          },
+          "foreignLetterName": "Зе",
+          "caseEquivalent": "з",
+          "lowercaseEnglishName": "ze"
+        },
+        {
+          "identifier": 2020,
+          "itemType": 0,
+          "englishName": "Y",
+          "foreignLetter": "И",
+          "exampleWord": "Сир, which means 'cheese'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a relaxed 'i,' like the 'i' in 'ill' or 'kid' — between 'ee' and 'uh.' So, 'Сир' is pronounced 'syr.'",
+              "short": "a relaxed 'i,' as in 'ill'"
+            }
+          },
+          "foreignLetterName": "И",
+          "caseEquivalent": "и",
+          "lowercaseEnglishName": "y",
+          "explanation": "No word begins with this letter, so these example words contain it rather than start with it. Careful if you know Russian: Ukrainian и sounds like Russian ы, not like 'ee' (that's і)."
+        },
+        {
+          "identifier": 2022,
+          "itemType": 0,
+          "englishName": "I",
+          "foreignLetter": "І",
+          "exampleWord": "Іграшка, which means 'toy'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'ee' sound, like the 'ee' in 'see' or the 'i' in 'machine.' So, 'Іграшка' is pronounced 'ee-HRASH-ka.'",
+              "short": "an 'ee,' as in 'see'"
+            }
+          },
+          "foreignLetterName": "І",
+          "caseEquivalent": "і",
+          "lowercaseEnglishName": "i"
+        },
+        {
+          "identifier": 2024,
+          "itemType": 0,
+          "englishName": "Yi",
+          "foreignLetter": "Ї",
+          "exampleWord": "Їжак, which means 'hedgehog'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a 'yee' sound — a 'y' glide followed by 'ee,' as at the start of 'yeast.' So, 'Їжак' is pronounced 'yee-ZHAK.'",
+              "short": "'yee,' as in 'yeast'"
+            }
+          },
+          "foreignLetterName": "Ї",
+          "caseEquivalent": "ї",
+          "lowercaseEnglishName": "yi",
+          "explanation": "Ukraine's signature letter — no other Slavic Cyrillic alphabet has it. You'll see it in 'Київ' (Kyiv)."
+        },
+        {
+          "identifier": 2026,
+          "itemType": 0,
+          "englishName": "Short I",
+          "foreignLetter": "Й",
+          "exampleWord": "Йогурт, which means 'yogurt'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a glide, not a full vowel — the 'y' sound at the end of 'boy' or the start of 'yes.' It always teams up with a neighboring vowel. So, 'Йогурт' is pronounced 'YO-hoort.'",
+              "short": "a 'y' glide, as in 'boy' or 'yes'"
+            }
+          },
+          "foreignLetterName": "Йот",
+          "caseEquivalent": "й",
+          "lowercaseEnglishName": "short i"
+        },
+        {
+          "identifier": 2028,
+          "itemType": 0,
+          "englishName": "Ka",
+          "foreignLetter": "К",
+          "exampleWord": "Капелюх, which means 'hat'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the English 'k' in 'kite,' but without the little puff of air. So, 'Капелюх' is pronounced 'ka-pe-LYUKH.'",
+              "short": "a 'k,' as in 'kite'"
+            }
+          },
+          "foreignLetterName": "Ка",
+          "caseEquivalent": "к",
+          "lowercaseEnglishName": "ka",
+          "explanation": "Note the example word: unlike Russian, Ukrainian vowels keep their value when unstressed — 'молоко' really is 'mo-lo-KO.'"
+        },
+        {
+          "identifier": 2030,
+          "itemType": 0,
+          "englishName": "El",
+          "foreignLetter": "Л",
+          "exampleWord": "Лампа, which means 'lamp'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is like the English 'l,' though usually a bit darker and harder. So, 'Лампа' is pronounced 'LAM-pa.'",
+              "short": "an 'l,' as in 'lamp'"
+            }
+          },
+          "foreignLetterName": "Ел",
+          "caseEquivalent": "л",
+          "lowercaseEnglishName": "el"
+        },
+        {
+          "identifier": 2032,
+          "itemType": 0,
+          "englishName": "Em",
+          "foreignLetter": "М",
+          "exampleWord": "Мова, which means 'language'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'm.' So, 'Мова' is pronounced 'MO-va.'",
+              "short": "an 'm,' as in 'mom'"
+            }
+          },
+          "foreignLetterName": "Ем",
+          "caseEquivalent": "м",
+          "lowercaseEnglishName": "em"
+        },
+        {
+          "identifier": 2034,
+          "itemType": 0,
+          "englishName": "En",
+          "foreignLetter": "Н",
+          "exampleWord": "Ніс, which means 'nose'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "It looks like an English 'H,' but it sounds like an 'n.' So, 'Ніс' is pronounced 'nees.'",
+              "short": "an 'n,' as in 'nose'"
+            }
+          },
+          "foreignLetterName": "Ен",
+          "caseEquivalent": "н",
+          "lowercaseEnglishName": "en"
+        },
+        {
+          "identifier": 2036,
+          "itemType": 0,
+          "englishName": "O",
+          "foreignLetter": "О",
+          "exampleWord": "Око, which means 'eye'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'o' sound, as in 'more.' So, 'Око' is pronounced 'O-ko.'",
+              "short": "an 'o,' as in 'more'"
+            }
+          },
+          "foreignLetterName": "О",
+          "caseEquivalent": "о",
+          "lowercaseEnglishName": "o"
+        },
+        {
+          "identifier": 2038,
+          "itemType": 0,
+          "englishName": "Pe",
+          "foreignLetter": "П",
+          "exampleWord": "Пес, which means 'dog'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'p' in 'park.' So, 'Пес' is pronounced 'pes.'",
+              "short": "a 'p,' as in 'park'"
+            }
+          },
+          "foreignLetterName": "Пе",
+          "caseEquivalent": "п",
+          "lowercaseEnglishName": "pe"
+        },
+        {
+          "identifier": 2040,
+          "itemType": 0,
+          "englishName": "Er",
+          "foreignLetter": "Р",
+          "exampleWord": "Рука, which means 'hand (or arm)'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a rolled, trilled 'r,' like in Spanish or Italian. It looks like an English 'P,' but never sounds like one. So, 'Рука' is pronounced 'roo-KA.'",
+              "short": "a rolled 'r,' as in Spanish or Italian"
+            }
+          },
+          "foreignLetterName": "Ер",
+          "caseEquivalent": "р",
+          "lowercaseEnglishName": "er"
+        },
+        {
+          "identifier": 2042,
+          "itemType": 0,
+          "englishName": "Es",
+          "foreignLetter": "С",
+          "exampleWord": "Сонце, which means 'sun'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "It looks like an English 'C,' but it always sounds like the 's' in 'sun' — never like a 'k.' So, 'Сонце' is pronounced 'SON-tse.'",
+              "short": "an 's,' as in 'sun'"
+            }
+          },
+          "foreignLetterName": "Ес",
+          "caseEquivalent": "с",
+          "lowercaseEnglishName": "es"
+        },
+        {
+          "identifier": 2044,
+          "itemType": 0,
+          "englishName": "Te",
+          "foreignLetter": "Т",
+          "exampleWord": "Тато, which means 'dad'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 't' in 'top,' but without the puff of air. So, 'Тато' is pronounced 'TA-to.'",
+              "short": "a 't,' as in 'top'"
+            }
+          },
+          "foreignLetterName": "Те",
+          "caseEquivalent": "т",
+          "lowercaseEnglishName": "te"
+        },
+        {
+          "identifier": 2046,
+          "itemType": 0,
+          "englishName": "U",
+          "foreignLetter": "У",
+          "exampleWord": "Учитель, which means 'teacher'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'oo' sound, as in 'moon' or 'school' — never the 'u' of 'cup.' So, 'Учитель' is pronounced 'oo-CHY-tel.'",
+              "short": "an 'oo,' as in 'moon'"
+            }
+          },
+          "foreignLetterName": "У",
+          "caseEquivalent": "у",
+          "lowercaseEnglishName": "u"
+        },
+        {
+          "identifier": 2048,
+          "itemType": 0,
+          "englishName": "Ef",
+          "foreignLetter": "Ф",
+          "exampleWord": "Фарба, which means 'paint'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'f' in 'fun.' So, 'Фарба' is pronounced 'FAR-ba.'",
+              "short": "an 'f,' as in 'fun'"
+            }
+          },
+          "foreignLetterName": "Еф",
+          "caseEquivalent": "ф",
+          "lowercaseEnglishName": "ef"
+        },
+        {
+          "identifier": 2050,
+          "itemType": 0,
+          "englishName": "Kha",
+          "foreignLetter": "Х",
+          "exampleWord": "Хліб, which means 'bread'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a breathy 'h' from the back of the throat — like the 'ch' in the Scottish 'loch' or German 'Bach.' So, 'Хліб' is pronounced 'khleeb.'",
+              "short": "a breathy 'kh,' like the 'ch' in 'loch'"
+            }
+          },
+          "foreignLetterName": "Ха",
+          "caseEquivalent": "х",
+          "lowercaseEnglishName": "kha"
+        },
+        {
+          "identifier": 2052,
+          "itemType": 0,
+          "englishName": "Tse",
+          "foreignLetter": "Ц",
+          "exampleWord": "Цукор, which means 'sugar'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the 'ts' in 'cats,' and unlike English it can begin a word. So, 'Цукор' is pronounced 'TSOO-kor.'",
+              "short": "'ts,' as in 'cats'"
+            }
+          },
+          "foreignLetterName": "Це",
+          "caseEquivalent": "ц",
+          "lowercaseEnglishName": "tse"
+        },
+        {
+          "identifier": 2054,
+          "itemType": 0,
+          "englishName": "Che",
+          "foreignLetter": "Ч",
+          "exampleWord": "Час, which means 'time (or hour)'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the 'ch' in 'church.' So, 'Час' is pronounced 'chas.'",
+              "short": "'ch,' as in 'church'"
+            }
+          },
+          "foreignLetterName": "Че",
+          "caseEquivalent": "ч",
+          "lowercaseEnglishName": "che"
+        },
+        {
+          "identifier": 2056,
+          "itemType": 0,
+          "englishName": "Sha",
+          "foreignLetter": "Ш",
+          "exampleWord": "Школа, which means 'school'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a hard 'sh,' as in 'shoe,' said with the tongue pulled a little further back than in English. So, 'Школа' is pronounced 'SHKO-la.'",
+              "short": "a hard 'sh,' as in 'shoe'"
+            }
+          },
+          "foreignLetterName": "Ша",
+          "caseEquivalent": "ш",
+          "lowercaseEnglishName": "sha"
+        },
+        {
+          "identifier": 2058,
+          "itemType": 0,
+          "englishName": "Shcha",
+          "foreignLetter": "Щ",
+          "exampleWord": "Щука, which means 'pike (the fish)'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a 'shch' cluster — 'sh' and 'ch' run together, as in 'fresh cheese' said quickly. (Harder than the long soft 'sh' of Russian щ.) So, 'Щука' is pronounced 'SHCHOO-ka.'",
+              "short": "'shch,' as in 'fresh cheese'"
+            }
+          },
+          "foreignLetterName": "Ща",
+          "caseEquivalent": "щ",
+          "lowercaseEnglishName": "shcha"
+        },
+        {
+          "identifier": 2060,
+          "itemType": 0,
+          "englishName": "Soft sign",
+          "foreignLetter": "Ь",
+          "exampleWord": "Сіль, which means 'salt'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "The soft sign is silent, but it changes its neighbor: the consonant right before it is 'softened' (palatalized), pronounced as if a tiny 'y' were folded into it. So, 'Сіль' is pronounced 'seel' (with a softened 'l').'",
+              "short": "silent — softens the consonant before it"
+            }
+          },
+          "foreignLetterName": "М'який знак",
+          "caseEquivalent": "ь",
+          "lowercaseEnglishName": "soft sign",
+          "explanation": "No Ukrainian word begins with ь — it only ever appears after a consonant. (Where Russian uses the hard sign ъ, Ukrainian uses an apostrophe instead: м'ясо.)"
+        },
+        {
+          "identifier": 2062,
+          "itemType": 0,
+          "englishName": "Yu",
+          "foreignLetter": "Ю",
+          "exampleWord": "Юшка, which means 'broth'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like 'you,' or the 'u' in 'universe.' After a consonant, the 'y' part melts into that consonant and softens it. So, 'Юшка' is pronounced 'YOOSH-ka.'",
+              "short": "'yu,' as in 'universe'"
+            }
+          },
+          "foreignLetterName": "Ю",
+          "caseEquivalent": "ю",
+          "lowercaseEnglishName": "yu"
+        },
+        {
+          "identifier": 2064,
+          "itemType": 0,
+          "englishName": "Ya",
+          "foreignLetter": "Я",
+          "exampleWord": "Яблуко, which means 'apple'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the 'ya' in 'yard.' After a consonant, the 'y' part melts into that consonant and softens it. So, 'Яблуко' is pronounced 'YA-blu-ko.'",
+              "short": "'ya,' as in 'yard'"
+            }
+          },
+          "foreignLetterName": "Я",
+          "caseEquivalent": "я",
+          "lowercaseEnglishName": "ya",
+          "explanation": "Note the apostrophe in 'м'ясо': Ukrainian uses it the way Russian uses the hard sign ъ, to keep the 'y' of я crisp."
+        },
+        {
+          "identifier": 2001,
+          "itemType": 0,
+          "englishName": "a",
+          "foreignLetter": "а",
+          "exampleWord": "мама, which means 'mom'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an open 'ah' sound, like the 'a' in 'father.' So, 'мама' is pronounced 'MA-ma.'",
+              "short": "an 'ah,' as in 'father'"
+            }
+          },
+          "foreignLetterName": "а",
+          "caseEquivalent": "А"
+        },
+        {
+          "identifier": 2003,
+          "itemType": 0,
+          "englishName": "be",
+          "foreignLetter": "б",
+          "exampleWord": "риба, which means 'fish'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'b' in 'book.' So, 'риба' is pronounced 'RY-ba.'",
+              "short": "a 'b,' as in 'book'"
+            }
+          },
+          "foreignLetterName": "бе",
+          "caseEquivalent": "Б"
+        },
+        {
+          "identifier": 2005,
+          "itemType": 0,
+          "englishName": "ve",
+          "foreignLetter": "в",
+          "exampleWord": "кава, which means 'coffee'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "It looks like an English 'B,' but it is pronounced like the 'v' in 'very.' So, 'кава' is pronounced 'KA-va.'",
+              "short": "a 'v,' as in 'very'"
+            }
+          },
+          "foreignLetterName": "ве",
+          "caseEquivalent": "В"
+        },
+        {
+          "identifier": 2007,
+          "itemType": 0,
+          "englishName": "he",
+          "foreignLetter": "г",
+          "exampleWord": "нога, which means 'leg'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "Unlike its Russian counterpart, the Ukrainian г is a voiced 'h' sound, like the 'h' in 'behind' said with your voice on. So, 'нога' is pronounced 'no-HA.'",
+              "short": "a voiced 'h,' as in 'behind'"
+            }
+          },
+          "foreignLetterName": "ге",
+          "caseEquivalent": "Г",
+          "explanation": "This is the biggest 'false friend' between Ukrainian and Russian: the same letter is a hard 'g' in Russian but an 'h' in Ukrainian."
+        },
+        {
+          "identifier": 2009,
+          "itemType": 0,
+          "englishName": "ge",
+          "foreignLetter": "ґ",
+          "exampleWord": "ґудзик, which means 'button'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a hard 'g,' as in 'go.' It appears in only a small set of words — the little upturned tail is what separates it from the 'h' letter г. So, 'ґудзик' is pronounced 'GOO-dzyk.'",
+              "short": "a hard 'g,' as in 'go' — a rare letter"
+            }
+          },
+          "foreignLetterName": "ґе",
+          "caseEquivalent": "Ґ",
+          "explanation": "Ukrainian's rarest letter: it exists precisely because г became 'h,' leaving a handful of words that still need a true hard 'g.'"
+        },
+        {
+          "identifier": 2011,
+          "itemType": 0,
+          "englishName": "de",
+          "foreignLetter": "д",
+          "exampleWord": "сад, which means 'garden'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'd' in 'dog.' So, 'сад' is pronounced 'sahd.'",
+              "short": "a 'd,' as in 'dog'"
+            }
+          },
+          "foreignLetterName": "де",
+          "caseEquivalent": "Д",
+          "explanation": "Unlike Russian, Ukrainian does not devoice final consonants — 'сад' ends in a true 'd,' not a 't.'"
+        },
+        {
+          "identifier": 2013,
+          "itemType": 0,
+          "englishName": "e",
+          "foreignLetter": "е",
+          "exampleWord": "небо, which means 'sky'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a plain 'e,' as in 'end' or 'echo,' with no 'y' sound in front. So, 'небо' is pronounced 'NE-bo.'",
+              "short": "an 'e,' as in 'end'"
+            }
+          },
+          "foreignLetterName": "е",
+          "caseEquivalent": "Е",
+          "explanation": "Careful if you know Russian: Ukrainian е is the plain 'e' (Russian э), while the 'ye' sound belongs to є."
+        },
+        {
+          "identifier": 2015,
+          "itemType": 0,
+          "englishName": "ye",
+          "foreignLetter": "є",
+          "exampleWord": "синє, which means 'blue (neuter)'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the 'ye' in 'yes.' After a consonant, the 'y' part melts into that consonant and softens it. So, 'синє' is pronounced 'SY-nye.'",
+              "short": "'ye,' as in 'yes'"
+            }
+          },
+          "foreignLetterName": "є",
+          "caseEquivalent": "Є"
+        },
+        {
+          "identifier": 2017,
+          "itemType": 0,
+          "englishName": "zhe",
+          "foreignLetter": "ж",
+          "exampleWord": "пожежа, which means 'fire'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is the 'zh' sound — like the 's' in 'measure' or 'pleasure.' So, 'пожежа' is pronounced 'po-ZHE-zha.'",
+              "short": "'zh,' like the 's' in 'measure'"
+            }
+          },
+          "foreignLetterName": "же",
+          "caseEquivalent": "Ж"
+        },
+        {
+          "identifier": 2019,
+          "itemType": 0,
+          "englishName": "ze",
+          "foreignLetter": "з",
+          "exampleWord": "коза, which means 'goat'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the 'z' in 'zoo.' Watch out: the letter looks like the digit 3. So, 'коза' is pronounced 'ko-ZA.'",
+              "short": "a 'z,' as in 'zoo'"
+            }
+          },
+          "foreignLetterName": "зе",
+          "caseEquivalent": "З"
+        },
+        {
+          "identifier": 2021,
+          "itemType": 0,
+          "englishName": "y",
+          "foreignLetter": "и",
+          "exampleWord": "ми, which means 'we'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a relaxed 'i,' like the 'i' in 'ill' or 'kid' — between 'ee' and 'uh.' So, 'ми' is pronounced 'my.'",
+              "short": "a relaxed 'i,' as in 'ill'"
+            }
+          },
+          "foreignLetterName": "и",
+          "caseEquivalent": "И",
+          "explanation": "No word begins with this letter, so these example words contain it rather than start with it. Careful if you know Russian: Ukrainian и sounds like Russian ы, not like 'ee' (that's і)."
+        },
+        {
+          "identifier": 2023,
+          "itemType": 0,
+          "englishName": "i",
+          "foreignLetter": "і",
+          "exampleWord": "кіт, which means 'cat'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'ee' sound, like the 'ee' in 'see' or the 'i' in 'machine.' So, 'кіт' is pronounced 'keet.'",
+              "short": "an 'ee,' as in 'see'"
+            }
+          },
+          "foreignLetterName": "і",
+          "caseEquivalent": "І"
+        },
+        {
+          "identifier": 2025,
+          "itemType": 0,
+          "englishName": "yi",
+          "foreignLetter": "ї",
+          "exampleWord": "їжа, which means 'food'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a 'yee' sound — a 'y' glide followed by 'ee,' as at the start of 'yeast.' So, 'їжа' is pronounced 'YEE-zha.'",
+              "short": "'yee,' as in 'yeast'"
+            }
+          },
+          "foreignLetterName": "ї",
+          "caseEquivalent": "Ї",
+          "explanation": "Ukraine's signature letter — no other Slavic Cyrillic alphabet has it. You'll see it in 'Київ' (Kyiv)."
+        },
+        {
+          "identifier": 2027,
+          "itemType": 0,
+          "englishName": "short i",
+          "foreignLetter": "й",
+          "exampleWord": "чай, which means 'tea'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a glide, not a full vowel — the 'y' sound at the end of 'boy' or the start of 'yes.' It always teams up with a neighboring vowel. So, 'чай' is pronounced 'chai (rhymes with 'tie').'",
+              "short": "a 'y' glide, as in 'boy' or 'yes'"
+            }
+          },
+          "foreignLetterName": "йот",
+          "caseEquivalent": "Й"
+        },
+        {
+          "identifier": 2029,
+          "itemType": 0,
+          "englishName": "ka",
+          "foreignLetter": "к",
+          "exampleWord": "молоко, which means 'milk'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the English 'k' in 'kite,' but without the little puff of air. So, 'молоко' is pronounced 'mo-lo-KO.'",
+              "short": "a 'k,' as in 'kite'"
+            }
+          },
+          "foreignLetterName": "ка",
+          "caseEquivalent": "К",
+          "explanation": "Note the example word: unlike Russian, Ukrainian vowels keep their value when unstressed — 'молоко' really is 'mo-lo-KO.'"
+        },
+        {
+          "identifier": 2031,
+          "itemType": 0,
+          "englishName": "el",
+          "foreignLetter": "л",
+          "exampleWord": "стіл, which means 'table'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is like the English 'l,' though usually a bit darker and harder. So, 'стіл' is pronounced 'steel.'",
+              "short": "an 'l,' as in 'lamp'"
+            }
+          },
+          "foreignLetterName": "ел",
+          "caseEquivalent": "Л"
+        },
+        {
+          "identifier": 2033,
+          "itemType": 0,
+          "englishName": "em",
+          "foreignLetter": "м",
+          "exampleWord": "сім, which means 'seven'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'm.' So, 'сім' is pronounced 'seem.'",
+              "short": "an 'm,' as in 'mom'"
+            }
+          },
+          "foreignLetterName": "ем",
+          "caseEquivalent": "М"
+        },
+        {
+          "identifier": 2035,
+          "itemType": 0,
+          "englishName": "en",
+          "foreignLetter": "н",
+          "exampleWord": "вікно, which means 'window'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "It looks like an English 'H,' but it sounds like an 'n.' So, 'вікно' is pronounced 'veek-NO.'",
+              "short": "an 'n,' as in 'nose'"
+            }
+          },
+          "foreignLetterName": "ен",
+          "caseEquivalent": "Н"
+        },
+        {
+          "identifier": 2037,
+          "itemType": 0,
+          "englishName": "o",
+          "foreignLetter": "о",
+          "exampleWord": "море, which means 'sea'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'o' sound, as in 'more.' So, 'море' is pronounced 'MO-re.'",
+              "short": "an 'o,' as in 'more'"
+            }
+          },
+          "foreignLetterName": "о",
+          "caseEquivalent": "О"
+        },
+        {
+          "identifier": 2039,
+          "itemType": 0,
+          "englishName": "pe",
+          "foreignLetter": "п",
+          "exampleWord": "суп, which means 'soup'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'p' in 'park.' So, 'суп' is pronounced 'soop.'",
+              "short": "a 'p,' as in 'park'"
+            }
+          },
+          "foreignLetterName": "пе",
+          "caseEquivalent": "П"
+        },
+        {
+          "identifier": 2041,
+          "itemType": 0,
+          "englishName": "er",
+          "foreignLetter": "р",
+          "exampleWord": "двір, which means 'yard'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a rolled, trilled 'r,' like in Spanish or Italian. It looks like an English 'P,' but never sounds like one. So, 'двір' is pronounced 'dveer.'",
+              "short": "a rolled 'r,' as in Spanish or Italian"
+            }
+          },
+          "foreignLetterName": "ер",
+          "caseEquivalent": "Р"
+        },
+        {
+          "identifier": 2043,
+          "itemType": 0,
+          "englishName": "es",
+          "foreignLetter": "с",
+          "exampleWord": "ліс, which means 'forest'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "It looks like an English 'C,' but it always sounds like the 's' in 'sun' — never like a 'k.' So, 'ліс' is pronounced 'lees.'",
+              "short": "an 's,' as in 'sun'"
+            }
+          },
+          "foreignLetterName": "ес",
+          "caseEquivalent": "С"
+        },
+        {
+          "identifier": 2045,
+          "itemType": 0,
+          "englishName": "te",
+          "foreignLetter": "т",
+          "exampleWord": "брат, which means 'brother'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 't' in 'top,' but without the puff of air. So, 'брат' is pronounced 'braht.'",
+              "short": "a 't,' as in 'top'"
+            }
+          },
+          "foreignLetterName": "те",
+          "caseEquivalent": "Т"
+        },
+        {
+          "identifier": 2047,
+          "itemType": 0,
+          "englishName": "u",
+          "foreignLetter": "у",
+          "exampleWord": "дуб, which means 'oak'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'oo' sound, as in 'moon' or 'school' — never the 'u' of 'cup.' So, 'дуб' is pronounced 'doob.'",
+              "short": "an 'oo,' as in 'moon'"
+            }
+          },
+          "foreignLetterName": "у",
+          "caseEquivalent": "У"
+        },
+        {
+          "identifier": 2049,
+          "itemType": 0,
+          "englishName": "ef",
+          "foreignLetter": "ф",
+          "exampleWord": "кафе, which means 'café'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'f' in 'fun.' So, 'кафе' is pronounced 'ka-FE.'",
+              "short": "an 'f,' as in 'fun'"
+            }
+          },
+          "foreignLetterName": "еф",
+          "caseEquivalent": "Ф"
+        },
+        {
+          "identifier": 2051,
+          "itemType": 0,
+          "englishName": "kha",
+          "foreignLetter": "х",
+          "exampleWord": "вухо, which means 'ear'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a breathy 'h' from the back of the throat — like the 'ch' in the Scottish 'loch' or German 'Bach.' So, 'вухо' is pronounced 'VOO-kho.'",
+              "short": "a breathy 'kh,' like the 'ch' in 'loch'"
+            }
+          },
+          "foreignLetterName": "ха",
+          "caseEquivalent": "Х"
+        },
+        {
+          "identifier": 2053,
+          "itemType": 0,
+          "englishName": "tse",
+          "foreignLetter": "ц",
+          "exampleWord": "вулиця, which means 'street'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the 'ts' in 'cats,' and unlike English it can begin a word. So, 'вулиця' is pronounced 'VOO-ly-tsya.'",
+              "short": "'ts,' as in 'cats'"
+            }
+          },
+          "foreignLetterName": "це",
+          "caseEquivalent": "Ц"
+        },
+        {
+          "identifier": 2055,
+          "itemType": 0,
+          "englishName": "che",
+          "foreignLetter": "ч",
+          "exampleWord": "ніч, which means 'night'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the 'ch' in 'church.' So, 'ніч' is pronounced 'neech.'",
+              "short": "'ch,' as in 'church'"
+            }
+          },
+          "foreignLetterName": "че",
+          "caseEquivalent": "Ч"
+        },
+        {
+          "identifier": 2057,
+          "itemType": 0,
+          "englishName": "sha",
+          "foreignLetter": "ш",
+          "exampleWord": "душ, which means 'shower'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a hard 'sh,' as in 'shoe,' said with the tongue pulled a little further back than in English. So, 'душ' is pronounced 'doosh.'",
+              "short": "a hard 'sh,' as in 'shoe'"
+            }
+          },
+          "foreignLetterName": "ша",
+          "caseEquivalent": "Ш"
+        },
+        {
+          "identifier": 2059,
+          "itemType": 0,
+          "englishName": "shcha",
+          "foreignLetter": "щ",
+          "exampleWord": "борщ, which means 'borscht'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a 'shch' cluster — 'sh' and 'ch' run together, as in 'fresh cheese' said quickly. (Harder than the long soft 'sh' of Russian щ.) So, 'борщ' is pronounced 'borshch.'",
+              "short": "'shch,' as in 'fresh cheese'"
+            }
+          },
+          "foreignLetterName": "ща",
+          "caseEquivalent": "Щ"
+        },
+        {
+          "identifier": 2061,
+          "itemType": 0,
+          "englishName": "soft sign",
+          "foreignLetter": "ь",
+          "exampleWord": "день, which means 'day'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "The soft sign is silent, but it changes its neighbor: the consonant right before it is 'softened' (palatalized), pronounced as if a tiny 'y' were folded into it. So, 'день' is pronounced 'den' (with a softened 'n').'",
+              "short": "silent — softens the consonant before it"
+            }
+          },
+          "foreignLetterName": "м'який знак",
+          "caseEquivalent": "Ь",
+          "explanation": "No Ukrainian word begins with ь — it only ever appears after a consonant. (Where Russian uses the hard sign ъ, Ukrainian uses an apostrophe instead: м'ясо.)"
+        },
+        {
+          "identifier": 2063,
+          "itemType": 0,
+          "englishName": "yu",
+          "foreignLetter": "ю",
+          "exampleWord": "меню, which means 'menu'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like 'you,' or the 'u' in 'universe.' After a consonant, the 'y' part melts into that consonant and softens it. So, 'меню' is pronounced 'me-NYU.'",
+              "short": "'yu,' as in 'universe'"
+            }
+          },
+          "foreignLetterName": "ю",
+          "caseEquivalent": "Ю"
+        },
+        {
+          "identifier": 2065,
+          "itemType": 0,
+          "englishName": "ya",
+          "foreignLetter": "я",
+          "exampleWord": "м'ясо, which means 'meat'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This sounds like the 'ya' in 'yard.' After a consonant, the 'y' part melts into that consonant and softens it. So, 'м'ясо' is pronounced 'MYA-so.'",
+              "short": "'ya,' as in 'yard'"
+            }
+          },
+          "foreignLetterName": "я",
+          "caseEquivalent": "Я",
+          "explanation": "Note the apostrophe in 'м'ясо': Ukrainian uses it the way Russian uses the hard sign ъ, to keep the 'y' of я crisp."
+        }
+      ]
+    }
+  ]
+}

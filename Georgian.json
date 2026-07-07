@@ -1,0 +1,512 @@
+{
+  "version": 2,
+  "alphabets": [
+    {
+      "language": 8,
+      "alphabetItems": [
+        {
+          "identifier": 8000,
+          "itemType": 0,
+          "englishName": "An",
+          "foreignLetter": "ა",
+          "exampleWord": "ანბანი, which means 'alphabet'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an open 'ah' sound, like the 'a' in 'father.' So, 'ანბანი' is pronounced 'an-BAH-nee.'",
+              "short": "an 'ah,' as in 'father'"
+            }
+          },
+          "foreignLetterName": "ან"
+        },
+        {
+          "identifier": 8001,
+          "itemType": 0,
+          "englishName": "Ban",
+          "foreignLetter": "ბ",
+          "exampleWord": "ბავშვი, which means 'child'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'b.' So, 'ბავშვი' is pronounced 'BAHV-shvee.'",
+              "short": "a 'b,' as in 'book'"
+            }
+          },
+          "foreignLetterName": "ბან"
+        },
+        {
+          "identifier": 8002,
+          "itemType": 0,
+          "englishName": "Gan",
+          "foreignLetter": "გ",
+          "exampleWord": "გიტარა, which means 'guitar'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a hard 'g,' as in 'go.' So, 'გიტარა' is pronounced 'gee-TAH-rah.'",
+              "short": "a hard 'g,' as in 'go'"
+            }
+          },
+          "foreignLetterName": "გან"
+        },
+        {
+          "identifier": 8003,
+          "itemType": 0,
+          "englishName": "Don",
+          "foreignLetter": "დ",
+          "exampleWord": "დედა, which means 'mother'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'd.' So, 'დედა' is pronounced 'DEH-dah.'",
+              "short": "a 'd,' as in 'dog'"
+            }
+          },
+          "foreignLetterName": "დონ"
+        },
+        {
+          "identifier": 8004,
+          "itemType": 0,
+          "englishName": "En",
+          "foreignLetter": "ე",
+          "exampleWord": "ენა, which means 'language (or tongue)'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a plain 'e,' as in 'end.' So, 'ენა' is pronounced 'EH-nah.'",
+              "short": "an 'e,' as in 'end'"
+            }
+          },
+          "foreignLetterName": "ენ"
+        },
+        {
+          "identifier": 8005,
+          "itemType": 0,
+          "englishName": "Vin",
+          "foreignLetter": "ვ",
+          "exampleWord": "ვარდი, which means 'rose'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'v.' So, 'ვარდი' is pronounced 'VAHR-dee.'",
+              "short": "a 'v,' as in 'very'"
+            }
+          },
+          "foreignLetterName": "ვინ"
+        },
+        {
+          "identifier": 8006,
+          "itemType": 0,
+          "englishName": "Zen",
+          "foreignLetter": "ზ",
+          "exampleWord": "ზამთარი, which means 'winter'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'z.' So, 'ზამთარი' is pronounced 'ZAHM-tah-ree.'",
+              "short": "a 'z,' as in 'zoo'"
+            }
+          },
+          "foreignLetterName": "ზენ"
+        },
+        {
+          "identifier": 8007,
+          "itemType": 0,
+          "englishName": "Tan",
+          "foreignLetter": "თ",
+          "exampleWord": "თევზი, which means 'fish'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an aspirated 't' — a 't' with a puff of air, as in 'time.' Its popped twin is ტ. So, 'თევზი' is pronounced 'TEV-zee.'",
+              "short": "an airy 't,' as in 'time'"
+            }
+          },
+          "foreignLetterName": "თან"
+        },
+        {
+          "identifier": 8008,
+          "itemType": 0,
+          "englishName": "In",
+          "foreignLetter": "ი",
+          "exampleWord": "ია, which means 'violet (the flower)'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'ee' sound, as in 'see.' So, 'ია' is pronounced 'EE-ah.'",
+              "short": "an 'ee,' as in 'see'"
+            }
+          },
+          "foreignLetterName": "ინ"
+        },
+        {
+          "identifier": 8009,
+          "itemType": 0,
+          "englishName": "K'an",
+          "foreignLetter": "კ",
+          "exampleWord": "კატა, which means 'cat'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a sharp, popped 'k' (an ejective) — a 'k' said with a small catch in the throat. Its airy twin is ქ. So, 'კატა' is pronounced 'KAH-tah.'",
+              "short": "a popped 'k'"
+            }
+          },
+          "foreignLetterName": "კან",
+          "explanation": "Georgian pairs several plain consonants with sharp, 'popped' twins (ejectives) — said with a little catch in the throat. This is the popped one."
+        },
+        {
+          "identifier": 8010,
+          "itemType": 0,
+          "englishName": "Las",
+          "foreignLetter": "ლ",
+          "exampleWord": "ლომი, which means 'lion'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'l.' So, 'ლომი' is pronounced 'LOH-mee.'",
+              "short": "an 'l,' as in 'lamp'"
+            }
+          },
+          "foreignLetterName": "ლას"
+        },
+        {
+          "identifier": 8011,
+          "itemType": 0,
+          "englishName": "Man",
+          "foreignLetter": "მ",
+          "exampleWord": "მზე, which means 'sun'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'm.' So, 'მზე' is pronounced 'mzeh.'",
+              "short": "an 'm,' as in 'mom'"
+            }
+          },
+          "foreignLetterName": "მან"
+        },
+        {
+          "identifier": 8012,
+          "itemType": 0,
+          "englishName": "Nar",
+          "foreignLetter": "ნ",
+          "exampleWord": "ნავი, which means 'boat'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'n.' So, 'ნავი' is pronounced 'NAH-vee.'",
+              "short": "an 'n,' as in 'nose'"
+            }
+          },
+          "foreignLetterName": "ნარ"
+        },
+        {
+          "identifier": 8013,
+          "itemType": 0,
+          "englishName": "On",
+          "foreignLetter": "ო",
+          "exampleWord": "ოთახი, which means 'room'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'o' sound, as in 'more.' So, 'ოთახი' is pronounced 'OH-tah-khee.'",
+              "short": "an 'o,' as in 'more'"
+            }
+          },
+          "foreignLetterName": "ონ"
+        },
+        {
+          "identifier": 8014,
+          "itemType": 0,
+          "englishName": "P'ar",
+          "foreignLetter": "პ",
+          "exampleWord": "პური, which means 'bread'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a sharp, popped 'p' (an ejective) — a 'p' said with a small catch in the throat. Its airy twin is ფ. So, 'პური' is pronounced 'POO-ree.'",
+              "short": "a popped 'p'"
+            }
+          },
+          "foreignLetterName": "პარ",
+          "explanation": "Georgian pairs several plain consonants with sharp, 'popped' twins (ejectives) — said with a little catch in the throat. This is the popped one."
+        },
+        {
+          "identifier": 8015,
+          "itemType": 0,
+          "englishName": "Zhan",
+          "foreignLetter": "ჟ",
+          "exampleWord": "ჟირაფი, which means 'giraffe'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is the 'zh' sound — like the 's' in 'measure.' So, 'ჟირაფი' is pronounced 'zhee-RAH-pee.'",
+              "short": "'zh,' like the 's' in 'measure'"
+            }
+          },
+          "foreignLetterName": "ჟან"
+        },
+        {
+          "identifier": 8016,
+          "itemType": 0,
+          "englishName": "Rae",
+          "foreignLetter": "რ",
+          "exampleWord": "რძე, which means 'milk'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a quick, tapped 'r,' like in Spanish or Italian. So, 'რძე' is pronounced 'rdzeh.'",
+              "short": "a tapped 'r,' as in Spanish"
+            }
+          },
+          "foreignLetterName": "რაე"
+        },
+        {
+          "identifier": 8017,
+          "itemType": 0,
+          "englishName": "San",
+          "foreignLetter": "ს",
+          "exampleWord": "სახლი, which means 'house'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 's.' So, 'სახლი' is pronounced 'SAKH-lee.'",
+              "short": "an 's,' as in 'sun'"
+            }
+          },
+          "foreignLetterName": "სან"
+        },
+        {
+          "identifier": 8018,
+          "itemType": 0,
+          "englishName": "T'ar",
+          "foreignLetter": "ტ",
+          "exampleWord": "ტბა, which means 'lake'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a sharp, popped 't' (an ejective) — a 't' said with a small catch in the throat. Its airy twin is თ. So, 'ტბა' is pronounced 'tbah.'",
+              "short": "a popped 't'"
+            }
+          },
+          "foreignLetterName": "ტარ",
+          "explanation": "Georgian pairs several plain consonants with sharp, 'popped' twins (ejectives) — said with a little catch in the throat. This is the popped one."
+        },
+        {
+          "identifier": 8019,
+          "itemType": 0,
+          "englishName": "Un",
+          "foreignLetter": "უ",
+          "exampleWord": "უთო, which means 'clothes iron'",
+          "isVowel": true,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an 'oo' sound, as in 'moon.' So, 'უთო' is pronounced 'OO-toh.'",
+              "short": "an 'oo,' as in 'moon'"
+            }
+          },
+          "foreignLetterName": "უნ"
+        },
+        {
+          "identifier": 8020,
+          "itemType": 0,
+          "englishName": "Par",
+          "foreignLetter": "ფ",
+          "exampleWord": "ფული, which means 'money'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an aspirated 'p' — a 'p' with a puff of air, as in 'pie.' Its popped twin is პ. So, 'ფული' is pronounced 'POO-lee.'",
+              "short": "an airy 'p,' as in 'pie'"
+            }
+          },
+          "foreignLetterName": "ფარ"
+        },
+        {
+          "identifier": 8021,
+          "itemType": 0,
+          "englishName": "Kan",
+          "foreignLetter": "ქ",
+          "exampleWord": "ქალი, which means 'woman'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an aspirated 'k' — a 'k' with a puff of air, as in 'kite.' Its popped twin is კ. So, 'ქალი' is pronounced 'KAH-lee.'",
+              "short": "an airy 'k,' as in 'kite'"
+            }
+          },
+          "foreignLetterName": "ქან"
+        },
+        {
+          "identifier": 8022,
+          "itemType": 0,
+          "englishName": "Ghan",
+          "foreignLetter": "ღ",
+          "exampleWord": "ღვინო, which means 'wine'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a gargled 'gh' from the back of the throat — very close to a French 'r.' So, 'ღვინო' is pronounced 'GHVEE-noh.'",
+              "short": "a gargled 'gh,' like a French 'r'"
+            }
+          },
+          "foreignLetterName": "ღან",
+          "explanation": "Fitting example: Georgia is often called the birthplace of wine."
+        },
+        {
+          "identifier": 8023,
+          "itemType": 0,
+          "englishName": "Q'ar",
+          "foreignLetter": "ყ",
+          "exampleWord": "ყავა, which means 'coffee'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is Georgian's famously hard sound: a popped 'k' made far back in the throat, deeper than კ. Georgians tease learners with the tongue-twister 'baq'aq'i ts'q'alshi q'iq'inebs' ('the frog croaks in the water'). So, 'ყავა' is pronounced 'QAH-vah.'",
+              "short": "a popped 'q,' deep in the throat"
+            }
+          },
+          "foreignLetterName": "ყარ",
+          "explanation": "Georgian pairs several plain consonants with sharp, 'popped' twins (ejectives) — said with a little catch in the throat. This is the popped one."
+        },
+        {
+          "identifier": 8024,
+          "itemType": 0,
+          "englishName": "Shin",
+          "foreignLetter": "შ",
+          "exampleWord": "შვილი, which means 'child (son or daughter)'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is the 'sh' sound of 'shoe.' So, 'შვილი' is pronounced 'SHVEE-lee.'",
+              "short": "'sh,' as in 'shoe'"
+            }
+          },
+          "foreignLetterName": "შინ"
+        },
+        {
+          "identifier": 8025,
+          "itemType": 0,
+          "englishName": "Chin",
+          "foreignLetter": "ჩ",
+          "exampleWord": "ჩაი, which means 'tea'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an aspirated 'ch,' as in 'church.' Its popped twin is ჭ. So, 'ჩაი' is pronounced 'chai.'",
+              "short": "an airy 'ch,' as in 'church'"
+            }
+          },
+          "foreignLetterName": "ჩინ"
+        },
+        {
+          "identifier": 8026,
+          "itemType": 0,
+          "englishName": "Tsan",
+          "foreignLetter": "ც",
+          "exampleWord": "ცა, which means 'sky'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is an aspirated 'ts,' as in 'cats.' Its popped twin is წ. So, 'ცა' is pronounced 'tsah.'",
+              "short": "an airy 'ts,' as in 'cats'"
+            }
+          },
+          "foreignLetterName": "ცან"
+        },
+        {
+          "identifier": 8027,
+          "itemType": 0,
+          "englishName": "Dzil",
+          "foreignLetter": "ძ",
+          "exampleWord": "ძაღლი, which means 'dog'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a 'dz' sound — the voiced partner of ც, like the 'ds' in 'lads.' So, 'ძაღლი' is pronounced 'DZAGH-lee.'",
+              "short": "'dz,' as in 'lads'"
+            }
+          },
+          "foreignLetterName": "ძილ"
+        },
+        {
+          "identifier": 8028,
+          "itemType": 0,
+          "englishName": "Ts'il",
+          "foreignLetter": "წ",
+          "exampleWord": "წყალი, which means 'water'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a sharp, popped 'ts' (an ejective). Its airy twin is ც. So, 'წყალი' is pronounced 'TSQAH-lee.'",
+              "short": "a popped 'ts'"
+            }
+          },
+          "foreignLetterName": "წილ",
+          "explanation": "Georgian pairs several plain consonants with sharp, 'popped' twins (ejectives) — said with a little catch in the throat. This is the popped one."
+        },
+        {
+          "identifier": 8029,
+          "itemType": 0,
+          "englishName": "Ch'ar",
+          "foreignLetter": "ჭ",
+          "exampleWord": "ჭიქა, which means 'glass (for drinking)'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a sharp, popped 'ch' (an ejective). Its airy twin is ჩ. So, 'ჭიქა' is pronounced 'CHEE-kah.'",
+              "short": "a popped 'ch'"
+            }
+          },
+          "foreignLetterName": "ჭარ",
+          "explanation": "Georgian pairs several plain consonants with sharp, 'popped' twins (ejectives) — said with a little catch in the throat. This is the popped one."
+        },
+        {
+          "identifier": 8030,
+          "itemType": 0,
+          "englishName": "Khan",
+          "foreignLetter": "ხ",
+          "exampleWord": "ხელი, which means 'hand'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is a breathy 'kh' from the back of the throat — like the 'ch' in 'loch' or 'Bach.' So, 'ხელი' is pronounced 'KHEH-lee.'",
+              "short": "a breathy 'kh,' like the 'ch' in 'loch'"
+            }
+          },
+          "foreignLetterName": "ხან"
+        },
+        {
+          "identifier": 8031,
+          "itemType": 0,
+          "englishName": "Jan",
+          "foreignLetter": "ჯ",
+          "exampleWord": "ჯიბე, which means 'pocket'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is the 'j' of 'judge' or 'jam.' So, 'ჯიბე' is pronounced 'JEE-beh.'",
+              "short": "a 'j,' as in 'judge'"
+            }
+          },
+          "foreignLetterName": "ჯან"
+        },
+        {
+          "identifier": 8032,
+          "itemType": 0,
+          "englishName": "Hae",
+          "foreignLetter": "ჰ",
+          "exampleWord": "ჰაერი, which means 'air'",
+          "isVowel": false,
+          "pronunciations": {
+            "modern": {
+              "full": "This is pronounced like the English 'h.' So, 'ჰაერი' is pronounced 'HAH-eh-ree.'",
+              "short": "an 'h,' as in 'hat'"
+            }
+          },
+          "foreignLetterName": "ჰაე"
+        }
+      ]
+    }
+  ]
+}
