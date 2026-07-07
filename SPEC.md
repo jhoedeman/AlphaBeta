@@ -88,7 +88,7 @@ Alphabet: `{ "language": Int, "alphabetItems": [AlphabetItem] }`
 | `lowercaseEnglishName` | String | e.g. "beta" |
 | `explanation` | String | Used on diphthongs/combinations ("This is a combination of…") |
 
-Greek data: 60 items — 24 capitals, 25 lowercase (incl. sigma teliko), 6 diphthongs, 5 combinations.
+Greek data: 62 items — 24 capitals, 25 lowercase (incl. sigma teliko), 6 diphthongs, 7 combinations.
 
 ### 3.2 Pronunciations object
 
@@ -336,7 +336,7 @@ Both are `.sheet` (form sheet on iPad).
 7. Haptics behind a small `Haptics` utility.
 
 ### Build order (milestones)
-1. **M1 Content pipeline:** Codable models, manifest/registry, `BundledAlphabetProvider`, decode test against `Greek.json` (all 60 items, spot-check sigma family & marked vowels).
+1. **M1 Content pipeline:** Codable models, manifest/registry, `BundledAlphabetProvider`, decode test against `Greek.json` (all 62 items, spot-check sigma family & marked vowels).
 2. **M2 Theming shell:** ThemeManager, placeholder palettes, RootView tabs, appearance switching.
 3. **M3 Cards:** deck, swipe gestures, filter pills, shuffle, iPad constraint, card count.
 4. **M4 Detail sheet:** all sections, case-sibling navigation, dismiss gestures.
@@ -350,7 +350,7 @@ Both are `.sheet` (form sheet on iPad).
 - `QuizEngine`: distractor validity (Q3/Q4 substring rule, Q6 sound-collision rule), no-repeat rule, small-pool degradation, weighting distribution sanity.
 - `StreakStore`: all date edge cases (§4).
 - JSON decoding: full `Greek.json` round-trip; unknown/extra keys tolerated (forward compatibility).
-- Filter logic: category mapping for all 60 items (24 caps / 25 lower / 6 diphthongs / 5 combos).
+- Filter logic: category mapping for all 62 items (24 caps / 25 lower / 6 diphthongs / 7 combos).
 
 ---
 
