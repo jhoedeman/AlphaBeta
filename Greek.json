@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "alphabets": [
     {
       "language": 0,
@@ -12,16 +12,10 @@
           "exampleWord": "Άλογο, which means 'horse'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "This is a longish 'a' sound, like you would hear in the words 'alms' or 'father.' Note that you will not hear a sound similar to the first 'a' in the word 'animal.' So, the word 'Άλογο' is pronounced 'ah-loh-ghoh.'",
-            "modernShortPronunciation": "a long 'a,' as in 'father'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This is a longish 'a' sound, like you would hear in the words 'alms' or 'father.' Note that you will not hear a sound similar to the first 'a' in the word 'animal.' So, the word 'Άλογο' is pronounced 'ah-loh-ghoh.'",
+              "short": "a long 'a,' as in 'father'"
+            }
           },
           "languageSubtype": null,
           "foreignLetterName": "Άλφα",
@@ -41,16 +35,10 @@
           "exampleWord": "Βουβάλι, which means 'buffalo'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Although it looks a lot like a 'b,' the βήτα is pronounced very much like the English 'v,' and in fact, the letter itself is pronounced 'vee-tah.' So, the word 'Βουβάλι' is pronounced 'voo-vah-lee.'",
-            "modernShortPronunciation": "a 'v' sound, as in 'very'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Although it looks a lot like a 'b,' the βήτα is pronounced very much like the English 'v,' and in fact, the letter itself is pronounced 'vee-tah.' So, the word 'Βουβάλι' is pronounced 'voo-vah-lee.'",
+              "short": "a 'v' sound, as in 'very'"
+            }
           },
           "foreignLetterName": "Βήτα",
           "caseEquivalent": "β",
@@ -64,16 +52,10 @@
           "exampleWord": "Γάτα, which means 'cat'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Gamma is a tricky one! Before the vowels α, ο, and ου (and before consonants), it's not a hard 'g,' but neither is it a soft 'h' — it's a soft, gargled 'gh.' Before the vowels ε and ι, it instead sounds like the 'y' in 'yes.' 'Γάτα' is pronounced 'ghah-tah.'",
-            "modernShortPronunciation": "a soft, gargled 'gh' (or a 'y' sound before 'e' and 'ee' vowels)",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Gamma is a tricky one! Before the vowels α, ο, and ου (and before consonants), it's not a hard 'g,' but neither is it a soft 'h' — it's a soft, gargled 'gh.' Before the vowels ε and ι, it instead sounds like the 'y' in 'yes.' 'Γάτα' is pronounced 'ghah-tah.'",
+              "short": "a soft, gargled 'gh' (or a 'y' sound before 'e' and 'ee' vowels)"
+            }
           },
           "foreignLetterName": "Γάμμα",
           "caseEquivalent": "γ",
@@ -87,16 +69,10 @@
           "exampleWord": "Διαβάζω, which means 'I read'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Despite looking like an English 'd,' the delta is pronounced like the 'th' sound in the words 'these' and 'those.' (It is not, however, pronounced like the softer 'th' in 'bath' or 'death.') So, 'Διαβάζω' is pronounced 'thee-ah-vah-zoe.'",
-            "modernShortPronunciation": "a voiced 'th,' as in 'these' or 'those'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Despite looking like an English 'd,' the delta is pronounced like the 'th' sound in the words 'these' and 'those.' (It is not, however, pronounced like the softer 'th' in 'bath' or 'death.') So, 'Διαβάζω' is pronounced 'thee-ah-vah-zoe.'",
+              "short": "a voiced 'th,' as in 'these' or 'those'"
+            }
           },
           "foreignLetterName": "Δέλτα",
           "caseEquivalent": "δ",
@@ -110,16 +86,10 @@
           "exampleWord": "Έχω, which means 'I have'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "Epsilon sounds like a short 'e' in English, meaning it's similar in sound to the 'e' in 'held' or 'pen,' but not the longer 'e' as in 'evil' or 'emit.' 'Έχω' is pronounced 'eh-ho.'",
-            "modernShortPronunciation": "a short 'e,' as in 'felt' or 'hen'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Epsilon sounds like a short 'e' in English, meaning it's similar in sound to the 'e' in 'held' or 'pen,' but not the longer 'e' as in 'evil' or 'emit.' 'Έχω' is pronounced 'eh-ho.'",
+              "short": "a short 'e,' as in 'felt' or 'hen'"
+            }
           },
           "foreignLetterName": "Έψιλον",
           "markedVersion": "Έ",
@@ -135,16 +105,10 @@
           "exampleWord": "Ζωή, which means 'life'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Zeta is pronounced like the English 'z.' So, the word 'Ζωή' is pronounced 'zoh-ee.'",
-            "modernShortPronunciation": "a 'z' sound, as in 'zoo'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Zeta is pronounced like the English 'z.' So, the word 'Ζωή' is pronounced 'zoh-ee.'",
+              "short": "a 'z' sound, as in 'zoo'"
+            }
           },
           "foreignLetterName": "Ζήτα",
           "caseEquivalent": "ζ",
@@ -158,16 +122,10 @@
           "exampleWord": "Κρήτη, the name of the island we call 'Crete'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "Eta is pronounced like the 'ee' in 'feet' or 'greet.' This means that 'Κρήτη' is pronounced 'kree-tee.'",
-            "modernShortPronunciation": "a long 'ee,' as in 'feel'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Eta is pronounced like the 'ee' in 'feet' or 'greet.' This means that 'Κρήτη' is pronounced 'kree-tee.'",
+              "short": "a long 'ee,' as in 'feel'"
+            }
           },
           "foreignLetterName": "Ήτα",
           "markedVersion": "Ή",
@@ -183,16 +141,10 @@
           "exampleWord": "Θέμα, which means 'theme' or 'subject'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "The theta is pronounced like a soft 'th,' as in 'path' or 'mathematics.' 'Θέμα' is pronounced 'theh-mah.'",
-            "modernShortPronunciation": "an unvoiced 'th,' as in 'think' or 'thank'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "The theta is pronounced like a soft 'th,' as in 'path' or 'mathematics.' 'Θέμα' is pronounced 'theh-mah.'",
+              "short": "an unvoiced 'th,' as in 'think' or 'thank'"
+            }
           },
           "foreignLetterName": "θήτα",
           "caseEquivalent": "θ",
@@ -206,16 +158,10 @@
           "exampleWord": "Κίτρινο, which means 'yellow'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "Iota sounds like a long i (meaning the letter itself is pronounced like 'yota'). It sounds like the 'i' sound in 'machine,' meaning 'κίτρινο' is pronounced 'kee-tree-noh.'",
-            "modernShortPronunciation": "a long i, as in 'machine'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Iota sounds like a long i (meaning the letter itself is pronounced like 'yota'). It sounds like the 'i' sound in 'machine,' meaning 'κίτρινο' is pronounced 'kee-tree-noh.'",
+              "short": "a long i, as in 'machine'"
+            }
           },
           "foreignLetterName": "Ιώτα",
           "markedVersion": "Ί",
@@ -231,16 +177,10 @@
           "exampleWord": "Κορίτσι, which means 'girl'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Kappa is identical to the sound an English 'k' makes. So, 'Κορίτσι' is pronounced 'koh-ree-tsee.'",
-            "modernShortPronunciation": "a 'k' sound, as in 'kayak'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Kappa is identical to the sound an English 'k' makes. So, 'Κορίτσι' is pronounced 'koh-ree-tsee.'",
+              "short": "a 'k' sound, as in 'kayak'"
+            }
           },
           "foreignLetterName": "Κάππα",
           "caseEquivalent": "κ",
@@ -254,16 +194,10 @@
           "exampleWord": "Λέει, which means 'he says'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Lambda is pronounced like the English 'l,' which means that the word 'Λέει' is pronounced 'lay-ee.'",
-            "modernShortPronunciation": "an 'l' sound, as in 'lamb'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Lambda is pronounced like the English 'l,' which means that the word 'Λέει' is pronounced 'lay-ee.'",
+              "short": "an 'l' sound, as in 'lamb'"
+            }
           },
           "foreignLetterName": "Λάμβδα",
           "caseEquivalent": "λ",
@@ -277,16 +211,10 @@
           "exampleWord": "Μαμά, which means 'mom'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Mu is pronounced like the English 'm,' meaning that 'Μαμά' is pronounced 'ma-ma.'",
-            "modernShortPronunciation": "an 'm,' as in 'mom' or 'more'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Mu is pronounced like the English 'm,' meaning that 'Μαμά' is pronounced 'ma-ma.'",
+              "short": "an 'm,' as in 'mom' or 'more'"
+            }
           },
           "foreignLetterName": "Μυ",
           "caseEquivalent": "μ",
@@ -300,16 +228,10 @@
           "exampleWord": "Πίνουν, which means 'they drink'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Nu has a pronunciation identical to the English 'n.' 'Πίνουν' is pronounced 'pee-noon.'",
-            "modernShortPronunciation": "an 'n,' as in 'nice' or 'never'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Nu has a pronunciation identical to the English 'n.' 'Πίνουν' is pronounced 'pee-noon.'",
+              "short": "an 'n,' as in 'nice' or 'never'"
+            }
           },
           "foreignLetterName": "Νυ",
           "caseEquivalent": "ν",
@@ -323,16 +245,10 @@
           "exampleWord": "Ξένος, which means 'foreigner'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Xi is pronounced like the English letter 'x,' although it can be used at any point in the word, including the beginning, without changing its pronunciation. So, 'Ξένος' is pronounced 'kseh-nos.'",
-            "modernShortPronunciation": "an English 'x,' as in 'fox' or 'box'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Xi is pronounced like the English letter 'x,' although it can be used at any point in the word, including the beginning, without changing its pronunciation. So, 'Ξένος' is pronounced 'kseh-nos.'",
+              "short": "an English 'x,' as in 'fox' or 'box'"
+            }
           },
           "foreignLetterName": "Ξι",
           "caseEquivalent": "ξ",
@@ -346,16 +262,10 @@
           "exampleWord": "Όνομα, which means 'name'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "In modern Greek, omicron and omega make exactly the same 'o' sound, as in 'over' — only the spelling differs. A handy pattern: when a word ends in an omicron, it tends to be a noun, adjective, or article, but not a verb. 'Όνομα' is pronounced 'OH-no-mah,' with the stress on the accented first syllable.",
-            "modernShortPronunciation": "an 'o,' as in 'over' — ends many adjectives, articles, and nouns",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "In modern Greek, omicron and omega make exactly the same 'o' sound, as in 'over' — only the spelling differs. A handy pattern: when a word ends in an omicron, it tends to be a noun, adjective, or article, but not a verb. 'Όνομα' is pronounced 'OH-no-mah,' with the stress on the accented first syllable.",
+              "short": "an 'o,' as in 'over' — ends many adjectives, articles, and nouns"
+            }
           },
           "foreignLetterName": "Όμικρον",
           "markedVersion": "Ό",
@@ -371,16 +281,10 @@
           "exampleWord": "Πόσο, which means 'how much?'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Pi is pronounced like the English 'p' (and the letter itself is pronounced like 'pee'), which means that 'Πόσο' is pronounced 'po-so.'",
-            "modernShortPronunciation": "a 'p,' as in 'pants' or 'pond'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Pi is pronounced like the English 'p' (and the letter itself is pronounced like 'pee'), which means that 'Πόσο' is pronounced 'po-so.'",
+              "short": "a 'p,' as in 'pants' or 'pond'"
+            }
           },
           "foreignLetterName": "Πι",
           "caseEquivalent": "π",
@@ -394,16 +298,10 @@
           "exampleWord": "Ρόδα, which means 'wheel'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Rho's pronunciation is similar to the English 'r,' but it is slightly trilled, similar to how an 'r' is pronounced in Spanish or Italian. Make sure your tongue hits the roof of your mouth when you say the rho in 'ρόδα,' which is pronounced '´roh-tha.'",
-            "modernShortPronunciation": "an 'r' sound, as in 'rare'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Rho's pronunciation is similar to the English 'r,' but it is slightly trilled, similar to how an 'r' is pronounced in Spanish or Italian. Make sure your tongue hits the roof of your mouth when you say the rho in 'ρόδα,' which is pronounced '´roh-tha.'",
+              "short": "an 'r' sound, as in 'rare'"
+            }
           },
           "foreignLetterName": "Ρω",
           "caseEquivalent": "ρ",
@@ -417,16 +315,10 @@
           "exampleWord": "Σκούρος, which means 'dark'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Sigma is pronounced like the English 's.' So, the word 'σκούρος,' which means 'dark,' is pronounced with the same 's' sound as its English counterpart. Say it 'skoo-ros.'",
-            "modernShortPronunciation": "an 's' sound, as in 'sass'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Sigma is pronounced like the English 's.' So, the word 'σκούρος,' which means 'dark,' is pronounced with the same 's' sound as its English counterpart. Say it 'skoo-ros.'",
+              "short": "an 's' sound, as in 'sass'"
+            }
           },
           "foreignLetterName": "Σίγμα",
           "caseEquivalent": "σ",
@@ -441,16 +333,10 @@
           "exampleWord": "Τι, which means 'what'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Tau is pronounced like an English 't.' The word 'Τι' is pronounced as it's spelled: 'ti.'",
-            "modernShortPronunciation": "a 't' sound, as in 'top' or 'tattle'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Tau is pronounced like an English 't.' The word 'Τι' is pronounced as it's spelled: 'ti.'",
+              "short": "a 't' sound, as in 'top' or 'tattle'"
+            }
           },
           "foreignLetterName": "Ταυ",
           "caseEquivalent": "τ",
@@ -464,16 +350,10 @@
           "exampleWord": "Ύμνος, which means 'hymn'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "Ypsilon is an 'ee' sound, like the vowel version of 'y' — for example, the 'y' sound in 'candy.' The accent simply marks the stressed syllable, so 'Ύμνος' is pronounced 'EEM-nos.' (The 'h' in the English word 'hymn' comes from an ancient Greek 'rough breathing' mark that is no longer pronounced in modern Greek.)",
-            "modernShortPronunciation": "a long 'ee' sound like the vowel 'y' in 'candy'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Ypsilon is an 'ee' sound, like the vowel version of 'y' — for example, the 'y' sound in 'candy.' The accent simply marks the stressed syllable, so 'Ύμνος' is pronounced 'EEM-nos.' (The 'h' in the English word 'hymn' comes from an ancient Greek 'rough breathing' mark that is no longer pronounced in modern Greek.)",
+              "short": "a long 'ee' sound like the vowel 'y' in 'candy'"
+            }
           },
           "foreignLetterName": "Ύψιλον",
           "markedVersion": "Ύ",
@@ -489,16 +369,10 @@
           "exampleWord": "Ελέφαντας, which means 'elephant'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Phi is pronounced like the English 'f.' 'Ελέφαντας' is pronounced 'eh-leh-fan-tas.'",
-            "modernShortPronunciation": "an 'f' sound, as in 'file' or 'far'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Phi is pronounced like the English 'f.' 'Ελέφαντας' is pronounced 'eh-leh-fan-tas.'",
+              "short": "an 'f' sound, as in 'file' or 'far'"
+            }
           },
           "foreignLetterName": "Φι",
           "caseEquivalent": "φ",
@@ -512,16 +386,10 @@
           "exampleWord": "Όχι, which means 'no'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Chi (in Greek, the letter is pronounced like 'hee') is a breathy 'h' sound — harder than an English 'h,' like the 'ch' in the Scottish 'loch' or German 'Bach,' and softer (like the 'h' in 'hue') before 'e' and 'ee' sounds. So, the word 'όχι' sounds like 'oh-hee.'",
-            "modernShortPronunciation": "a breathy 'h,' like the 'ch' in 'loch'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Chi (in Greek, the letter is pronounced like 'hee') is a breathy 'h' sound — harder than an English 'h,' like the 'ch' in the Scottish 'loch' or German 'Bach,' and softer (like the 'h' in 'hue') before 'e' and 'ee' sounds. So, the word 'όχι' sounds like 'oh-hee.'",
+              "short": "a breathy 'h,' like the 'ch' in 'loch'"
+            }
           },
           "foreignLetterName": "Χι",
           "caseEquivalent": "χ",
@@ -535,16 +403,10 @@
           "exampleWord": "Ψυχή, which means 'soul'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "True to its name, the letter Ψ is pronounced as a combination of the consonant sounds of 'p' and 's,' and it can be found in any place in the word, including the very beginning. It sounds the same as the 'ps' combination in the English words 'claps' or 'traps,' so 'Ψυχή' is pronounced 'psee-hee.'",
-            "modernShortPronunciation": "a combination of the consonant sounds 'p' and 's,' forming a 'ps' as in 'cyclops'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "True to its name, the letter Ψ is pronounced as a combination of the consonant sounds of 'p' and 's,' and it can be found in any place in the word, including the very beginning. It sounds the same as the 'ps' combination in the English words 'claps' or 'traps,' so 'Ψυχή' is pronounced 'psee-hee.'",
+              "short": "a combination of the consonant sounds 'p' and 's,' forming a 'ps' as in 'cyclops'"
+            }
           },
           "foreignLetterName": "Ψι",
           "caseEquivalent": "ψ",
@@ -558,16 +420,10 @@
           "exampleWord": "Ωκεανός, which means 'ocean'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "Omega is an 'o' sound, as in 'over' or 'post.' In modern Greek it is pronounced exactly the same as the omicron — the difference is spelling and grammar: when a word ends in an omega, that word tends to be a verb. The word 'Ωκεανός' is pronounced 'oh-keh-ah-nos.'",
-            "modernShortPronunciation": "an 'o,' as in 'over' — ends many verbs",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Omega is an 'o' sound, as in 'over' or 'post.' In modern Greek it is pronounced exactly the same as the omicron — the difference is spelling and grammar: when a word ends in an omega, that word tends to be a verb. The word 'Ωκεανός' is pronounced 'oh-keh-ah-nos.'",
+              "short": "an 'o,' as in 'over' — ends many verbs"
+            }
           },
           "foreignLetterName": "Ωμέγα",
           "markedVersion": "Ώ",
@@ -583,16 +439,10 @@
           "exampleWord": "γράμμα, which means 'letter'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "This is a longish 'a' sound, like you would hear in the words 'alms' or 'father.' Note that you will not hear a sound similar to the first 'a' in the word 'animal.' The word 'γράμμα' is pronounced 'ghrah-mah.'",
-            "modernShortPronunciation": "a long 'a,' as in 'father'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This is a longish 'a' sound, like you would hear in the words 'alms' or 'father.' Note that you will not hear a sound similar to the first 'a' in the word 'animal.' The word 'γράμμα' is pronounced 'ghrah-mah.'",
+              "short": "a long 'a,' as in 'father'"
+            }
           },
           "foreignLetterName": "άλφα",
           "markedVersion": "ά",
@@ -607,16 +457,10 @@
           "exampleWord": "βιβλίο, which means 'book'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Although it looks a lot like a 'b,' the βήτα is pronounced very much like the English 'v,' and in fact, the letter itself is pronounced 'vee-tah.' Therefore, the word 'βιβλίο' is pronounced 'vee-vlee-oh.'",
-            "modernShortPronunciation": "a 'v' sound, as in 'very'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Although it looks a lot like a 'b,' the βήτα is pronounced very much like the English 'v,' and in fact, the letter itself is pronounced 'vee-tah.' Therefore, the word 'βιβλίο' is pronounced 'vee-vlee-oh.'",
+              "short": "a 'v' sound, as in 'very'"
+            }
           },
           "foreignLetterName": "βήτα",
           "caseEquivalent": "Β"
@@ -629,16 +473,10 @@
           "exampleWord": "βιολογία, which means 'biology'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Gamma is a tricky one! Before the vowels α, ο, and ου (and before consonants), it's a soft, gargled 'gh' — not a hard 'g,' but not a soft 'h' either. Before the vowels ε and ι, it sounds like the 'y' in 'yes.' That's why 'βιολογία' is pronounced 'vee-oh-lo-yee-ah.'",
-            "modernShortPronunciation": "a soft, gargled 'gh' (or a 'y' sound before 'e' and 'ee' vowels)",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Gamma is a tricky one! Before the vowels α, ο, and ου (and before consonants), it's a soft, gargled 'gh' — not a hard 'g,' but not a soft 'h' either. Before the vowels ε and ι, it sounds like the 'y' in 'yes.' That's why 'βιολογία' is pronounced 'vee-oh-lo-yee-ah.'",
+              "short": "a soft, gargled 'gh' (or a 'y' sound before 'e' and 'ee' vowels)"
+            }
           },
           "foreignLetterName": "γάμμα",
           "caseEquivalent": "Γ"
@@ -651,16 +489,10 @@
           "exampleWord": "διαμάντι, which means 'diamond'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Despite looking like an English 'd,' the delta is pronounced like the 'th' sound in the words 'these' and 'those.' (It is not, however, pronounced like the softer 'th' in 'bath' or 'death.') So, 'διαμάντι' is pronounced 'thee-ah-mahn-tee.'",
-            "modernShortPronunciation": "a voiced 'th,' as in 'these' or 'those'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Despite looking like an English 'd,' the delta is pronounced like the 'th' sound in the words 'these' and 'those.' (It is not, however, pronounced like the softer 'th' in 'bath' or 'death.') So, 'διαμάντι' is pronounced 'thee-ah-mahn-tee.'",
+              "short": "a voiced 'th,' as in 'these' or 'those'"
+            }
           },
           "foreignLetterName": "δέλτα",
           "caseEquivalent": "Δ"
@@ -673,16 +505,10 @@
           "exampleWord": "μέση, which means 'waist'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "Epsilon sounds like a short 'e' in English, meaning it's similar in sound to the 'e' in 'held' or 'pen,' but not the longer 'e' as in 'evil' or 'emit.' 'Μέση' is pronounced 'meh-see.'",
-            "modernShortPronunciation": "a short 'e,' as in 'felt' or 'hen'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Epsilon sounds like a short 'e' in English, meaning it's similar in sound to the 'e' in 'held' or 'pen,' but not the longer 'e' as in 'evil' or 'emit.' 'Μέση' is pronounced 'meh-see.'",
+              "short": "a short 'e,' as in 'felt' or 'hen'"
+            }
           },
           "foreignLetterName": "έψιλον",
           "markedVersion": "έ",
@@ -697,16 +523,10 @@
           "exampleWord": "ζουζούνι, which means 'insect'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Zeta is pronounced like the English 'z.' So, the word 'ζουζούνι' is pronounced like 'zoo-zoo-nee.'",
-            "modernShortPronunciation": "a 'z' sound, as in 'zoo'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Zeta is pronounced like the English 'z.' So, the word 'ζουζούνι' is pronounced like 'zoo-zoo-nee.'",
+              "short": "a 'z' sound, as in 'zoo'"
+            }
           },
           "foreignLetterName": "ζήτα",
           "caseEquivalent": "Ζ"
@@ -719,16 +539,10 @@
           "exampleWord": "αράχνη, which means 'spider'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "Eta is pronounced like the 'ee' in 'feet' or 'greet.' This means that 'αράχνη' is pronounced 'ah-rah-hnee.'",
-            "modernShortPronunciation": "a long 'ee,' as in 'feel'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Eta is pronounced like the 'ee' in 'feet' or 'greet.' This means that 'αράχνη' is pronounced 'ah-rah-hnee.'",
+              "short": "a long 'ee,' as in 'feel'"
+            }
           },
           "foreignLetterName": "ήτα",
           "markedVersion": "ή",
@@ -743,16 +557,10 @@
           "exampleWord": "μαθηματικά, which means 'mathematics'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "The theta is pronounced like a soft 'th,' as in 'path' or 'mathematics' (not a coincidence), meaning that 'μαθηματικά' is pronounced, as you would expect, 'mah-thee-mah-tee-kah.'",
-            "modernShortPronunciation": "an unvoiced 'th,' as in 'think' or 'thank'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "The theta is pronounced like a soft 'th,' as in 'path' or 'mathematics' (not a coincidence), meaning that 'μαθηματικά' is pronounced, as you would expect, 'mah-thee-mah-tee-kah.'",
+              "short": "an unvoiced 'th,' as in 'think' or 'thank'"
+            }
           },
           "foreignLetterName": "θήτα",
           "caseEquivalent": "Θ"
@@ -765,16 +573,10 @@
           "exampleWord": "κόκκινη, which means 'red'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "Iota sounds like a long i (meaning the letter itself is pronounced like 'yota'). It sounds like the 'i' sound in 'machine,' meaning 'κόκκινη' is pronounced 'koh-ki-nee.'",
-            "modernShortPronunciation": "a long i, as in 'machine'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Iota sounds like a long i (meaning the letter itself is pronounced like 'yota'). It sounds like the 'i' sound in 'machine,' meaning 'κόκκινη' is pronounced 'koh-ki-nee.'",
+              "short": "a long i, as in 'machine'"
+            }
           },
           "foreignLetterName": "ιώτα",
           "markedVersion": "ί",
@@ -789,16 +591,10 @@
           "exampleWord": "πορτοκαλί, which means 'orange'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Kappa is identical to the sound an English 'k' makes. So, 'πορτοκαλί' is pronounced 'por-toe-kah-lee.'",
-            "modernShortPronunciation": "a 'k' sound, as in 'kayak'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Kappa is identical to the sound an English 'k' makes. So, 'πορτοκαλί' is pronounced 'por-toe-kah-lee.'",
+              "short": "a 'k' sound, as in 'kayak'"
+            }
           },
           "foreignLetterName": "κάππα",
           "caseEquivalent": "Κ"
@@ -811,16 +607,10 @@
           "exampleWord": "καλό, which means 'good'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Lambda is pronounced like the English 'l,' which means that the word 'καλό' is pronounced 'kah-low.'",
-            "modernShortPronunciation": "an 'l' sound, as in 'lamb'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Lambda is pronounced like the English 'l,' which means that the word 'καλό' is pronounced 'kah-low.'",
+              "short": "an 'l' sound, as in 'lamb'"
+            }
           },
           "foreignLetterName": "λάμβδα",
           "caseEquivalent": "Λ"
@@ -833,16 +623,10 @@
           "exampleWord": "ομόνοια, which means 'concord'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Mu is pronounced like the English 'm,' meaning that 'ομόνοια' is pronounced 'oh-moe-nee-ah'",
-            "modernShortPronunciation": "an 'm,' as in 'mom' or 'more'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Mu is pronounced like the English 'm,' meaning that 'ομόνοια' is pronounced 'oh-moe-nee-ah'",
+              "short": "an 'm,' as in 'mom' or 'more'"
+            }
           },
           "foreignLetterName": "μυ",
           "caseEquivalent": "Μ"
@@ -855,16 +639,10 @@
           "exampleWord": "νερό, which means 'water'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Nu has a pronunciation identical to the English 'n.' 'Νερό' is pronounced 'neh-roe.'",
-            "modernShortPronunciation": "an 'n,' as in 'nice' or 'never'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Nu has a pronunciation identical to the English 'n.' 'Νερό' is pronounced 'neh-roe.'",
+              "short": "an 'n,' as in 'nice' or 'never'"
+            }
           },
           "foreignLetterName": "νυ",
           "caseEquivalent": "Ν"
@@ -877,16 +655,10 @@
           "exampleWord": "λεξικό, which means 'dictionary'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Xi is pronounced like the English letter 'x,' and it can be used at any point in the word, including the beginning, without changing its pronunciation. 'Λεξικό' is pronounced 'leks-ih-ko.'",
-            "modernShortPronunciation": "an English 'x,' as in 'fox' or 'box'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Xi is pronounced like the English letter 'x,' and it can be used at any point in the word, including the beginning, without changing its pronunciation. 'Λεξικό' is pronounced 'leks-ih-ko.'",
+              "short": "an English 'x,' as in 'fox' or 'box'"
+            }
           },
           "foreignLetterName": "ξι",
           "caseEquivalent": "Ξ"
@@ -899,16 +671,10 @@
           "exampleWord": "φρέσκο, which means 'fresh'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "In modern Greek, omicron and omega make exactly the same 'o' sound, as in 'over' — only the spelling differs. A handy pattern: when a word ends in an omicron, it tends to be a noun, adjective, or article, but not a verb. Because the omicron ends the word 'φρέσκο,' it is pronounced 'fres-koh.'",
-            "modernShortPronunciation": "an 'o,' as in 'over' — ends many adjectives, articles, and nouns",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "In modern Greek, omicron and omega make exactly the same 'o' sound, as in 'over' — only the spelling differs. A handy pattern: when a word ends in an omicron, it tends to be a noun, adjective, or article, but not a verb. Because the omicron ends the word 'φρέσκο,' it is pronounced 'fres-koh.'",
+              "short": "an 'o,' as in 'over' — ends many adjectives, articles, and nouns"
+            }
           },
           "foreignLetterName": "όμικρον",
           "markedVersion": "ό",
@@ -923,16 +689,10 @@
           "exampleWord": "πάπια, which means 'duck'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Pi is pronounced like the English 'p' (and the letter itself is pronounced like 'pee'), which means 'πάπια' is pronounced 'pah-pee-ah.'",
-            "modernShortPronunciation": "a 'p,' as in 'pants' or 'pond'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Pi is pronounced like the English 'p' (and the letter itself is pronounced like 'pee'), which means 'πάπια' is pronounced 'pah-pee-ah.'",
+              "short": "a 'p,' as in 'pants' or 'pond'"
+            }
           },
           "foreignLetterName": "πι",
           "caseEquivalent": "Π"
@@ -945,16 +705,10 @@
           "exampleWord": "παρακαλώ, which means 'please'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Rho's pronunciation is similar to the English 'r,' but it is slightly trilled, similar to how an 'r' is pronounced in Spanish or Italian. Make sure your tongue hits the roof of your mouth when you reach the rho in 'παρακαλώ,' which is pronounced 'pah-´rah-kah-lo.'",
-            "modernShortPronunciation": "an 'r' sound, as in 'rare'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Rho's pronunciation is similar to the English 'r,' but it is slightly trilled, similar to how an 'r' is pronounced in Spanish or Italian. Make sure your tongue hits the roof of your mouth when you reach the rho in 'παρακαλώ,' which is pronounced 'pah-´rah-kah-lo.'",
+              "short": "an 'r' sound, as in 'rare'"
+            }
           },
           "foreignLetterName": "ρω",
           "caseEquivalent": "Ρ"
@@ -967,16 +721,10 @@
           "exampleWord": "στάση, which means 'stop'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Sigma is pronounced like the English 's.' So, the word 'στάση,' which means 'stop,' is pronounced with the same 's' sound as its English counterpart. Say it 'stah-see.'",
-            "modernShortPronunciation": "an 's' sound, as in 'sass'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Sigma is pronounced like the English 's.' So, the word 'στάση,' which means 'stop,' is pronounced with the same 's' sound as its English counterpart. Say it 'stah-see.'",
+              "short": "an 's' sound, as in 'sass'"
+            }
           },
           "foreignLetterName": "σίγμα",
           "caseEquivalent": "Σ",
@@ -990,16 +738,10 @@
           "exampleWord": "γάτες, which means 'cats'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Sigma is pronounced like the English 's.' So, the word 'γάτες,' which means 'cats,' is pronounced with the same 's' sound as its English counterpart. Say it 'ghah-tes.'",
-            "modernShortPronunciation": "an 's' sound, as in 'sass'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Sigma is pronounced like the English 's.' So, the word 'γάτες,' which means 'cats,' is pronounced with the same 's' sound as its English counterpart. Say it 'ghah-tes.'",
+              "short": "an 's' sound, as in 'sass'"
+            }
           },
           "foreignLetterName": "σίγμα τελικό",
           "caseEquivalent": "Σ",
@@ -1014,16 +756,10 @@
           "exampleWord": "τρώει, which means 'he eats'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Tau is pronounced like an English 't.' The word 'τρώει' is pronounced 'troh-ee.'",
-            "modernShortPronunciation": "a 't' sound, as in 'top' or 'tattle'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Tau is pronounced like an English 't.' The word 'τρώει' is pronounced 'troh-ee.'",
+              "short": "a 't' sound, as in 'top' or 'tattle'"
+            }
           },
           "foreignLetterName": "ταυ",
           "caseEquivalent": "Τ"
@@ -1036,16 +772,10 @@
           "exampleWord": "σκύλος, which means 'dog'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "Ypsilon is a 'ee' sound, or a long 'i' as in 'machine.' So, 'σκύλος' is pronounced like 'skee-los.'",
-            "modernShortPronunciation": "a long 'ee' sound like the vowel 'y' in 'candy'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Ypsilon is a 'ee' sound, or a long 'i' as in 'machine.' So, 'σκύλος' is pronounced like 'skee-los.'",
+              "short": "a long 'ee' sound like the vowel 'y' in 'candy'"
+            }
           },
           "foreignLetterName": "ύψιλον",
           "markedVersion": "ύ",
@@ -1060,16 +790,10 @@
           "exampleWord": "καφές, which means 'coffee'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Phi is pronounced like the English 'f.' 'Καφές' is pronounced 'kah-fes.'",
-            "modernShortPronunciation": "an 'f' sound, as in 'file' or 'far'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Phi is pronounced like the English 'f.' 'Καφές' is pronounced 'kah-fes.'",
+              "short": "an 'f' sound, as in 'file' or 'far'"
+            }
           },
           "foreignLetterName": "φι",
           "caseEquivalent": "Φ"
@@ -1082,16 +806,10 @@
           "exampleWord": "χυμός, which means 'juice'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "Chi (in Greek, the letter is pronounced like 'hee') is a breathy 'h' sound — harder than an English 'h,' like the 'ch' in the Scottish 'loch' or German 'Bach,' and softer (like the 'h' in 'hue') before 'e' and 'ee' sounds. 'Χυμός' is pronounced 'hee-MOS.'",
-            "modernShortPronunciation": "a breathy 'h,' like the 'ch' in 'loch'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Chi (in Greek, the letter is pronounced like 'hee') is a breathy 'h' sound — harder than an English 'h,' like the 'ch' in the Scottish 'loch' or German 'Bach,' and softer (like the 'h' in 'hue') before 'e' and 'ee' sounds. 'Χυμός' is pronounced 'hee-MOS.'",
+              "short": "a breathy 'h,' like the 'ch' in 'loch'"
+            }
           },
           "foreignLetterName": "χι",
           "caseEquivalent": "Χ"
@@ -1104,16 +822,10 @@
           "exampleWord": "ψάρι, which means 'fish'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "The letter Ψ is pronounced as a combination of the consonant sounds of 'p' and 's,' and it can be found in any place in the word, including the very beginning. It sounds the same as the 'ps' combination in the English words 'claps' or 'traps,' so 'ψάρι' is pronounced 'psah-ree.'",
-            "modernShortPronunciation": "a combination of the consonant sounds 'p' and 's,' forming a 'ps' as in 'cyclops'",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "The letter Ψ is pronounced as a combination of the consonant sounds of 'p' and 's,' and it can be found in any place in the word, including the very beginning. It sounds the same as the 'ps' combination in the English words 'claps' or 'traps,' so 'ψάρι' is pronounced 'psah-ree.'",
+              "short": "a combination of the consonant sounds 'p' and 's,' forming a 'ps' as in 'cyclops'"
+            }
           },
           "foreignLetterName": "ψι",
           "caseEquivalent": "Ψ"
@@ -1126,16 +838,10 @@
           "exampleWord": "πρώτα, which means 'first'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "Omega is an 'o' sound, as in 'over' or 'post.' In modern Greek it is pronounced exactly the same as the omicron — the difference is spelling and grammar: when a word ends in an omega, that word tends to be a verb. The word 'πρώτα' is pronounced 'pro-tah.'",
-            "modernShortPronunciation": "an 'o,' as in 'over' — ends many verbs",
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "Omega is an 'o' sound, as in 'over' or 'post.' In modern Greek it is pronounced exactly the same as the omicron — the difference is spelling and grammar: when a word ends in an omega, that word tends to be a verb. The word 'πρώτα' is pronounced 'pro-tah.'",
+              "short": "an 'o,' as in 'over' — ends many verbs"
+            }
           },
           "foreignLetterName": "ωμέγα",
           "markedVersion": "ώ",
@@ -1150,16 +856,9 @@
           "exampleWord": "Παιδί, which means 'child'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "This combination has a short-e sound, like 'eh.' So, 'παιδί' sounds like 'peh-thee.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This combination has a short-e sound, like 'eh.' So, 'παιδί' sounds like 'peh-thee.'"
+            }
           },
           "explanation": "This is a combination of the vowels alpha (α) and iota (ι)."
         },
@@ -1171,16 +870,9 @@
           "exampleWord": "Αυτό, which means 'this'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "This combination usually has an 'ahf' sound, with a distinct 'f,' when it comes before a voiceless consonant — so 'αυτό' sounds like 'af-to.' Before a vowel or a voiced consonant it sounds like 'av' instead: 'αύριο,' which means 'tomorrow,' is pronounced 'AV-ree-oh.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This combination usually has an 'ahf' sound, with a distinct 'f,' when it comes before a voiceless consonant — so 'αυτό' sounds like 'af-to.' Before a vowel or a voiced consonant it sounds like 'av' instead: 'αύριο,' which means 'tomorrow,' is pronounced 'AV-ree-oh.'"
+            }
           },
           "explanation": "This is a combination of the vowels alpha (α) and ypsilon (υ)."
         },
@@ -1192,16 +884,9 @@
           "exampleWord": "Εκείνοι, which means 'those'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "This combination makes a sound like the 'ee' in 'feet' or 'machine,' meaning 'εκείνοι' is pronounced 'eh-kee-nee.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This combination makes a sound like the 'ee' in 'feet' or 'machine,' meaning 'εκείνοι' is pronounced 'eh-kee-nee.'"
+            }
           },
           "explanation": "This is a combination of the vowels epsilon (ε) and iota (ι)."
         },
@@ -1213,16 +898,9 @@
           "exampleWord": "Ευχαριστώ, which means 'thank you'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "This combination usually has an 'eff' sound, with a distinct 'f' despite not containing a φ, when it comes before a voiceless consonant — so 'ευχαριστώ' sounds like 'eff-har-ee-sto.' Before a vowel or a voiced consonant it sounds like 'ev' instead: 'Ευρώπη,' which means 'Europe,' is pronounced 'ev-RO-pee.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This combination usually has an 'eff' sound, with a distinct 'f' despite not containing a φ, when it comes before a voiceless consonant — so 'ευχαριστώ' sounds like 'eff-har-ee-sto.' Before a vowel or a voiced consonant it sounds like 'ev' instead: 'Ευρώπη,' which means 'Europe,' is pronounced 'ev-RO-pee.'"
+            }
           },
           "explanation": "This is a combination of the vowels epsilon (ε) and ypsilon (υ)."
         },
@@ -1234,16 +912,9 @@
           "exampleWord": "Όλοι, which means 'all.'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "This combination makes a sound like 'ee.' 'Όλοι' is pronounced 'oh-lee.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This combination makes a sound like 'ee.' 'Όλοι' is pronounced 'oh-lee.'"
+            }
           },
           "explanation": "This is a combination of the vowels omicron (ο) and iota (ι)."
         },
@@ -1255,16 +926,9 @@
           "exampleWord": "Σκούρο, which means 'dark'",
           "isVowel": true,
           "pronunciations": {
-            "modernPronunciation": "This combination sounds like a long 'oo,' like the English words 'school' or 'pool.' 'Σκούρο' is pronounced 'skoo-ro.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This combination sounds like a long 'oo,' like the English words 'school' or 'pool.' 'Σκούρο' is pronounced 'skoo-ro.'"
+            }
           },
           "explanation": "This is a combination of the vowels omicron (ο) and ypsilon (υ)."
         },
@@ -1276,16 +940,9 @@
           "exampleWord": "Αγγλικά, which means 'English'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "This combination sounds like an English 'ng' as in 'sing' or the word 'English' itself. So, 'Αγγλικά' is pronounced 'ang-lee-ka.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This combination sounds like an English 'ng' as in 'sing' or the word 'English' itself. So, 'Αγγλικά' is pronounced 'ang-lee-ka.'"
+            }
           },
           "explanation": "This is a combination of two gammas (γγ), but it has a sound different from a single gamma."
         },
@@ -1297,16 +954,9 @@
           "exampleWord": "Γκολ, which means 'goal' (in sports)",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "At the start of a word, this combination sounds like a hard English 'g,' as in 'go' — so 'γκολ' is pronounced 'gohl.' In the middle of a word it often picks up a nasal sound, like the 'ng' in 'finger': 'αγκαλιά,' which means 'hug,' is pronounced 'ang-gah-lyah.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "At the start of a word, this combination sounds like a hard English 'g,' as in 'go' — so 'γκολ' is pronounced 'gohl.' In the middle of a word it often picks up a nasal sound, like the 'ng' in 'finger': 'αγκαλιά,' which means 'hug,' is pronounced 'ang-gah-lyah.'"
+            }
           },
           "explanation": "This is a combination of the consonants gamma and kappa, but it sounds unlike either one alone."
         },
@@ -1318,16 +968,9 @@
           "exampleWord": "Άγχος, which means 'anxiety.'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "This combination adds a soft 'ng' sound with a breathy 'gh' sound like that of the χ itself. So 'άγχος' is pronounced 'ang-hohs.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This combination adds a soft 'ng' sound with a breathy 'gh' sound like that of the χ itself. So 'άγχος' is pronounced 'ang-hohs.'"
+            }
           },
           "explanation": "This is a combination of the consonants gamma and chi, but although the chi sound shines through at the end, the combination creates an 'ng' sound as well."
         },
@@ -1339,16 +982,9 @@
           "exampleWord": "Μπαμπάς, which means 'dad'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "While the beta would seem like a good candidate to have a 'b' sound, it really acts as a 'v,' leaving this consonant cluster to sound like the English 'b.' Thus, μπαμπάς sounds like 'ba-bas.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "While the beta would seem like a good candidate to have a 'b' sound, it really acts as a 'v,' leaving this consonant cluster to sound like the English 'b.' Thus, μπαμπάς sounds like 'ba-bas.'"
+            }
           },
           "languageSubtype": 0,
           "explanation": "This is a combination of the consonants mu and pi, but sounds unlike either one alone."
@@ -1361,16 +997,9 @@
           "exampleWord": "Αντίο, which means 'goodbye'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "This combination sounds very much like an English 'd.' Given that the delta is more like a hard 'th,' this consonant cluster takes the place of the 'd' sound. 'Αντίο' is pronounced very much like the French 'adieu,' like 'ah-dee-oh.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This combination sounds very much like an English 'd.' Given that the delta is more like a hard 'th,' this consonant cluster takes the place of the 'd' sound. 'Αντίο' is pronounced very much like the French 'adieu,' like 'ah-dee-oh.'"
+            }
           },
           "explanation": "This is a combination of the consonants nu and tau, but sounds unlike either one alone."
         },
@@ -1382,16 +1011,9 @@
           "exampleWord": "Τσάι, which means 'tea'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "This combination sounds like 'ts,' as in the English word 'cats.' 'Τσάι' is pronounced 'tsah-ee.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This combination sounds like 'ts,' as in the English word 'cats.' 'Τσάι' is pronounced 'tsah-ee.'"
+            }
           },
           "explanation": "This is a combination of the consonants tau and sigma, but it sounds unlike either one alone."
         },
@@ -1403,16 +1025,9 @@
           "exampleWord": "Τζατζίκι, which means 'tzatziki'",
           "isVowel": false,
           "pronunciations": {
-            "modernPronunciation": "This combination sounds like 'dz,' a bit like the 'ds' in 'lads.' So, 'τζατζίκι' is pronounced 'dzah-dzee-kee.'",
-            "modernShortPronunciation": null,
-            "ancientPronunciation": null,
-            "ancientShortPronunciation": null,
-            "koinePronunciation": null,
-            "koineShortPronunciation": null,
-            "modernLetterPronunciation": null,
-            "ancientLetterPronunciation": null,
-            "koineLetterPronunciation": null,
-            "fraternityLetterPronunciation": null
+            "modern": {
+              "full": "This combination sounds like 'dz,' a bit like the 'ds' in 'lads.' So, 'τζατζίκι' is pronounced 'dzah-dzee-kee.'"
+            }
           },
           "explanation": "This is a combination of the consonants tau and zeta, but it sounds unlike either one alone."
         }

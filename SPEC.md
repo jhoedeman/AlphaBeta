@@ -66,7 +66,7 @@ Principles:
 
 ### 3.1 JSON schema (matches shipped `Greek.json` exactly)
 
-Top level: `{ "version": Int, "alphabets": [Alphabet] }`
+Top level: `{ "version": Int, "alphabets": [Alphabet] }` — shipped `Greek.json` is `version: 2`.
 Alphabet: `{ "language": Int, "alphabetItems": [AlphabetItem] }`
 
 `AlphabetItem` fields (all optional unless noted):
@@ -90,13 +90,33 @@ Alphabet: `{ "language": Int, "alphabetItems": [AlphabetItem] }`
 
 Greek data: 62 items — 24 capitals, 25 lowercase (incl. sigma teliko), 6 diphthongs, 7 combinations.
 
-### 3.2 Pronunciations object
+### 3.2 Pronunciations object (schema v2: era-keyed map)
 
-Keys: `modernPronunciation`, `modernShortPronunciation`, `ancientPronunciation`, `ancientShortPronunciation`, `koinePronunciation`, `koineShortPronunciation`, `modernLetterPronunciation`, `ancientLetterPronunciation`, `koineLetterPronunciation`, `fraternityLetterPronunciation` — all `String?`.
+`pronunciations` is a dictionary keyed by era string, so new languages/eras never require schema changes:
 
-Greek v1 populates only the two `modern*` keys. Model **all** keys now.
+```json
+"pronunciations": {
+  "modern": { "full": "…long explanation…", "short": "a long 'a,' as in 'father'", "letterName": "…" },
+  "koine":  { "full": "…" }
+}
+```
 
-**Era handling:** `PronunciationEra` enum (`modern`, `koine`, `ancient`, plus `fraternity` as a letter-name-only variant). The manifest declares which eras a language actually has data for; the settings picker shows only those (Greek v1: Modern only, control still present but single-option). Resolution rule: requested era → fall back to `modern` → fall back to any non-nil. Never show an empty pronunciation.
+- Sub-keys per era (all optional): `full`, `short`, `letterName`.
+- Eras with no data are omitted entirely (no nulls). Greek currently ships `modern` only (`full` on all 62 items, `short` on the 49 letters).
+- Era keys are open strings: Greek uses `modern`/`koine`/`ancient`/`fraternity` (fraternity is letter-name-only); Arabic could add `quranic`, Hebrew `biblical`, etc. Decode as `[String: PronunciationEntry]` — unknown era keys must survive decoding untouched.
+
+```swift
+struct PronunciationEntry: Codable, Hashable {
+    let full: String?
+    let short: String?
+    let letterName: String?
+}
+// on AlphabetItem: let pronunciations: [String: PronunciationEntry]
+```
+
+**Era handling:** `PronunciationEra` is a lightweight wrapper over the raw string (known cases `modern`, `koine`, `ancient`, `fraternity`, plus future strings from manifests — display names come from the manifest, not a hardcoded enum). The manifest's `availableEras` declares what a language has; the settings picker shows only those (Greek v1: Modern only, control still present but single-option). Resolution rule: requested era → fall back to `modern` → fall back to any populated era. Never show an empty pronunciation.
+
+**Legacy note:** `Greek-V1.json` in the repo preserves the retired flat-key format (`modernPronunciation`, `koineShortPronunciation`, …, `version: 1`) for reference only. The app decodes v2 exclusively; do not add v1 support.
 
 ### 3.3 Swift content types
 
@@ -229,7 +249,7 @@ Because CloudKit merges can duplicate the "singleton" models, always fetch-and-m
 2. Hero glyph: `foreignLetter` very large, theme accent color. If `markedVersion` exists, show it beside/behind at smaller scale with caption "with accent".
 3. `englishName` (title) + `foreignLetterName` (subtitle, native script).
 4. Metadata chips row: category (Letter/Diphthong/Combination), Vowel/Consonant, capital/lowercase where applicable.
-5. **Pronunciation** section: full `…Pronunciation` text for the selected era; `…ShortPronunciation` as a highlighted one-liner ("Sounds like: a long 'a,' as in 'father'") when present. Era label shown if the language has multiple eras. Speaker button slot: **present in layout but hidden in v1** (audio designed-for, not shipped — see §11).
+5. **Pronunciation** section: the selected era's `full` text; its `short` as a highlighted one-liner ("Sounds like: a long 'a,' as in 'father'") when present. Era label shown if the language has multiple eras. Speaker button slot: **present in layout but hidden in v1** (audio designed-for, not shipped — see §11).
 6. **Example word** section: parse `exampleWord` strings of the form "Άλογο, which means 'horse'" into word + meaning for nicer typography (fallback: show raw string). Native word rendered large.
 7. **Explanation** section (when present — diphthongs/combinations).
 8. **Case forms** section (letters only, per John's requirement): smaller, lower down, the related forms resolved as tappable mini-cards — e.g. detail for "Σ" shows σ (lowercase) and ς (final form / sigma teliko) with labels; tapping one pushes/replaces to that item's detail. Uses `caseEquivalent`, `endingCaseEquivalent`, `leadingCaseEquivalent`, `middleCaseEquivalent`. Not shown for diphthongs/combinations.
@@ -257,7 +277,7 @@ Because CloudKit merges can duplicate the "singleton" models, always fetch-and-m
 | Q3 | Word → contains | Show a native word (from `exampleWord`): "Which letter appears in this word?" | 4 English names; exactly one option's glyph occurs in the word |
 | Q4 | Name → word | "Which word contains a lambda?" | 4 native words; exactly one contains the target glyph |
 | Q5 | Case match (suggested) | "Which is the lowercase form of Σ?" | 4 glyphs; only for items with `caseEquivalent`; only when `hasLetterCase` |
-| Q6 | Sound → glyph (suggested) | "Which letter sounds like 'v', as in 'very'?" (from `…ShortPronunciation`) | 4 glyphs; only for items with a short pronunciation |
+| Q6 | Sound → glyph (suggested) | "Which letter sounds like 'v', as in 'very'?" (from the era's `short` text) | 4 glyphs; only for items with a short pronunciation |
 
 **Distractor rules (critical for fairness):**
 - Distractors come from the same `itemType` and, where relevant, same case as the correct answer.
@@ -357,7 +377,7 @@ Both are `.sheet` (form sheet on iPad).
 ## 11. Future roadmap (design hooks already in place)
 
 - **Audio:** speaker button slot in detail view + `audioProvider` protocol stub. Later: `AVSpeechSynthesizer` (per-language voice) or recorded assets referenced from manifest.
-- **More eras:** koine/ancient Greek pronunciations — JSON keys already modeled; adding data lights up the era picker automatically. `fraternityLetterPronunciation` available for a fun "fraternity mode" toggle.
+- **More eras:** koine/ancient Greek pronunciations — add `koine`/`ancient` entries to items' pronunciation maps plus the manifest's `availableEras`, and the era picker lights up automatically. A `fraternity` era (letter names only) is reserved for a fun "fraternity mode" toggle.
 - **New alphabets:** add `<Name>.json` + manifest entry + palette. Case-less scripts (`hasLetterCase: false`) auto-drop case filters/case sections; Arabic/Persian positional forms reuse leading/middle/ending fields; RTL reminder auto-enables. Devanagari/Thai may need new `itemType` values — enum decodes unknown types safely (skip + log, don't crash).
 - **Remote content:** `RemoteAlphabetProvider` via CloudKit public DB, keyed by `version`.
 - **IAP:** gate `LanguageRegistry` entries behind StoreKit 2 product IDs.
