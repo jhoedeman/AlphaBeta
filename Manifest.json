@@ -1,0 +1,34 @@
+[
+  {
+    "id": 0,
+    "code": "el",
+    "displayName": "Greek",
+    "nativeName": "Ελληνικά",
+    "scriptFamily": "greek",
+    "fileName": "Greek",
+    "readingDirection": "leftToRight",
+    "hasLetterCase": true,
+    "pronunciationSystems": [
+      { "id": "modern", "displayName": "Modern" }
+    ],
+    "filterCategories": ["capitals", "lowercase", "diphthongs", "combinations"],
+    "defaultPaletteID": "greek-flag",
+    "flagEmoji": "🇬🇷"
+  },
+  {
+    "id": 1,
+    "code": "ru",
+    "displayName": "Russian",
+    "nativeName": "Русский",
+    "scriptFamily": "cyrillic",
+    "fileName": "Russian",
+    "readingDirection": "leftToRight",
+    "hasLetterCase": true,
+    "pronunciationSystems": [
+      { "id": "modern", "displayName": "Modern" }
+    ],
+    "filterCategories": ["capitals", "lowercase"],
+    "defaultPaletteID": "russian-flag",
+    "flagEmoji": "🇷🇺"
+  }
+]

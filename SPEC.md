@@ -1,6 +1,6 @@
 # AlphaBeta — Build Specification v1.0
 
-A pure-SwiftUI iPhone/iPad app for exploring non-Latin alphabets. Ships with Greek; architected for Cyrillic, Arabic, Hebrew, Persian, Armenian, Hindi, Thai, Korean, Japanese kana, and others later.
+A pure-SwiftUI iPhone/iPad app for exploring non-Latin alphabets. Ships with Greek and Russian (Cyrillic); architected for the rest of the Cyrillic family, Arabic, Hebrew, Persian, Armenian, Hindi, Thai, Korean, Japanese kana, and others later.
 
 ---
 
@@ -36,7 +36,7 @@ AlphaBeta/
 │   ├── Models/                     # AlphabetItem, Pronunciations, Language, etc.
 │   ├── Loading/                    # AlphabetProviding protocol, BundledAlphabetProvider
 │   ├── Registry/                   # LanguageRegistry, LanguageManifest
-│   └── Resources/                  # Greek.json (+ future Cyrillic.json, …)
+│   └── Resources/                  # Manifest.json, Greek.json, Russian.json (+ future …)
 ├── UserData/                       # SwiftData models + stores
 │   ├── ItemProgress.swift
 │   ├── QuizSession.swift
@@ -89,6 +89,7 @@ Alphabet: `{ "language": Int, "alphabetItems": [AlphabetItem] }`
 | `explanation` | String | Used on diphthongs/combinations ("This is a combination of…") |
 
 Greek data: 62 items — 24 capitals, 25 lowercase (incl. sigma teliko), 6 diphthongs, 7 combinations.
+Russian data (`Russian.json`, language 1): 66 items — 33 capitals, 33 lowercase; no diphthong/combination items, so its manifest declares only the capitals/lowercase filter categories. Hard sign (ъ), soft sign (ь), and yery (ы) use example words that contain rather than start with the letter (no Russian word begins with them), with `explanation` notes saying so.
 
 ### 3.2 Pronunciations object (schema v2: system-keyed map)
 
@@ -159,7 +160,7 @@ struct PronunciationSystem: Codable, Identifiable, Hashable {
 }
 ```
 
-`LanguageRegistry` loads a bundled `Manifest.json` array. Adding a language later = add JSON + manifest entry + palette. **RTL hook:** when `readingDirection == .rightToLeft`, multi-character items (diphthongs/combinations) render a subtle "read right-to-left ←" hint on cards and detail pages.
+`LanguageRegistry` loads a bundled `Manifest.json` array (shipped in this repo with Greek and Russian entries). Adding a language later = add JSON + manifest entry + palette. **RTL hook:** when `readingDirection == .rightToLeft`, multi-character items (diphthongs/combinations) render a subtle "read right-to-left ←" hint on cards and detail pages.
 
 ### 3.5 Script families & language variants
 
@@ -341,7 +342,7 @@ struct ThemeColors: Codable {       // stored as hex strings
 - **Language switch animates a full recolor** (wrap in `withAnimation(.easeInOut(0.4))`).
 
 ### 8.2 Palettes
-- John supplies final palettes later. Ship with placeholder `greek-flag`: light = bright blue `#0D5EAF` on white; dark = bright blue + midnight navy `#0A1A33` surfaces with white text. Palette definitions live in a bundled `Palettes.json` so new ones are data, not code.
+- John supplies final palettes later. Ship with placeholders — `greek-flag`: light = bright blue `#0D5EAF` on white; dark = bright blue + midnight navy `#0A1A33` surfaces with white text. `russian-flag`: light = deep blue `#0033A0` accent on white with red `#DA291C` highlights; dark = navy surfaces, white text, red/blue accents. Palette definitions live in a bundled `Palettes.json` so new ones are data, not code.
 - Each future language manifest names its default palette (flag-inspired).
 - **Custom palette builder** (Settings): user picks accent/background/surface colors via `ColorPicker` for light and dark; stored in `UserPreferences.customPaletteData`; "Reset to language default" button.
 
@@ -349,7 +350,7 @@ struct ThemeColors: Codable {       // stored as hex strings
 
 ## 9. Settings & Language Picker
 
-**Language sheet** (globe/flag button, top-left): list from `LanguageRegistry`, **grouped into sections by `scriptFamily`** ("Cyrillic ▸ Russian, Ukrainian, …"); a family with one language renders as a plain row. Rows show flag emoji, display name, native name. v1 lists Greek (selected). Include a teaser row style ready for future entries. Selecting switches `AlphabetStore` content, filters reset to all-on, theme animates to the language default (unless user has a custom/stock override), card deck resets to first item.
+**Language sheet** (globe/flag button, top-left): list from `LanguageRegistry`, **grouped into sections by `scriptFamily`** ("Cyrillic ▸ Russian, Ukrainian, …"); a family with one language renders as a plain row. Rows show flag emoji, display name, native name. v1 lists Greek and Russian. Include a teaser row style ready for future entries. Selecting switches `AlphabetStore` content, filters reset to all-on, theme animates to the language default (unless user has a custom/stock override), card deck resets to first item.
 
 **Settings sheet** (gear, top-right):
 - Appearance: System / Light / Dark segmented control.
@@ -365,14 +366,14 @@ Both are `.sheet` (form sheet on iPad).
 
 1. Xcode project "AlphaBeta" created in this folder (already a git repo), bundle ID `com.JohnHoedeman.AlphaBeta`, iOS 18.0 target, iPhone + iPad, portrait + landscape.
 2. Capabilities: iCloud → CloudKit (container above), Background Modes → Remote notifications.
-3. Copy `Greek.json` (in this folder, alongside this spec) into `Content/Resources/`. Do not mutate it; it is the contract.
+3. Copy `Manifest.json`, `Greek.json`, and `Russian.json` (in this folder, alongside this spec) into `Content/Resources/`. Do not mutate them; they are the contract.
 4. `ModelContainer` with all four `@Model` types, `cloudKitDatabase: .automatic`; fall back to local-only configuration if container init throws (e.g. simulator without iCloud).
 5. Provide SwiftUI Previews with an in-memory container and a `PreviewAlphabetProvider`.
 6. Accessibility: Dynamic Type throughout (glyphs scale but cap), VoiceOver labels on cards ("Capital Sigma, letter, tap for details"), Reduce Motion honored (no confetti, cross-fade instead of swipe).
 7. Haptics behind a small `Haptics` utility.
 
 ### Build order (milestones)
-1. **M1 Content pipeline:** Codable models, manifest/registry, `BundledAlphabetProvider`, decode test against `Greek.json` (all 62 items, spot-check sigma family & marked vowels).
+1. **M1 Content pipeline:** Codable models, manifest/registry, `BundledAlphabetProvider`, decode tests against `Greek.json` (all 62 items, spot-check sigma family & marked vowels) and `Russian.json` (all 66 items, spot-check ъ/ь/ы and Ё).
 2. **M2 Theming shell:** ThemeManager, placeholder palettes, RootView tabs, appearance switching.
 3. **M3 Cards:** deck, swipe gestures, filter pills, shuffle, iPad constraint, card count.
 4. **M4 Detail sheet:** all sections, case-sibling navigation, dismiss gestures.
@@ -385,7 +386,7 @@ Both are `.sheet` (form sheet on iPad).
 ### Testing (minimum)
 - `QuizEngine`: distractor validity (Q3/Q4 substring rule, Q6 sound-collision rule), no-repeat rule, small-pool degradation, weighting distribution sanity.
 - `StreakStore`: all date edge cases (§4).
-- JSON decoding: full `Greek.json` round-trip; unknown/extra keys tolerated (forward compatibility).
+- JSON decoding: full `Greek.json` + `Russian.json` round-trips; unknown/extra keys tolerated (forward compatibility).
 - Filter logic: category mapping for all 62 items (24 caps / 25 lower / 6 diphthongs / 7 combos).
 
 ---
