@@ -68,11 +68,13 @@ struct QuizView: View {
             .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
             .padding(.horizontal, 24)
             Spacer()
-            VStack(spacing: 10) {
-                Text("Choose what to test")
-                    .font(.footnote.weight(.medium))
-                    .foregroundStyle(theme.textSecondary)
-                QuizFilterPillBar(viewModel: viewModel)
+            if viewModel.manifest.filterCategories.count > 1 {
+                VStack(spacing: 10) {
+                    Text("Choose what to test")
+                        .font(.footnote.weight(.medium))
+                        .foregroundStyle(theme.textSecondary)
+                    QuizFilterPillBar(viewModel: viewModel)
+                }
             }
             Spacer()
             Button {
