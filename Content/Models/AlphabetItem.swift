@@ -61,4 +61,52 @@ extension AlphabetItem {
             return seen.insert(sibling.identifier).inserted
         }
     }
+
+    /// Same resolution as `caseSiblings(in:)`, but paired with a label
+    /// naming which positional field matched — so the detail sheet can show
+    /// "Ending form" for sigma teliko rather than a bare glyph.
+    func caseSiblingsWithRole(in items: [AlphabetItem]) -> [(item: AlphabetItem, role: String)] {
+        let mapping: [(String?, String)] = [
+            (caseEquivalent, "Case form"),
+            (leadingCaseEquivalent, "Leading form"),
+            (middleCaseEquivalent, "Middle form"),
+            (endingCaseEquivalent, "Ending form")
+        ]
+        var seen = Set<Int>()
+        var results: [(item: AlphabetItem, role: String)] = []
+        for (glyph, role) in mapping {
+            guard let glyph,
+                  let match = items.first(where: { $0.foreignLetter == glyph && $0.identifier != identifier }),
+                  seen.insert(match.identifier).inserted else { continue }
+            results.append((match, role))
+        }
+        return results
+    }
+
+    /// Splits `exampleWord` strings of the form "Άλογο, which means 'horse'"
+    /// into the native word and its English gloss. Strings that don't match
+    /// the pattern fall back to showing the raw text as the word.
+    var parsedExampleWord: (word: String, meaning: String?)? {
+        guard let exampleWord else { return nil }
+        guard let separatorRange = exampleWord.range(of: ", which means ") else {
+            return (exampleWord, nil)
+        }
+        let word = String(exampleWord[..<separatorRange.lowerBound])
+        let meaning = String(exampleWord[separatorRange.upperBound...])
+            .trimmingCharacters(in: CharacterSet(charactersIn: "'\""))
+        return (word, meaning)
+    }
+
+    /// Resolves the pronunciation entry to display, per SPEC §3.2: the
+    /// requested system, else any system with data. Never returns an
+    /// entry whose fields are all nil.
+    func pronunciation(preferring systemID: String) -> PronunciationEntry? {
+        func isPopulated(_ entry: PronunciationEntry) -> Bool {
+            entry.full != nil || entry.short != nil || entry.letterName != nil
+        }
+        if let entry = pronunciations[systemID], isPopulated(entry) {
+            return entry
+        }
+        return pronunciations.values.first(where: isPopulated)
+    }
 }

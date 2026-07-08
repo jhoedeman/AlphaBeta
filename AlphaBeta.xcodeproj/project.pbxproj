@@ -33,6 +33,7 @@
 		91C68F59DD110CE56CD38D64 /* Greek.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B79F45C3D92AAE6E9D53CBB /* Greek.json */; };
 		94B6C0198FC8124025DD65B3 /* ThemeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D47257AE5CDC2E2306857D /* ThemeManagerTests.swift */; };
 		95C91E0C9CD02537AB58E641 /* Armenian.json in Resources */ = {isa = PBXBuildFile; fileRef = 14A3ECE1B6491E26D7B3BDD9 /* Armenian.json */; };
+		9EBD4E4B3984CB3DAC38A002 /* AlphabetItemDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E3DD7D5505E488B8CF40C /* AlphabetItemDetailTests.swift */; };
 		A938C37AA93B760D4C04E086 /* Macedonian.json in Resources */ = {isa = PBXBuildFile; fileRef = 39194103FBAFBED3E40A40A6 /* Macedonian.json */; };
 		AE30F7942431E9C5C2CA251F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1CC34E0325E6B88CB4D4AE /* RootView.swift */; };
 		B053A4BE2D397037C8FB28DA /* AlphaBetaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B69C96D84C2D8966A8CBB1 /* AlphaBetaApp.swift */; };
@@ -93,6 +94,7 @@
 		B221B04E85CBA3C6B8EBE362 /* CardDeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeckViewModel.swift; sourceTree = "<group>"; };
 		B7B77F97C8A0C6698D80EFCA /* PronunciationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationSystem.swift; sourceTree = "<group>"; };
 		BDC4ED7DBEE592B273E902AF /* Belarusian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Belarusian.json; sourceTree = "<group>"; };
+		C44E3DD7D5505E488B8CF40C /* AlphabetItemDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetItemDetailTests.swift; sourceTree = "<group>"; };
 		C802E2447E5904A0ADB4801C /* Russian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Russian.json; sourceTree = "<group>"; };
 		CC9A85E77C8C600BC1EFA4FA /* CardDeckViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeckViewModelTests.swift; sourceTree = "<group>"; };
 		D539743A21482ED4AAC52A2E /* CardFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFaceView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		813790603657C29DE5BD7DF8 /* AlphaBetaTests */ = {
 			isa = PBXGroup;
 			children = (
+				C44E3DD7D5505E488B8CF40C /* AlphabetItemDetailTests.swift */,
 				CC9A85E77C8C600BC1EFA4FA /* CardDeckViewModelTests.swift */,
 				A2B9D8CF85AB42AB472C01F3 /* ContentDecodingTests.swift */,
 				24D47257AE5CDC2E2306857D /* ThemeManagerTests.swift */,
@@ -397,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EBD4E4B3984CB3DAC38A002 /* AlphabetItemDetailTests.swift in Sources */,
 				D6D4EAA2262864DCE1A30793 /* CardDeckViewModelTests.swift in Sources */,
 				311285090DB846E24B24315D /* ContentDecodingTests.swift in Sources */,
 				94B6C0198FC8124025DD65B3 /* ThemeManagerTests.swift in Sources */,

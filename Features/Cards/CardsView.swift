@@ -8,6 +8,7 @@ struct CardsView: View {
     @State private var detailItem: AlphabetItem?
 
     @Environment(ThemeManager.self) private var theme
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
 
     init(manifest: LanguageManifest, items: [AlphabetItem]) {
         _viewModel = State(initialValue: CardDeckViewModel(manifest: manifest, allItems: items))
@@ -37,8 +38,18 @@ struct CardsView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(theme.background)
-        .fullScreenCover(item: $detailItem) { item in
-            ItemDetailSheet(item: item)
+        .sheet(item: $detailItem) { item in
+            // iPhone: full-height sheet with a drag handle for the
+            // interactive pull-down dismiss SPEC §6 asks for, alongside the
+            // chevron button. iPad: a centered form sheet, per the same spec.
+            if horizontalSizeClass == .regular {
+                ItemDetailSheet(item: item, manifest: viewModel.manifest, allItems: viewModel.allItems)
+                    .presentationSizing(.form)
+            } else {
+                ItemDetailSheet(item: item, manifest: viewModel.manifest, allItems: viewModel.allItems)
+                    .presentationDetents([.large])
+                    .presentationDragIndicator(.visible)
+            }
         }
     }
 }
