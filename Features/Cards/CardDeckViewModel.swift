@@ -7,18 +7,31 @@ final class CardDeckViewModel {
     let manifest: LanguageManifest
     let allItems: [AlphabetItem]
 
+    /// Persists filter/shuffle changes (SPEC §4 `cardFilterRaw`/`isShuffled`)
+    /// without this view model knowing anything about SwiftData — same
+    /// facade-closure pattern as `QuizViewModel`'s `UserDataPersisting`.
+    private let onPreferencesChanged: (_ filterRaw: String, _ isShuffled: Bool) -> Void
+
     private(set) var selectedFilters: Set<FilterCategory>
-    private(set) var isShuffled = false
+    private(set) var isShuffled: Bool
     private(set) var hideNames = false
     private(set) var order: [AlphabetItem]
     private(set) var currentIndex = 0
 
-    init(manifest: LanguageManifest, allItems: [AlphabetItem]) {
+    init(
+        manifest: LanguageManifest, allItems: [AlphabetItem],
+        initialFilters: Set<FilterCategory>? = nil, initialShuffled: Bool = false,
+        onPreferencesChanged: @escaping (_ filterRaw: String, _ isShuffled: Bool) -> Void = { _, _ in }
+    ) {
         self.manifest = manifest
         self.allItems = allItems
-        let initialFilters = Set(manifest.filterCategories)
-        selectedFilters = initialFilters
-        order = Self.filteredOrder(allItems: allItems, manifest: manifest, filters: initialFilters)
+        self.onPreferencesChanged = onPreferencesChanged
+        let resolvedFilters = initialFilters ?? Set(manifest.filterCategories)
+        selectedFilters = resolvedFilters
+        isShuffled = initialShuffled
+        var initialOrder = Self.filteredOrder(allItems: allItems, manifest: manifest, filters: resolvedFilters)
+        if initialShuffled { initialOrder.shuffle() }
+        order = initialOrder
     }
 
     var count: Int { order.count }
@@ -31,6 +44,7 @@ final class CardDeckViewModel {
             selectedFilters.insert(category)
         }
         refreshOrder()
+        notifyPreferencesChanged()
     }
 
     /// Reshuffles every time the deck transitions to shuffled, per SPEC §5
@@ -38,6 +52,12 @@ final class CardDeckViewModel {
     func toggleShuffle() {
         isShuffled.toggle()
         refreshOrder()
+        notifyPreferencesChanged()
+    }
+
+    private func notifyPreferencesChanged() {
+        let filterRaw = selectedFilters.map(\.rawValue).sorted().joined(separator: ",")
+        onPreferencesChanged(filterRaw, isShuffled)
     }
 
     /// Hides `englishName`/`foreignLetterName` on the card face for

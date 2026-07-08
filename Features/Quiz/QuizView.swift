@@ -8,10 +8,14 @@ struct QuizView: View {
 
     @Environment(ThemeManager.self) private var theme
 
-    init(manifest: LanguageManifest, items: [AlphabetItem], streakStore: StreakStore, userDataStore: SwiftDataUserDataStore) {
+    init(
+        manifest: LanguageManifest, items: [AlphabetItem], streakStore: StreakStore,
+        userDataStore: SwiftDataUserDataStore, pronunciationSystemID: String? = nil
+    ) {
         _viewModel = State(initialValue: QuizViewModel(
             manifest: manifest, allItems: items, streakStore: streakStore,
-            accuracyProvider: userDataStore, userData: userDataStore
+            accuracyProvider: userDataStore, userData: userDataStore,
+            pronunciationSystemID: pronunciationSystemID
         ))
     }
 

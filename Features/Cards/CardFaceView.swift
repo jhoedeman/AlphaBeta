@@ -64,5 +64,8 @@ struct CardFaceView: View {
         .background(theme.surface)
         .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
         .shadow(color: .black.opacity(0.15), radius: 12, y: 6)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("\(item.englishName), \(item.category(hasLetterCase: manifest.hasLetterCase).displayName.lowercased())")
+        .accessibilityHint("Tap for details")
     }
 }

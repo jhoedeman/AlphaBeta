@@ -2,54 +2,113 @@ import SwiftUI
 
 /// Cards tab root, per SPEC §5: filter pills + shuffle above, the swipeable
 /// deck centered (constrained to 480x640 on iPad), a card-count indicator
-/// below, and a friendly empty state when every filter is deselected.
+/// below, and a friendly empty state when every filter is deselected. Also
+/// hosts the top bar's language/settings buttons per SPEC §9.
 struct CardsView: View {
+    let languageRegistry: LanguageRegistry
+    let paletteRegistry: PaletteRegistry
+    let preferencesStore: UserPreferencesStore
+    let onSelectLanguage: (LanguageManifest) -> Void
+
     @State private var viewModel: CardDeckViewModel
     @State private var detailItem: AlphabetItem?
+    @State private var showLanguagePicker = false
+    @State private var showSettings = false
 
     @Environment(ThemeManager.self) private var theme
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    init(manifest: LanguageManifest, items: [AlphabetItem]) {
-        _viewModel = State(initialValue: CardDeckViewModel(manifest: manifest, allItems: items))
+    private var pronunciationSystemID: String {
+        viewModel.manifest.resolvedPronunciationSystemID(preferring: preferencesStore.pronunciationSystemID)
+    }
+
+    init(
+        manifest: LanguageManifest, items: [AlphabetItem], languageRegistry: LanguageRegistry,
+        paletteRegistry: PaletteRegistry, preferencesStore: UserPreferencesStore,
+        onSelectLanguage: @escaping (LanguageManifest) -> Void
+    ) {
+        self.languageRegistry = languageRegistry
+        self.paletteRegistry = paletteRegistry
+        self.preferencesStore = preferencesStore
+        self.onSelectLanguage = onSelectLanguage
+
+        let persisted = FilterCategory.set(fromCommaJoinedRawValues: preferencesStore.cardFilterRaw)
+            .intersection(manifest.filterCategories)
+        let initialFilters = persisted.isEmpty ? Set(manifest.filterCategories) : persisted
+
+        _viewModel = State(initialValue: CardDeckViewModel(
+            manifest: manifest, allItems: items,
+            initialFilters: initialFilters, initialShuffled: preferencesStore.isShuffled,
+            onPreferencesChanged: { filterRaw, isShuffled in
+                preferencesStore.setCardPreferences(filterRaw: filterRaw, isShuffled: isShuffled)
+            }
+        ))
     }
 
     var body: some View {
-        VStack(spacing: 12) {
-            FilterPillBar(viewModel: viewModel)
+        NavigationStack {
+            VStack(spacing: 12) {
+                FilterPillBar(viewModel: viewModel)
 
-            if viewModel.count == 0 {
-                Spacer()
-                Text("Pick at least one category")
-                    .foregroundStyle(theme.textSecondary)
-                Spacer()
-            } else {
-                CardDeckView(viewModel: viewModel) { item in
-                    detailItem = item
+                if viewModel.count == 0 {
+                    Spacer()
+                    Text("Pick at least one category")
+                        .foregroundStyle(theme.textSecondary)
+                    Spacer()
+                } else {
+                    CardDeckView(viewModel: viewModel, reduceMotion: reduceMotion) { item in
+                        detailItem = item
+                    }
+                    .padding(.horizontal, 24)
+                    .frame(maxWidth: 480, maxHeight: 640)
+
+                    Text("\(viewModel.currentIndex + 1) / \(viewModel.count)")
+                        .font(.footnote)
+                        .foregroundStyle(theme.textSecondary)
+                        .padding(.bottom, 8)
                 }
-                .padding(.horizontal, 24)
-                .frame(maxWidth: 480, maxHeight: 640)
-
-                Text("\(viewModel.currentIndex + 1) / \(viewModel.count)")
-                    .font(.footnote)
-                    .foregroundStyle(theme.textSecondary)
-                    .padding(.bottom, 8)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(theme.background)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        showLanguagePicker = true
+                    } label: {
+                        Text(viewModel.manifest.flagEmoji)
+                            .font(.title3)
+                    }
+                    .accessibilityLabel("Change language")
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showSettings = true
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                    .accessibilityLabel("Settings")
+                }
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(theme.background)
         .sheet(item: $detailItem) { item in
             // iPhone: full-height sheet with a drag handle for the
             // interactive pull-down dismiss SPEC §6 asks for, alongside the
             // chevron button. iPad: a centered form sheet, per the same spec.
             if horizontalSizeClass == .regular {
-                ItemDetailSheet(item: item, manifest: viewModel.manifest, allItems: viewModel.allItems)
+                ItemDetailSheet(item: item, manifest: viewModel.manifest, allItems: viewModel.allItems, pronunciationSystemID: pronunciationSystemID)
                     .presentationSizing(.form)
             } else {
-                ItemDetailSheet(item: item, manifest: viewModel.manifest, allItems: viewModel.allItems)
+                ItemDetailSheet(item: item, manifest: viewModel.manifest, allItems: viewModel.allItems, pronunciationSystemID: pronunciationSystemID)
                     .presentationDetents([.large])
                     .presentationDragIndicator(.visible)
             }
+        }
+        .sheet(isPresented: $showLanguagePicker) {
+            LanguagePickerSheet(registry: languageRegistry, currentLanguageID: viewModel.manifest.id, onSelect: onSelectLanguage)
+        }
+        .sheet(isPresented: $showSettings) {
+            SettingsSheet(manifest: viewModel.manifest, paletteRegistry: paletteRegistry, preferencesStore: preferencesStore)
         }
     }
 }

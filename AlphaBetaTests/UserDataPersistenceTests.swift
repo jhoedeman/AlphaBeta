@@ -113,4 +113,56 @@ struct UserDataPersistenceTests {
         #expect(record.longestStreak == 3)
         #expect(record.lastCompletedDay == day)
     }
+
+    // MARK: - UserPreferencesStore (M9)
+
+    @Test func preferencesStoreLoadsDefaultsWhenNoRecordExists() {
+        let context = Self.makeContext()
+        let store = UserPreferencesStore(context: context)
+        #expect(store.selectedLanguageID == 0)
+        #expect(store.appearanceRaw == "system")
+        #expect(store.paletteID == "")
+        #expect(store.cardFilterRaw == "")
+        #expect(store.isShuffled == false)
+    }
+
+    @Test func preferencesStoreSettersPersistToTheSingletonRecord() {
+        let context = Self.makeContext()
+        let store = UserPreferencesStore(context: context)
+
+        store.setSelectedLanguage(id: 7)
+        store.setPronunciationSystem(id: "western")
+        store.setAppearance("dark")
+        store.setPalette(id: "russian-flag")
+        store.setCardPreferences(filterRaw: "capitals,lowercase", isShuffled: true)
+
+        #expect(store.selectedLanguageID == 7)
+        #expect(store.pronunciationSystemID == "western")
+        #expect(store.appearanceRaw == "dark")
+        #expect(store.paletteID == "russian-flag")
+        #expect(store.cardFilterRaw == "capitals,lowercase")
+        #expect(store.isShuffled == true)
+
+        // Reloading from a fresh store over the same context proves the
+        // record itself was updated, not just the in-memory mirror.
+        let reloaded = UserPreferencesStore(context: context)
+        #expect(reloaded.selectedLanguageID == 7)
+        #expect(reloaded.pronunciationSystemID == "western")
+        #expect(reloaded.appearanceRaw == "dark")
+        #expect(reloaded.paletteID == "russian-flag")
+        #expect(reloaded.cardFilterRaw == "capitals,lowercase")
+        #expect(reloaded.isShuffled == true)
+    }
+
+    @Test func settingCustomPaletteDataRoundTrips() {
+        let context = Self.makeContext()
+        let store = UserPreferencesStore(context: context)
+        let data = Data("custom-palette".utf8)
+
+        store.setCustomPalette(data)
+        #expect(store.customPaletteData == data)
+
+        store.setCustomPalette(nil)
+        #expect(store.customPaletteData == nil)
+    }
 }

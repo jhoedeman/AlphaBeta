@@ -23,4 +23,11 @@ struct LanguageManifest: Codable, Identifiable, Hashable, Sendable {
     var defaultPronunciationSystemID: String {
         pronunciationSystems.first?.id ?? "modern"
     }
+
+    /// The user's preferred system if this language actually offers it,
+    /// else the manifest default — a language switch can leave a stale
+    /// preference (e.g. Armenian's "eastern") that doesn't apply to Greek.
+    func resolvedPronunciationSystemID(preferring id: String) -> String {
+        pronunciationSystems.contains { $0.id == id } ? id : defaultPronunciationSystemID
+    }
 }

@@ -121,4 +121,46 @@ struct CardDeckViewModelTests {
         #expect(!viewModel.isShuffled)
         #expect(viewModel.order.map(\.id) == Self.items.map(\.id))
     }
+
+    // MARK: - M9: restored preferences + persistence callback
+
+    @Test func initialFiltersAndShuffledRestorePersistedState() {
+        let viewModel = CardDeckViewModel(
+            manifest: Self.manifest, allItems: Self.items,
+            initialFilters: [.lowercase], initialShuffled: true
+        )
+        #expect(viewModel.selectedFilters == [.lowercase])
+        #expect(viewModel.isShuffled)
+        #expect(viewModel.count == 1)
+    }
+
+    @Test func toggleFilterInvokesPersistenceCallbackWithSortedRawValues() {
+        var reported: (filterRaw: String, isShuffled: Bool)?
+        let viewModel = CardDeckViewModel(
+            manifest: Self.manifest, allItems: Self.items,
+            onPreferencesChanged: { filterRaw, isShuffled in reported = (filterRaw, isShuffled) }
+        )
+        viewModel.toggleFilter(.diphthongs)
+        #expect(reported?.filterRaw == "capitals,lowercase")
+        #expect(reported?.isShuffled == false)
+    }
+
+    @Test func toggleShuffleInvokesPersistenceCallback() {
+        var reportedShuffled: Bool?
+        let viewModel = CardDeckViewModel(
+            manifest: Self.manifest, allItems: Self.items,
+            onPreferencesChanged: { _, isShuffled in reportedShuffled = isShuffled }
+        )
+        viewModel.toggleShuffle()
+        #expect(reportedShuffled == true)
+    }
+
+    @Test func filterCategorySetParsesCommaJoinedRawValuesIgnoringUnknowns() {
+        let parsed = FilterCategory.set(fromCommaJoinedRawValues: "capitals,bogus,lowercase")
+        #expect(parsed == [.capitals, .lowercase])
+    }
+
+    @Test func filterCategorySetOfEmptyStringIsEmpty() {
+        #expect(FilterCategory.set(fromCommaJoinedRawValues: "").isEmpty)
+    }
 }

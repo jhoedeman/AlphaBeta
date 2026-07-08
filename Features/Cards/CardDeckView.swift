@@ -5,6 +5,7 @@ import SwiftUI
 /// advances to the next item, right returns to the previous; the deck wraps.
 struct CardDeckView: View {
     let viewModel: CardDeckViewModel
+    var reduceMotion: Bool = false
     var onTapCurrentItem: (AlphabetItem) -> Void = { _ in }
 
     @State private var dragOffset: CGSize = .zero
@@ -39,7 +40,7 @@ struct CardDeckView: View {
                         .scaleEffect(1 - CGFloat(entry.position) * 0.05)
                         .offset(y: CGFloat(entry.position) * 10)
                         .offset(isTop ? dragOffset : .zero)
-                        .rotationEffect(isTop ? .degrees(Double(dragOffset.width / 20)) : .zero, anchor: .bottom)
+                        .rotationEffect(isTop && !reduceMotion ? .degrees(Double(dragOffset.width / 20)) : .zero, anchor: .bottom)
                         .allowsHitTesting(isTop)
                         .gesture(dragGesture(cardWidth: geo.size.width))
                         .onTapGesture { onTapCurrentItem(entry.item) }
@@ -47,7 +48,8 @@ struct CardDeckView: View {
                         // departing card is already animated by its own
                         // dragOffset fling, so a competing removal transition
                         // would fight it and produce stray diagonal motion.
-                        .transition(.asymmetric(insertion: .move(edge: insertionEdge), removal: .identity))
+                        // Reduce Motion swaps the slide for a plain cross-fade.
+                        .transition(reduceMotion ? .opacity : .asymmetric(insertion: .move(edge: insertionEdge), removal: .identity))
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
@@ -75,13 +77,22 @@ struct CardDeckView: View {
     /// -1 swipes left (advance to next), +1 swipes right (retreat to previous).
     private func swipeAway(direction: CGFloat) {
         insertionEdge = direction < 0 ? .trailing : .leading
-        let flungOffset = CGSize(width: direction * 600, height: dragOffset.height)
-        withAnimation(.easeOut(duration: 0.25)) { dragOffset = flungOffset }
         Haptics.impactLight()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.22) {
-            withAnimation(.spring(response: 0.35, dampingFraction: 0.75)) {
+        if reduceMotion {
+            // No fling-off-screen motion — just cross-fade straight to the
+            // next/previous card (SPEC §10: "cross-fade instead of swipe").
+            withAnimation(.easeInOut(duration: 0.2)) {
                 if direction < 0 { viewModel.advance() } else { viewModel.retreat() }
                 dragOffset = .zero
+            }
+        } else {
+            let flungOffset = CGSize(width: direction * 600, height: dragOffset.height)
+            withAnimation(.easeOut(duration: 0.25)) { dragOffset = flungOffset }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.22) {
+                withAnimation(.spring(response: 0.35, dampingFraction: 0.75)) {
+                    if direction < 0 { viewModel.advance() } else { viewModel.retreat() }
+                    dragOffset = .zero
+                }
             }
         }
     }

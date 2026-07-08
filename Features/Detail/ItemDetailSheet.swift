@@ -6,15 +6,17 @@ import SwiftUI
 struct ItemDetailSheet: View {
     let manifest: LanguageManifest
     let allItems: [AlphabetItem]
+    let pronunciationSystemID: String
 
     @State private var displayedItem: AlphabetItem
 
     @Environment(\.dismiss) private var dismiss
     @Environment(ThemeManager.self) private var theme
 
-    init(item: AlphabetItem, manifest: LanguageManifest, allItems: [AlphabetItem]) {
+    init(item: AlphabetItem, manifest: LanguageManifest, allItems: [AlphabetItem], pronunciationSystemID: String? = nil) {
         self.manifest = manifest
         self.allItems = allItems
+        self.pronunciationSystemID = pronunciationSystemID ?? manifest.defaultPronunciationSystemID
         _displayedItem = State(initialValue: item)
     }
 
@@ -23,7 +25,7 @@ struct ItemDetailSheet: View {
     }
 
     private var pronunciation: PronunciationEntry? {
-        displayedItem.pronunciation(preferring: manifest.defaultPronunciationSystemID)
+        displayedItem.pronunciation(preferring: pronunciationSystemID)
     }
 
     var body: some View {
@@ -129,7 +131,7 @@ struct ItemDetailSheet: View {
                         .foregroundStyle(theme.textPrimary)
                     if manifest.pronunciationSystems.count > 1,
                        let systemName = manifest.pronunciationSystems
-                           .first(where: { $0.id == manifest.defaultPronunciationSystemID })?.displayName {
+                           .first(where: { $0.id == pronunciationSystemID })?.displayName {
                         Text(systemName)
                             .font(.caption)
                             .foregroundStyle(theme.textSecondary)

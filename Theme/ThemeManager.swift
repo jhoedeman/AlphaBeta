@@ -87,4 +87,14 @@ extension Color {
         let b = Double(value & 0x0000FF) / 255
         self.init(red: r, green: g, blue: b)
     }
+
+    /// Round-trips a `ColorPicker`-produced `Color` back to the `#RRGGBB`
+    /// hex strings `ThemeColors` stores, for the custom palette builder.
+    var hexString: String {
+        let resolved = resolve(in: EnvironmentValues())
+        let r = Int((resolved.red * 255).rounded())
+        let g = Int((resolved.green * 255).rounded())
+        let b = Int((resolved.blue * 255).rounded())
+        return String(format: "#%02X%02X%02X", r, g, b)
+    }
 }

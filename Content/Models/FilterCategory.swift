@@ -19,4 +19,11 @@ enum FilterCategory: String, Codable, CaseIterable, Hashable, Sendable {
         case .letters: "Letters"
         }
     }
+
+    /// Parses a `UserPreferences.cardFilterRaw`-style comma-joined raw-value
+    /// list back into a set, per SPEC §4. Unknown entries (e.g. a category
+    /// dropped in a later app version) are silently ignored.
+    static func set(fromCommaJoinedRawValues raw: String) -> Set<FilterCategory> {
+        Set(raw.split(separator: ",").compactMap { FilterCategory(rawValue: String($0)) })
+    }
 }

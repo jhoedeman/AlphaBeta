@@ -17,6 +17,7 @@ final class QuizViewModel {
     let streakStore: StreakStore
     private let accuracyProvider: ItemAccuracyProviding
     private let userData: UserDataPersisting
+    private let pronunciationSystemID: String
 
     private(set) var selectedFilters: Set<FilterCategory>
     private(set) var questions: [QuizQuestion] = []
@@ -32,13 +33,15 @@ final class QuizViewModel {
     init(
         manifest: LanguageManifest, allItems: [AlphabetItem], streakStore: StreakStore,
         accuracyProvider: ItemAccuracyProviding = NoOpAccuracyProvider(),
-        userData: UserDataPersisting = NoOpUserDataPersisting()
+        userData: UserDataPersisting = NoOpUserDataPersisting(),
+        pronunciationSystemID: String? = nil
     ) {
         self.manifest = manifest
         self.allItems = allItems
         self.streakStore = streakStore
         self.accuracyProvider = accuracyProvider
         self.userData = userData
+        self.pronunciationSystemID = manifest.resolvedPronunciationSystemID(preferring: pronunciationSystemID ?? manifest.defaultPronunciationSystemID)
         selectedFilters = Set(manifest.filterCategories)
     }
 
@@ -70,7 +73,7 @@ final class QuizViewModel {
     func startQuiz<G: RandomNumberGenerator>(rng: inout G) {
         questions = QuizEngine.generateQuiz(
             pool: pool, fullAlphabet: allItems, manifest: manifest,
-            pronunciationSystemID: manifest.defaultPronunciationSystemID,
+            pronunciationSystemID: pronunciationSystemID,
             accuracyProvider: accuracyProvider, rng: &rng
         )
         currentIndex = 0
