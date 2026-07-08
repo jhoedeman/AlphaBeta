@@ -14,19 +14,26 @@ struct NoOpAccuracyProvider: ItemAccuracyProviding {
 final class QuizViewModel {
     let manifest: LanguageManifest
     let allItems: [AlphabetItem]
+    let streakStore: StreakStore
     private let accuracyProvider: ItemAccuracyProviding
 
     private(set) var selectedFilters: Set<FilterCategory>
     private(set) var questions: [QuizQuestion] = []
+    private(set) var answers: [QuizAnswerRecord] = []
     private(set) var currentIndex = 0
     private(set) var selectedOptionID: UUID?
     private(set) var isAnswerRevealed = false
     private(set) var score = 0
     private(set) var isFinished = false
+    private(set) var streakJustEarnedToday = false
 
-    init(manifest: LanguageManifest, allItems: [AlphabetItem], accuracyProvider: ItemAccuracyProviding = NoOpAccuracyProvider()) {
+    init(
+        manifest: LanguageManifest, allItems: [AlphabetItem], streakStore: StreakStore,
+        accuracyProvider: ItemAccuracyProviding = NoOpAccuracyProvider()
+    ) {
         self.manifest = manifest
         self.allItems = allItems
+        self.streakStore = streakStore
         self.accuracyProvider = accuracyProvider
         selectedFilters = Set(manifest.filterCategories)
     }
@@ -65,6 +72,8 @@ final class QuizViewModel {
         currentIndex = 0
         score = 0
         isFinished = false
+        streakJustEarnedToday = false
+        answers = []
         selectedOptionID = nil
         isAnswerRevealed = false
     }
@@ -85,6 +94,7 @@ final class QuizViewModel {
         guard !isAnswerRevealed, let question = currentQuestion, let selectedOptionID else { return }
         isAnswerRevealed = true
         let isCorrect = question.options.first { $0.id == selectedOptionID }?.isCorrect ?? false
+        answers.append(QuizAnswerRecord(question: question, isCorrect: isCorrect))
         if isCorrect {
             score += 1
             Haptics.success()
@@ -93,12 +103,16 @@ final class QuizViewModel {
         }
     }
 
-    /// Advances past a revealed answer, or marks the quiz finished on the
-    /// last question. Per SPEC §7.4, saving the session and showing results
-    /// lands in M7 — for now `isFinished` just exposes the final score.
-    func continueToNext() {
+    /// Advances past a revealed answer, or on the last question records the
+    /// completed session's streak credit and marks the quiz finished so the
+    /// results sheet (SPEC §7.4) can present it.
+    func continueToNext(now: Date = .now, calendar: Calendar = .current) {
         guard isAnswerRevealed else { return }
         if isLastQuestion {
+            let today = calendar.startOfDay(for: now)
+            let alreadyCreditedToday = streakStore.lastCompletedDay.map { calendar.startOfDay(for: $0) == today } ?? false
+            streakStore.recordCompletion(now: now, calendar: calendar)
+            streakJustEarnedToday = !alreadyCreditedToday
             isFinished = true
         } else {
             currentIndex += 1

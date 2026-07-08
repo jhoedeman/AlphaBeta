@@ -8,8 +8,8 @@ struct QuizView: View {
 
     @Environment(ThemeManager.self) private var theme
 
-    init(manifest: LanguageManifest, items: [AlphabetItem]) {
-        _viewModel = State(initialValue: QuizViewModel(manifest: manifest, allItems: items))
+    init(manifest: LanguageManifest, items: [AlphabetItem], streakStore: StreakStore) {
+        _viewModel = State(initialValue: QuizViewModel(manifest: manifest, allItems: items, streakStore: streakStore))
     }
 
     var body: some View {
@@ -19,22 +19,28 @@ struct QuizView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(theme.background)
         }
+        .sheet(isPresented: Binding(
+            get: { viewModel.isFinished },
+            set: { isPresented in if !isPresented { viewModel.returnToHome() } }
+        )) {
+            ResultsView(
+                viewModel: viewModel,
+                onAnotherQuiz: { viewModel.startQuiz() },
+                onDone: { viewModel.returnToHome() }
+            )
+            .environment(theme)
+        }
     }
 
     @ViewBuilder
     private var content: some View {
-        if viewModel.isFinished {
-            finishedView
-        } else if viewModel.questions.isEmpty {
+        if viewModel.questions.isEmpty {
             homeView
         } else {
             questionFlowView
         }
     }
 
-    // No StreakStore until M8/M7 land, so this is a static explainer rather
-    // than real streak data — swap in the "🔥 N-day streak" line once
-    // that's wired up.
     private var homeView: some View {
         VStack(spacing: 24) {
             Spacer()
@@ -50,6 +56,11 @@ struct QuizView: View {
                     .foregroundStyle(theme.textSecondary)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 8)
+                if viewModel.streakStore.displayedStreak() > 0 {
+                    Text("🔥 \(viewModel.streakStore.displayedStreak())-day streak")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(theme.accent)
+                }
             }
             .padding(24)
             .frame(maxWidth: .infinity)
@@ -135,39 +146,4 @@ struct QuizView: View {
         .disabled(!viewModel.canSubmit && !viewModel.isAnswerRevealed)
     }
 
-    private var finishedView: some View {
-        VStack(spacing: 24) {
-            Spacer()
-            Text("\(viewModel.score) / \(viewModel.questions.count)")
-                .font(.system(size: 56, weight: .bold, design: .rounded))
-                .foregroundStyle(theme.accent)
-            Text("Quiz complete")
-                .font(.title3)
-                .foregroundStyle(theme.textPrimary)
-            Spacer()
-            Button {
-                viewModel.startQuiz()
-            } label: {
-                Text("Another Quiz")
-                    .font(.headline)
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 16)
-                    .background(theme.accent)
-                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-            }
-            Button {
-                viewModel.returnToHome()
-            } label: {
-                Text("Done")
-                    .font(.headline)
-                    .foregroundStyle(theme.textPrimary)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 16)
-                    .background(theme.surface)
-                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-            }
-        }
-        .padding(24)
-    }
 }

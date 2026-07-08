@@ -32,8 +32,20 @@ struct QuizViewModelTests {
 
     private static let items = (1...15).map { item($0, "L\($0)") }
 
-    private func makeViewModel() -> QuizViewModel {
-        QuizViewModel(manifest: Self.manifest, allItems: Self.items, accuracyProvider: FixedAccuracyProvider())
+    private func makeViewModel(streakStore: StreakStore = StreakStore()) -> QuizViewModel {
+        QuizViewModel(manifest: Self.manifest, allItems: Self.items, streakStore: streakStore, accuracyProvider: FixedAccuracyProvider())
+    }
+
+    /// Runs every question with the first option, submitting and continuing
+    /// each time — enough to drive a quiz to completion regardless of which
+    /// option happens to be correct.
+    private func finishQuiz(_ viewModel: QuizViewModel) {
+        for _ in 0..<viewModel.questions.count {
+            let option = viewModel.currentQuestion!.options.first!
+            viewModel.selectOption(option.id)
+            viewModel.submit()
+            viewModel.continueToNext()
+        }
     }
 
     @Test func defaultsToAllFiltersAndNoQuizYet() {
@@ -123,13 +135,7 @@ struct QuizViewModelTests {
         let viewModel = makeViewModel()
         var rng = SeededGenerator(seed: 8)
         viewModel.startQuiz(rng: &rng)
-
-        for _ in 0..<viewModel.questions.count {
-            let option = viewModel.currentQuestion!.options.first!
-            viewModel.selectOption(option.id)
-            viewModel.submit()
-            viewModel.continueToNext()
-        }
+        finishQuiz(viewModel)
 
         #expect(viewModel.isFinished)
         #expect(viewModel.score >= 0 && viewModel.score <= 10)
@@ -150,5 +156,55 @@ struct QuizViewModelTests {
             viewModel.toggleFilter(category)
         }
         #expect(viewModel.pool.isEmpty)
+    }
+
+    @Test func submitAppendsAnAnswerRecordForEveryQuestion() {
+        let viewModel = makeViewModel()
+        var rng = SeededGenerator(seed: 10)
+        viewModel.startQuiz(rng: &rng)
+        finishQuiz(viewModel)
+
+        #expect(viewModel.answers.count == 10)
+        #expect(viewModel.answers.filter(\.isCorrect).count == viewModel.score)
+    }
+
+    @Test func startQuizResetsAnswersAndStreakFlag() {
+        let viewModel = makeViewModel()
+        var rng = SeededGenerator(seed: 11)
+        viewModel.startQuiz(rng: &rng)
+        finishQuiz(viewModel)
+        #expect(!viewModel.answers.isEmpty)
+
+        var rng2 = SeededGenerator(seed: 12)
+        viewModel.startQuiz(rng: &rng2)
+        #expect(viewModel.answers.isEmpty)
+        #expect(!viewModel.streakJustEarnedToday)
+    }
+
+    @Test func finishingAQuizRecordsStreakCreditForToday() {
+        let streakStore = StreakStore()
+        let viewModel = makeViewModel(streakStore: streakStore)
+        var rng = SeededGenerator(seed: 13)
+        viewModel.startQuiz(rng: &rng)
+        finishQuiz(viewModel)
+
+        #expect(streakStore.currentStreak == 1)
+        #expect(viewModel.streakJustEarnedToday)
+    }
+
+    @Test func finishingASecondQuizTheSameDayDoesNotReearnStreakCredit() {
+        let streakStore = StreakStore()
+        let viewModel = makeViewModel(streakStore: streakStore)
+        var rng = SeededGenerator(seed: 14)
+        viewModel.startQuiz(rng: &rng)
+        finishQuiz(viewModel)
+        #expect(viewModel.streakJustEarnedToday)
+
+        var rng2 = SeededGenerator(seed: 15)
+        viewModel.startQuiz(rng: &rng2)
+        finishQuiz(viewModel)
+
+        #expect(streakStore.currentStreak == 1)
+        #expect(!viewModel.streakJustEarnedToday)
     }
 }

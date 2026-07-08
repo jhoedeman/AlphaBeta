@@ -34,3 +34,12 @@ struct QuizQuestion: Identifiable, Hashable, Sendable {
 protocol ItemAccuracyProviding {
     func accuracy(for itemIdentifier: Int) -> Double?
 }
+
+/// One answered question, kept for the results sheet's per-question recap
+/// (SPEC §7.4).
+struct QuizAnswerRecord: Identifiable, Hashable, Sendable {
+    let question: QuizQuestion
+    let isCorrect: Bool
+
+    var id: UUID { question.id }
+}

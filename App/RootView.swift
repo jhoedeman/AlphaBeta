@@ -6,6 +6,7 @@ struct RootView: View {
     @State private var theme: ThemeManager
     @State private var alphabetStore: AlphabetStore?
     @State private var loadError: String?
+    @State private var streakStore = StreakStore()
 
     init() {
         let paletteRegistry = (try? PaletteRegistry()) ?? PaletteRegistry(palettes: [])
@@ -49,7 +50,7 @@ struct RootView: View {
     @ViewBuilder
     private var quizTab: some View {
         if let alphabetStore {
-            QuizView(manifest: alphabetStore.currentManifest, items: alphabetStore.items)
+            QuizView(manifest: alphabetStore.currentManifest, items: alphabetStore.items, streakStore: streakStore)
         } else if let loadError {
             Text(loadError).foregroundStyle(.red)
         } else {
