@@ -45,6 +45,7 @@ targets:
     info:
       path: App/Info.plist
       properties:
+        UILaunchScreen: {}
         UIApplicationSceneManifest:
           UIApplicationSupportsMultipleScenes: false
         UIBackgroundModes:
