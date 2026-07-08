@@ -98,14 +98,13 @@ struct ItemDetailSheet: View {
         .frame(maxWidth: .infinity)
     }
 
+    // Category alone already says "Capitals"/"Lowercase" for letters — a
+    // separate capital/lowercase chip would just restate it.
     private var chipsRow: some View {
         HStack(spacing: 8) {
             chip(displayedItem.category(hasLetterCase: manifest.hasLetterCase).displayName)
             if let isVowel = displayedItem.isVowel {
                 chip(isVowel ? "Vowel" : "Consonant")
-            }
-            if manifest.hasLetterCase && displayedItem.itemType == .letter {
-                chip(displayedItem.isCapital ? "Capital" : "Lowercase")
             }
         }
     }
