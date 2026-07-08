@@ -34,6 +34,7 @@
 		CC3ECFFA8C80ADA6038573CB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C1993D526D91A51EE627E /* Theme.swift */; };
 		F6835020E41F4E83EA2C5573 /* PronunciationEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CE58DE606FDEEA7740F758 /* PronunciationEntry.swift */; };
 		F7C312FDE1C64828277121A1 /* Russian.json in Resources */ = {isa = PBXBuildFile; fileRef = C802E2447E5904A0ADB4801C /* Russian.json */; };
+		F93134718EA3AAB4524D0762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73213E113A99756620430B3F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		57CE58DE606FDEEA7740F758 /* PronunciationEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationEntry.swift; sourceTree = "<group>"; };
 		5B1F5248C7183AF1ECA74B02 /* LanguageRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRegistry.swift; sourceTree = "<group>"; };
 		64444851EE6FDD20F7744A42 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
+		73213E113A99756620430B3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74E36F13B67CB7643C500E81 /* Ukrainian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Ukrainian.json; sourceTree = "<group>"; };
 		8BD2F9A3EA90800D18079F5F /* Serbian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Serbian.json; sourceTree = "<group>"; };
 		9898312F6A7FDA6FDBA0276B /* AlphabetProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetProviding.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				9C49065F54C1926EA4C621A3 /* AlphaBeta.entitlements */,
 				E4B69C96D84C2D8966A8CBB1 /* AlphaBetaApp.swift */,
+				73213E113A99756620430B3F /* Assets.xcassets */,
 				A992191278F405E22CEFA21E /* Info.plist */,
 				1D1CC34E0325E6B88CB4D4AE /* RootView.swift */,
 			);
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95C91E0C9CD02537AB58E641 /* Armenian.json in Resources */,
+				F93134718EA3AAB4524D0762 /* Assets.xcassets in Resources */,
 				B4942A6E4C7904DE2CD1487F /* Belarusian.json in Resources */,
 				8E5B4826CB13695215CE5324 /* Bulgarian.json in Resources */,
 				6A844DDE445E7187B835D8C3 /* Georgian.json in Resources */,
@@ -495,6 +499,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = App/AlphaBeta.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +541,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = App/AlphaBeta.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
