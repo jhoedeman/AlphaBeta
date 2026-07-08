@@ -1,0 +1,164 @@
+[
+  {
+    "id": "greek-flag",
+    "name": "Hellenic Blue",
+    "light": {
+      "background": "#F8FAFF",
+      "surface": "#FFFFFF",
+      "accent": "#1055E8",
+      "textPrimary": "#1A2845",
+      "textSecondary": "#3D5A85"
+    },
+    "dark": {
+      "background": "#0D1625",
+      "surface": "#152040",
+      "accent": "#3D80FF",
+      "textPrimary": "#EEF2FD",
+      "textSecondary": "#8FA4C8"
+    }
+  },
+  {
+    "id": "russian-flag",
+    "name": "Tricolor Red",
+    "light": {
+      "background": "#FAFAFA",
+      "surface": "#FFFFFF",
+      "accent": "#C41E1E",
+      "textPrimary": "#27211D",
+      "textSecondary": "#57514B"
+    },
+    "dark": {
+      "background": "#120A0A",
+      "surface": "#1E1010",
+      "accent": "#F94D45",
+      "textPrimary": "#F5F4F2",
+      "textSecondary": "#A8A19A"
+    }
+  },
+  {
+    "id": "ukrainian-flag",
+    "name": "Sky and Wheat",
+    "light": {
+      "background": "#FAFAFA",
+      "surface": "#FFFFFF",
+      "accent": "#005BBB",
+      "textPrimary": "#252524",
+      "textSecondary": "#555552"
+    },
+    "dark": {
+      "background": "#0D1324",
+      "surface": "#172040",
+      "accent": "#2277F5",
+      "textPrimary": "#EEF2FF",
+      "textSecondary": "#A3A39E"
+    }
+  },
+  {
+    "id": "belarusian-flag",
+    "name": "Rushnik Red",
+    "light": {
+      "background": "#FAFAFA",
+      "surface": "#FFFFFF",
+      "accent": "#CF101A",
+      "textPrimary": "#252524",
+      "textSecondary": "#555552"
+    },
+    "dark": {
+      "background": "#0D1A0F",
+      "surface": "#16261A",
+      "accent": "#F94840",
+      "textPrimary": "#F0F4F0",
+      "textSecondary": "#A3A39E"
+    }
+  },
+  {
+    "id": "serbian-flag",
+    "name": "Royal Navy Red",
+    "light": {
+      "background": "#FAFAFA",
+      "surface": "#FFFFFF",
+      "accent": "#CE2028",
+      "textPrimary": "#252524",
+      "textSecondary": "#555552"
+    },
+    "dark": {
+      "background": "#06152A",
+      "surface": "#091E3A",
+      "accent": "#F94448",
+      "textPrimary": "#EEF2FF",
+      "textSecondary": "#A3A39E"
+    }
+  },
+  {
+    "id": "bulgarian-flag",
+    "name": "Carmine Emerald",
+    "light": {
+      "background": "#F9FAFA",
+      "surface": "#FFFFFF",
+      "accent": "#D62612",
+      "textPrimary": "#232826",
+      "textSecondary": "#515955"
+    },
+    "dark": {
+      "background": "#071410",
+      "surface": "#0D1E16",
+      "accent": "#F44E40",
+      "textPrimary": "#F0FFF6",
+      "textSecondary": "#A0AAA5"
+    }
+  },
+  {
+    "id": "macedonian-flag",
+    "name": "Sun of Liberty",
+    "light": {
+      "background": "#FAFAF5",
+      "surface": "#FFFFFF",
+      "accent": "#CE1126",
+      "textPrimary": "#252420",
+      "textSecondary": "#575449"
+    },
+    "dark": {
+      "background": "#160004",
+      "surface": "#220008",
+      "accent": "#F03848",
+      "textPrimary": "#FFF8D6",
+      "textSecondary": "#A8A492"
+    }
+  },
+  {
+    "id": "armenian-flag",
+    "name": "Red Blue Apricot",
+    "light": {
+      "background": "#FAFAF8",
+      "surface": "#FFFFFF",
+      "accent": "#D90012",
+      "textPrimary": "#242422",
+      "textSecondary": "#555551"
+    },
+    "dark": {
+      "background": "#03061E",
+      "surface": "#060D30",
+      "accent": "#F43040",
+      "textPrimary": "#FFF5E0",
+      "textSecondary": "#A3A39C"
+    }
+  },
+  {
+    "id": "georgian-flag",
+    "name": "Five Cross Red",
+    "light": {
+      "background": "#FAF9F7",
+      "surface": "#FFFFFF",
+      "accent": "#C8102E",
+      "textPrimary": "#242220",
+      "textSecondary": "#555350"
+    },
+    "dark": {
+      "background": "#180409",
+      "surface": "#240810",
+      "accent": "#F0304A",
+      "textPrimary": "#FFF8F0",
+      "textSecondary": "#A3A09A"
+    }
+  }
+]
