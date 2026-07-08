@@ -433,4 +433,5 @@ Out of scope permanently: Han characters/kanji (logographic, not an alphabet). V
 3. Native-speaker review of the Ukrainian, Belarusian, Serbian, Bulgarian, Macedonian, Armenian, and Georgian datasets (example words, glosses, letter names) before release.
 4. JSON files for additional alphabets (schema in §3 is the template; roadmap in §11.1).
 5. App icon.
+6. Greek.json's 13 diphthongs/combinations (`αι`, `γγ`, `μπ`, etc.) have no `short` pronunciation text, so they never generate a Q6 sound→glyph question (§7.2) — minor variety gap, not a correctness issue since every letter is fully covered. Low priority; fill in whenever Greek content gets another pass.
 

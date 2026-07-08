@@ -1,7 +1,6 @@
 import SwiftUI
 
-/// `TabView` shell with Cards | Quiz, themed via `ThemeManager`. Quiz stays a
-/// placeholder until M6.
+/// `TabView` shell with Cards | Quiz, themed via `ThemeManager`.
 struct RootView: View {
     @Environment(\.colorScheme) private var colorScheme
     @State private var theme: ThemeManager
@@ -17,8 +16,8 @@ struct RootView: View {
         TabView {
             cardsTab
                 .tabItem { Label("Cards", systemImage: "rectangle.stack") }
-            quizPlaceholder
-                .tabItem { Label("Quiz", systemImage: "questionmark.circle") }
+            quizTab
+                .tabItem { Label("Quiz", systemImage: "graduationcap.fill") }
         }
         .tint(theme.accent)
         .environment(theme)
@@ -47,12 +46,14 @@ struct RootView: View {
         }
     }
 
-    private var quizPlaceholder: some View {
-        NavigationStack {
-            Text("Quiz coming in M5/M6")
-                .foregroundStyle(theme.textSecondary)
-                .navigationTitle("Quiz")
-                .background(theme.background)
+    @ViewBuilder
+    private var quizTab: some View {
+        if let alphabetStore {
+            QuizView(manifest: alphabetStore.currentManifest, items: alphabetStore.items)
+        } else if let loadError {
+            Text(loadError).foregroundStyle(.red)
+        } else {
+            ProgressView()
         }
     }
 }
