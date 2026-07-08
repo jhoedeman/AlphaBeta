@@ -6,6 +6,7 @@ struct CardFaceView: View {
     let item: AlphabetItem
     let manifest: LanguageManifest
     let allItems: [AlphabetItem]
+    var hideNames = false
 
     @Environment(ThemeManager.self) private var theme
 
@@ -32,14 +33,16 @@ struct CardFaceView: View {
                 }
             }
 
-            Text(item.englishName)
-                .font(.title2.weight(.semibold))
-                .foregroundStyle(theme.textPrimary)
+            if !hideNames {
+                Text(item.englishName)
+                    .font(.title2.weight(.semibold))
+                    .foregroundStyle(theme.textPrimary)
 
-            if let foreignLetterName = item.foreignLetterName {
-                Text(foreignLetterName)
-                    .font(.subheadline)
-                    .foregroundStyle(theme.textSecondary)
+                if let foreignLetterName = item.foreignLetterName {
+                    Text(foreignLetterName)
+                        .font(.subheadline)
+                        .foregroundStyle(theme.textSecondary)
+                }
             }
 
             Spacer()

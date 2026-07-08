@@ -35,7 +35,7 @@ struct CardDeckView: View {
             ZStack {
                 ForEach(Array(visibleEntries.reversed()), id: \.item.id) { entry in
                     let isTop = entry.position == 0
-                    CardFaceView(item: entry.item, manifest: viewModel.manifest, allItems: viewModel.allItems)
+                    CardFaceView(item: entry.item, manifest: viewModel.manifest, allItems: viewModel.allItems, hideNames: viewModel.hideNames)
                         .scaleEffect(1 - CGFloat(entry.position) * 0.05)
                         .offset(y: CGFloat(entry.position) * 10)
                         .offset(isTop ? dragOffset : .zero)

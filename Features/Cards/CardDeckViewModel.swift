@@ -9,6 +9,7 @@ final class CardDeckViewModel {
 
     private(set) var selectedFilters: Set<FilterCategory>
     private(set) var isShuffled = false
+    private(set) var hideNames = false
     private(set) var order: [AlphabetItem]
     private(set) var currentIndex = 0
 
@@ -37,6 +38,13 @@ final class CardDeckViewModel {
     func toggleShuffle() {
         isShuffled.toggle()
         refreshOrder()
+    }
+
+    /// Hides `englishName`/`foreignLetterName` on the card face for
+    /// self-quizzing; tapping the card still opens the full detail sheet.
+    /// Purely a display flag — doesn't touch filtering/order/index.
+    func toggleHideNames() {
+        hideNames.toggle()
     }
 
     func advance() {

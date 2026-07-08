@@ -40,6 +40,19 @@ struct CardDeckViewModelTests {
         #expect(viewModel.currentItem?.id == Self.capitalA.id)
     }
 
+    @Test func hideNamesDefaultsToFalseAndTogglesWithoutAffectingDeckState() {
+        let viewModel = makeViewModel()
+        #expect(viewModel.hideNames == false)
+
+        viewModel.advance()
+        viewModel.toggleHideNames()
+        #expect(viewModel.hideNames == true)
+        #expect(viewModel.currentIndex == 1)
+
+        viewModel.toggleHideNames()
+        #expect(viewModel.hideNames == false)
+    }
+
     @Test func advanceWrapsAroundToStart() {
         let viewModel = makeViewModel()
         viewModel.advance()
