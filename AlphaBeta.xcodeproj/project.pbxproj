@@ -14,6 +14,7 @@
 		043620A89E0ED3CD79EC4D38 /* AlphabetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0BF3AD8A40B7E1E2C8523E /* AlphabetItem.swift */; };
 		1A6B77B5F3D708549DD2492D /* LanguageRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F5248C7183AF1ECA74B02 /* LanguageRegistry.swift */; };
 		24B4988D22A0BCB7094C883F /* Ukrainian.json in Resources */ = {isa = PBXBuildFile; fileRef = 74E36F13B67CB7643C500E81 /* Ukrainian.json */; };
+		2C6F56E202F018D3F4A1624E /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC24CC2C4C33315E9BAF98B /* ThemeManager.swift */; };
 		2E3298F741BC20D26A0698FF /* LanguageManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45676DED26A635E71F751365 /* LanguageManifest.swift */; };
 		311285090DB846E24B24315D /* ContentDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B9D8CF85AB42AB472C01F3 /* ContentDecodingTests.swift */; };
 		32BDD4388F1054F90D00FA79 /* Palettes.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C7A92CAB3CB87BEB2FA4C49 /* Palettes.json */; };
@@ -24,6 +25,7 @@
 		7A0C7E7CD868BA6099D8DE1D /* FilterCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD483640135A8198DCAABC6 /* FilterCategory.swift */; };
 		8E5B4826CB13695215CE5324 /* Bulgarian.json in Resources */ = {isa = PBXBuildFile; fileRef = F66BD6B367647AE0AF6BE226 /* Bulgarian.json */; };
 		91C68F59DD110CE56CD38D64 /* Greek.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B79F45C3D92AAE6E9D53CBB /* Greek.json */; };
+		94B6C0198FC8124025DD65B3 /* ThemeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D47257AE5CDC2E2306857D /* ThemeManagerTests.swift */; };
 		95C91E0C9CD02537AB58E641 /* Armenian.json in Resources */ = {isa = PBXBuildFile; fileRef = 14A3ECE1B6491E26D7B3BDD9 /* Armenian.json */; };
 		A938C37AA93B760D4C04E086 /* Macedonian.json in Resources */ = {isa = PBXBuildFile; fileRef = 39194103FBAFBED3E40A40A6 /* Macedonian.json */; };
 		AE30F7942431E9C5C2CA251F /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1CC34E0325E6B88CB4D4AE /* RootView.swift */; };
@@ -48,10 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BC24CC2C4C33315E9BAF98B /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		14A3ECE1B6491E26D7B3BDD9 /* Armenian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Armenian.json; sourceTree = "<group>"; };
 		1C7A92CAB3CB87BEB2FA4C49 /* Palettes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Palettes.json; sourceTree = "<group>"; };
 		1D0145315F2A41B36CF9871A /* BundledAlphabetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundledAlphabetProvider.swift; sourceTree = "<group>"; };
 		1D1CC34E0325E6B88CB4D4AE /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		24D47257AE5CDC2E2306857D /* ThemeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManagerTests.swift; sourceTree = "<group>"; };
 		2647FEAC88E94C70E82FB4AA /* Manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Manifest.json; sourceTree = "<group>"; };
 		2F0BF3AD8A40B7E1E2C8523E /* AlphabetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetItem.swift; sourceTree = "<group>"; };
 		39194103FBAFBED3E40A40A6 /* Macedonian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Macedonian.json; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			children = (
 				9B00D1A3711C6764ECF625E9 /* PaletteRegistry.swift */,
 				D70C1993D526D91A51EE627E /* Theme.swift */,
+				0BC24CC2C4C33315E9BAF98B /* ThemeManager.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				A2B9D8CF85AB42AB472C01F3 /* ContentDecodingTests.swift */,
+				24D47257AE5CDC2E2306857D /* ThemeManagerTests.swift */,
 			);
 			path = AlphaBetaTests;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				6926A50418510A5EA600D9FC /* ReadingDirection.swift in Sources */,
 				AE30F7942431E9C5C2CA251F /* RootView.swift in Sources */,
 				CC3ECFFA8C80ADA6038573CB /* Theme.swift in Sources */,
+				2C6F56E202F018D3F4A1624E /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				311285090DB846E24B24315D /* ContentDecodingTests.swift in Sources */,
+				94B6C0198FC8124025DD65B3 /* ThemeManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
