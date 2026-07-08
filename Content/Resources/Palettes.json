@@ -3,7 +3,7 @@
     "id": "greek-flag",
     "name": "Hellenic Blue",
     "light": {
-      "background": "#F8FAFF",
+      "background": "#E7E9ED",
       "surface": "#FFFFFF",
       "accent": "#1055E8",
       "textPrimary": "#1A2845",
@@ -21,7 +21,7 @@
     "id": "russian-flag",
     "name": "Tricolor Red",
     "light": {
-      "background": "#FAFAFA",
+      "background": "#E9E9E9",
       "surface": "#FFFFFF",
       "accent": "#C41E1E",
       "textPrimary": "#27211D",
@@ -39,7 +39,7 @@
     "id": "ukrainian-flag",
     "name": "Sky and Wheat",
     "light": {
-      "background": "#FAFAFA",
+      "background": "#E9E9E9",
       "surface": "#FFFFFF",
       "accent": "#005BBB",
       "textPrimary": "#252524",
@@ -57,7 +57,7 @@
     "id": "belarusian-flag",
     "name": "Rushnik Red",
     "light": {
-      "background": "#FAFAFA",
+      "background": "#E9E9E9",
       "surface": "#FFFFFF",
       "accent": "#CF101A",
       "textPrimary": "#252524",
@@ -75,7 +75,7 @@
     "id": "serbian-flag",
     "name": "Royal Navy Red",
     "light": {
-      "background": "#FAFAFA",
+      "background": "#E9E9E9",
       "surface": "#FFFFFF",
       "accent": "#CE2028",
       "textPrimary": "#252524",
@@ -93,7 +93,7 @@
     "id": "bulgarian-flag",
     "name": "Carmine Emerald",
     "light": {
-      "background": "#F9FAFA",
+      "background": "#E8E9E9",
       "surface": "#FFFFFF",
       "accent": "#D62612",
       "textPrimary": "#232826",
@@ -111,7 +111,7 @@
     "id": "macedonian-flag",
     "name": "Sun of Liberty",
     "light": {
-      "background": "#FAFAF5",
+      "background": "#E9E9E4",
       "surface": "#FFFFFF",
       "accent": "#CE1126",
       "textPrimary": "#252420",
@@ -129,7 +129,7 @@
     "id": "armenian-flag",
     "name": "Red Blue Apricot",
     "light": {
-      "background": "#FAFAF8",
+      "background": "#E9E9E7",
       "surface": "#FFFFFF",
       "accent": "#D90012",
       "textPrimary": "#242422",
@@ -147,7 +147,7 @@
     "id": "georgian-flag",
     "name": "Five Cross Red",
     "light": {
-      "background": "#FAF9F7",
+      "background": "#E9E8E6",
       "surface": "#FFFFFF",
       "accent": "#C8102E",
       "textPrimary": "#242220",

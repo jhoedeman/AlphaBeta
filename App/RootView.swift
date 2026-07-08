@@ -1,11 +1,11 @@
 import SwiftUI
 
-/// M2 shell: `TabView` with Cards | Quiz, themed via `ThemeManager`.
-/// Tab contents are placeholders until M3 (Cards) and M6 (Quiz UI).
+/// `TabView` shell with Cards | Quiz, themed via `ThemeManager`. Quiz stays a
+/// placeholder until M6.
 struct RootView: View {
     @Environment(\.colorScheme) private var colorScheme
     @State private var theme: ThemeManager
-    @State private var languages: [LanguageManifest] = []
+    @State private var alphabetStore: AlphabetStore?
     @State private var loadError: String?
 
     init() {
@@ -15,7 +15,7 @@ struct RootView: View {
 
     var body: some View {
         TabView {
-            cardsPlaceholder
+            cardsTab
                 .tabItem { Label("Cards", systemImage: "rectangle.stack") }
             quizPlaceholder
                 .tabItem { Label("Quiz", systemImage: "questionmark.circle") }
@@ -27,25 +27,23 @@ struct RootView: View {
         .onChange(of: colorScheme) { _, newValue in theme.systemColorScheme = newValue }
         .task {
             do {
-                languages = try LanguageRegistry().languages
+                let store = AlphabetStore(registry: try LanguageRegistry())
+                theme.languageDefaultPaletteID = store.currentManifest.defaultPaletteID
+                alphabetStore = store
             } catch {
                 loadError = "Failed to load Manifest.json: \(error)"
             }
         }
     }
 
-    private var cardsPlaceholder: some View {
-        NavigationStack {
-            List {
-                if let loadError {
-                    Text(loadError).foregroundStyle(.red)
-                }
-                ForEach(languages) { language in
-                    Label(language.displayName, systemImage: "character.book.closed")
-                }
-            }
-            .navigationTitle("AlphaBeta")
-            .background(theme.background)
+    @ViewBuilder
+    private var cardsTab: some View {
+        if let alphabetStore {
+            CardsView(manifest: alphabetStore.currentManifest, items: alphabetStore.items)
+        } else if let loadError {
+            Text(loadError).foregroundStyle(.red)
+        } else {
+            ProgressView()
         }
     }
 
