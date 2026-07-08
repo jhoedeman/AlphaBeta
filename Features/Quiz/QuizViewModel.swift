@@ -16,6 +16,7 @@ final class QuizViewModel {
     let allItems: [AlphabetItem]
     let streakStore: StreakStore
     private let accuracyProvider: ItemAccuracyProviding
+    private let userData: UserDataPersisting
 
     private(set) var selectedFilters: Set<FilterCategory>
     private(set) var questions: [QuizQuestion] = []
@@ -26,15 +27,18 @@ final class QuizViewModel {
     private(set) var score = 0
     private(set) var isFinished = false
     private(set) var streakJustEarnedToday = false
+    private var quizStartedAt = Date.now
 
     init(
         manifest: LanguageManifest, allItems: [AlphabetItem], streakStore: StreakStore,
-        accuracyProvider: ItemAccuracyProviding = NoOpAccuracyProvider()
+        accuracyProvider: ItemAccuracyProviding = NoOpAccuracyProvider(),
+        userData: UserDataPersisting = NoOpUserDataPersisting()
     ) {
         self.manifest = manifest
         self.allItems = allItems
         self.streakStore = streakStore
         self.accuracyProvider = accuracyProvider
+        self.userData = userData
         selectedFilters = Set(manifest.filterCategories)
     }
 
@@ -76,6 +80,7 @@ final class QuizViewModel {
         answers = []
         selectedOptionID = nil
         isAnswerRevealed = false
+        quizStartedAt = .now
     }
 
     func startQuiz() {
@@ -95,6 +100,7 @@ final class QuizViewModel {
         isAnswerRevealed = true
         let isCorrect = question.options.first { $0.id == selectedOptionID }?.isCorrect ?? false
         answers.append(QuizAnswerRecord(question: question, isCorrect: isCorrect))
+        userData.recordAnswer(languageID: manifest.id, itemIdentifier: question.correctItemIdentifier, isCorrect: isCorrect)
         if isCorrect {
             score += 1
             Haptics.success()
@@ -113,6 +119,15 @@ final class QuizViewModel {
             let alreadyCreditedToday = streakStore.lastCompletedDay.map { calendar.startOfDay(for: $0) == today } ?? false
             streakStore.recordCompletion(now: now, calendar: calendar)
             streakJustEarnedToday = !alreadyCreditedToday
+            userData.persistStreak(
+                currentStreak: streakStore.currentStreak, longestStreak: streakStore.longestStreak,
+                lastCompletedDay: today
+            )
+            userData.recordQuizSession(
+                languageID: manifest.id, startedAt: quizStartedAt, completedAt: now,
+                score: score, questionCount: questions.count,
+                filtersUsedRaw: selectedFilters.map(\.rawValue).sorted().joined(separator: ",")
+            )
             isFinished = true
         } else {
             currentIndex += 1

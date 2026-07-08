@@ -1,12 +1,15 @@
+import SwiftData
 import SwiftUI
 
 /// `TabView` shell with Cards | Quiz, themed via `ThemeManager`.
 struct RootView: View {
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.modelContext) private var modelContext
     @State private var theme: ThemeManager
     @State private var alphabetStore: AlphabetStore?
     @State private var loadError: String?
-    @State private var streakStore = StreakStore()
+    @State private var streakStore: StreakStore?
+    @State private var userDataStore: SwiftDataUserDataStore?
 
     init() {
         let paletteRegistry = (try? PaletteRegistry()) ?? PaletteRegistry(palettes: [])
@@ -30,6 +33,13 @@ struct RootView: View {
                 let store = AlphabetStore(registry: try LanguageRegistry())
                 theme.languageDefaultPaletteID = store.currentManifest.defaultPaletteID
                 alphabetStore = store
+
+                let record = modelContext.fetchOrCreateStreakRecord()
+                streakStore = StreakStore(
+                    currentStreak: record.currentStreak, longestStreak: record.longestStreak,
+                    lastCompletedDay: record.lastCompletedDay
+                )
+                userDataStore = SwiftDataUserDataStore(context: modelContext, languageID: store.currentManifest.id)
             } catch {
                 loadError = "Failed to load Manifest.json: \(error)"
             }
@@ -49,8 +59,11 @@ struct RootView: View {
 
     @ViewBuilder
     private var quizTab: some View {
-        if let alphabetStore {
-            QuizView(manifest: alphabetStore.currentManifest, items: alphabetStore.items, streakStore: streakStore)
+        if let alphabetStore, let streakStore, let userDataStore {
+            QuizView(
+                manifest: alphabetStore.currentManifest, items: alphabetStore.items,
+                streakStore: streakStore, userDataStore: userDataStore
+            )
         } else if let loadError {
             Text(loadError).foregroundStyle(.red)
         } else {
