@@ -61,11 +61,16 @@ struct ItemDetailSheet: View {
     private var heroSection: some View {
         VStack(spacing: 8) {
             ZStack(alignment: .topTrailing) {
+                // A fixed frame, not the glyph's own bounding box, anchors the
+                // badge — Athelas' per-glyph metrics vary enough (e.g. "Ε" vs
+                // "Α") that anchoring to the Text's intrinsic frame let the
+                // badge overlap letters with a shorter visible ascender.
                 Text(displayedItem.foreignLetter)
                     .font(.custom("Athelas-Bold", size: 140))
                     .minimumScaleFactor(0.3)
                     .lineLimit(1)
                     .foregroundStyle(theme.accent)
+                    .frame(width: 200, height: 160)
                 if let markedVersion = displayedItem.markedVersion {
                     VStack(spacing: 2) {
                         Text(markedVersion)
@@ -75,7 +80,8 @@ struct ItemDetailSheet: View {
                             .font(.caption2)
                             .foregroundStyle(theme.textSecondary)
                     }
-                    .offset(x: 16, y: -4)
+                    .fixedSize()
+                    .offset(x: 8, y: -12)
                 }
             }
             .frame(maxWidth: .infinity)
