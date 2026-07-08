@@ -73,7 +73,16 @@ struct AlphabetItemDetailTests {
 
         let siblings = capitalSigma.caseSiblingsWithRole(in: allItems)
         #expect(siblings.map(\.item.id) == [2, 3])
-        #expect(siblings.map(\.role) == ["Case form", "Ending form"])
+        #expect(siblings.map(\.role) == ["Lowercase", "Ending form"])
+    }
+
+    @Test func caseSiblingsWithRoleLabelsPlainPairByTargetCase() {
+        let capitalBeta = Self.item(1, "Β", caseEquivalent: "β")
+        let lowerBeta = Self.item(2, "β", caseEquivalent: "Β")
+        let allItems = [capitalBeta, lowerBeta]
+
+        #expect(capitalBeta.caseSiblingsWithRole(in: allItems).map(\.role) == ["Lowercase"])
+        #expect(lowerBeta.caseSiblingsWithRole(in: allItems).map(\.role) == ["Capital"])
     }
 
     @Test func caseSiblingsWithRoleIsEmptyWhenNoEquivalents() {

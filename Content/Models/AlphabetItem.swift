@@ -63,14 +63,15 @@ extension AlphabetItem {
     }
 
     /// Same resolution as `caseSiblings(in:)`, but paired with a label
-    /// naming which positional field matched — so the detail sheet can show
-    /// "Ending form" for sigma teliko rather than a bare glyph.
+    /// naming the sibling's role — "Capital"/"Lowercase" for the plain case
+    /// pair, or the specific positional form ("Ending form" for sigma
+    /// teliko) — so the detail sheet never shows a bare, unlabeled glyph.
     func caseSiblingsWithRole(in items: [AlphabetItem]) -> [(item: AlphabetItem, role: String)] {
-        let mapping: [(String?, String)] = [
-            (caseEquivalent, "Case form"),
-            (leadingCaseEquivalent, "Leading form"),
-            (middleCaseEquivalent, "Middle form"),
-            (endingCaseEquivalent, "Ending form")
+        let mapping: [(String?, (AlphabetItem) -> String)] = [
+            (caseEquivalent, { $0.isCapital ? "Capital" : "Lowercase" }),
+            (leadingCaseEquivalent, { _ in "Leading form" }),
+            (middleCaseEquivalent, { _ in "Middle form" }),
+            (endingCaseEquivalent, { _ in "Ending form" })
         ]
         var seen = Set<Int>()
         var results: [(item: AlphabetItem, role: String)] = []
@@ -78,7 +79,7 @@ extension AlphabetItem {
             guard let glyph,
                   let match = items.first(where: { $0.foreignLetter == glyph && $0.identifier != identifier }),
                   seen.insert(match.identifier).inserted else { continue }
-            results.append((match, role))
+            results.append((match, role(match)))
         }
         return results
     }
