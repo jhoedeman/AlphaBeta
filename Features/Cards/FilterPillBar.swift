@@ -7,17 +7,31 @@ struct FilterPillBar: View {
     let viewModel: CardDeckViewModel
 
     @Environment(ThemeManager.self) private var theme
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+
+    private var row: some View {
+        HStack(spacing: 10) {
+            ForEach(viewModel.manifest.filterCategories, id: \.self) { category in
+                pill(for: category)
+            }
+            shuffleButton
+            hideNamesButton
+        }
+    }
 
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 10) {
-                ForEach(viewModel.manifest.filterCategories, id: \.self) { category in
-                    pill(for: category)
-                }
-                shuffleButton
-                hideNamesButton
+        // Regular-width (iPad) has enough room to fit every pill without
+        // scrolling, so it's centered above the constrained-width card
+        // (SPEC §5) instead of leading-aligned across the full screen.
+        if horizontalSizeClass == .regular {
+            row
+                .padding(.horizontal)
+                .frame(maxWidth: .infinity)
+        } else {
+            ScrollView(.horizontal, showsIndicators: false) {
+                row
+                    .padding(.horizontal)
             }
-            .padding(.horizontal)
         }
     }
 
@@ -25,6 +39,7 @@ struct FilterPillBar: View {
         let isActive = viewModel.selectedFilters.contains(category)
         return Text(category.displayName)
             .font(.subheadline.weight(.medium))
+            .fixedSize()
             .padding(.horizontal, 14)
             .padding(.vertical, 8)
             .background(isActive ? theme.accent : theme.surface)
