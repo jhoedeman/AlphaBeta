@@ -130,15 +130,12 @@ final class CardDeckViewModel {
         } else {
             selectedFilters.insert(category)
         }
-        refreshOrder()
-        notifyPreferencesChanged()
-    }
-
-    /// Reshuffles every time the deck transitions to shuffled, per SPEC §5
-    /// ("reshuffles on each activation"); toggling off restores manifest order.
-    func toggleShuffle() {
-        isShuffled.toggle()
-        refreshOrder()
+        let previousFocusedItem = currentItem
+        order = recomputeOrder()
+        currentIndex = Self.resolveFocusIndex(
+            previousFocusedItem: previousFocusedItem, allItemsInOriginalOrder: allItems, newOrder: order
+        )
+        lastIndexChangeAnimates = false
         notifyPreferencesChanged()
     }
 
@@ -154,11 +151,49 @@ final class CardDeckViewModel {
         hideNames.toggle()
     }
 
-    private func refreshOrder() {
+    private func recomputeOrder() -> [AlphabetItem] {
         var next = Self.filteredOrder(allItems: allItems, manifest: manifest, filters: selectedFilters)
         if isShuffled { next.shuffle() }
-        order = next
+        return next
+    }
+
+    /// If `previousFocusedItem` still exists in `newOrder`, stay on it
+    /// (wherever it now sits). Otherwise walk forward through
+    /// `allItemsInOriginalOrder` starting just after its old position,
+    /// wrapping around, until finding the first item that survived into
+    /// `newOrder` — pure and unit-tested independent of `self` so filter
+    /// fallback behavior can be verified without constructing a full view
+    /// model.
+    static func resolveFocusIndex(
+        previousFocusedItem: AlphabetItem?, allItemsInOriginalOrder: [AlphabetItem], newOrder: [AlphabetItem]
+    ) -> Int {
+        guard let previousFocusedItem else { return 0 }
+        if let sameIndex = newOrder.firstIndex(where: { $0.id == previousFocusedItem.id }) {
+            return sameIndex
+        }
+        guard !newOrder.isEmpty,
+              let startPosition = allItemsInOriginalOrder.firstIndex(where: { $0.id == previousFocusedItem.id })
+        else { return 0 }
+        let idsInNewOrder = Set(newOrder.map(\.id))
+        for offset in 1..<allItemsInOriginalOrder.count {
+            let candidateIndex = (startPosition + offset) % allItemsInOriginalOrder.count
+            let candidate = allItemsInOriginalOrder[candidateIndex]
+            if idsInNewOrder.contains(candidate.id),
+               let resolvedIndex = newOrder.firstIndex(where: { $0.id == candidate.id }) {
+                return resolvedIndex
+            }
+        }
+        return 0
+    }
+
+    /// Reshuffles every time the deck transitions to shuffled, per SPEC §5
+    /// ("reshuffles on each activation"); toggling off restores manifest order.
+    func toggleShuffle() {
+        isShuffled.toggle()
+        order = recomputeOrder()
         currentIndex = 0
+        lastIndexChangeAnimates = false
+        notifyPreferencesChanged()
     }
 
     private static func filteredOrder(allItems: [AlphabetItem], manifest: LanguageManifest, filters: Set<FilterCategory>) -> [AlphabetItem] {

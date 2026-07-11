@@ -70,12 +70,80 @@ struct CardDeckViewModelTests {
         #expect(viewModel.currentItem?.id == Self.capitalA.id)
     }
 
-    @Test func filterChangeResetsCurrentIndex() {
+    @Test func filterChangeKeepsFocusOnTheSameItemWhenItIsStillVisible() {
         let viewModel = makeViewModel()
         viewModel.focusNeighbor(Self.lowerA)
-        #expect(viewModel.currentIndex == 1)
-        viewModel.toggleFilter(.diphthongs)
+        viewModel.toggleFilter(.diphthongs) // lowerA still passes capitals+lowercase
+        #expect(viewModel.currentItem?.id == Self.lowerA.id)
+    }
+
+    @Test func filterChangeWalksForwardInOriginalOrderWhenFocusedItemIsFilteredOut() {
+        let viewModel = makeViewModel()
+        viewModel.focusNeighbor(Self.lowerA)
+        viewModel.toggleFilter(.lowercase) // removes lowerA; diphthong is next in original order
+        #expect(viewModel.currentItem?.id == Self.diphthong.id)
+    }
+
+    @Test func filterChangeWrapsSearchToTheStartWhenNothingLaterIsVisible() {
+        let viewModel = makeViewModel()
+        viewModel.focusNeighbor(Self.diphthong) // last item in original order
+        viewModel.toggleFilter(.diphthongs) // removes diphthong; nothing after it survives either
+        #expect(viewModel.currentItem?.id == Self.capitalA.id) // wraps the search back to the start
+    }
+
+    @Test func filterChangeToEmptyDeckLeavesCurrentItemNil() {
+        let viewModel = makeViewModel()
+        for category in Self.manifest.filterCategories {
+            viewModel.toggleFilter(category)
+        }
+        #expect(viewModel.currentItem == nil)
         #expect(viewModel.currentIndex == 0)
+    }
+
+    // MARK: - resolveFocusIndex (pure function)
+
+    @Test func resolveFocusIndexReturnsZeroWhenThereWasNoPreviousFocus() {
+        let index = CardDeckViewModel.resolveFocusIndex(
+            previousFocusedItem: nil, allItemsInOriginalOrder: Self.items, newOrder: Self.items
+        )
+        #expect(index == 0)
+    }
+
+    @Test func resolveFocusIndexFindsTheSameItemInTheNewOrderRegardlessOfPosition() {
+        let reordered = [Self.diphthong, Self.capitalA, Self.lowerA]
+        let index = CardDeckViewModel.resolveFocusIndex(
+            previousFocusedItem: Self.lowerA, allItemsInOriginalOrder: Self.items, newOrder: reordered
+        )
+        #expect(index == 2)
+    }
+
+    @Test func resolveFocusIndexWalksForwardThroughOriginalOrderWhenItemIsMissing() {
+        let newOrder = [Self.capitalA] // lowerA and diphthong both filtered out
+        let index = CardDeckViewModel.resolveFocusIndex(
+            previousFocusedItem: Self.lowerA, allItemsInOriginalOrder: Self.items, newOrder: newOrder
+        )
+        #expect(index == 0) // capitalA is the only survivor
+    }
+
+    @Test func resolveFocusIndexReturnsZeroWhenNewOrderIsEmpty() {
+        let index = CardDeckViewModel.resolveFocusIndex(
+            previousFocusedItem: Self.lowerA, allItemsInOriginalOrder: Self.items, newOrder: []
+        )
+        #expect(index == 0)
+    }
+
+    @Test func shuffleToggleResetsFocusToTheFirstShuffledItem() {
+        let viewModel = makeViewModel()
+        viewModel.focusNeighbor(Self.diphthong)
+        viewModel.toggleShuffle()
+        #expect(viewModel.currentIndex == 0)
+        #expect(viewModel.currentItem?.id == viewModel.order.first?.id)
+        #expect(viewModel.lastIndexChangeAnimates == false)
+
+        viewModel.focusNeighbor(viewModel.order[1])
+        viewModel.toggleShuffle() // toggling off restores manifest order, still resets to 0
+        #expect(viewModel.currentIndex == 0)
+        #expect(viewModel.currentItem?.id == Self.capitalA.id)
     }
 
     @Test func shuffleContainsSameItemsInSomeOrder() {
