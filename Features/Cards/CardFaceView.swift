@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// The visual face of a single card, per SPEC §5 "Card face". Pure
-/// presentation — all navigation/gesture handling lives in `CardDeckView`.
+/// presentation — all navigation/gesture handling lives in `CardCarouselView`.
 struct CardFaceView: View {
     let item: AlphabetItem
     let manifest: LanguageManifest

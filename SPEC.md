@@ -250,13 +250,14 @@ Because CloudKit merges can duplicate the "singleton" models, always fetch-and-m
 - Shuffle toggle button (e.g. `shuffle` SF Symbol) at the trailing end of the pill bar. Reshuffles on each activation.
 - Center: the card deck. Card count indicator ("14 / 35") subtly below the deck.
 
-### Deck behavior ("Tinder look, nothing is discarded")
+### Deck behavior (horizontally-paged, peeking carousel — nothing is discarded)
 - Deck is the filtered, ordered item list. Default order: JSON order (alphabetical); shuffle mode randomizes.
-- Top card is draggable. Drag translates and rotates the card (rotation ≈ `translation.width / 20` degrees, anchored below center). Beneath it, the next 2 cards peek with slight scale/offset (stacked look).
-- Swipe left past threshold (~1/3 card width or high velocity) → card animates off-screen left, deck advances to **next** item; the card re-enters the bottom of the stack. Swipe right → **previous** item. Below threshold → spring back.
-- The deck **wraps around** (after the last item comes the first).
-- Light impact haptic on every completed swipe.
-- Tap on the top card → detail sheet (Section 6).
+- One card is focused (centered); its neighbors peek in at both edges (~20% of card width on iPhone). Swiping pages one card at a time with animated, physics-driven paging (view-aligned scrolling) — no card is ever removed or discarded, paging only changes which one is focused.
+- Light impact haptic each time paging settles on a new card.
+- Tapping the focused card → detail sheet (Section 6). Tapping a peeking neighbor animates it into focus instead (no detail sheet).
+- Changing an active filter pill keeps focus on the same letter if it still passes; otherwise focus jumps (no animated travel) to the next visible letter in alphabet order.
+- Toggling shuffle reshuffles and resets focus to the first card in the new order.
+- The carousel **wraps around**: swiping past the last card returns to the first, and past the first returns to the last. Each wrap shows a brief native-style capsule indicator ("Back to the beginning" / "Back to the end") with a haptic tick, auto-dismissing after ~1.5s.
 
 ### Card face
 - Huge `foreignLetter` glyph, centered (SF font, `.rounded` optional; scale to fit — combinations like "γγ" must fit).
@@ -266,7 +267,7 @@ Because CloudKit merges can duplicate the "singleton" models, always fetch-and-m
 - Card uses theme surface color, large corner radius (~28pt), soft shadow.
 
 ### iPad
-- Constrain card size: `.frame(maxWidth: 480, maxHeight: 640)` centered; whitespace fills the rest. Same interaction. Regular-width layouts may show the pill bar centered.
+- The carousel keeps the same fixed card size as iPhone; the extra width becomes a larger peek (more of each neighbor visible) rather than a bigger card. Same interaction. Regular-width layouts show the `FilterPillBar` centered.
 
 ---
 
