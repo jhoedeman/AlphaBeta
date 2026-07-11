@@ -17,7 +17,6 @@ struct CardsView: View {
 
     @Environment(ThemeManager.self) private var theme
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     private var pronunciationSystemID: String {
         viewModel.manifest.resolvedPronunciationSystemID(preferring: preferencesStore.pronunciationSystemID)
@@ -57,11 +56,13 @@ struct CardsView: View {
                         .foregroundStyle(theme.textSecondary)
                     Spacer()
                 } else {
-                    CardDeckView(viewModel: viewModel, reduceMotion: reduceMotion) { item in
+                    // Full width, not constrained to 480 — the carousel's
+                    // card size is fixed internally, and the iPad's extra
+                    // width beyond that fixed size is what becomes peek.
+                    CardCarouselView(viewModel: viewModel) { item in
                         detailItem = item
                     }
-                    .padding(.horizontal, 24)
-                    .frame(maxWidth: 480, maxHeight: 640)
+                    .frame(maxWidth: .infinity)
 
                     Text("\(viewModel.currentIndex + 1) / \(viewModel.count)")
                         .font(.footnote)

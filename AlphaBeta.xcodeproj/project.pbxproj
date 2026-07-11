@@ -14,7 +14,6 @@
 		03355C9986BFBB807FAECB01 /* PronunciationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B77F97C8A0C6698D80EFCA /* PronunciationSystem.swift */; };
 		043620A89E0ED3CD79EC4D38 /* AlphabetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0BF3AD8A40B7E1E2C8523E /* AlphabetItem.swift */; };
 		06B87E578F3F8CAE2D63F7E7 /* CardFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539743A21482ED4AAC52A2E /* CardFaceView.swift */; };
-		164A9101F53E3DDA279E93CB /* CardDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A864BCE9126C5B2491CCC9 /* CardDeckView.swift */; };
 		1A6B77B5F3D708549DD2492D /* LanguageRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F5248C7183AF1ECA74B02 /* LanguageRegistry.swift */; };
 		24B4988D22A0BCB7094C883F /* Ukrainian.json in Resources */ = {isa = PBXBuildFile; fileRef = 74E36F13B67CB7643C500E81 /* Ukrainian.json */; };
 		25CCC89D82D06936133AFF9D /* StreakRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D95252E8D3EC2E9EB71B7E /* StreakRecord.swift */; };
@@ -28,6 +27,7 @@
 		3DC35E4EC23F9B2658E6B26B /* FilterPillBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745347C3FF22A0F295D77D00 /* FilterPillBar.swift */; };
 		432AD727CD5ED9E6E0DE4551 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C5566D46CFD7DDA4C1DDC6 /* Haptics.swift */; };
 		48DBC3E95CEC49B59E69079E /* QuizViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA8F08C4A6E3C51EE2134D /* QuizViewModelTests.swift */; };
+		4C86E97C5E1FEC6FC059DF32 /* CardCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B549586C5B0727920A70B85 /* CardCarouselView.swift */; };
 		525C3E7776D34211044834CA /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC141C46BABF24DF3A3016 /* ResultsView.swift */; };
 		568BAD240295708D8A10D91B /* AlphabetProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9898312F6A7FDA6FDBA0276B /* AlphabetProviding.swift */; };
 		58D0F80B315C75EED8A6F0EB /* Serbian.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BD2F9A3EA90800D18079F5F /* Serbian.json */; };
@@ -65,6 +65,7 @@
 		D2F0F58D0A7BDE5D8B74317D /* UserDataPersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACCD6871CD762D954D806A4 /* UserDataPersistenceTests.swift */; };
 		D6D4EAA2262864DCE1A30793 /* CardDeckViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85E77C8C600BC1EFA4FA /* CardDeckViewModelTests.swift */; };
 		D79274B3FD637F0D35C3AA13 /* LanguageManifestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A292142C9648E949CB497A9 /* LanguageManifestTests.swift */; };
+		E0D20562A13E90E4ECA6269C /* WrapIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ACECCCB1D4D4CE8B372474 /* WrapIndicatorView.swift */; };
 		E5BB66E92F8A58DE9A983BD9 /* QuizOptionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA447DF28E580AA183E8723 /* QuizOptionRow.swift */; };
 		F43ED737900B45E86E945770 /* ItemDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B151AE727C3012B8E121B3 /* ItemDetailSheet.swift */; };
 		F6835020E41F4E83EA2C5573 /* PronunciationEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CE58DE606FDEEA7740F758 /* PronunciationEntry.swift */; };
@@ -96,6 +97,7 @@
 		1D0145315F2A41B36CF9871A /* BundledAlphabetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundledAlphabetProvider.swift; sourceTree = "<group>"; };
 		1D1CC34E0325E6B88CB4D4AE /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		1EAA8F08C4A6E3C51EE2134D /* QuizViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModelTests.swift; sourceTree = "<group>"; };
+		20ACECCCB1D4D4CE8B372474 /* WrapIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapIndicatorView.swift; sourceTree = "<group>"; };
 		22DE9FAA406E8714AB93440F /* ModelContext+Singletons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelContext+Singletons.swift"; sourceTree = "<group>"; };
 		22EAEAC31E092FEEE24C08C7 /* LanguagePickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePickerSheet.swift; sourceTree = "<group>"; };
 		24D47257AE5CDC2E2306857D /* ThemeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManagerTests.swift; sourceTree = "<group>"; };
@@ -111,7 +113,6 @@
 		453A2427A065B54888F6E4F5 /* Georgian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Georgian.json; sourceTree = "<group>"; };
 		45676DED26A635E71F751365 /* LanguageManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManifest.swift; sourceTree = "<group>"; };
 		4C7A596327211F0218A97F20 /* Coptic.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Coptic.json; sourceTree = "<group>"; };
-		51A864BCE9126C5B2491CCC9 /* CardDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeckView.swift; sourceTree = "<group>"; };
 		57CE58DE606FDEEA7740F758 /* PronunciationEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationEntry.swift; sourceTree = "<group>"; };
 		59B88BC9C6269F5E3F5A01EA /* ItemProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProgress.swift; sourceTree = "<group>"; };
 		5AF8C292CE12D2C5D006CF18 /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 		64444851EE6FDD20F7744A42 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		65A1AD34FBBFF53860C6DC06 /* PaletteBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteBuilderView.swift; sourceTree = "<group>"; };
 		6ACCD6871CD762D954D806A4 /* UserDataPersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataPersistenceTests.swift; sourceTree = "<group>"; };
+		6B549586C5B0727920A70B85 /* CardCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCarouselView.swift; sourceTree = "<group>"; };
 		6B9894E8B51B322A7129C031 /* UserPreferencesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesStore.swift; sourceTree = "<group>"; };
 		73213E113A99756620430B3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		745347C3FF22A0F295D77D00 /* FilterPillBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPillBar.swift; sourceTree = "<group>"; };
@@ -151,10 +153,10 @@
 		D539743A21482ED4AAC52A2E /* CardFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFaceView.swift; sourceTree = "<group>"; };
 		D66C8F04A3F0D5CE7037F265 /* QuizSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSession.swift; sourceTree = "<group>"; };
 		D70C1993D526D91A51EE627E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		E399CEA55AD8FD12E10FE5D1 /* AlphaBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E399CEA55AD8FD12E10FE5D1 /* AlphaBeta.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AlphaBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69C96D84C2D8966A8CBB1 /* AlphaBetaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaBetaApp.swift; sourceTree = "<group>"; };
 		E9D5E816E4128AB61BCDDABB /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
-		EF2793653DFE7415CBAEBA14 /* AlphaBetaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaBetaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2793653DFE7415CBAEBA14 /* AlphaBetaTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AlphaBetaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66BD6B367647AE0AF6BE226 /* Bulgarian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Bulgarian.json; sourceTree = "<group>"; };
 		F693D2AF0FC83A5033D39FF2 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		FB0D62D17CC873D23D27A115 /* QuizEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEngine.swift; sourceTree = "<group>"; };
@@ -199,11 +201,12 @@
 		4C14854D95441C4732C302D3 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
-				51A864BCE9126C5B2491CCC9 /* CardDeckView.swift */,
+				6B549586C5B0727920A70B85 /* CardCarouselView.swift */,
 				B221B04E85CBA3C6B8EBE362 /* CardDeckViewModel.swift */,
 				D539743A21482ED4AAC52A2E /* CardFaceView.swift */,
 				93346C01019E41885B72AA85 /* CardsView.swift */,
 				745347C3FF22A0F295D77D00 /* FilterPillBar.swift */,
+				20ACECCCB1D4D4CE8B372474 /* WrapIndicatorView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -473,7 +476,7 @@
 				568BAD240295708D8A10D91B /* AlphabetProviding.swift in Sources */,
 				5DB74ACCA8E9EB5C3F4C0742 /* AlphabetStore.swift in Sources */,
 				BB6602561CFAD73FE6AD8242 /* BundledAlphabetProvider.swift in Sources */,
-				164A9101F53E3DDA279E93CB /* CardDeckView.swift in Sources */,
+				4C86E97C5E1FEC6FC059DF32 /* CardCarouselView.swift in Sources */,
 				68231FBE87C575D8E5F6A422 /* CardDeckViewModel.swift in Sources */,
 				06B87E578F3F8CAE2D63F7E7 /* CardFaceView.swift in Sources */,
 				C9DF625CD3D2CA34C0096780 /* CardsView.swift in Sources */,
@@ -512,6 +515,7 @@
 				02BF4105238C8DB11E3EAE34 /* UserDataPersisting.swift in Sources */,
 				3011B4630F52AA8D3F045BC6 /* UserPreferences.swift in Sources */,
 				7688FBD3B648FCD9F7F7EE18 /* UserPreferencesStore.swift in Sources */,
+				E0D20562A13E90E4ECA6269C /* WrapIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,7 +696,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = XY62X6K9VH;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -735,7 +738,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = XY62X6K9VH;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
