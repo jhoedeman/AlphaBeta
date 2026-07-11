@@ -15,6 +15,11 @@ struct CardCarouselView: View {
     /// Suppresses the page-settle haptic for the very first `scrollTargetID`
     /// assignment in `onAppear` — that's the carousel loading, not a swipe.
     @State private var hasAppeared = false
+    /// The currently live wrap-indicator dismiss timer, cancelled and
+    /// replaced whenever a new wrap fires so rapid consecutive wraps never
+    /// leave a stale dismiss in flight (see finding #3 in
+    /// .superpowers/sdd/final-review-findings.md).
+    @State private var wrapDismissTask: Task<Void, Never>?
 
     /// Fixed absolute size on both iPhone and iPad, per the design doc's
     /// iPad-sizing section — iPad's extra width becomes more peek instead of
@@ -69,12 +74,14 @@ struct CardCarouselView: View {
                 // paging settles on a real card, not on the initial load or
                 // on landing on a sentinel (the wrap indicator's own
                 // `.selection()` haptic covers that case instead).
-                if hasAppeared, let newID, newID.hasPrefix("real-") {
+                // A wrap already gets its own `.selection()` haptic below;
+                // the sentinel-to-real re-point it triggers must not also
+                // fire this impact haptic (finding #2).
+                if hasAppeared, let newID, newID.hasPrefix("real-"), viewModel.wrapEvent == nil {
                     Haptics.impactLight()
                 }
             }
-            .onChange(of: viewModel.currentIndex) { _, newIndex in
-                let newID = viewModel.entryID(at: newIndex)
+            .onChange(of: viewModel.entryID(at: viewModel.currentIndex)) { _, newID in
                 if viewModel.lastIndexChangeAnimates {
                     withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
                         scrollTargetID = newID
@@ -93,7 +100,10 @@ struct CardCarouselView: View {
                 withAnimation(reduceMotion ? .easeInOut : .spring(response: 0.3, dampingFraction: 0.8)) {
                     showWrapIndicator = true
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                wrapDismissTask?.cancel()
+                wrapDismissTask = Task {
+                    try? await Task.sleep(for: .seconds(1.5))
+                    guard !Task.isCancelled else { return }
                     withAnimation(.easeInOut(duration: 0.2)) {
                         showWrapIndicator = false
                     }
