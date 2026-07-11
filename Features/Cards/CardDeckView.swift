@@ -82,7 +82,7 @@ struct CardDeckView: View {
             // No fling-off-screen motion — just cross-fade straight to the
             // next/previous card (SPEC §10: "cross-fade instead of swipe").
             withAnimation(.easeInOut(duration: 0.2)) {
-                if direction < 0 { viewModel.advance() } else { viewModel.retreat() }
+                focusAdjacentItem(direction: direction)
                 dragOffset = .zero
             }
         } else {
@@ -90,10 +90,21 @@ struct CardDeckView: View {
             withAnimation(.easeOut(duration: 0.25)) { dragOffset = flungOffset }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.22) {
                 withAnimation(.spring(response: 0.35, dampingFraction: 0.75)) {
-                    if direction < 0 { viewModel.advance() } else { viewModel.retreat() }
+                    self.focusAdjacentItem(direction: direction)
                     dragOffset = .zero
                 }
             }
         }
+    }
+
+    /// `CardDeckView` is a stopgap: it's replaced by `CardCarouselView` (which
+    /// uses `focusNeighbor`/`handleScrollSettled` directly) once that lands,
+    /// so this only needs to reproduce the old `advance`/`retreat` wraparound
+    /// using the view model's current, view-facing API.
+    private func focusAdjacentItem(direction: CGFloat) {
+        guard viewModel.count > 0 else { return }
+        let offset = direction < 0 ? 1 : -1
+        let nextIndex = (viewModel.currentIndex + offset + viewModel.count) % viewModel.count
+        viewModel.focusNeighbor(viewModel.order[nextIndex])
     }
 }

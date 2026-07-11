@@ -17,6 +17,16 @@ final class CardDeckViewModel {
     private(set) var hideNames = false
     private(set) var order: [AlphabetItem]
     private(set) var currentIndex = 0
+    /// Set by wrap detection so `CardCarouselView` can show the wrap
+    /// indicator; cleared via `clearWrapEvent()` once the indicator's
+    /// auto-dismiss timer fires.
+    private(set) var wrapEvent: WrapEvent?
+    /// Whether the *next* `currentIndex` change the view observes should
+    /// animate its scroll position, or snap instantly. Filter/shuffle
+    /// changes and wrap re-pointing set this `false`; `focusNeighbor` sets
+    /// it back to `true`. Read once per change by the view's
+    /// `onChange(of: currentIndex)` handler.
+    var lastIndexChangeAnimates = true
 
     /// One rendered slot in the carousel. `id` disambiguates a real item's
     /// own card from a sentinel duplicate used to detect wraparound — see
@@ -24,6 +34,11 @@ final class CardDeckViewModel {
     struct CarouselEntry: Identifiable, Hashable {
         let id: String
         let item: AlphabetItem
+    }
+
+    enum WrapEvent: Equatable {
+        case forward
+        case backward
     }
 
     init(
@@ -67,6 +82,48 @@ final class CardDeckViewModel {
         return "real-\(order[index].identifier)"
     }
 
+    /// Called by the view whenever its scroll position settles on a new
+    /// entry id — including the two sentinels. A sentinel means the user
+    /// swiped past the real end of the deck; this re-points `currentIndex`
+    /// to the matching real end and raises `wrapEvent` so the view can show
+    /// the wrap indicator, without animating the (imperceptible) snap back
+    /// to the real item's own id.
+    func handleScrollSettled(to id: String?) {
+        guard let id, !order.isEmpty else { return }
+        switch id {
+        case "sentinel-trailing":
+            currentIndex = 0
+            lastIndexChangeAnimates = false
+            wrapEvent = .forward
+        case "sentinel-leading":
+            currentIndex = order.count - 1
+            lastIndexChangeAnimates = false
+            wrapEvent = .backward
+        default:
+            if let identifier = Self.itemIdentifier(fromEntryID: id),
+               let index = order.firstIndex(where: { $0.identifier == identifier }) {
+                currentIndex = index
+            }
+        }
+    }
+
+    /// Tapping a peeking neighbor card brings it into focus with an
+    /// animated scroll, unlike a filter/shuffle-forced jump.
+    func focusNeighbor(_ item: AlphabetItem) {
+        guard let index = order.firstIndex(where: { $0.id == item.id }) else { return }
+        currentIndex = index
+        lastIndexChangeAnimates = true
+    }
+
+    func clearWrapEvent() {
+        wrapEvent = nil
+    }
+
+    private static func itemIdentifier(fromEntryID id: String) -> Int? {
+        guard id.hasPrefix("real-") else { return nil }
+        return Int(id.dropFirst("real-".count))
+    }
+
     func toggleFilter(_ category: FilterCategory) {
         if selectedFilters.contains(category) {
             selectedFilters.remove(category)
@@ -95,23 +152,6 @@ final class CardDeckViewModel {
     /// Purely a display flag — doesn't touch filtering/order/index.
     func toggleHideNames() {
         hideNames.toggle()
-    }
-
-    func advance() {
-        guard count > 0 else { return }
-        currentIndex = (currentIndex + 1) % count
-    }
-
-    func retreat() {
-        guard count > 0 else { return }
-        currentIndex = (currentIndex - 1 + count) % count
-    }
-
-    /// The next `n` items after the current one, for the peeking stack —
-    /// wraps around, and returns fewer than `n` if the deck is that small.
-    func peekItems(_ n: Int) -> [AlphabetItem] {
-        guard count > 1 else { return [] }
-        return (1...min(n, count - 1)).map { order[(currentIndex + $0) % count] }
     }
 
     private func refreshOrder() {

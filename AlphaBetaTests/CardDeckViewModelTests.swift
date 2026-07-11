@@ -44,28 +44,13 @@ struct CardDeckViewModelTests {
         let viewModel = makeViewModel()
         #expect(viewModel.hideNames == false)
 
-        viewModel.advance()
+        viewModel.focusNeighbor(Self.lowerA)
         viewModel.toggleHideNames()
         #expect(viewModel.hideNames == true)
         #expect(viewModel.currentIndex == 1)
 
         viewModel.toggleHideNames()
         #expect(viewModel.hideNames == false)
-    }
-
-    @Test func advanceWrapsAroundToStart() {
-        let viewModel = makeViewModel()
-        viewModel.advance()
-        viewModel.advance()
-        #expect(viewModel.currentItem?.id == Self.diphthong.id)
-        viewModel.advance()
-        #expect(viewModel.currentItem?.id == Self.capitalA.id)
-    }
-
-    @Test func retreatWrapsAroundToEnd() {
-        let viewModel = makeViewModel()
-        viewModel.retreat()
-        #expect(viewModel.currentItem?.id == Self.diphthong.id)
     }
 
     @Test func togglingOffAllFiltersEmptiesTheDeck() {
@@ -87,28 +72,10 @@ struct CardDeckViewModelTests {
 
     @Test func filterChangeResetsCurrentIndex() {
         let viewModel = makeViewModel()
-        viewModel.advance()
+        viewModel.focusNeighbor(Self.lowerA)
         #expect(viewModel.currentIndex == 1)
         viewModel.toggleFilter(.diphthongs)
         #expect(viewModel.currentIndex == 0)
-    }
-
-    @Test func peekItemsWrapsAndCapsAtDeckSizeMinusOne() {
-        let viewModel = makeViewModel()
-        let peeks = viewModel.peekItems(2)
-        #expect(peeks.map(\.id) == [Self.lowerA.id, Self.diphthong.id])
-
-        viewModel.advance()
-        viewModel.advance()
-        let wrapped = viewModel.peekItems(2)
-        #expect(wrapped.map(\.id) == [Self.capitalA.id, Self.lowerA.id])
-    }
-
-    @Test func peekItemsCapsAtDeckSizeMinusOneWhenSmall() {
-        let viewModel = makeViewModel()
-        viewModel.toggleFilter(.diphthongs)
-        #expect(viewModel.count == 2)
-        #expect(viewModel.peekItems(2).map(\.id) == [Self.lowerA.id])
     }
 
     @Test func shuffleContainsSameItemsInSomeOrder() {
@@ -164,7 +131,7 @@ struct CardDeckViewModelTests {
         #expect(FilterCategory.set(fromCommaJoinedRawValues: "").isEmpty)
     }
 
-    // MARK: - Carousel entries (sentinels)
+    // MARK: - Carousel entries, wrap, and neighbor focus
 
     @Test func carouselEntriesWrapsRealItemsWithLeadingAndTrailingSentinels() {
         let viewModel = makeViewModel()
@@ -197,5 +164,61 @@ struct CardDeckViewModelTests {
         let viewModel = makeViewModel()
         #expect(viewModel.entryID(at: -1) == nil)
         #expect(viewModel.entryID(at: 99) == nil)
+    }
+
+    @Test func focusNeighborUpdatesCurrentIndexAndMarksTheChangeAsAnimated() {
+        let viewModel = makeViewModel()
+        viewModel.lastIndexChangeAnimates = false // prove focusNeighbor flips it back to true
+        viewModel.focusNeighbor(Self.diphthong)
+        #expect(viewModel.currentIndex == 2)
+        #expect(viewModel.currentItem?.id == Self.diphthong.id)
+        #expect(viewModel.lastIndexChangeAnimates == true)
+    }
+
+    @Test func focusNeighborIgnoresAnItemNotInTheCurrentOrder() {
+        let viewModel = makeViewModel()
+        viewModel.toggleFilter(.diphthongs) // removes Self.diphthong from `order`
+        viewModel.focusNeighbor(Self.diphthong)
+        #expect(viewModel.currentIndex == 0) // unchanged — no matching item to focus
+    }
+
+    @Test func handleScrollSettledOnTrailingSentinelWrapsForwardToStart() {
+        let viewModel = makeViewModel()
+        viewModel.focusNeighbor(Self.diphthong)
+        viewModel.handleScrollSettled(to: "sentinel-trailing")
+        #expect(viewModel.currentIndex == 0)
+        #expect(viewModel.currentItem?.id == Self.capitalA.id)
+        #expect(viewModel.wrapEvent == .forward)
+        #expect(viewModel.lastIndexChangeAnimates == false)
+    }
+
+    @Test func handleScrollSettledOnLeadingSentinelWrapsBackwardToEnd() {
+        let viewModel = makeViewModel()
+        viewModel.handleScrollSettled(to: "sentinel-leading")
+        #expect(viewModel.currentIndex == Self.items.count - 1)
+        #expect(viewModel.currentItem?.id == Self.diphthong.id)
+        #expect(viewModel.wrapEvent == .backward)
+        #expect(viewModel.lastIndexChangeAnimates == false)
+    }
+
+    @Test func handleScrollSettledOnARealEntryUpdatesCurrentIndexOnly() {
+        let viewModel = makeViewModel()
+        viewModel.handleScrollSettled(to: "real-\(Self.diphthong.identifier)")
+        #expect(viewModel.currentIndex == 2)
+        #expect(viewModel.wrapEvent == nil)
+    }
+
+    @Test func handleScrollSettledIgnoresAnUnrecognizedID() {
+        let viewModel = makeViewModel()
+        viewModel.handleScrollSettled(to: "not-a-real-id")
+        #expect(viewModel.currentIndex == 0)
+    }
+
+    @Test func clearWrapEventResetsToNil() {
+        let viewModel = makeViewModel()
+        viewModel.handleScrollSettled(to: "sentinel-leading")
+        #expect(viewModel.wrapEvent != nil)
+        viewModel.clearWrapEvent()
+        #expect(viewModel.wrapEvent == nil)
     }
 }
