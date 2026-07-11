@@ -90,3 +90,7 @@ fastlane/test_output
 iOSInjectionProject/
 *.xcbkptlist
 AlphaBeta.xcodeproj/xcuserdata/jhoedeman.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+
+# superpowers scratch state (brainstorm sessions, worktrees)
+.superpowers/
+.worktrees/
