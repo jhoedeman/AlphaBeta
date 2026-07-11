@@ -1,6 +1,6 @@
 # AlphaBeta — Build Specification v1.0
 
-A pure-SwiftUI iPhone/iPad app for exploring non-Latin alphabets. Ships with nine languages — Greek, six Cyrillic (Russian, Ukrainian, Belarusian, Serbian, Bulgarian, Macedonian), Armenian, and Georgian — and is architected for Arabic script, Hebrew, Devanagari, kana, Hangul, and more (roadmap in §11.1).
+A pure-SwiftUI iPhone/iPad app for exploring non-Latin alphabets. Ships with ten languages — Greek, six Cyrillic (Russian, Ukrainian, Belarusian, Serbian, Bulgarian, Macedonian), Armenian, Georgian, and Coptic — and is architected for Arabic script, Hebrew, Devanagari, kana, Hangul, and more (roadmap in §11.1).
 
 ---
 
@@ -365,7 +365,7 @@ struct ThemeColors: Codable {       // stored as hex strings
 
 ## 9. Settings & Language Picker
 
-**Language sheet** (globe/flag button, top-left): list from `LanguageRegistry`, **grouped into sections by `scriptFamily`** ("Cyrillic ▸ Russian, Ukrainian, …"); a family with one language renders as a plain row. Rows show flag emoji, display name, native name. v1 lists all nine languages (Cyrillic renders as a six-row section). Include a teaser row style ready for future entries. Selecting switches `AlphabetStore` content, filters reset to all-on, theme animates to the language default (unless user has a custom/stock override), card deck resets to first item.
+**Language sheet** (globe/flag button, top-left): list from `LanguageRegistry`, **grouped into sections by `scriptFamily`** ("Cyrillic ▸ Russian, Ukrainian, …"); a family with one language renders as a plain row. Rows show flag emoji, display name, native name. v1 lists all ten languages (Cyrillic renders as a six-row section). Include a teaser row style ready for future entries. Selecting switches `AlphabetStore` content, filters reset to all-on, theme animates to the language default (unless user has a custom/stock override), card deck resets to first item.
 
 **Settings sheet** (gear, top-right):
 - Appearance: System / Light / Dark segmented control.
@@ -381,7 +381,7 @@ Both are `.sheet` (form sheet on iPad).
 
 1. Xcode project "AlphaBeta" created in this folder (already a git repo), bundle ID `com.JohnHoedeman.AlphaBeta`, iOS 18.0 target, iPhone + iPad, portrait + landscape.
 2. Capabilities: iCloud → CloudKit (container above), Background Modes → Remote notifications.
-3. Copy `Manifest.json` and all nine language JSONs (in this folder, alongside this spec) into `Content/Resources/`. Do not mutate them; they are the contract.
+3. Copy `Manifest.json` and all ten language JSONs (in this folder, alongside this spec) into `Content/Resources/`. Do not mutate them; they are the contract.
 4. `ModelContainer` with all four `@Model` types, `cloudKitDatabase: .automatic`; fall back to local-only configuration if container init throws (e.g. simulator without iCloud).
 5. Provide SwiftUI Previews with an in-memory container and a `PreviewAlphabetProvider`.
 6. Accessibility: Dynamic Type throughout (glyphs scale but cap), VoiceOver labels on cards ("Capital Sigma, letter, tap for details"), Reduce Motion honored (no confetti, cross-fade instead of swipe).
