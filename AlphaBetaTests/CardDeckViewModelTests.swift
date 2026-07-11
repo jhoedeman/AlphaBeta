@@ -163,4 +163,39 @@ struct CardDeckViewModelTests {
     @Test func filterCategorySetOfEmptyStringIsEmpty() {
         #expect(FilterCategory.set(fromCommaJoinedRawValues: "").isEmpty)
     }
+
+    // MARK: - Carousel entries (sentinels)
+
+    @Test func carouselEntriesWrapsRealItemsWithLeadingAndTrailingSentinels() {
+        let viewModel = makeViewModel()
+        let entries = viewModel.carouselEntries
+        #expect(entries.count == Self.items.count + 2)
+        #expect(entries.first?.id == "sentinel-leading")
+        #expect(entries.first?.item.id == Self.diphthong.id) // mirrors the last real item
+        #expect(entries.last?.id == "sentinel-trailing")
+        #expect(entries.last?.item.id == Self.capitalA.id) // mirrors the first real item
+        #expect(entries[1].id == "real-\(Self.capitalA.identifier)")
+        #expect(entries[2].id == "real-\(Self.lowerA.identifier)")
+        #expect(entries[3].id == "real-\(Self.diphthong.identifier)")
+    }
+
+    @Test func carouselEntriesIsEmptyWhenDeckIsEmpty() {
+        let viewModel = makeViewModel()
+        for category in Self.manifest.filterCategories {
+            viewModel.toggleFilter(category)
+        }
+        #expect(viewModel.carouselEntries.isEmpty)
+    }
+
+    @Test func entryIDReturnsRealPrefixedIdentifierForValidIndex() {
+        let viewModel = makeViewModel()
+        #expect(viewModel.entryID(at: 0) == "real-\(Self.capitalA.identifier)")
+        #expect(viewModel.entryID(at: 2) == "real-\(Self.diphthong.identifier)")
+    }
+
+    @Test func entryIDReturnsNilForOutOfBoundsIndex() {
+        let viewModel = makeViewModel()
+        #expect(viewModel.entryID(at: -1) == nil)
+        #expect(viewModel.entryID(at: 99) == nil)
+    }
 }

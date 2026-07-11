@@ -18,6 +18,14 @@ final class CardDeckViewModel {
     private(set) var order: [AlphabetItem]
     private(set) var currentIndex = 0
 
+    /// One rendered slot in the carousel. `id` disambiguates a real item's
+    /// own card from a sentinel duplicate used to detect wraparound — see
+    /// `carouselEntries`.
+    struct CarouselEntry: Identifiable, Hashable {
+        let id: String
+        let item: AlphabetItem
+    }
+
     init(
         manifest: LanguageManifest, allItems: [AlphabetItem],
         initialFilters: Set<FilterCategory>? = nil, initialShuffled: Bool = false,
@@ -36,6 +44,28 @@ final class CardDeckViewModel {
 
     var count: Int { order.count }
     var currentItem: AlphabetItem? { order.isEmpty ? nil : order[currentIndex] }
+
+    /// The carousel's full rendered sequence: every item in `order`, padded
+    /// with a leading sentinel that duplicates the last item and a trailing
+    /// sentinel that duplicates the first. `CardCarouselView` pages through
+    /// this array with `ScrollView`/`scrollTargetBehavior(.viewAligned)`;
+    /// landing on a sentinel is how it detects "the user swiped past the
+    /// real end," since `ScrollView` has no content beyond the real items to
+    /// drag into otherwise.
+    var carouselEntries: [CarouselEntry] {
+        guard !order.isEmpty else { return [] }
+        var entries = order.map { CarouselEntry(id: "real-\($0.identifier)", item: $0) }
+        entries.insert(CarouselEntry(id: "sentinel-leading", item: order.last!), at: 0)
+        entries.append(CarouselEntry(id: "sentinel-trailing", item: order.first!))
+        return entries
+    }
+
+    /// The carousel entry id for a real item at `index` in `order`, or `nil`
+    /// if `index` is out of bounds (e.g. an empty deck).
+    func entryID(at index: Int) -> String? {
+        guard order.indices.contains(index) else { return nil }
+        return "real-\(order[index].identifier)"
+    }
 
     func toggleFilter(_ category: FilterCategory) {
         if selectedFilters.contains(category) {
