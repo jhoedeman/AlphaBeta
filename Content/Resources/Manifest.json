@@ -143,5 +143,21 @@
     "filterCategories": ["letters"],
     "defaultPaletteID": "georgian-flag",
     "flagEmoji": "🇬🇪"
+  },
+  {
+    "id": 9,
+    "code": "cop",
+    "displayName": "Coptic",
+    "nativeName": "ϯⲙⲉⲧⲣⲉⲙⲛⲭⲏⲙⲓ",
+    "scriptFamily": "coptic",
+    "fileName": "Coptic",
+    "readingDirection": "leftToRight",
+    "hasLetterCase": true,
+    "pronunciationSystems": [
+      { "id": "bohairic", "displayName": "Bohairic" }
+    ],
+    "filterCategories": ["capitals", "lowercase"],
+    "defaultPaletteID": "coptic-cross",
+    "flagEmoji": "☦️"
   }
 ]

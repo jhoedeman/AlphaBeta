@@ -160,5 +160,23 @@
       "textPrimary": "#FFF8F0",
       "textSecondary": "#A3A09A"
     }
+  },
+  {
+    "id": "coptic-cross",
+    "name": "Icon Gold",
+    "light": {
+      "background": "#EDE7DA",
+      "surface": "#FFFFFF",
+      "accent": "#B8860B",
+      "textPrimary": "#2A2117",
+      "textSecondary": "#5C4F3D"
+    },
+    "dark": {
+      "background": "#1A140A",
+      "surface": "#241C0F",
+      "accent": "#E8C547",
+      "textPrimary": "#FBF3DD",
+      "textSecondary": "#B3A387"
+    }
   }
 ]

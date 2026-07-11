@@ -1,0 +1,986 @@
+{
+  "version": 2,
+  "alphabets": [
+    {
+      "language": 9,
+      "alphabetItems": [
+        {
+          "identifier": 100,
+          "itemType": 0,
+          "englishName": "Alfa",
+          "foreignLetter": "Ⲁ",
+          "exampleWord": "ⲁⲙⲏⲛ, which means 'amen'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "This is an open 'a' sound, as in 'father.' So 'ⲁⲙⲏⲛ' is pronounced 'ah-MEEN.'",
+              "short": "an open 'a,' as in 'father'"
+            }
+          },
+          "caseEquivalent": "ⲁ",
+          "lowercaseEnglishName": "alfa",
+          "isVowel": true
+        },
+        {
+          "identifier": 101,
+          "itemType": 0,
+          "englishName": "alfa",
+          "foreignLetter": "ⲁ",
+          "exampleWord": "ⲁⲙⲏⲛ, which means 'amen'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "This is an open 'a' sound, as in 'father.' So 'ⲁⲙⲏⲛ' is pronounced 'ah-MEEN.'",
+              "short": "an open 'a,' as in 'father'"
+            }
+          },
+          "caseEquivalent": "Ⲁ",
+          "lowercaseEnglishName": "alfa",
+          "isVowel": true
+        },
+        {
+          "identifier": 102,
+          "itemType": 0,
+          "englishName": "Vida",
+          "foreignLetter": "Ⲃ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "Though it looks like the Greek beta, in Coptic this letter is pronounced like an English 'v,' not a 'b.'",
+              "short": "a 'v' sound, as in 'very'"
+            }
+          },
+          "caseEquivalent": "ⲃ",
+          "lowercaseEnglishName": "vida",
+          "isVowel": false
+        },
+        {
+          "identifier": 103,
+          "itemType": 0,
+          "englishName": "vida",
+          "foreignLetter": "ⲃ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "Though it looks like the Greek beta, in Coptic this letter is pronounced like an English 'v,' not a 'b.'",
+              "short": "a 'v' sound, as in 'very'"
+            }
+          },
+          "caseEquivalent": "Ⲃ",
+          "lowercaseEnglishName": "vida",
+          "isVowel": false
+        },
+        {
+          "identifier": 104,
+          "itemType": 0,
+          "englishName": "Gamma",
+          "foreignLetter": "Ⲅ",
+          "exampleWord": "ⲅⲉⲛⲟⲥ, which means 'race' or 'kind'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "Pronounced like a hard English 'g.' Before another velar consonant it can nasalize toward 'ng,' but on its own it is a plain 'g.'",
+              "short": "a hard 'g,' as in 'go'"
+            }
+          },
+          "caseEquivalent": "ⲅ",
+          "lowercaseEnglishName": "gamma",
+          "isVowel": false
+        },
+        {
+          "identifier": 105,
+          "itemType": 0,
+          "englishName": "gamma",
+          "foreignLetter": "ⲅ",
+          "exampleWord": "ⲅⲉⲛⲟⲥ, which means 'race' or 'kind'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "Pronounced like a hard English 'g.' Before another velar consonant it can nasalize toward 'ng,' but on its own it is a plain 'g.'",
+              "short": "a hard 'g,' as in 'go'"
+            }
+          },
+          "caseEquivalent": "Ⲅ",
+          "lowercaseEnglishName": "gamma",
+          "isVowel": false
+        },
+        {
+          "identifier": 106,
+          "itemType": 0,
+          "englishName": "Dalda",
+          "foreignLetter": "Ⲇ",
+          "exampleWord": "ⲇⲱⲣⲟⲛ, which means 'gift'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'd' sound, just like the English 'd.'",
+              "short": "a 'd' sound, as in 'dog'"
+            }
+          },
+          "caseEquivalent": "ⲇ",
+          "lowercaseEnglishName": "dalda",
+          "isVowel": false
+        },
+        {
+          "identifier": 107,
+          "itemType": 0,
+          "englishName": "dalda",
+          "foreignLetter": "ⲇ",
+          "exampleWord": "ⲇⲱⲣⲟⲛ, which means 'gift'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'd' sound, just like the English 'd.'",
+              "short": "a 'd' sound, as in 'dog'"
+            }
+          },
+          "caseEquivalent": "Ⲇ",
+          "lowercaseEnglishName": "dalda",
+          "isVowel": false
+        },
+        {
+          "identifier": 108,
+          "itemType": 0,
+          "englishName": "Ei",
+          "foreignLetter": "Ⲉ",
+          "exampleWord": "ⲡⲉ, which means 'sky' or 'heaven'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A short, open 'e' sound, as in the English word 'bed.'",
+              "short": "a short 'e,' as in 'bed'"
+            }
+          },
+          "caseEquivalent": "ⲉ",
+          "lowercaseEnglishName": "ei",
+          "isVowel": true
+        },
+        {
+          "identifier": 109,
+          "itemType": 0,
+          "englishName": "ei",
+          "foreignLetter": "ⲉ",
+          "exampleWord": "ⲡⲉ, which means 'sky' or 'heaven'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A short, open 'e' sound, as in the English word 'bed.'",
+              "short": "a short 'e,' as in 'bed'"
+            }
+          },
+          "caseEquivalent": "Ⲉ",
+          "lowercaseEnglishName": "ei",
+          "isVowel": true
+        },
+        {
+          "identifier": 110,
+          "itemType": 0,
+          "englishName": "Zata",
+          "foreignLetter": "Ⲍ",
+          "exampleWord": "ⲍⲱⲏ, which means 'life'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'z' sound, just like the English 'z.'",
+              "short": "a 'z' sound, as in 'zebra'"
+            }
+          },
+          "caseEquivalent": "ⲍ",
+          "lowercaseEnglishName": "zata",
+          "isVowel": false
+        },
+        {
+          "identifier": 111,
+          "itemType": 0,
+          "englishName": "zata",
+          "foreignLetter": "ⲍ",
+          "exampleWord": "ⲍⲱⲏ, which means 'life'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'z' sound, just like the English 'z.'",
+              "short": "a 'z' sound, as in 'zebra'"
+            }
+          },
+          "caseEquivalent": "Ⲍ",
+          "lowercaseEnglishName": "zata",
+          "isVowel": false
+        },
+        {
+          "identifier": 112,
+          "itemType": 0,
+          "englishName": "Hta",
+          "foreignLetter": "Ⲏ",
+          "exampleWord": "ϩⲏⲧ, which means 'heart'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "In Bohairic pronunciation this is a long 'ee' sound, as in the English word 'see.'",
+              "short": "a long 'ee,' as in 'see'"
+            }
+          },
+          "caseEquivalent": "ⲏ",
+          "lowercaseEnglishName": "hta",
+          "isVowel": true
+        },
+        {
+          "identifier": 113,
+          "itemType": 0,
+          "englishName": "hta",
+          "foreignLetter": "ⲏ",
+          "exampleWord": "ϩⲏⲧ, which means 'heart'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "In Bohairic pronunciation this is a long 'ee' sound, as in the English word 'see.'",
+              "short": "a long 'ee,' as in 'see'"
+            }
+          },
+          "caseEquivalent": "Ⲏ",
+          "lowercaseEnglishName": "hta",
+          "isVowel": true
+        },
+        {
+          "identifier": 114,
+          "itemType": 0,
+          "englishName": "Thita",
+          "foreignLetter": "Ⲑ",
+          "exampleWord": "ⲑⲉⲟⲥ, which means 'God'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "An unvoiced 'th' sound, as in the English word 'think.'",
+              "short": "a soft 'th,' as in 'think'"
+            }
+          },
+          "caseEquivalent": "ⲑ",
+          "lowercaseEnglishName": "thita",
+          "isVowel": false
+        },
+        {
+          "identifier": 115,
+          "itemType": 0,
+          "englishName": "thita",
+          "foreignLetter": "ⲑ",
+          "exampleWord": "ⲑⲉⲟⲥ, which means 'God'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "An unvoiced 'th' sound, as in the English word 'think.'",
+              "short": "a soft 'th,' as in 'think'"
+            }
+          },
+          "caseEquivalent": "Ⲑ",
+          "lowercaseEnglishName": "thita",
+          "isVowel": false
+        },
+        {
+          "identifier": 116,
+          "itemType": 0,
+          "englishName": "Iavda",
+          "foreignLetter": "Ⲓ",
+          "exampleWord": "ⲣⲱⲙⲓ, which means 'man' or 'human being'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "An 'ee' sound as in 'machine'; before another vowel it can glide toward a 'y' sound.",
+              "short": "an 'ee' sound, as in 'machine'"
+            }
+          },
+          "caseEquivalent": "ⲓ",
+          "lowercaseEnglishName": "iavda",
+          "isVowel": true
+        },
+        {
+          "identifier": 117,
+          "itemType": 0,
+          "englishName": "iavda",
+          "foreignLetter": "ⲓ",
+          "exampleWord": "ⲣⲱⲙⲓ, which means 'man' or 'human being'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "An 'ee' sound as in 'machine'; before another vowel it can glide toward a 'y' sound.",
+              "short": "an 'ee' sound, as in 'machine'"
+            }
+          },
+          "caseEquivalent": "Ⲓ",
+          "lowercaseEnglishName": "iavda",
+          "isVowel": true
+        },
+        {
+          "identifier": 118,
+          "itemType": 0,
+          "englishName": "Kabba",
+          "foreignLetter": "Ⲕ",
+          "exampleWord": "ⲕⲁϩⲓ, which means 'earth' or 'land'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'k' sound, just like the English 'k.'",
+              "short": "a 'k' sound, as in 'kite'"
+            }
+          },
+          "caseEquivalent": "ⲕ",
+          "lowercaseEnglishName": "kabba",
+          "isVowel": false
+        },
+        {
+          "identifier": 119,
+          "itemType": 0,
+          "englishName": "kabba",
+          "foreignLetter": "ⲕ",
+          "exampleWord": "ⲕⲁϩⲓ, which means 'earth' or 'land'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'k' sound, just like the English 'k.'",
+              "short": "a 'k' sound, as in 'kite'"
+            }
+          },
+          "caseEquivalent": "Ⲕ",
+          "lowercaseEnglishName": "kabba",
+          "isVowel": false
+        },
+        {
+          "identifier": 120,
+          "itemType": 0,
+          "englishName": "Labda",
+          "foreignLetter": "Ⲗ",
+          "exampleWord": "ⲗⲁⲥ, which means 'tongue' or 'language'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'l' sound, just like the English 'l.'",
+              "short": "an 'l' sound, as in 'lamp'"
+            }
+          },
+          "caseEquivalent": "ⲗ",
+          "lowercaseEnglishName": "labda",
+          "isVowel": false
+        },
+        {
+          "identifier": 121,
+          "itemType": 0,
+          "englishName": "labda",
+          "foreignLetter": "ⲗ",
+          "exampleWord": "ⲗⲁⲥ, which means 'tongue' or 'language'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'l' sound, just like the English 'l.'",
+              "short": "an 'l' sound, as in 'lamp'"
+            }
+          },
+          "caseEquivalent": "Ⲗ",
+          "lowercaseEnglishName": "labda",
+          "isVowel": false
+        },
+        {
+          "identifier": 122,
+          "itemType": 0,
+          "englishName": "Mi",
+          "foreignLetter": "Ⲙ",
+          "exampleWord": "ⲙⲱⲟⲩ, which means 'water'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'm' sound, just like the English 'm.'",
+              "short": "an 'm' sound, as in 'mother'"
+            }
+          },
+          "caseEquivalent": "ⲙ",
+          "lowercaseEnglishName": "mi",
+          "isVowel": false
+        },
+        {
+          "identifier": 123,
+          "itemType": 0,
+          "englishName": "mi",
+          "foreignLetter": "ⲙ",
+          "exampleWord": "ⲙⲱⲟⲩ, which means 'water'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'm' sound, just like the English 'm.'",
+              "short": "an 'm' sound, as in 'mother'"
+            }
+          },
+          "caseEquivalent": "Ⲙ",
+          "lowercaseEnglishName": "mi",
+          "isVowel": false
+        },
+        {
+          "identifier": 124,
+          "itemType": 0,
+          "englishName": "Ni",
+          "foreignLetter": "Ⲛ",
+          "exampleWord": "ⲛⲟⲩϯ, which means 'God'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'n' sound, just like the English 'n.'",
+              "short": "an 'n' sound, as in 'net'"
+            }
+          },
+          "caseEquivalent": "ⲛ",
+          "lowercaseEnglishName": "ni",
+          "isVowel": false
+        },
+        {
+          "identifier": 125,
+          "itemType": 0,
+          "englishName": "ni",
+          "foreignLetter": "ⲛ",
+          "exampleWord": "ⲛⲟⲩϯ, which means 'God'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'n' sound, just like the English 'n.'",
+              "short": "an 'n' sound, as in 'net'"
+            }
+          },
+          "caseEquivalent": "Ⲛ",
+          "lowercaseEnglishName": "ni",
+          "isVowel": false
+        },
+        {
+          "identifier": 126,
+          "itemType": 0,
+          "englishName": "Eksi",
+          "foreignLetter": "Ⲝ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A combined 'ks' sound, as in the English word 'box.'",
+              "short": "a 'ks' sound, as in 'box'"
+            }
+          },
+          "caseEquivalent": "ⲝ",
+          "lowercaseEnglishName": "eksi",
+          "isVowel": false
+        },
+        {
+          "identifier": 127,
+          "itemType": 0,
+          "englishName": "eksi",
+          "foreignLetter": "ⲝ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A combined 'ks' sound, as in the English word 'box.'",
+              "short": "a 'ks' sound, as in 'box'"
+            }
+          },
+          "caseEquivalent": "Ⲝ",
+          "lowercaseEnglishName": "eksi",
+          "isVowel": false
+        },
+        {
+          "identifier": 128,
+          "itemType": 0,
+          "englishName": "O",
+          "foreignLetter": "Ⲟ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A short, open 'o' sound, as in the English word 'off.'",
+              "short": "a short 'o,' as in 'off'"
+            }
+          },
+          "caseEquivalent": "ⲟ",
+          "lowercaseEnglishName": "o",
+          "isVowel": true
+        },
+        {
+          "identifier": 129,
+          "itemType": 0,
+          "englishName": "o",
+          "foreignLetter": "ⲟ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A short, open 'o' sound, as in the English word 'off.'",
+              "short": "a short 'o,' as in 'off'"
+            }
+          },
+          "caseEquivalent": "Ⲟ",
+          "lowercaseEnglishName": "o",
+          "isVowel": true
+        },
+        {
+          "identifier": 130,
+          "itemType": 0,
+          "englishName": "Pi",
+          "foreignLetter": "Ⲡ",
+          "exampleWord": "ⲡⲉ, which means 'sky' or 'heaven'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'p' sound, just like the English 'p.'",
+              "short": "a 'p' sound, as in 'pot'"
+            }
+          },
+          "caseEquivalent": "ⲡ",
+          "lowercaseEnglishName": "pi",
+          "isVowel": false
+        },
+        {
+          "identifier": 131,
+          "itemType": 0,
+          "englishName": "pi",
+          "foreignLetter": "ⲡ",
+          "exampleWord": "ⲡⲉ, which means 'sky' or 'heaven'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'p' sound, just like the English 'p.'",
+              "short": "a 'p' sound, as in 'pot'"
+            }
+          },
+          "caseEquivalent": "Ⲡ",
+          "lowercaseEnglishName": "pi",
+          "isVowel": false
+        },
+        {
+          "identifier": 132,
+          "itemType": 0,
+          "englishName": "Ro",
+          "foreignLetter": "Ⲣ",
+          "exampleWord": "ⲣⲱⲙⲓ, which means 'man' or 'human being'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A lightly trilled or tapped 'r,' closer to a Spanish 'r' than an English one.",
+              "short": "a lightly trilled 'r'"
+            }
+          },
+          "caseEquivalent": "ⲣ",
+          "lowercaseEnglishName": "ro",
+          "isVowel": false
+        },
+        {
+          "identifier": 133,
+          "itemType": 0,
+          "englishName": "ro",
+          "foreignLetter": "ⲣ",
+          "exampleWord": "ⲣⲱⲙⲓ, which means 'man' or 'human being'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A lightly trilled or tapped 'r,' closer to a Spanish 'r' than an English one.",
+              "short": "a lightly trilled 'r'"
+            }
+          },
+          "caseEquivalent": "Ⲣ",
+          "lowercaseEnglishName": "ro",
+          "isVowel": false
+        },
+        {
+          "identifier": 134,
+          "itemType": 0,
+          "englishName": "Sima",
+          "foreignLetter": "Ⲥ",
+          "exampleWord": "ⲥⲱⲙⲁ, which means 'body'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain, unvoiced 's' sound, just like the English 's' in 'sun.'",
+              "short": "an 's' sound, as in 'sun'"
+            }
+          },
+          "caseEquivalent": "ⲥ",
+          "lowercaseEnglishName": "sima",
+          "isVowel": false
+        },
+        {
+          "identifier": 135,
+          "itemType": 0,
+          "englishName": "sima",
+          "foreignLetter": "ⲥ",
+          "exampleWord": "ⲥⲱⲙⲁ, which means 'body'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain, unvoiced 's' sound, just like the English 's' in 'sun.'",
+              "short": "an 's' sound, as in 'sun'"
+            }
+          },
+          "caseEquivalent": "Ⲥ",
+          "lowercaseEnglishName": "sima",
+          "isVowel": false
+        },
+        {
+          "identifier": 136,
+          "itemType": 0,
+          "englishName": "Tau",
+          "foreignLetter": "Ⲧ",
+          "exampleWord": "ϩⲏⲧ, which means 'heart'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 't' sound, just like the English 't.'",
+              "short": "a 't' sound, as in 'top'"
+            }
+          },
+          "caseEquivalent": "ⲧ",
+          "lowercaseEnglishName": "tau",
+          "isVowel": false
+        },
+        {
+          "identifier": 137,
+          "itemType": 0,
+          "englishName": "tau",
+          "foreignLetter": "ⲧ",
+          "exampleWord": "ϩⲏⲧ, which means 'heart'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 't' sound, just like the English 't.'",
+              "short": "a 't' sound, as in 'top'"
+            }
+          },
+          "caseEquivalent": "Ⲧ",
+          "lowercaseEnglishName": "tau",
+          "isVowel": false
+        },
+        {
+          "identifier": 138,
+          "itemType": 0,
+          "englishName": "He",
+          "foreignLetter": "Ⲩ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "An 'oo' sound as in 'boot' on its own; in combination with another vowel it can glide toward a 'w' sound.",
+              "short": "an 'oo' sound, as in 'boot'"
+            }
+          },
+          "caseEquivalent": "ⲩ",
+          "lowercaseEnglishName": "he",
+          "isVowel": true
+        },
+        {
+          "identifier": 139,
+          "itemType": 0,
+          "englishName": "he",
+          "foreignLetter": "ⲩ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "An 'oo' sound as in 'boot' on its own; in combination with another vowel it can glide toward a 'w' sound.",
+              "short": "an 'oo' sound, as in 'boot'"
+            }
+          },
+          "caseEquivalent": "Ⲩ",
+          "lowercaseEnglishName": "he",
+          "isVowel": true
+        },
+        {
+          "identifier": 140,
+          "itemType": 0,
+          "englishName": "Fi",
+          "foreignLetter": "Ⲫ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "An aspirated 'p' that has come to be pronounced as an 'f' sound, as in the English word 'fun.'",
+              "short": "an 'f' sound, as in 'fun'"
+            }
+          },
+          "caseEquivalent": "ⲫ",
+          "lowercaseEnglishName": "fi",
+          "isVowel": false
+        },
+        {
+          "identifier": 141,
+          "itemType": 0,
+          "englishName": "fi",
+          "foreignLetter": "ⲫ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "An aspirated 'p' that has come to be pronounced as an 'f' sound, as in the English word 'fun.'",
+              "short": "an 'f' sound, as in 'fun'"
+            }
+          },
+          "caseEquivalent": "Ⲫ",
+          "lowercaseEnglishName": "fi",
+          "isVowel": false
+        },
+        {
+          "identifier": 142,
+          "itemType": 0,
+          "englishName": "Khi",
+          "foreignLetter": "Ⲭ",
+          "exampleWord": "ⲭⲣⲓⲥⲧⲟⲥ, which means 'Christ'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A rough, back-of-the-throat 'kh' sound, similar to the 'ch' in the Scottish word 'loch.'",
+              "short": "a rough 'kh,' as in the Scottish 'loch'"
+            }
+          },
+          "caseEquivalent": "ⲭ",
+          "lowercaseEnglishName": "khi",
+          "isVowel": false
+        },
+        {
+          "identifier": 143,
+          "itemType": 0,
+          "englishName": "khi",
+          "foreignLetter": "ⲭ",
+          "exampleWord": "ⲭⲣⲓⲥⲧⲟⲥ, which means 'Christ'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A rough, back-of-the-throat 'kh' sound, similar to the 'ch' in the Scottish word 'loch.'",
+              "short": "a rough 'kh,' as in the Scottish 'loch'"
+            }
+          },
+          "caseEquivalent": "Ⲭ",
+          "lowercaseEnglishName": "khi",
+          "isVowel": false
+        },
+        {
+          "identifier": 144,
+          "itemType": 0,
+          "englishName": "Epsi",
+          "foreignLetter": "Ⲯ",
+          "exampleWord": "ⲯⲩⲭⲏ, which means 'soul'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A combined 'ps' sound, as in the English word 'lapse.'",
+              "short": "a 'ps' sound, as in 'lapse'"
+            }
+          },
+          "caseEquivalent": "ⲯ",
+          "lowercaseEnglishName": "epsi",
+          "isVowel": false
+        },
+        {
+          "identifier": 145,
+          "itemType": 0,
+          "englishName": "epsi",
+          "foreignLetter": "ⲯ",
+          "exampleWord": "ⲯⲩⲭⲏ, which means 'soul'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A combined 'ps' sound, as in the English word 'lapse.'",
+              "short": "a 'ps' sound, as in 'lapse'"
+            }
+          },
+          "caseEquivalent": "Ⲯ",
+          "lowercaseEnglishName": "epsi",
+          "isVowel": false
+        },
+        {
+          "identifier": 146,
+          "itemType": 0,
+          "englishName": "Oou",
+          "foreignLetter": "Ⲱ",
+          "exampleWord": "ⲙⲱⲟⲩ, which means 'water'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A long, rounded 'oh' sound, as in the English word 'so.'",
+              "short": "a long 'oh,' as in 'so'"
+            }
+          },
+          "caseEquivalent": "ⲱ",
+          "lowercaseEnglishName": "oou",
+          "isVowel": true
+        },
+        {
+          "identifier": 147,
+          "itemType": 0,
+          "englishName": "oou",
+          "foreignLetter": "ⲱ",
+          "exampleWord": "ⲙⲱⲟⲩ, which means 'water'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A long, rounded 'oh' sound, as in the English word 'so.'",
+              "short": "a long 'oh,' as in 'so'"
+            }
+          },
+          "caseEquivalent": "Ⲱ",
+          "lowercaseEnglishName": "oou",
+          "isVowel": true
+        },
+        {
+          "identifier": 148,
+          "itemType": 0,
+          "englishName": "Shai",
+          "foreignLetter": "Ϣ",
+          "exampleWord": "ϣⲏⲣⲓ, which means 'son' or 'child'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'sh' sound, just like the English 'sh' in 'she.' This letter comes from Demotic Egyptian, not Greek.",
+              "short": "a 'sh' sound, as in 'she'"
+            }
+          },
+          "caseEquivalent": "ϣ",
+          "lowercaseEnglishName": "shai",
+          "isVowel": false
+        },
+        {
+          "identifier": 149,
+          "itemType": 0,
+          "englishName": "shai",
+          "foreignLetter": "ϣ",
+          "exampleWord": "ϣⲏⲣⲓ, which means 'son' or 'child'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A plain 'sh' sound, just like the English 'sh' in 'she.' This letter comes from Demotic Egyptian, not Greek.",
+              "short": "a 'sh' sound, as in 'she'"
+            }
+          },
+          "caseEquivalent": "Ϣ",
+          "lowercaseEnglishName": "shai",
+          "isVowel": false
+        },
+        {
+          "identifier": 150,
+          "itemType": 0,
+          "englishName": "Fai",
+          "foreignLetter": "Ϥ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "Another letter for the 'f' sound, borrowed from Demotic Egyptian rather than Greek.",
+              "short": "an 'f' sound, as in 'fun'"
+            }
+          },
+          "caseEquivalent": "ϥ",
+          "lowercaseEnglishName": "fai",
+          "isVowel": false
+        },
+        {
+          "identifier": 151,
+          "itemType": 0,
+          "englishName": "fai",
+          "foreignLetter": "ϥ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "Another letter for the 'f' sound, borrowed from Demotic Egyptian rather than Greek.",
+              "short": "an 'f' sound, as in 'fun'"
+            }
+          },
+          "caseEquivalent": "Ϥ",
+          "lowercaseEnglishName": "fai",
+          "isVowel": false
+        },
+        {
+          "identifier": 152,
+          "itemType": 0,
+          "englishName": "Khai",
+          "foreignLetter": "Ϧ",
+          "exampleWord": "ⲱⲛϧ, which means 'life'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A rough, throaty 'kh' sound, pronounced further back than khi (ⲭ). This letter is specific to the Bohairic dialect.",
+              "short": "a rough, throaty 'kh'"
+            }
+          },
+          "caseEquivalent": "ϧ",
+          "lowercaseEnglishName": "khai",
+          "isVowel": false
+        },
+        {
+          "identifier": 153,
+          "itemType": 0,
+          "englishName": "khai",
+          "foreignLetter": "ϧ",
+          "exampleWord": "ⲱⲛϧ, which means 'life'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A rough, throaty 'kh' sound, pronounced further back than khi (ⲭ). This letter is specific to the Bohairic dialect.",
+              "short": "a rough, throaty 'kh'"
+            }
+          },
+          "caseEquivalent": "Ϧ",
+          "lowercaseEnglishName": "khai",
+          "isVowel": false
+        },
+        {
+          "identifier": 154,
+          "itemType": 0,
+          "englishName": "Hori",
+          "foreignLetter": "Ϩ",
+          "exampleWord": "ⲕⲁϩⲓ, which means 'earth' or 'land'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A breathy 'h' sound, as in the English word 'house.' This letter comes from Demotic Egyptian, not Greek.",
+              "short": "a breathy 'h,' as in 'house'"
+            }
+          },
+          "caseEquivalent": "ϩ",
+          "lowercaseEnglishName": "hori",
+          "isVowel": false
+        },
+        {
+          "identifier": 155,
+          "itemType": 0,
+          "englishName": "hori",
+          "foreignLetter": "ϩ",
+          "exampleWord": "ⲕⲁϩⲓ, which means 'earth' or 'land'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A breathy 'h' sound, as in the English word 'house.' This letter comes from Demotic Egyptian, not Greek.",
+              "short": "a breathy 'h,' as in 'house'"
+            }
+          },
+          "caseEquivalent": "Ϩ",
+          "lowercaseEnglishName": "hori",
+          "isVowel": false
+        },
+        {
+          "identifier": 156,
+          "itemType": 0,
+          "englishName": "Janja",
+          "foreignLetter": "Ϫ",
+          "exampleWord": "ϫⲟⲙ, which means 'power' or 'strength'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A 'j' sound, as in the English word 'jump.' This letter comes from Demotic Egyptian, not Greek.",
+              "short": "a 'j' sound, as in 'jump'"
+            }
+          },
+          "caseEquivalent": "ϫ",
+          "lowercaseEnglishName": "janja",
+          "isVowel": false
+        },
+        {
+          "identifier": 157,
+          "itemType": 0,
+          "englishName": "janja",
+          "foreignLetter": "ϫ",
+          "exampleWord": "ϫⲟⲙ, which means 'power' or 'strength'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A 'j' sound, as in the English word 'jump.' This letter comes from Demotic Egyptian, not Greek.",
+              "short": "a 'j' sound, as in 'jump'"
+            }
+          },
+          "caseEquivalent": "Ϫ",
+          "lowercaseEnglishName": "janja",
+          "isVowel": false
+        },
+        {
+          "identifier": 158,
+          "itemType": 0,
+          "englishName": "Chima",
+          "foreignLetter": "Ϭ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A 'ch' sound, as in the English word 'church.' This letter comes from Demotic Egyptian, not Greek.",
+              "short": "a 'ch' sound, as in 'church'"
+            }
+          },
+          "caseEquivalent": "ϭ",
+          "lowercaseEnglishName": "chima",
+          "isVowel": false
+        },
+        {
+          "identifier": 159,
+          "itemType": 0,
+          "englishName": "chima",
+          "foreignLetter": "ϭ",
+          "pronunciations": {
+            "bohairic": {
+              "full": "A 'ch' sound, as in the English word 'church.' This letter comes from Demotic Egyptian, not Greek.",
+              "short": "a 'ch' sound, as in 'church'"
+            }
+          },
+          "caseEquivalent": "Ϭ",
+          "lowercaseEnglishName": "chima",
+          "isVowel": false
+        },
+        {
+          "identifier": 160,
+          "itemType": 0,
+          "englishName": "Ti",
+          "foreignLetter": "Ϯ",
+          "exampleWord": "ⲛⲟⲩϯ, which means 'God'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "This letter is a ligature standing for the syllable 'ti,' as in the English word 'ticket.' This letter comes from Demotic Egyptian, not Greek.",
+              "short": "the syllable 'ti,' as in 'ticket'"
+            }
+          },
+          "caseEquivalent": "ϯ",
+          "lowercaseEnglishName": "ti"
+        },
+        {
+          "identifier": 161,
+          "itemType": 0,
+          "englishName": "ti",
+          "foreignLetter": "ϯ",
+          "exampleWord": "ⲛⲟⲩϯ, which means 'God'",
+          "pronunciations": {
+            "bohairic": {
+              "full": "This letter is a ligature standing for the syllable 'ti,' as in the English word 'ticket.' This letter comes from Demotic Egyptian, not Greek.",
+              "short": "the syllable 'ti,' as in 'ticket'"
+            }
+          },
+          "caseEquivalent": "Ϯ",
+          "lowercaseEnglishName": "ti"
+        }
+      ]
+    }
+  ]
+}

@@ -71,6 +71,7 @@
 		F7C312FDE1C64828277121A1 /* Russian.json in Resources */ = {isa = PBXBuildFile; fileRef = C802E2447E5904A0ADB4801C /* Russian.json */; };
 		F8D4EFA92AC0B71F0D79BF3D /* QuizSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F04A3F0D5CE7037F265 /* QuizSession.swift */; };
 		F93134718EA3AAB4524D0762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73213E113A99756620430B3F /* Assets.xcassets */; };
+		F99E77D6D41CF8B10CAFD59F /* Coptic.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A596327211F0218A97F20 /* Coptic.json */; };
 		FB9B73E7CD7A870BFF9C6A35 /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF167DDBD69106BA03B7E1EA /* QuestionCardView.swift */; };
 		FEF154AA775BC8E58C0F0C49 /* ItemProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B88BC9C6269F5E3F5A01EA /* ItemProgress.swift */; };
 /* End PBXBuildFile section */
@@ -109,6 +110,7 @@
 		4275EAE2248DAE0CFFBC6380 /* AlphabetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetStore.swift; sourceTree = "<group>"; };
 		453A2427A065B54888F6E4F5 /* Georgian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Georgian.json; sourceTree = "<group>"; };
 		45676DED26A635E71F751365 /* LanguageManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManifest.swift; sourceTree = "<group>"; };
+		4C7A596327211F0218A97F20 /* Coptic.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Coptic.json; sourceTree = "<group>"; };
 		51A864BCE9126C5B2491CCC9 /* CardDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeckView.swift; sourceTree = "<group>"; };
 		57CE58DE606FDEEA7740F758 /* PronunciationEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationEntry.swift; sourceTree = "<group>"; };
 		59B88BC9C6269F5E3F5A01EA /* ItemProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProgress.swift; sourceTree = "<group>"; };
@@ -149,10 +151,10 @@
 		D539743A21482ED4AAC52A2E /* CardFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFaceView.swift; sourceTree = "<group>"; };
 		D66C8F04A3F0D5CE7037F265 /* QuizSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSession.swift; sourceTree = "<group>"; };
 		D70C1993D526D91A51EE627E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		E399CEA55AD8FD12E10FE5D1 /* AlphaBeta.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AlphaBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E399CEA55AD8FD12E10FE5D1 /* AlphaBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69C96D84C2D8966A8CBB1 /* AlphaBetaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaBetaApp.swift; sourceTree = "<group>"; };
 		E9D5E816E4128AB61BCDDABB /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
-		EF2793653DFE7415CBAEBA14 /* AlphaBetaTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AlphaBetaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2793653DFE7415CBAEBA14 /* AlphaBetaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaBetaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66BD6B367647AE0AF6BE226 /* Bulgarian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Bulgarian.json; sourceTree = "<group>"; };
 		F693D2AF0FC83A5033D39FF2 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		FB0D62D17CC873D23D27A115 /* QuizEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEngine.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				14A3ECE1B6491E26D7B3BDD9 /* Armenian.json */,
 				BDC4ED7DBEE592B273E902AF /* Belarusian.json */,
 				F66BD6B367647AE0AF6BE226 /* Bulgarian.json */,
+				4C7A596327211F0218A97F20 /* Coptic.json */,
 				453A2427A065B54888F6E4F5 /* Georgian.json */,
 				3B79F45C3D92AAE6E9D53CBB /* Greek.json */,
 				39194103FBAFBED3E40A40A6 /* Macedonian.json */,
@@ -445,6 +448,7 @@
 				F93134718EA3AAB4524D0762 /* Assets.xcassets in Resources */,
 				B4942A6E4C7904DE2CD1487F /* Belarusian.json in Resources */,
 				8E5B4826CB13695215CE5324 /* Bulgarian.json in Resources */,
+				F99E77D6D41CF8B10CAFD59F /* Coptic.json in Resources */,
 				6A844DDE445E7187B835D8C3 /* Georgian.json in Resources */,
 				91C68F59DD110CE56CD38D64 /* Greek.json in Resources */,
 				A938C37AA93B760D4C04E086 /* Macedonian.json in Resources */,
@@ -688,6 +692,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = XY62X6K9VH;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -730,6 +735,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = XY62X6K9VH;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

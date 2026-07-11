@@ -101,8 +101,9 @@ Alphabet: `{ "language": Int, "alphabetItems": [AlphabetItem] }`
 | Macedonian | 6 | 62 | ѓ ќ ѕ unique letters |
 | Armenian | 7 | 78 | 38 case pairs + ու (diphthong) + և (combination); `eastern` + `western` systems on every item; Ւ has no example word (historical letter) |
 | Georgian | 8 | 33 | Caseless (`hasLetterCase: false`) — single items, no `caseEquivalent`; ejective/aspirate pairs cross-referenced |
+| Coptic | 9 | 62 | 31 case pairs (24 Greek-derived + 7 Demotic-derived: shai, fai, khai, hori, janja, chima, ti); single `bohairic` pronunciation system; ~19 letters have example words, rest omitted rather than guessed |
 
-Non-Russian Slavic, Armenian, and Georgian example words/glosses are first-draft content — flag for native-speaker review before App Store release (tracked in §12).
+Non-Russian Slavic, Armenian, Georgian, and Coptic example words/glosses are first-draft content — flag for native-speaker review before App Store release (tracked in §12). Coptic in particular was drafted by research rather than supplied content and needs a Coptic-literate reviewer before shipping.
 
 ### 3.2 Pronunciations object (schema v2: system-keyed map)
 
@@ -418,7 +419,7 @@ Both are `.sheet` (form sheet on iPad).
 
 Phased by how much architecture each wave exercises. Nothing here requires schema changes until Phase 4.
 
-1. **Phase 1 — drop-in (same model as Greek/Russian):** rest of Cyrillic (Ukrainian, Belarusian, Serbian, Bulgarian, Macedonian; later Kazakh, Mongolian Cyrillic), Armenian (`eastern`/`western` pronunciation systems), Georgian (first caseless language — `hasLetterCase: false`, single `letters` filter category), Coptic (niche; Greek-derived).
+1. **Phase 1 — drop-in (same model as Greek/Russian):** rest of Cyrillic (Ukrainian, Belarusian, Serbian, Bulgarian, Macedonian; later Kazakh, Mongolian Cyrillic), Armenian (`eastern`/`western` pronunciation systems), Georgian (first caseless language — `hasLetterCase: false`, single `letters` filter category), Coptic (niche; Greek-derived) — **all shipped** except the later Kazakh/Mongolian Cyrillic additions.
 2. **Phase 2 — RTL wave:** Hebrew first (gentlest: five final letters ך ם ן ף ץ map onto `endingCaseEquivalent` exactly like sigma teliko; niqqud as a marked-version-style toggle later), then Arabic, Persian, Urdu (full leading/middle/ending positional forms + RTL reading reminders).
 3. **Phase 3 — syllabaries (item = syllable; card model unchanged):** Japanese hiragana + katakana (two datasets, `kana` family; dakuten variants ≈ marked versions, digraphs like きゃ ≈ combinations), Korean Hangul (jamo as letters; syllable-block building as combinations — likely the highest-demand single addition), Bopomofo/Zhuyin.
 4. **Phase 4 — abugidas (needs 1–2 new `itemType` values for dependent vowel signs/conjuncts):** Devanagari family (Hindi → Marathi, Nepali, Sanskrit-as-classical-system), then Bengali, Gurmukhi, Gujarati, Tamil, Telugu, Kannada, Malayalam by demand; Thai (consonant classes + tones), Lao, Khmer, Burmese, Amharic/Ge'ez.
@@ -434,4 +435,5 @@ Out of scope permanently: Han characters/kanji (logographic, not an alphabet). V
 4. JSON files for additional alphabets (schema in §3 is the template; roadmap in §11.1).
 5. App icon.
 6. Greek.json's 13 diphthongs/combinations (`αι`, `γγ`, `μπ`, etc.) have no `short` pronunciation text, so they never generate a Q6 sound→glyph question (§7.2) — minor variety gap, not a correctness issue since every letter is fully covered. Low priority; fill in whenever Greek content gets another pass.
+7. Coptic-literate review of `Coptic.json` before release: it was drafted by research (not supplied), covers only the 31-letter spelling alphabet (no diphthongs/combinations), uses Bohairic pronunciation only, and about a third of letters have no example word rather than a guessed one. The manifest's `nativeName` ("ϯⲙⲉⲧⲣⲉⲙⲛⲭⲏⲙⲓ") and the ☦️ flag-emoji choice (no Coptic nation-state exists) are both judgment calls worth double-checking.
 

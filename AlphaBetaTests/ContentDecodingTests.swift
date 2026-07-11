@@ -17,6 +17,7 @@ struct ContentDecodingTests {
         "Macedonian": 62,
         "Armenian": 78,
         "Georgian": 33,
+        "Coptic": 62,
     ]
 
     // Tests run hosted inside AlphaBeta.app (AlphaBetaTests.xctest lives in
@@ -28,9 +29,9 @@ struct ContentDecodingTests {
         return try JSONDecoder().decode(AlphabetFile.self, from: data)
     }
 
-    @Test func manifestDecodesAllNineLanguages() throws {
+    @Test func manifestDecodesAllTenLanguages() throws {
         let registry = try LanguageRegistry()
-        #expect(registry.languages.count == 9)
+        #expect(registry.languages.count == 10)
     }
 
     @Test func everyManifestFileNameHasAMatchingBundledJSON() throws {
@@ -118,6 +119,25 @@ struct ContentDecodingTests {
             #expect(item.isCapital == false)
             #expect(item.category(hasLetterCase: georgian.hasLetterCase) == .letters)
         }
+    }
+
+    @Test func copticHasLetterCaseAndOneBohairicPronunciationSystem() throws {
+        let registry = try LanguageRegistry()
+        let coptic = try #require(registry.manifest(forID: 9))
+        #expect(coptic.hasLetterCase)
+        #expect(coptic.filterCategories == [.capitals, .lowercase])
+        #expect(coptic.pronunciationSystems.map(\.id) == ["bohairic"])
+
+        let file = try decodeFile("Coptic")
+        let items = try #require(file.alphabets.first).alphabetItems
+        let capitalAlfa = try #require(items.first { $0.foreignLetter == "Ⲁ" })
+        #expect(capitalAlfa.caseEquivalent == "ⲁ")
+        #expect(capitalAlfa.isCapital)
+        #expect(capitalAlfa.pronunciation(preferring: "bohairic")?.short != nil)
+
+        let lowerAlfa = try #require(items.first { $0.foreignLetter == "ⲁ" })
+        #expect(lowerAlfa.caseEquivalent == "Ⲁ")
+        #expect(lowerAlfa.isCapital == false)
     }
 
     @Test func unknownItemTypeDecodesWithoutThrowing() throws {
