@@ -41,14 +41,14 @@
     "light": {
       "background": "#E4E8F0",
       "surface": "#FFFFFF",
-      "accent": "#A38800",
+      "accent": "#B8950A",
       "textPrimary": "#1A2438",
       "textSecondary": "#4A5570"
     },
     "dark": {
       "background": "#0B1020",
       "surface": "#131B33",
-      "accent": "#FFD500",
+      "accent": "#EBD670",
       "textPrimary": "#EEF2FF",
       "textSecondary": "#8FA0C4"
     }
