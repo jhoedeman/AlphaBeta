@@ -109,6 +109,8 @@ struct SettingsSheet: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .accessibilityIdentifier("paletteRow-\(palette.id)")
+        .accessibilityValue(isActive ? "Selected" : "Not selected")
     }
 
     @ViewBuilder

@@ -35,6 +35,20 @@
                ReferencedContainer = "container:AlphaBeta.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E2FD1BE80DC115C61D521676"
+               BuildableName = "AlphaBetaUITests.xctest"
+               BlueprintName = "AlphaBetaUITests"
+               ReferencedContainer = "container:AlphaBeta.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -61,6 +75,17 @@
                BlueprintIdentifier = "86C4685E0FE73B7CC89762FB"
                BuildableName = "AlphaBetaTests.xctest"
                BlueprintName = "AlphaBetaTests"
+               ReferencedContainer = "container:AlphaBeta.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E2FD1BE80DC115C61D521676"
+               BuildableName = "AlphaBetaUITests.xctest"
+               BlueprintName = "AlphaBetaUITests"
                ReferencedContainer = "container:AlphaBeta.xcodeproj">
             </BuildableReference>
          </TestableReference>

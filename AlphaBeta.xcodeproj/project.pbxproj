@@ -59,6 +59,7 @@
 		BB6602561CFAD73FE6AD8242 /* BundledAlphabetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0145315F2A41B36CF9871A /* BundledAlphabetProvider.swift */; };
 		BFCBA99E1FAA6BF5FC2BC936 /* ModelContext+Singletons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DE9FAA406E8714AB93440F /* ModelContext+Singletons.swift */; };
 		C0D9B92DE9E6EDBA113D4A73 /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5E816E4128AB61BCDDABB /* Alphabet.swift */; };
+		C6CDC39A77BDE5C95F5C6B64 /* PaletteRowTapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F93BA4A71BD0C2EA4C36DEA /* PaletteRowTapTests.swift */; };
 		C9DF625CD3D2CA34C0096780 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93346C01019E41885B72AA85 /* CardsView.swift */; };
 		CB677C330E2B3A89CF18601B /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F693D2AF0FC83A5033D39FF2 /* QuizViewModel.swift */; };
 		CC3ECFFA8C80ADA6038573CB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70C1993D526D91A51EE627E /* Theme.swift */; };
@@ -85,12 +86,20 @@
 			remoteGlobalIDString = 9234F0E1688C6E740EF47EC8;
 			remoteInfo = AlphaBeta;
 		};
+		2D024F74151776586409B1FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5376F80825E88FC96EC14E73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9234F0E1688C6E740EF47EC8;
+			remoteInfo = AlphaBeta;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		08C5566D46CFD7DDA4C1DDC6 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		0A292142C9648E949CB497A9 /* LanguageManifestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManifestTests.swift; sourceTree = "<group>"; };
 		0BC24CC2C4C33315E9BAF98B /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		0F93BA4A71BD0C2EA4C36DEA /* PaletteRowTapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteRowTapTests.swift; sourceTree = "<group>"; };
 		14A3ECE1B6491E26D7B3BDD9 /* Armenian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Armenian.json; sourceTree = "<group>"; };
 		1C7A92CAB3CB87BEB2FA4C49 /* Palettes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Palettes.json; sourceTree = "<group>"; };
 		1CA447DF28E580AA183E8723 /* QuizOptionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizOptionRow.swift; sourceTree = "<group>"; };
@@ -113,6 +122,7 @@
 		453A2427A065B54888F6E4F5 /* Georgian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Georgian.json; sourceTree = "<group>"; };
 		45676DED26A635E71F751365 /* LanguageManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManifest.swift; sourceTree = "<group>"; };
 		4C7A596327211F0218A97F20 /* Coptic.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Coptic.json; sourceTree = "<group>"; };
+		577666AA298131525DEF04F1 /* AlphaBetaUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = AlphaBetaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CE58DE606FDEEA7740F758 /* PronunciationEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationEntry.swift; sourceTree = "<group>"; };
 		59B88BC9C6269F5E3F5A01EA /* ItemProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemProgress.swift; sourceTree = "<group>"; };
 		5AF8C292CE12D2C5D006CF18 /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
@@ -194,6 +204,7 @@
 			children = (
 				E399CEA55AD8FD12E10FE5D1 /* AlphaBeta.app */,
 				EF2793653DFE7415CBAEBA14 /* AlphaBetaTests.xctest */,
+				577666AA298131525DEF04F1 /* AlphaBetaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -284,6 +295,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		90EC93E3BE2F349BB9AC0CA6 /* AlphaBetaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0F93BA4A71BD0C2EA4C36DEA /* PaletteRowTapTests.swift */,
+			);
+			path = AlphaBetaUITests;
+			sourceTree = "<group>";
+		};
 		94753145450F3AF8DC1C1882 /* Registry */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				813790603657C29DE5BD7DF8 /* AlphaBetaTests */,
+				90EC93E3BE2F349BB9AC0CA6 /* AlphaBetaUITests */,
 				E8BAA8407C117C1061470914 /* App */,
 				F8FB08867BD7CDF491E32E83 /* Content */,
 				EB8840CEAA76B60B6D40D488 /* Features */,
@@ -408,6 +428,24 @@
 			productReference = E399CEA55AD8FD12E10FE5D1 /* AlphaBeta.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E2FD1BE80DC115C61D521676 /* AlphaBetaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B513738615CCBA4ACC35942 /* Build configuration list for PBXNativeTarget "AlphaBetaUITests" */;
+			buildPhases = (
+				291168F2EFB05E81F0ABE2BB /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DAB8FA390AE2DBC51A8DDA2 /* PBXTargetDependency */,
+			);
+			name = AlphaBetaUITests;
+			packageProductDependencies = (
+			);
+			productName = AlphaBetaUITests;
+			productReference = 577666AA298131525DEF04F1 /* AlphaBetaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -420,6 +458,9 @@
 					9234F0E1688C6E740EF47EC8 = {
 						DevelopmentTeam = XY62X6K9VH;
 						ProvisioningStyle = Automatic;
+					};
+					E2FD1BE80DC115C61D521676 = {
+						TestTargetID = 9234F0E1688C6E740EF47EC8;
 					};
 				};
 			};
@@ -439,6 +480,7 @@
 			targets = (
 				9234F0E1688C6E740EF47EC8 /* AlphaBeta */,
 				86C4685E0FE73B7CC89762FB /* AlphaBetaTests */,
+				E2FD1BE80DC115C61D521676 /* AlphaBetaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -520,6 +562,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		291168F2EFB05E81F0ABE2BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6CDC39A77BDE5C95F5C6B64 /* PaletteRowTapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		518CBE7DD2A160E9628DFC42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -539,6 +589,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9DAB8FA390AE2DBC51A8DDA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9234F0E1688C6E740EF47EC8 /* AlphaBeta */;
+			targetProxy = 2D024F74151776586409B1FD /* PBXContainerItemProxy */;
+		};
 		A1E6C9C421CFF8F1E5C69AB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9234F0E1688C6E740EF47EC8 /* AlphaBeta */;
@@ -611,6 +666,42 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		306272492BB214A39C16EFD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JohnHoedeman.AlphaBetaUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AlphaBeta;
+			};
+			name = Debug;
+		};
+		393BFBC7B416A949465BB77F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JohnHoedeman.AlphaBetaUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AlphaBeta;
+			};
+			name = Release;
 		};
 		6DB81641ACABDA6A156EAF5C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -759,6 +850,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2B513738615CCBA4ACC35942 /* Build configuration list for PBXNativeTarget "AlphaBetaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				306272492BB214A39C16EFD9 /* Debug */,
+				393BFBC7B416A949465BB77F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		4CC768794EDA12DA0EDE1566 /* Build configuration list for PBXNativeTarget "AlphaBetaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

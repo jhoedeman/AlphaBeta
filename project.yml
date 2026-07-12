@@ -64,12 +64,26 @@ targets:
       base:
         GENERATE_INFOPLIST_FILE: YES
 
+  AlphaBetaUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources:
+      - path: AlphaBetaUITests
+    dependencies:
+      - target: AlphaBeta
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+
 schemes:
   AlphaBeta:
     build:
       targets:
         AlphaBeta: all
         AlphaBetaTests: [test]
+        AlphaBetaUITests: [test]
     test:
       targets:
         - AlphaBetaTests
+        - AlphaBetaUITests
