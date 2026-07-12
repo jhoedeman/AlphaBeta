@@ -5,6 +5,8 @@ import SwiftUI
 /// below, and a friendly empty state when every filter is deselected. Also
 /// hosts the top bar's language/settings buttons per SPEC §9.
 struct CardsView: View {
+    let manifest: LanguageManifest
+    let items: [AlphabetItem]
     let languageRegistry: LanguageRegistry
     let paletteRegistry: PaletteRegistry
     let preferencesStore: UserPreferencesStore
@@ -27,22 +29,39 @@ struct CardsView: View {
         paletteRegistry: PaletteRegistry, preferencesStore: UserPreferencesStore,
         onSelectLanguage: @escaping (LanguageManifest) -> Void
     ) {
+        self.manifest = manifest
+        self.items = items
         self.languageRegistry = languageRegistry
         self.paletteRegistry = paletteRegistry
         self.preferencesStore = preferencesStore
         self.onSelectLanguage = onSelectLanguage
+        _viewModel = State(initialValue: Self.makeViewModel(manifest: manifest, items: items, preferencesStore: preferencesStore))
+    }
 
+    /// Rebuilds `viewModel` for a newly-selected manifest without changing
+    /// `CardsView`'s own identity (no `.id()` in `RootView` any more).
+    /// Forcing a fresh identity used to tear down and recreate this view's
+    /// `NavigationStack` on every language switch — which, on iOS 18.4
+    /// Simulator, reliably crashed with `NSInternalInconsistencyException`
+    /// ("attempt to nest wrapped navigation controllers") because the
+    /// language-picker sheet's own `NavigationStack` was still mid-dismissal
+    /// on the very bar being torn down. Resetting the view model in place
+    /// keeps the `NavigationStack` alive across the switch and avoids the
+    /// race entirely.
+    private static func makeViewModel(
+        manifest: LanguageManifest, items: [AlphabetItem], preferencesStore: UserPreferencesStore
+    ) -> CardDeckViewModel {
         let persisted = FilterCategory.set(fromCommaJoinedRawValues: preferencesStore.cardFilterRaw)
             .intersection(manifest.filterCategories)
         let initialFilters = persisted.isEmpty ? Set(manifest.filterCategories) : persisted
 
-        _viewModel = State(initialValue: CardDeckViewModel(
+        return CardDeckViewModel(
             manifest: manifest, allItems: items,
             initialFilters: initialFilters, initialShuffled: preferencesStore.isShuffled,
             onPreferencesChanged: { filterRaw, isShuffled in
                 preferencesStore.setCardPreferences(filterRaw: filterRaw, isShuffled: isShuffled)
             }
-        ))
+        )
     }
 
     var body: some View {
@@ -110,6 +129,9 @@ struct CardsView: View {
         }
         .sheet(isPresented: $showSettings) {
             SettingsSheet(manifest: viewModel.manifest, paletteRegistry: paletteRegistry, preferencesStore: preferencesStore)
+        }
+        .onChange(of: manifest.id) { _, _ in
+            viewModel = Self.makeViewModel(manifest: manifest, items: items, preferencesStore: preferencesStore)
         }
     }
 }

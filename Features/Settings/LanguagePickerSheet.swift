@@ -58,6 +58,7 @@ struct LanguagePickerSheet: View {
                         .foregroundStyle(theme.accent)
                 }
             }
+            .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
     }

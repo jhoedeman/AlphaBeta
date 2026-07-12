@@ -36,7 +36,15 @@ struct RootView: View {
                         languageRegistry: languageRegistry, paletteRegistry: paletteRegistry,
                         preferencesStore: preferencesStore, onSelectLanguage: selectLanguage
                     )
-                    .id(alphabetStore.currentManifest.id)
+                    // Deliberately no `.id()` here (unlike QuizView below):
+                    // CardsView reacts to manifest changes via its own
+                    // `.onChange(of: manifest.id)`, rebuilding just its view
+                    // model in place. Forcing a fresh identity here would
+                    // tear down and recreate CardsView's NavigationStack on
+                    // every language switch, which crashes on iOS 18.4
+                    // Simulator when the language-picker sheet (itself a
+                    // NavigationStack) is still mid-dismissal — see
+                    // CardsView.makeViewModel's doc comment.
                     .tabItem { Label("Cards", systemImage: "rectangle.stack") }
                     .tag(0)
 
