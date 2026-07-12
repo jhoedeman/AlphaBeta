@@ -34,6 +34,10 @@ struct LanguagePickerSheet: View {
                 }
             }
         }
+        // List's chrome otherwise follows the real system colorScheme, not
+        // ThemeManager's in-app override — sheets get a fresh presentation
+        // context that doesn't inherit RootView's `.preferredColorScheme`.
+        .preferredColorScheme(theme.preferredColorScheme)
     }
 
     private func row(for language: LanguageManifest) -> some View {
