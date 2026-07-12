@@ -71,22 +71,31 @@ struct RootView: View {
         .task {
             do {
                 let registry = try LanguageRegistry()
-                languageRegistry = registry
                 let store = AlphabetStore(registry: registry)
 
                 let preferences = UserPreferencesStore(context: modelContext)
-                preferencesStore = preferences
                 applyPersistedTheme(from: preferences)
                 store.selectLanguage(id: preferences.selectedLanguageID)
                 theme.languageDefaultPaletteID = store.currentManifest.defaultPaletteID
-                alphabetStore = store
 
                 let record = modelContext.fetchOrCreateStreakRecord()
-                streakStore = StreakStore(
+                let streak = StreakStore(
                     currentStreak: record.currentStreak, longestStreak: record.longestStreak,
                     lastCompletedDay: record.lastCompletedDay
                 )
-                userDataStore = SwiftDataUserDataStore(context: modelContext, languageID: store.currentManifest.id)
+                let userData = SwiftDataUserDataStore(context: modelContext, languageID: store.currentManifest.id)
+
+                // Assign every gating property together, in one statement,
+                // rather than interleaved one at a time above. The `if let`
+                // in `body` only shows the TabView once all five are
+                // non-nil, so writing them one by one briefly re-evaluates
+                // that condition on each assignment instead of flipping it
+                // exactly once — right as the TabView's UITabBarController
+                // is first inserted is exactly when its tap gesture
+                // recognizers are most likely to still be settling, which
+                // can swallow the very first tap on launch.
+                (languageRegistry, preferencesStore, alphabetStore, streakStore, userDataStore) =
+                    (registry, preferences, store, streak, userData)
             } catch {
                 loadError = "Failed to load Manifest.json: \(error)"
             }
