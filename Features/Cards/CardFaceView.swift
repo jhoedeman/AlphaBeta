@@ -17,21 +17,11 @@ struct CardFaceView: View {
     var body: some View {
         VStack(spacing: 16) {
             Spacer()
-            ZStack(alignment: .topTrailing) {
-                Text(item.foreignLetter)
-                    .font(.custom("Athelas-Bold", size: 180))
-                    .minimumScaleFactor(0.3)
-                    .lineLimit(1)
-                    .foregroundStyle(theme.accent)
-                if let markedVersion = item.markedVersion {
-                    // Athelas is missing glyphs for some accented Greek capitals
-                    // (Έ, Ή, Ί, Ύ); the system serif has full Unicode coverage.
-                    Text(markedVersion)
-                        .font(.system(size: 36, weight: .semibold, design: .serif))
-                        .foregroundStyle(theme.accent.opacity(0.6))
-                        .offset(x: 20, y: -4)
-                }
-            }
+            Text(item.foreignLetter)
+                .font(.custom("Athelas-Bold", size: 180))
+                .minimumScaleFactor(0.3)
+                .lineLimit(1)
+                .foregroundStyle(theme.accent)
 
             if !hideNames {
                 Text(item.englishName)
