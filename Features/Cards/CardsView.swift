@@ -78,9 +78,22 @@ struct CardsView: View {
                     // Full width, not constrained to 480 — the carousel's
                     // card size is fixed internally, and the iPad's extra
                     // width beyond that fixed size is what becomes peek.
+                    // `.id()` here (not on CardsView itself) so switching
+                    // languages remounts just the carousel: CardCarouselView
+                    // seeds its scroll position from `viewModel.currentIndex`
+                    // in `init`, but since `viewModel` is now swapped in
+                    // place (see `makeViewModel` above) rather than forcing a
+                    // new `CardsView` identity, that `init` was never
+                    // re-running — leaving the carousel's scroll state stuck
+                    // on the *previous* language's entries and visibly
+                    // landing on the wrong (often last) item after a switch.
+                    // CardCarouselView owns no NavigationStack, so remounting
+                    // it can't reintroduce the nav-bar crash `CardsView`'s
+                    // own `.id()` used to cause.
                     CardCarouselView(viewModel: viewModel) { item in
                         detailItem = item
                     }
+                    .id(viewModel.manifest.id)
                     .frame(maxWidth: .infinity)
 
                     Text("\(viewModel.currentIndex + 1) / \(viewModel.count)")

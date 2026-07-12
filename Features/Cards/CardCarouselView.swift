@@ -11,14 +11,11 @@ struct CardCarouselView: View {
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
-    /// Seeded from the view model at init so `scrollTargetID` is never
-    /// visibly wrong before layout — the actual initial scroll is then
-    /// forced imperatively once real geometry is available (see the
-    /// `onChange(of: geometry.size.width)` below): `scrollPosition(id:)`
-    /// alone doesn't reliably move the `ScrollView` on its very first
-    /// programmatic set, leaving it resting on the leading sentinel (a
-    /// duplicate of the *last* item) while still reporting this state
-    /// variable as if it had scrolled to the real first item.
+    /// Seeded from the view model at init so it's never visibly wrong
+    /// before layout — the actual initial scroll is then forced
+    /// imperatively in `forceInitialScrollUntilItSticks(using:)`, since
+    /// `scrollPosition(id:)` alone doesn't reliably move the `ScrollView`
+    /// on its very first programmatic set.
     @State private var scrollTargetID: String?
     @State private var showWrapIndicator = false
     /// Suppresses the page-settle haptic for the very first `scrollTargetID`
@@ -92,17 +89,8 @@ struct CardCarouselView: View {
                     .onAppear {
                         hasAppeared = true
                     }
-                    .onChange(of: geometry.size.width) { _, _ in
-                        // `scrollPosition(id:)` alone doesn't reliably move the
-                        // scroll view on its very first programmatic set (it can
-                        // report the id as "current" without actually scrolling
-                        // there, leaving the view resting on the leading
-                        // sentinel — the *last* item — instead). Once real
-                        // geometry is available, force the jump imperatively via
-                        // `ScrollViewReader`, which does reliably move it.
-                        if let id = viewModel.entryID(at: viewModel.currentIndex) {
-                            proxy.scrollTo(id, anchor: .center)
-                        }
+                    .task {
+                        await forceInitialScrollUntilItSticks(using: proxy)
                     }
                     .onChange(of: scrollTargetID) { _, newID in
                         viewModel.handleScrollSettled(to: newID)
@@ -156,6 +144,28 @@ struct CardCarouselView: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        }
+    }
+
+    /// Repeatedly forces the scroll view to the view model's current item
+    /// (animations disabled) until `scrollTargetID` actually reflects it,
+    /// rather than trusting a single attempt. `scrollPosition(id:)` doesn't
+    /// reliably move the `ScrollView` on a single programmatic set — the
+    /// underlying `UIScrollView` isn't always attached/laid out yet at the
+    /// point this first runs. In practice this converges on the very first
+    /// attempt; the loop is a safety net rather than a normally-exercised
+    /// path.
+    private func forceInitialScrollUntilItSticks(using proxy: ScrollViewProxy) async {
+        guard let targetID = viewModel.entryID(at: viewModel.currentIndex) else { return }
+        for _ in 0..<20 {
+            guard !Task.isCancelled else { return }
+            var transaction = Transaction()
+            transaction.disablesAnimations = true
+            withTransaction(transaction) {
+                proxy.scrollTo(targetID, anchor: .center)
+            }
+            try? await Task.sleep(for: .milliseconds(50))
+            if scrollTargetID == targetID { return }
         }
     }
 }
