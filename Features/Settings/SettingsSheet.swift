@@ -106,6 +106,7 @@ struct SettingsSheet: View {
                         .foregroundStyle(theme.accent)
                 }
             }
+            .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
     }
