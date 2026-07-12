@@ -41,14 +41,14 @@
     "light": {
       "background": "#E4E8F0",
       "surface": "#FFFFFF",
-      "accent": "#C9A227",
+      "accent": "#A38800",
       "textPrimary": "#1A2438",
       "textSecondary": "#4A5570"
     },
     "dark": {
       "background": "#0B1020",
       "surface": "#131B33",
-      "accent": "#FFD54A",
+      "accent": "#FFD500",
       "textPrimary": "#EEF2FF",
       "textSecondary": "#8FA0C4"
     }
@@ -77,14 +77,14 @@
     "light": {
       "background": "#EDE7E7",
       "surface": "#FFFFFF",
-      "accent": "#1B3A8A",
+      "accent": "#0C4076",
       "textPrimary": "#2A1618",
       "textSecondary": "#6B4145"
     },
     "dark": {
       "background": "#1A0708",
       "surface": "#260B0D",
-      "accent": "#5C8AFF",
+      "accent": "#187CE7",
       "textPrimary": "#FFF0EE",
       "textSecondary": "#C08A8A"
     }
@@ -95,14 +95,14 @@
     "light": {
       "background": "#EDEDED",
       "surface": "#FFFFFF",
-      "accent": "#1E7A3D",
+      "accent": "#00966E",
       "textPrimary": "#202020",
       "textSecondary": "#5C5C5C"
     },
     "dark": {
       "background": "#121212",
       "surface": "#1C1C1C",
-      "accent": "#4ADE80",
+      "accent": "#0BCB98",
       "textPrimary": "#F5F5F5",
       "textSecondary": "#A8A8A8"
     }
@@ -113,32 +113,32 @@
     "light": {
       "background": "#F0E5E2",
       "surface": "#FFFFFF",
-      "accent": "#C77E0D",
+      "accent": "#A67C00",
       "textPrimary": "#2A1510",
       "textSecondary": "#6B4132"
     },
     "dark": {
       "background": "#1C0805",
       "surface": "#2A0F0A",
-      "accent": "#FFB84D",
+      "accent": "#FFC629",
       "textPrimary": "#FFF3E8",
       "textSecondary": "#C0958A"
     }
   },
   {
     "id": "armenian-flag",
-    "name": "Solar Yellow",
+    "name": "Apricot Sun",
     "light": {
       "background": "#E6E9EE",
       "surface": "#FFFFFF",
-      "accent": "#B5A300",
+      "accent": "#B36A00",
       "textPrimary": "#1A1E2E",
       "textSecondary": "#4E5570"
     },
     "dark": {
       "background": "#0A0D1C",
       "surface": "#121830",
-      "accent": "#F0DB4F",
+      "accent": "#F2A800",
       "textPrimary": "#F0F2FF",
       "textSecondary": "#8A90B8"
     }
