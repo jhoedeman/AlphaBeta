@@ -94,3 +94,4 @@ AlphaBeta.xcodeproj/xcuserdata/jhoedeman.xcuserdatad/xcdebugger/Breakpoints_v2.x
 # superpowers scratch state (brainstorm sessions, worktrees)
 .superpowers/
 .worktrees/
+.asc/artifacts/
