@@ -13,11 +13,12 @@ final class UserPreferences {
     var customPaletteData: Data?
     var cardFilterRaw: String = ""
     var isShuffled: Bool = false
+    var hasCompletedOnboarding: Bool = false
 
     init(
         selectedLanguageID: Int = 0, pronunciationSystemID: String = "modern",
         appearanceRaw: String = "system", paletteID: String = "", customPaletteData: Data? = nil,
-        cardFilterRaw: String = "", isShuffled: Bool = false
+        cardFilterRaw: String = "", isShuffled: Bool = false, hasCompletedOnboarding: Bool = false
     ) {
         self.selectedLanguageID = selectedLanguageID
         self.pronunciationSystemID = pronunciationSystemID
@@ -26,5 +27,6 @@ final class UserPreferences {
         self.customPaletteData = customPaletteData
         self.cardFilterRaw = cardFilterRaw
         self.isShuffled = isShuffled
+        self.hasCompletedOnboarding = hasCompletedOnboarding
     }
 }

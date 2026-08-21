@@ -38,6 +38,7 @@
 		6926A50418510A5EA600D9FC /* ReadingDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC2C04A7B0E4006DA960E84 /* ReadingDirection.swift */; };
 		6A844DDE445E7187B835D8C3 /* Georgian.json in Resources */ = {isa = PBXBuildFile; fileRef = 453A2427A065B54888F6E4F5 /* Georgian.json */; };
 		6DE80B79AF66B8EA307C12D1 /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBDC93C31963F3A018C6877 /* SettingsSheet.swift */; };
+		74859E6BFCDDBE7909130845 /* LanguageGridScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750506D71755D0A5E83B2FCD /* LanguageGridScreen.swift */; };
 		7688FBD3B648FCD9F7F7EE18 /* UserPreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9894E8B51B322A7129C031 /* UserPreferencesStore.swift */; };
 		795625D7F8FC9A4679235DD8 /* QuizModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8ADC760684FDE1E2014A1 /* QuizModels.swift */; };
 		7A0C7E7CD868BA6099D8DE1D /* FilterCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD483640135A8198DCAABC6 /* FilterCategory.swift */; };
@@ -48,6 +49,7 @@
 		9462E53418EB9CBBC1E6A19C /* StreakStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F120219F353FC2C576D1E /* StreakStoreTests.swift */; };
 		94B6C0198FC8124025DD65B3 /* ThemeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D47257AE5CDC2E2306857D /* ThemeManagerTests.swift */; };
 		95C91E0C9CD02537AB58E641 /* Armenian.json in Resources */ = {isa = PBXBuildFile; fileRef = 14A3ECE1B6491E26D7B3BDD9 /* Armenian.json */; };
+		96E3DA372CAA83388A056D3A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE826938DF910D0648D5D740 /* OnboardingView.swift */; };
 		9EBD4E4B3984CB3DAC38A002 /* AlphabetItemDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E3DD7D5505E488B8CF40C /* AlphabetItemDetailTests.swift */; };
 		A67214D8A1FDF515E55EC29C /* QuizEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CEEBE8D70E7D7DF0F6249A /* QuizEngineTests.swift */; };
 		A938C37AA93B760D4C04E086 /* Macedonian.json in Resources */ = {isa = PBXBuildFile; fileRef = 39194103FBAFBED3E40A40A6 /* Macedonian.json */; };
@@ -59,6 +61,7 @@
 		BB6602561CFAD73FE6AD8242 /* BundledAlphabetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0145315F2A41B36CF9871A /* BundledAlphabetProvider.swift */; };
 		BFCBA99E1FAA6BF5FC2BC936 /* ModelContext+Singletons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DE9FAA406E8714AB93440F /* ModelContext+Singletons.swift */; };
 		C0D9B92DE9E6EDBA113D4A73 /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D5E816E4128AB61BCDDABB /* Alphabet.swift */; };
+		C11A8DAB90B5F923868C8A54 /* IntroScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F96EE7DBCF62C9EC77AB0E /* IntroScreen.swift */; };
 		C6CDC39A77BDE5C95F5C6B64 /* PaletteRowTapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F93BA4A71BD0C2EA4C36DEA /* PaletteRowTapTests.swift */; };
 		C9DF625CD3D2CA34C0096780 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93346C01019E41885B72AA85 /* CardsView.swift */; };
 		CB677C330E2B3A89CF18601B /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F693D2AF0FC83A5033D39FF2 /* QuizViewModel.swift */; };
@@ -136,6 +139,8 @@
 		73213E113A99756620430B3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		745347C3FF22A0F295D77D00 /* FilterPillBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPillBar.swift; sourceTree = "<group>"; };
 		74E36F13B67CB7643C500E81 /* Ukrainian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Ukrainian.json; sourceTree = "<group>"; };
+		750506D71755D0A5E83B2FCD /* LanguageGridScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageGridScreen.swift; sourceTree = "<group>"; };
+		78F96EE7DBCF62C9EC77AB0E /* IntroScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreen.swift; sourceTree = "<group>"; };
 		80B28E92BC4E4F00A74690BC /* SwiftDataUserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataUserDataStore.swift; sourceTree = "<group>"; };
 		8BD2F9A3EA90800D18079F5F /* Serbian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Serbian.json; sourceTree = "<group>"; };
 		93346C01019E41885B72AA85 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
@@ -148,6 +153,7 @@
 		A2B9D8CF85AB42AB472C01F3 /* ContentDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDecodingTests.swift; sourceTree = "<group>"; };
 		A58CC6F82E73907231EE7343 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		A992191278F405E22CEFA21E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AE826938DF910D0648D5D740 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B221B04E85CBA3C6B8EBE362 /* CardDeckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDeckViewModel.swift; sourceTree = "<group>"; };
 		B7B77F97C8A0C6698D80EFCA /* PronunciationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationSystem.swift; sourceTree = "<group>"; };
 		BDC4ED7DBEE592B273E902AF /* Belarusian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Belarusian.json; sourceTree = "<group>"; };
@@ -239,6 +245,16 @@
 				74E36F13B67CB7643C500E81 /* Ukrainian.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		54583FB51CE11F3ED9AA9BEC /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				78F96EE7DBCF62C9EC77AB0E /* IntroScreen.swift */,
+				750506D71755D0A5E83B2FCD /* LanguageGridScreen.swift */,
+				AE826938DF910D0648D5D740 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		59B61FF425FF09F6B145C1A4 /* Support */ = {
@@ -372,6 +388,7 @@
 			children = (
 				4C14854D95441C4732C302D3 /* Cards */,
 				630E87AE55836698C154B867 /* Detail */,
+				54583FB51CE11F3ED9AA9BEC /* Onboarding */,
 				10513ABFBDEF9C82C491065F /* Quiz */,
 				18ABBFAB915298B7AE1F09EB /* Settings */,
 			);
@@ -527,13 +544,16 @@
 				7A0C7E7CD868BA6099D8DE1D /* FilterCategory.swift in Sources */,
 				3DC35E4EC23F9B2658E6B26B /* FilterPillBar.swift in Sources */,
 				432AD727CD5ED9E6E0DE4551 /* Haptics.swift in Sources */,
+				C11A8DAB90B5F923868C8A54 /* IntroScreen.swift in Sources */,
 				F43ED737900B45E86E945770 /* ItemDetailSheet.swift in Sources */,
 				FEF154AA775BC8E58C0F0C49 /* ItemProgress.swift in Sources */,
 				02173ACDD6E547D3A444CCBA /* ItemType.swift in Sources */,
+				74859E6BFCDDBE7909130845 /* LanguageGridScreen.swift in Sources */,
 				2E3298F741BC20D26A0698FF /* LanguageManifest.swift in Sources */,
 				59096E9746672F5C1A93A444 /* LanguagePickerSheet.swift in Sources */,
 				1A6B77B5F3D708549DD2492D /* LanguageRegistry.swift in Sources */,
 				BFCBA99E1FAA6BF5FC2BC936 /* ModelContext+Singletons.swift in Sources */,
+				96E3DA372CAA83388A056D3A /* OnboardingView.swift in Sources */,
 				ABB52B87D0966300725C61E1 /* PaletteBuilderView.swift in Sources */,
 				01322EB3033A129DAD7FD6FE /* PaletteRegistry.swift in Sources */,
 				F6835020E41F4E83EA2C5573 /* PronunciationEntry.swift in Sources */,

@@ -30,34 +30,41 @@ struct RootView: View {
             // its UIKit-hosted view showing a stale snapshot instead of
             // picking up the new content.
             if let alphabetStore, let languageRegistry, let preferencesStore, let streakStore, let userDataStore {
-                TabView(selection: $selectedTab) {
-                    CardsView(
-                        manifest: alphabetStore.currentManifest, items: alphabetStore.items,
+                if !preferencesStore.hasCompletedOnboarding {
+                    OnboardingView(
                         languageRegistry: languageRegistry, paletteRegistry: paletteRegistry,
-                        preferencesStore: preferencesStore, onSelectLanguage: selectLanguage
+                        alphabetStore: alphabetStore, preferencesStore: preferencesStore
                     )
-                    // Deliberately no `.id()` here (unlike QuizView below):
-                    // CardsView reacts to manifest changes via its own
-                    // `.onChange(of: manifest.id)`, rebuilding just its view
-                    // model in place. Forcing a fresh identity here would
-                    // tear down and recreate CardsView's NavigationStack on
-                    // every language switch, which crashes on iOS 18.4
-                    // Simulator when the language-picker sheet (itself a
-                    // NavigationStack) is still mid-dismissal — see
-                    // CardsView.makeViewModel's doc comment.
-                    .tabItem { Label("Cards", systemImage: "rectangle.stack") }
-                    .tag(0)
+                } else {
+                    TabView(selection: $selectedTab) {
+                        CardsView(
+                            manifest: alphabetStore.currentManifest, items: alphabetStore.items,
+                            languageRegistry: languageRegistry, paletteRegistry: paletteRegistry,
+                            preferencesStore: preferencesStore, onSelectLanguage: selectLanguage
+                        )
+                        // Deliberately no `.id()` here (unlike QuizView below):
+                        // CardsView reacts to manifest changes via its own
+                        // `.onChange(of: manifest.id)`, rebuilding just its view
+                        // model in place. Forcing a fresh identity here would
+                        // tear down and recreate CardsView's NavigationStack on
+                        // every language switch, which crashes on iOS 18.4
+                        // Simulator when the language-picker sheet (itself a
+                        // NavigationStack) is still mid-dismissal — see
+                        // CardsView.makeViewModel's doc comment.
+                        .tabItem { Label("Cards", systemImage: "rectangle.stack") }
+                        .tag(0)
 
-                    QuizView(
-                        manifest: alphabetStore.currentManifest, items: alphabetStore.items,
-                        streakStore: streakStore, userDataStore: userDataStore,
-                        pronunciationSystemID: preferencesStore.pronunciationSystemID
-                    )
-                    .id(alphabetStore.currentManifest.id)
-                    .tabItem { Label("Quiz", systemImage: "graduationcap.fill") }
-                    .tag(1)
+                        QuizView(
+                            manifest: alphabetStore.currentManifest, items: alphabetStore.items,
+                            streakStore: streakStore, userDataStore: userDataStore,
+                            pronunciationSystemID: preferencesStore.pronunciationSystemID
+                        )
+                        .id(alphabetStore.currentManifest.id)
+                        .tabItem { Label("Quiz", systemImage: "graduationcap.fill") }
+                        .tag(1)
+                    }
+                    .tint(theme.accent)
                 }
-                .tint(theme.accent)
             } else if let loadError {
                 Text(loadError).foregroundStyle(.red)
             } else {

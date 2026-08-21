@@ -18,6 +18,7 @@ final class UserPreferencesStore {
     private(set) var customPaletteData: Data?
     private(set) var cardFilterRaw: String
     private(set) var isShuffled: Bool
+    private(set) var hasCompletedOnboarding: Bool
 
     init(context: ModelContext) {
         self.context = context
@@ -30,6 +31,7 @@ final class UserPreferencesStore {
         customPaletteData = record.customPaletteData
         cardFilterRaw = record.cardFilterRaw
         isShuffled = record.isShuffled
+        hasCompletedOnboarding = record.hasCompletedOnboarding
     }
 
     func setSelectedLanguage(id: Int) {
@@ -68,6 +70,12 @@ final class UserPreferencesStore {
         self.isShuffled = isShuffled
         record.cardFilterRaw = filterRaw
         record.isShuffled = isShuffled
+        save()
+    }
+
+    func setHasCompletedOnboarding(_ value: Bool) {
+        hasCompletedOnboarding = value
+        record.hasCompletedOnboarding = value
         save()
     }
 

@@ -124,6 +124,7 @@ struct UserDataPersistenceTests {
         #expect(store.paletteID == "")
         #expect(store.cardFilterRaw == "")
         #expect(store.isShuffled == false)
+        #expect(store.hasCompletedOnboarding == false)
     }
 
     @Test func preferencesStoreSettersPersistToTheSingletonRecord() {
@@ -164,5 +165,16 @@ struct UserDataPersistenceTests {
 
         store.setCustomPalette(nil)
         #expect(store.customPaletteData == nil)
+    }
+
+    @Test func settingHasCompletedOnboardingPersistsToTheSingletonRecord() {
+        let context = Self.makeContext()
+        let store = UserPreferencesStore(context: context)
+
+        store.setHasCompletedOnboarding(true)
+        #expect(store.hasCompletedOnboarding == true)
+
+        let reloaded = UserPreferencesStore(context: context)
+        #expect(reloaded.hasCompletedOnboarding == true)
     }
 }

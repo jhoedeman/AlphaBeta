@@ -21,6 +21,9 @@ struct SettingsSheet: View {
                 colorSchemeSection
                 pronunciationSection
                 aboutSection
+                #if DEBUG
+                debugSection
+                #endif
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
@@ -153,6 +156,16 @@ struct SettingsSheet: View {
             }
         }
     }
+
+    #if DEBUG
+    private var debugSection: some View {
+        Section("Debug") {
+            Button("Replay Onboarding") {
+                preferencesStore.setHasCompletedOnboarding(false)
+            }
+        }
+    }
+    #endif
 }
 
 extension Bundle {
