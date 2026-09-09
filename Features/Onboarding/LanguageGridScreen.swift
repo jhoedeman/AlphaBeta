@@ -86,5 +86,11 @@ private struct LanguageCell: View {
                 .strokeBorder(tint, lineWidth: isSelected ? 3 : 0)
         )
         .scaleEffect(isSelected ? 1.05 : 1.0)
+        // Without grouping, this VStack's two Texts stay separate
+        // accessibility elements and an identifier applied from outside
+        // never surfaces as a single hit-testable element for XCUITest —
+        // group and identify together, self-contained, like CardFaceView.
+        .accessibilityElement(children: .combine)
+        .accessibilityIdentifier("languageCell-\(manifest.id)")
     }
 }

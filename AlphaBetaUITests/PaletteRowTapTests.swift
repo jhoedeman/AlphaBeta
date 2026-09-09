@@ -21,6 +21,7 @@ final class PaletteRowTapTests: XCTestCase {
         app.launchArguments = ["-uiTesting"]
         app.launch()
 
+        completeOnboarding(app, selectingLanguageID: 0)
         app.buttons["Settings"].tap()
 
         let target = app.buttons["paletteRow-macedonian-flag"]

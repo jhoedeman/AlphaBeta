@@ -34,6 +34,11 @@ struct OnboardingView: View {
         alphabetStore.selectLanguage(id: manifest.id)
         theme.languageDefaultPaletteID = manifest.defaultPaletteID
         preferencesStore.setSelectedLanguage(id: manifest.id)
+        // A stale, narrowed filter (e.g. left over from earlier testing, or
+        // a debug onboarding replay) would otherwise carry straight into
+        // the very first card the user sees — onboarding should always
+        // land on the manifest's natural, unfiltered order.
+        preferencesStore.setCardPreferences(filterRaw: "", isShuffled: false)
         preferencesStore.setHasCompletedOnboarding(true)
     }
 }

@@ -42,6 +42,7 @@
 		7688FBD3B648FCD9F7F7EE18 /* UserPreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9894E8B51B322A7129C031 /* UserPreferencesStore.swift */; };
 		795625D7F8FC9A4679235DD8 /* QuizModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8ADC760684FDE1E2014A1 /* QuizModels.swift */; };
 		7A0C7E7CD868BA6099D8DE1D /* FilterCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD483640135A8198DCAABC6 /* FilterCategory.swift */; };
+		7B24D4D268D2F1A439CB1636 /* XCUIApplication+Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F7B716BCE0240F8B79CC23 /* XCUIApplication+Onboarding.swift */; };
 		88C4FE5A449B11C476D95D6D /* QuizFilterPillBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95321E460B0572B88A18D024 /* QuizFilterPillBar.swift */; };
 		8E5B4826CB13695215CE5324 /* Bulgarian.json in Resources */ = {isa = PBXBuildFile; fileRef = F66BD6B367647AE0AF6BE226 /* Bulgarian.json */; };
 		90DA62F3D34635EE7A21C6E7 /* StreakStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EF36B40ABCBD0D34D0392 /* StreakStore.swift */; };
@@ -70,6 +71,7 @@
 		D6D4EAA2262864DCE1A30793 /* CardDeckViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A85E77C8C600BC1EFA4FA /* CardDeckViewModelTests.swift */; };
 		D79274B3FD637F0D35C3AA13 /* LanguageManifestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A292142C9648E949CB497A9 /* LanguageManifestTests.swift */; };
 		E0D20562A13E90E4ECA6269C /* WrapIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20ACECCCB1D4D4CE8B372474 /* WrapIndicatorView.swift */; };
+		E541293D95F56AFC6DD26A97 /* OnboardingCardFilterResetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCA72331ED289DA1DC0CB8B /* OnboardingCardFilterResetTests.swift */; };
 		E5BB66E92F8A58DE9A983BD9 /* QuizOptionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA447DF28E580AA183E8723 /* QuizOptionRow.swift */; };
 		F43ED737900B45E86E945770 /* ItemDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B151AE727C3012B8E121B3 /* ItemDetailSheet.swift */; };
 		F6835020E41F4E83EA2C5573 /* PronunciationEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CE58DE606FDEEA7740F758 /* PronunciationEntry.swift */; };
@@ -103,6 +105,7 @@
 		0A292142C9648E949CB497A9 /* LanguageManifestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManifestTests.swift; sourceTree = "<group>"; };
 		0BC24CC2C4C33315E9BAF98B /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		0F93BA4A71BD0C2EA4C36DEA /* PaletteRowTapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteRowTapTests.swift; sourceTree = "<group>"; };
+		11F7B716BCE0240F8B79CC23 /* XCUIApplication+Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Onboarding.swift"; sourceTree = "<group>"; };
 		14A3ECE1B6491E26D7B3BDD9 /* Armenian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Armenian.json; sourceTree = "<group>"; };
 		1C7A92CAB3CB87BEB2FA4C49 /* Palettes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Palettes.json; sourceTree = "<group>"; };
 		1CA447DF28E580AA183E8723 /* QuizOptionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizOptionRow.swift; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 		9BD483640135A8198DCAABC6 /* FilterCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCategory.swift; sourceTree = "<group>"; };
 		9C49065F54C1926EA4C621A3 /* AlphaBeta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlphaBeta.entitlements; sourceTree = "<group>"; };
 		9ED8ADC760684FDE1E2014A1 /* QuizModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModels.swift; sourceTree = "<group>"; };
+		9FCA72331ED289DA1DC0CB8B /* OnboardingCardFilterResetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardFilterResetTests.swift; sourceTree = "<group>"; };
 		A2B9D8CF85AB42AB472C01F3 /* ContentDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDecodingTests.swift; sourceTree = "<group>"; };
 		A58CC6F82E73907231EE7343 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		A992191278F405E22CEFA21E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -314,7 +318,9 @@
 		90EC93E3BE2F349BB9AC0CA6 /* AlphaBetaUITests */ = {
 			isa = PBXGroup;
 			children = (
+				9FCA72331ED289DA1DC0CB8B /* OnboardingCardFilterResetTests.swift */,
 				0F93BA4A71BD0C2EA4C36DEA /* PaletteRowTapTests.swift */,
+				11F7B716BCE0240F8B79CC23 /* XCUIApplication+Onboarding.swift */,
 			);
 			path = AlphaBetaUITests;
 			sourceTree = "<group>";
@@ -586,7 +592,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E541293D95F56AFC6DD26A97 /* OnboardingCardFilterResetTests.swift in Sources */,
 				C6CDC39A77BDE5C95F5C6B64 /* PaletteRowTapTests.swift in Sources */,
+				7B24D4D268D2F1A439CB1636 /* XCUIApplication+Onboarding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

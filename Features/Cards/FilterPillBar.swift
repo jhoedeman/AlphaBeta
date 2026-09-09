@@ -45,6 +45,7 @@ struct FilterPillBar: View {
             .background(isActive ? theme.accent : theme.surface)
             .foregroundStyle(isActive ? Color.white : theme.textPrimary)
             .clipShape(Capsule())
+            .accessibilityIdentifier("filterPill-\(category.rawValue)")
             .onTapGesture {
                 withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
                     viewModel.toggleFilter(category)
