@@ -74,6 +74,7 @@
 		E541293D95F56AFC6DD26A97 /* OnboardingCardFilterResetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCA72331ED289DA1DC0CB8B /* OnboardingCardFilterResetTests.swift */; };
 		E5BB66E92F8A58DE9A983BD9 /* QuizOptionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA447DF28E580AA183E8723 /* QuizOptionRow.swift */; };
 		F43ED737900B45E86E945770 /* ItemDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B151AE727C3012B8E121B3 /* ItemDetailSheet.swift */; };
+		F500DB1744A2CF55F532E022 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C33B1C94717CF307A5C516A5 /* PrivacyInfo.xcprivacy */; };
 		F6835020E41F4E83EA2C5573 /* PronunciationEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CE58DE606FDEEA7740F758 /* PronunciationEntry.swift */; };
 		F7C312FDE1C64828277121A1 /* Russian.json in Resources */ = {isa = PBXBuildFile; fileRef = C802E2447E5904A0ADB4801C /* Russian.json */; };
 		F8D4EFA92AC0B71F0D79BF3D /* QuizSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C8F04A3F0D5CE7037F265 /* QuizSession.swift */; };
@@ -162,6 +163,7 @@
 		B7B77F97C8A0C6698D80EFCA /* PronunciationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationSystem.swift; sourceTree = "<group>"; };
 		BDC4ED7DBEE592B273E902AF /* Belarusian.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Belarusian.json; sourceTree = "<group>"; };
 		BF167DDBD69106BA03B7E1EA /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
+		C33B1C94717CF307A5C516A5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		C3CC141C46BABF24DF3A3016 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		C44E3DD7D5505E488B8CF40C /* AlphabetItemDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetItemDetailTests.swift; sourceTree = "<group>"; };
 		C4C0A5EE1C6BB259AE9411CA /* UserDataPersisting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataPersisting.swift; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 				E4B69C96D84C2D8966A8CBB1 /* AlphaBetaApp.swift */,
 				73213E113A99756620430B3F /* Assets.xcassets */,
 				A992191278F405E22CEFA21E /* Info.plist */,
+				C33B1C94717CF307A5C516A5 /* PrivacyInfo.xcprivacy */,
 				1D1CC34E0325E6B88CB4D4AE /* RootView.swift */,
 			);
 			path = App;
@@ -523,6 +526,7 @@
 				A938C37AA93B760D4C04E086 /* Macedonian.json in Resources */,
 				0120E07184BA35E7D0B0774B /* Manifest.json in Resources */,
 				32BDD4388F1054F90D00FA79 /* Palettes.json in Resources */,
+				F500DB1744A2CF55F532E022 /* PrivacyInfo.xcprivacy in Resources */,
 				F7C312FDE1C64828277121A1 /* Russian.json in Resources */,
 				58D0F80B315C75EED8A6F0EB /* Serbian.json in Resources */,
 				24B4988D22A0BCB7094C883F /* Ukrainian.json in Resources */,
@@ -815,7 +819,7 @@
 				CODE_SIGN_ENTITLEMENTS = App/AlphaBeta.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = XY62X6K9VH;
 				INFOPLIST_FILE = App/Info.plist;
@@ -858,7 +862,7 @@
 				CODE_SIGN_ENTITLEMENTS = App/AlphaBeta.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = XY62X6K9VH;
 				INFOPLIST_FILE = App/Info.plist;
